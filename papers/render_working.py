@@ -26,6 +26,7 @@ def clean(t):
  t=re.sub(r'\\url\{([^}]*)\}',r'\1',t)
  t=re.sub(r'\\emph\{([^}]*)\}',r'\1',t)
  t=re.sub(r'\\textbf\{([^}]*)\}',r'\1',t)
+ t=re.sub(r'\\texttt\{([^}]*)\}',r'\1',t)
  t=re.sub(r'\\section\{([^}]*)\}',r'\n\n## \1\n\n',t)
  t=re.sub(r'\\begin\{(?:center|enumerate|tabular)\}(?:\{[^}]*\})?','',t)
  t=re.sub(r'\\end\{(?:center|enumerate|tabular)\}','',t)

@@ -80,3 +80,7 @@ Fetched seven public files from [PhysioNet MIMIC-III 100-patient demo](https://p
 ### Synthetic transition sensitivity, not a patient bootstrap
 
 `src/sepsis_bootstrap.py` reruns fixed-policy value evaluation under 12 seeded Dirichlet perturbations of each nonzero ICU-Sepsis transition row. Concentration 100: mean 0.875879, empirical 5th-95th percentiles 0.870695-0.880670; concentration 10: mean 0.875441, range 0.854448-0.889248. This holds the original optimal action map fixed and transition support unchanged. The concentration is a hypothetical pseudo-count, **not** observed patient sample size. This is neither a patient bootstrap nor a clinical confidence interval or a new published benchmark. See `results/sepsis_model_sensitivity*.json`; initial exact value was 0.875142.
+
+### Parkinson filtered-PSD reuse and denominator check
+
+To reduce full-neuron rerun time, `src/parkinson_published_psd_audit.py` reuses cached one-seed OFF/+5V full-horizon LFP arrays and exactly applies upstream `evaluate_HF_DBS.py` filtered-PSD protocol. Ratio +5V/OFF = 27.536%, notably different from our windowed-reward ratio 22.48% and raw global-LFP ratio 20.97%; published six-evaluation fixed-high Env0 ratio 19.8% SD 1.9. Upstream filter utility matched the reproduced filter exactly in a local cross-check. The mismatch is retained, not advertised as benchmark replication, and no native deep-RL controller was evaluated. Checkpoint wave arrays are not in Git; their SHA256 digests and recalculation code are recorded.

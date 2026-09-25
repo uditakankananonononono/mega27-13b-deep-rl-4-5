@@ -75,6 +75,12 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual((p['train_count'],p['test_count']),(293,75))
   self.assertGreater(p['cohort_heldout_auc'],.5)
   for d,expected in ((s,479),(p,438)):self.assertEqual(d['accessions_used'],expected);self.assertEqual(len(d['test_accessions']),d['test_count'])
+ def test_native_upstream_psd_distinct_estimands(self):
+  d=json.loads((ROOT/'results'/'parkinson_published_psd_seed222.json').read_text())
+  self.assertAlmostEqual(100*d['high_beta_psd']/d['off_beta_psd'],d['high_pct_of_off'])
+  self.assertGreater(d['high_pct_of_off'],25)
+  self.assertIn('no learned RL controller',d['limitation'])
+  self.assertEqual(d['n_steps'],5555)
  def test_adaptive_native_threshold_honest(self):
   d=json.loads((ROOT/'results'/'parkinson_env0_threshold_1200_seed223.json').read_text())
   self.assertEqual(d['steps'],1200);self.assertTrue(0<d['action_on_fraction']<1)

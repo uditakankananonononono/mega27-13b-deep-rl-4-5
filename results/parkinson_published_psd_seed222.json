@@ -1,0 +1,18 @@
+{
+  "source": "https://github.com/NevVerVer/DBS-Gym/blob/aa0b10b9502e4f62dea755ce6468da024235c319/aDBS_RL/evaluate_HF_DBS.py",
+  "protocol": "Paper repository calc_psd_for_simple_eval reproduced exactly: 5th order Butterworth 12-30 Hz filtfilt; rFFT squared magnitude*2/N^2, filtfilt([1]*12,5,PSD), sum 12.5<f<21; dt .0005 s",
+  "checkpoint_source": "src/parkinson_env0_chunk.py 512-neuron 5555-step Env0 full-horizon matched seed 222, actions normalized OFF=0, high=+1",
+  "seed": 222,
+  "n_steps": 5555,
+  "lfp_hash_off_high": [
+    "1bf4555423761c5925b6d26b3f66e0571712f8ac88453941e0545ac08bac5922",
+    "0ab9309048169538406b27583a20f27717a8deaaa33622edae407d81086eaa41"
+  ],
+  "off_beta_psd": 0.0064435290637283385,
+  "high_beta_psd": 0.0017742864172954002,
+  "high_pct_of_off": 27.5359418689231,
+  "published_off_pct": 100,
+  "published_high_pct": 19.8,
+  "published_high_sd_pct": 1.9,
+  "limitation": "Only one matched seed, not authors six-run mean/SD; author eval-env regime and initialization may differ; no learned RL controller evaluated. Not published-comparable RL result or clinical evidence."
+}
