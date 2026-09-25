@@ -1,0 +1,41 @@
+{
+  "model": "custom synthetic Parkinson beta-burst surrogate only; not DBS-Gym",
+  "train_weights": [
+    0.12,
+    0.4
+  ],
+  "seeds": [
+    70200,
+    70299
+  ],
+  "sample_size": 100,
+  "evaluation": {
+    "0.12": {
+      "original_weight_0_12": {
+        "mean_reward": -9.760959271536262,
+        "mean_energy": 37.635,
+        "mean_bursts": 0.5
+      },
+      "heavier_weight_0_40": {
+        "mean_reward": -13.54595119419824,
+        "mean_energy": 14.83,
+        "mean_bursts": 10.01
+      },
+      "paired_heavy_minus_original_mean_reward": -3.7849919226619737
+    },
+    "0.4": {
+      "original_weight_0_12": {
+        "mean_reward": -20.298759271536262,
+        "mean_energy": 37.635,
+        "mean_bursts": 0.5
+      },
+      "heavier_weight_0_40": {
+        "mean_reward": -17.69835119419824,
+        "mean_energy": 14.83,
+        "mean_bursts": 10.01
+      },
+      "paired_heavy_minus_original_mean_reward": 2.6004080773380247
+    }
+  },
+  "caveat": "The synthetic transition model is assumed, not patient-calibrated. Reward weights represent fictional preference penalties. No clinical safety or published benchmark comparison."
+}

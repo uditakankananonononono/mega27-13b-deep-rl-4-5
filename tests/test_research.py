@@ -47,6 +47,12 @@ class ResearchTests(unittest.TestCase):
   self.assertLess(pivot['neural_expected_return'],base['our_exact_values']['optimal'])
   self.assertLess(pivot['neural_expected_return'],base['neural_greedy']['expected_return'])
   self.assertAlmostEqual(sum(x['initial_mass'] for x in pivot['sofa_initial_state_strata'].values()),1.0,places=10)
+ def test_parkinson_pivot_tradeoff(self):
+  d=json.loads((ROOT/'results'/'parkinson_pivot.json').read_text())
+  self.assertEqual(d['sample_size'],100)
+  self.assertLess(d['evaluation']['0.12']['paired_heavy_minus_original_mean_reward'],0)
+  self.assertGreater(d['evaluation']['0.4']['paired_heavy_minus_original_mean_reward'],0)
+  self.assertLess(d['evaluation']['0.12']['heavier_weight_0_40']['mean_energy'],d['evaluation']['0.12']['original_weight_0_12']['mean_energy'])
  def test_tool_count_no_padding(self):
   tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],4)
  def test_descriptive_probes_not_treatment(self):

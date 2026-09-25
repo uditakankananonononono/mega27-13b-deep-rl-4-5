@@ -40,3 +40,7 @@ Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-lev
 ### Sepsis representation pivot
 
 `src/sepsis_pivot.py` trains a second neural Q model with the published 47-dimensional state cluster centers and stratifies simulated model return using published SOFA state annotations. Result 0.785245 versus original one-hot neural 0.786449 and optimal 0.875142: another honest negative. Exact JSON in `results/sepsis_pivot.json`. This does not add a new external tool or patient dataset.
+
+### Parkinson reward-cost pivot
+
+`src/parkinson_pivot.py` trains two policies at synthetic energy coefficients 0.12 and 0.40, each evaluated under both coefficients on 100 matched new seeds. The return ordering flips (-3.785 versus +2.600 for heavy-minus-original), revealing sensitivity to the invented utility function. The heavy-weight controller cuts simulator energy from 37.635 to 14.830 but increases beta-burst steps from 0.5 to 10.01. This is a within-project negative/tradeoff, not DBS-Gym or patient validation.
