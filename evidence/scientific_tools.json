@@ -1,6 +1,6 @@
 {
   "rule": "Count only actually-used scientific analysis/data tools or science libraries; generic transfer, literature search, tests, builds and source control excluded. Do not treat modules or workflows as separate tools.",
-  "verified_distinct_count": 16,
+  "verified_distinct_count": 17,
   "used": [
     {
       "name": "NumPy",
@@ -93,6 +93,12 @@
       "url": "https://zenodo.org/records/3989590",
       "scope": "Sepsis project only",
       "evidence": "src/sepsis_zenodo_workflow.py, results/sepsis_zenodo_workflow.json; downloaded 20.77MB archive, SHA256-verified and analyzed its 2,654 authentic activity events over 1,050 case IDs, excluding three synthetic amplified logs; not ICU action-policy data"
+    },
+    {
+      "name": "Zenodo dynamic-versus-static sepsis fluid-guidance trial dataset",
+      "url": "https://zenodo.org/records/10579408",
+      "scope": "Sepsis project only",
+      "evidence": "src/sepsis_zenodo_fluid_trial.py, results/sepsis_zenodo_fluid_trial.json; fetched and hashed 123-row Stata data, checked field labels/missingness and descriptive group aggregates against published randomized-trial methods; no sequential policy validation"
     }
   ],
   "not_counted": [
@@ -107,9 +113,9 @@
     "SciPy signal Welch as separate tool (SciPy counted once)"
   ],
   "project_counts": {
-    "sepsis": 11,
+    "sepsis": 12,
     "parkinson": 10
   },
-  "tool_count_interpretation": "16 unique science/data products or libraries globally (11 sepsis, 10 Parkinson); project-specific counts; generic transfer/tests/build/literature excluded.",
+  "tool_count_interpretation": "17 unique science/data products or libraries globally (12 sepsis, 10 Parkinson); project-specific counts; generic transfer/tests/build/literature excluded.",
   "used_science_tool_note": "Welch spectral estimate used in Parkinson PhysioNet analysis but SciPy library already counted; no extra submodule count."
 }

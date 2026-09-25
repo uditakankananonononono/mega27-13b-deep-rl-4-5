@@ -237,13 +237,13 @@ class ResearchTests(unittest.TestCase):
   d=json.loads((ROOT/'evidence'/'gates.json').read_text())
   for disease,tools in [('sepsis',6),('parkinson',8)]:
    row=d[disease]
-   self.assertEqual(row['used_science_tools'],{'sepsis':11,'parkinson':10}[disease])
+   self.assertEqual(row['used_science_tools'],{'sepsis':12,'parkinson':10}[disease])
    self.assertEqual(row['verified_gsm_samples_used'],{'sepsis':514,'parkinson':510}[disease])
    self.assertEqual(row['distinct_source_studies'],2)
    self.assertEqual(row['policy_trajectory_datasets'],0)
    self.assertFalse(row['gate_complete'])
  def test_tool_count_no_padding(self):
-  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],16);self.assertEqual(tools['project_counts'],{'sepsis':11,'parkinson':10})
+  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],17);self.assertEqual(tools['project_counts'],{'sepsis':12,'parkinson':10})
  def test_descriptive_probes_not_treatment(self):
   for disease in ('sepsis','parkinson'):
    result=json.loads((ROOT/'results'/f'{disease}_geo.json').read_text());self.assertEqual(result['accessions_used'],{'sepsis':479,'parkinson':438}[disease]);self.assertEqual(result['features_used'],48);self.assertEqual(result['test_n'],{'sepsis':144,'parkinson':132}[disease]);self.assertTrue(0<=result['heldout_auc']<=1)
@@ -270,4 +270,16 @@ class ZenodoSepsisWorkflowTests(unittest.TestCase):
   self.assertEqual(d['activities']['IV Antibiotics'],823)
   self.assertEqual(d['excluded_synthetic_log_names'],['x10.log','x100.log','x1000.log'])
   self.assertIn('not an ICU time-series',d['limitation'])
+  self.assertEqual(json.loads((ROOT/'evidence'/'gates.json').read_text())['sepsis']['policy_trajectory_datasets'],0)
+
+class SepsisFluidTrialAuditTests(unittest.TestCase):
+ def test_randomized_guidance_summary_not_rl_trajectory(self):
+  d=json.loads((ROOT/'results'/'sepsis_zenodo_fluid_trial.json').read_text())
+  a=d['arms']['static_cvp'];b=d['arms']['dynamic_ivc']
+  self.assertEqual((d['records'],d['columns']),(123,58))
+  self.assertEqual((a['records'],b['records']),(62,61))
+  self.assertEqual((a['mortality_observed'],a['mortality_missing'],a['30day_deaths']),(61,1,28))
+  self.assertEqual((b['mortality_observed'],b['mortality_missing'],b['30day_deaths']),(61,0,21))
+  self.assertIn('p=0.196',d['interpretation'])
+  self.assertIn('No dose timing',d['limitation'])
   self.assertEqual(json.loads((ROOT/'evidence'/'gates.json').read_text())['sepsis']['policy_trajectory_datasets'],0)

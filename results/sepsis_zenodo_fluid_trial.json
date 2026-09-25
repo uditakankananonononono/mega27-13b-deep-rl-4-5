@@ -1,0 +1,45 @@
+{
+  "source": "https://zenodo.org/records/10579408",
+  "source_doi": "10.5281/zenodo.10579408",
+  "source_sha256": "1b4232c84b5c3bbdb059484aca07dae0eddcad582be28322831fe59a4fd5fc03",
+  "associated_paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11342037/",
+  "associated_paper_doi": "10.12688/f1000research.147875.2",
+  "license": "CC BY 4.0 per Zenodo record",
+  "records": 123,
+  "columns": 58,
+  "arms": {
+    "static_cvp": {
+      "records": 62,
+      "mortality_observed": 61,
+      "mortality_missing": 1,
+      "30day_deaths": 28,
+      "30day_death_fraction_observed": 0.45901639344262296,
+      "fluid_72h_nonmissing": 62,
+      "fluid_72h_median_ml": 8081.0,
+      "norepinephrine_use_nonmissing": 62,
+      "norepinephrine_use_yes": 59,
+      "accumulated_ne_nonmissing": 62,
+      "accumulated_ne_median_mg_observed": 19.259999999999998,
+      "initial_sofa_nonmissing": 62,
+      "initial_sofa_median": 8.0
+    },
+    "dynamic_ivc": {
+      "records": 61,
+      "mortality_observed": 61,
+      "mortality_missing": 0,
+      "30day_deaths": 21,
+      "30day_death_fraction_observed": 0.3442622950819672,
+      "fluid_72h_nonmissing": 61,
+      "fluid_72h_median_ml": 8542.0,
+      "norepinephrine_use_nonmissing": 61,
+      "norepinephrine_use_yes": 52,
+      "accumulated_ne_nonmissing": 61,
+      "accumulated_ne_median_mg_observed": 7.744,
+      "initial_sofa_nonmissing": 61,
+      "initial_sofa_median": 7.0
+    }
+  },
+  "trial_design_from_paper": "Single-blind, stratified by APACHE II <25 versus >=25, block randomization 2 or 4 at Thammasat University Hospital, August 2016 to April 2020. Paper enrolled 124 (62/62); one dynamic withdrawal yields 123 released records; one static record lacks 30-day survival.",
+  "interpretation": "Aggregate descriptive readback of a randomized comparison of guidance strategies, not a newly estimated causal effect or reproduced adjusted trial analysis. Published primary 30-day mortality comparison p=0.196 and relative risk 0.8 (95% CI 0.5-1.2), p=0.201. These arm labels are strategy assignments, not sequential fluid/vasopressor decisions.",
+  "limitation": "No dose timing, repeated decision state, action propensity or 4-hour fluid/vasopressor action history in this 123-row patient summary. The published mortality difference is statistically uncertain; no efficacy or individualized RL-policy inference. Per-patient rows are not committed."
+}

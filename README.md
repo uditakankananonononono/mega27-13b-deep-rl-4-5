@@ -28,14 +28,14 @@ The raw matrices are not in Git because they are 107 MB and 64 MB. `data/*/acces
 
 | Project | Genuinely used distinct science/data tools | Accession records fetched, numeric data used | Numbered formulas | Times New Roman paper | Benchmark |
 |---|---:|---:|---:|---|---|
-| Sepsis | 11/40 | 514/120, across two GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
+| Sepsis | 12/40 | 514/120, across two GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
 | Parkinson | 10/40 | 510/120, across two GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
 
 Counting 479+35 day-one (sepsis) or 438+72 (Parkinson) distinct GSM identifiers with measured numeric features and labels, across two series per project. These are accession-level blood sample records, not independent treatment datasets; GSE54514 repeated follow-up samples are not added. Strict project-specific tool evidence in `evidence/scientific_tools.json`; no tool-count padding. Next work: run Parkinson against the real DBS-Gym simulator, obtain policy-relevant datasets where permitted, robust independent validation, expand genuinely used tools, and write/check substantial manuscripts. This is a progress checkpoint, not completion.
 
 ## Working manuscripts
 
-`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 11 sepsis and 9 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
+`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 12 sepsis and 9 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
 
 ### Sepsis representation pivot
 
@@ -151,4 +151,6 @@ The [Figshare derived eICU/MIMIC-IV immune trajectory product](https://figshare.
 
 The [Zenodo simplified authentic sepsis event log](https://zenodo.org/records/3989590) was separately hashed and analyzed: 2,654 activity events in 1,050 case IDs. The three amplified logs are synthetic and excluded. Activity timestamps are not ICU physiologic/action/reward trajectories, and Release A-E are not outcome labels; no policy validation. This adds one distinct sepsis data product (11/40), not 1,050 accessions. Source and aggregates: `src/sepsis_zenodo_workflow.py`, `results/sepsis_zenodo_workflow.json`.
 
-The latest local sepsis PDF renders 12 physical pages but the final process-log page is sparse; conservative substantive count remains 11, not 12. It has not replaced the previously delivered private Drive revision.
+With the fluid-guidance trial methods and aggregate audit added, the local sepsis PDF now renders 12 substantive pages. It has not replaced the previously delivered private Drive revision.
+
+A distinct [Zenodo randomized fluid-guidance trial dataset](https://zenodo.org/records/10579408), linked to [published trial methods](https://pmc.ncbi.nlm.nih.gov/articles/PMC11342037/), was hashed and analyzed as 123 summary rows (62 static CVP, 61 dynamic IVC). Observed 30-day deaths 28/61 and 21/61 with one missing static outcome; paper reports nonsignificant mortality p=.196. The arm assignment is not repeated fluid/pressor treatment action, so no policy trajectory or causal claim for our RL controller. Aggregate-only code/results in `src/sepsis_zenodo_fluid_trial.py`, `results/sepsis_zenodo_fluid_trial.json`. Count +1 distinct sepsis product, now 12/40.
