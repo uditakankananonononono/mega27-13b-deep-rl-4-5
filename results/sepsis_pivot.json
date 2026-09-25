@@ -1,0 +1,28 @@
+{
+  "model": "ICU-Sepsis v2 same exact transition model; 47 published state cluster center features",
+  "source": "https://github.com/icu-sepsis/icu-sepsis/blob/main/icu-sepsis-csv-tables.tar.gz",
+  "training_epochs": 100,
+  "training_loss_start_end": [
+    0.2435220975986934,
+    0.0005707218726861438
+  ],
+  "feature_dim": 47,
+  "neural_expected_return": 0.7852452037480687,
+  "optimal_expected_return": 0.8751416994800841,
+  "action_match_optimal_states": 0.0546984572230014,
+  "sofa_initial_state_strata": {
+    "lower_sofa": {
+      "initial_mass": 0.47981933499903906,
+      "n_states": 408,
+      "neural_expected_reward": 0.808445899366788,
+      "expert_expected_reward": 0.8055430332839872
+    },
+    "higher_sofa": {
+      "initial_mass": 0.520180665000961,
+      "n_states": 308,
+      "neural_expected_reward": 0.7638446729473544,
+      "expert_expected_reward": 0.759985509291584
+    }
+  },
+  "caveat": "SOFA is a model table annotation, not separate clinical validation. Same-source model-derived Q targets. State-cluster features may create unequal approximation error across strata. No causal safety claim."
+}

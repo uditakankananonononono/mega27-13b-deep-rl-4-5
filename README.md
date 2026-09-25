@@ -36,3 +36,7 @@ Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-lev
 ## Working manuscripts
 
 `papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 4 rendered pages each, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
+
+### Sepsis representation pivot
+
+`src/sepsis_pivot.py` trains a second neural Q model with the published 47-dimensional state cluster centers and stratifies simulated model return using published SOFA state annotations. Result 0.785245 versus original one-hot neural 0.786449 and optimal 0.875142: another honest negative. Exact JSON in `results/sepsis_pivot.json`. This does not add a new external tool or patient dataset.

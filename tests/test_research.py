@@ -40,6 +40,13 @@ class ResearchTests(unittest.TestCase):
   result=json.loads((ROOT/'results'/'sepsis.json').read_text())
   for key,expected in [('random',.78),('expert',.78),('optimal',.88)]:self.assertLess(abs(result['our_exact_values'][key]-expected),.01)
   self.assertLess(result['neural_greedy']['expected_return'],result['our_exact_values']['optimal'])
+ def test_sepsis_pivot_negative(self):
+  base=json.loads((ROOT/'results'/'sepsis.json').read_text())
+  pivot=json.loads((ROOT/'results'/'sepsis_pivot.json').read_text())
+  self.assertEqual(pivot['feature_dim'],47)
+  self.assertLess(pivot['neural_expected_return'],base['our_exact_values']['optimal'])
+  self.assertLess(pivot['neural_expected_return'],base['neural_greedy']['expected_return'])
+  self.assertAlmostEqual(sum(x['initial_mass'] for x in pivot['sofa_initial_state_strata'].values()),1.0,places=10)
  def test_tool_count_no_padding(self):
   tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],4)
  def test_descriptive_probes_not_treatment(self):
