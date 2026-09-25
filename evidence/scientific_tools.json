@@ -50,5 +50,6 @@
   "project_counts": {
     "sepsis": 6,
     "parkinson": 4
-  }
+  },
+  "tool_count_interpretation": "6 distinct tools across repository; project-specific: 6 sepsis, 4 Parkinson. Do not count global pool as 6 for each project."
 }

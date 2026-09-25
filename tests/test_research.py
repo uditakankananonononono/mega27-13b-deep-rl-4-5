@@ -61,7 +61,7 @@ class ResearchTests(unittest.TestCase):
   self.assertGreater(d['evaluation']['0.4']['paired_heavy_minus_original_mean_reward'],0)
   self.assertLess(d['evaluation']['0.12']['heavier_weight_0_40']['mean_energy'],d['evaluation']['0.12']['original_weight_0_12']['mean_energy'])
  def test_tool_count_no_padding(self):
-  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],6)
+  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],6);self.assertEqual(tools['project_counts'],{'sepsis':6,'parkinson':4})
  def test_descriptive_probes_not_treatment(self):
   for disease in ('sepsis','parkinson'):
    result=json.loads((ROOT/'results'/f'{disease}_geo.json').read_text());self.assertEqual(result['accessions_used'],150);self.assertEqual(result['features_used'],48);self.assertEqual(result['test_n'],45);self.assertTrue(0<=result['heldout_auc']<=1)
