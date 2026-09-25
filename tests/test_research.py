@@ -54,6 +54,14 @@ class ResearchTests(unittest.TestCase):
   self.assertLess(pivot['neural_expected_return'],base['our_exact_values']['optimal'])
   self.assertLess(pivot['neural_expected_return'],base['neural_greedy']['expected_return'])
   self.assertAlmostEqual(sum(x['initial_mass'] for x in pivot['sofa_initial_state_strata'].values()),1.0,places=10)
+ def test_sepsis_model_sensitivity_scoped(self):
+  for c in ('10','100'):
+   name='sepsis_model_sensitivity_10.json' if c=='10' else 'sepsis_model_sensitivity.json'
+   d=json.loads((ROOT/'results'/name).read_text());self.assertEqual(d['draws'],12)
+   self.assertEqual(d['pseudo_concentration'],int(c))
+   self.assertEqual(len(d['perturbed_fixed_policy_values']),12)
+   self.assertTrue(all(0<=v<=1 for v in d['perturbed_fixed_policy_values']))
+   self.assertIn('NOT a clinical confidence interval',d['limitation'])
  def test_mimic_demo_scope_and_counts(self):
   d=json.loads((ROOT/'results'/'sepsis_mimic_demo.json').read_text())
   self.assertEqual(d['sample_subjects'],100)

@@ -1,0 +1,28 @@
+{
+  "description": "Dirichlet perturbation on nonzero model transition supports, fixed original exact-optimal action map; synthetic model sensitivity only",
+  "source": "https://github.com/icu-sepsis/icu-sepsis",
+  "seed": 781,
+  "draws": 12,
+  "pseudo_concentration": 10.0,
+  "original_exact_optimal_value": 0.8751416994800841,
+  "perturbed_fixed_policy_values": [
+    0.8709658805204988,
+    0.850945613885775,
+    0.8863524593962896,
+    0.8681186416885655,
+    0.8746014295759683,
+    0.8573140452463222,
+    0.888835375541857,
+    0.8858285913238518,
+    0.8747773019538401,
+    0.8727186386343093,
+    0.8850778459759452,
+    0.8897532495363201
+  ],
+  "mean": 0.8754407561066285,
+  "p05_p95": [
+    0.854448251134076,
+    0.8892484188393653
+  ],
+  "limitation": "Pseudocount concentration is arbitrary; transition supports held fixed. This is NOT a clinical confidence interval, bootstrap over patients, robust policy certificate or published benchmark improvement."
+}
