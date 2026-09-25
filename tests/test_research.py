@@ -83,6 +83,16 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual(s['first_finite_numeric_probe_count'],48)
   self.assertTrue(0<=p['external_auc']<=1)
   self.assertIn('Neither source validates',d['limitation'])
+ def test_sepsis_state_holdout_exposes_memorization(self):
+  d=json.loads((ROOT/'results'/'sepsis_state_holdout.json').read_text())
+  self.assertEqual(len(d['splits']),3)
+  for split in d['splits']:
+   self.assertEqual(len(split['train_states']),570);self.assertEqual(len(split['test_states']),143)
+   self.assertFalse(set(split['train_states'])&set(split['test_states']))
+   self.assertEqual(split['train_action_match'],1.0)
+   self.assertLess(split['heldout_action_match'],.25)
+   self.assertLess(split['full_model_expected_return'],d['exact_model_optimal_value'])
+  self.assertIn('not external model generalization',d['limitation'])
  def test_sepsis_rank_pivot_is_model_memorization(self):
   d=json.loads((ROOT/'results'/'sepsis_rank_pivot.json').read_text())
   self.assertEqual(set(d['models']),{'32','64','128'})

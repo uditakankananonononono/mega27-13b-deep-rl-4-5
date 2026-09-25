@@ -16,7 +16,7 @@
     "formula_target": 10,
     "working_paper_pages": 8,
     "paper_target_approx": 20,
-    "tests_total_repo": 30,
+    "tests_total_repo": 31,
     "published_model_baselines_reproduced": true,
     "neural_outperforms_optimal": false,
     "clinical_validation": false,
@@ -29,7 +29,11 @@
     "gse54514_day1_out_of_fold_auc": 1.0,
     "gse54514_auc_validated": false,
     "rank_target_training_action_match": 1.0,
-    "rank_target_external_validation": false
+    "rank_target_external_validation": false,
+    "state_holdout_optimal_action_match_range": [
+      0.1258741258741259,
+      0.1958041958041958
+    ]
   },
   "parkinson": {
     "used_science_tools": 9,
@@ -42,7 +46,7 @@
     "formula_target": 10,
     "working_paper_pages": 9,
     "paper_target_approx": 20,
-    "tests_total_repo": 30,
+    "tests_total_repo": 31,
     "published_benchmark_comparable": false,
     "clinical_validation": false,
     "gate_complete": false,

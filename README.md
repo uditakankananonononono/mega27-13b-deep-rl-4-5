@@ -118,3 +118,7 @@ Reconstructed one-hot sepsis network at the original seed. Nonterminal Q MSE .00
 ### Sepsis rank-target pivot: memorize exact MDP policy, not patient benefit
 
 Three neural widths trained on all 713 exact-model best-action labels reached 100% **training-state** agreement and identical exact-model value .875142. This fixes the prior Q-regression network's ranking error (.786449) by supervised memorization of value iteration, not independent validation or deep-RL treatment discovery. Full sweep `src/sepsis_rank_pivot.py`, `results/sepsis_rank_pivot.json`. Patient outcomes and clinical claim unchanged.
+
+### Internal sepsis state holdout: memorization does not transfer
+
+Three fixed 570/143 state-ID splits of exact best-action labels left held-out optimal-action agreement at .126/.182/.196, despite perfect agreement on their training IDs. Same-split majority-action reference: .224/.196/.154. Full same-model returns .856390/.854850/.856915, below exact .875142. A one-hot input for a never-trained state ID lacks a meaningful shared representation. This is an internal negative, not independent patient or model validation: `src/sepsis_state_holdout.py`, `results/sepsis_state_holdout.json`.
