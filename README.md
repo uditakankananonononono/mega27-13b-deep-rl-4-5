@@ -35,7 +35,7 @@ Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-lev
 
 ## Working manuscripts
 
-`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 4 rendered pages each, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
+`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 5 sepsis and 6 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
 
 ### Sepsis representation pivot
 
@@ -60,3 +60,7 @@ At 512 neurons and 1000 action steps (one seed, shorter than published ~5555), u
 ### Full Env0 horizon checkpoint
 
 `src/parkinson_env0_chunk.py` resumed the 512-neuron upstream environment for the complete 5555 steps of its 5000-unit Env0 episode on matched seed 222. The 50+50 resume test exactly matched an uninterrupted 100-step run in reward and LFP. Full OFF versus +5 V upstream mean beta-component ratio is 22.48%; the published Table 1 Env0 high/zero mean is 19.8% (SD 1.9, six evaluations), source `evidence/dbs_published_table1.json`. One seed and no upstream-trained deep-RL policy means benchmark gate STILL OPEN. Outputs: `results/parkinson_env0_full_off_seed222.json`, `results/parkinson_env0_full_high_seed222.json`.
+
+### Native observable-threshold negative
+
+An arbitrary threshold policy on true DBS-Gym Env0 LFP features (512 neurons, 1200 steps, seed 223) yields 65.8% high-amplitude actions, energy 3950 (versus fixed-high 6000 for 1200 steps), and mean beta component 11.178. This is **not deep RL** and is not compared with unmatched-seed controls or the published full episode. It is a next pilot, not a result gate. Details: `src/parkinson_env0_adaptive.py`, `results/parkinson_env0_threshold_1200_seed223.json`.

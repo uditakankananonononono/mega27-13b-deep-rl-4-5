@@ -1,0 +1,19 @@
+{
+  "source": "https://github.com/NevVerVer/DBS-Gym",
+  "source_commit": "aa0b10b9502e4f62dea755ce6468da024235c319",
+  "model": "native 512-neuron Env0",
+  "policy": "fixed, arbitrary threshold on upstream observable LFP beta spectral power; NOT deep RL",
+  "threshold": 0.001,
+  "threshold_selected": "pilot heuristic, no independent tuning or clinical grounding",
+  "seed": 223,
+  "steps": 1200,
+  "published_episode_steps": 5555,
+  "mean_reward": -11.210630350112915,
+  "mean_beta_reward_component": 11.177713683446248,
+  "action_on_fraction": 0.6583333333333333,
+  "energy": 3950.0,
+  "global_low_beta_power": 0.001001718805830566,
+  "mean_observed_beta_before_action": 0.0011197267764267355,
+  "lfp_sha256": "8400c7f52e76e1003976a5e1571f21b10ddd56ef712e0fd0b1de7616a5301563",
+  "limitations": "Single seed, shortened episode, arbitrary threshold; not published benchmark or clinical recommendation."
+}

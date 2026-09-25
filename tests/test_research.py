@@ -54,6 +54,11 @@ class ResearchTests(unittest.TestCase):
   self.assertLess(pivot['neural_expected_return'],base['our_exact_values']['optimal'])
   self.assertLess(pivot['neural_expected_return'],base['neural_greedy']['expected_return'])
   self.assertAlmostEqual(sum(x['initial_mass'] for x in pivot['sofa_initial_state_strata'].values()),1.0,places=10)
+ def test_adaptive_native_threshold_honest(self):
+  d=json.loads((ROOT/'results'/'parkinson_env0_threshold_1200_seed223.json').read_text())
+  self.assertEqual(d['steps'],1200);self.assertTrue(0<d['action_on_fraction']<1)
+  self.assertIn('NOT deep RL',d['policy'])
+  self.assertTrue(d['energy']<6000)
  def test_full_env0_horizon_single_seed_not_benchmark(self):
   off=json.loads((ROOT/'results'/'parkinson_env0_full_off_seed222.json').read_text())
   high=json.loads((ROOT/'results'/'parkinson_env0_full_high_seed222.json').read_text())
