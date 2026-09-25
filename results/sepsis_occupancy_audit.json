@@ -1,0 +1,93 @@
+{
+  "source": "https://github.com/icu-sepsis/icu-sepsis",
+  "model": "released ICU-Sepsis MDP; first 713 nonterminal states; row-selected p for deterministic learned actions",
+  "definition": "Expected undiscounted visits d solves (I-P_pi,transposed)d=mu for transient states. Exact Q gap at each visited state assumes optimal continuation after that action. Sum d(s)*[V*(s)-Q*(s,pi(s))] equals J(optimal)-J(pi) under proper absorbing MDP and converged Bellman values.",
+  "optimal_model_value": 0.8751416994800841,
+  "splits": [
+    {
+      "seed": 31,
+      "test_count": 143,
+      "policies": {
+        "onehot": {
+          "model_value": 0.8563896106108838,
+          "visits_per_initial_case": 10.817489176015897,
+          "visit_mass_test_fraction": 0.19906104304184816,
+          "visit_weighted_action_match": 0.8255399783090484,
+          "visit_weighted_exact_q_shortfall": 0.018752088885003293,
+          "train_visit_fraction": 0.8009389569581516,
+          "initial_distribution_exact_q_shortfall": 0.0009840879794726014,
+          "train_visit_weighted_shortfall": 0.0,
+          "heldout_visit_weighted_shortfall": 0.018752088885003296
+        },
+        "centroid": {
+          "model_value": 0.8450721943555852,
+          "visits_per_initial_case": 10.624764963159105,
+          "visit_mass_test_fraction": 0.20407343481222953,
+          "visit_weighted_action_match": 0.8078376134989302,
+          "visit_weighted_exact_q_shortfall": 0.030069505167285654,
+          "train_visit_fraction": 0.7959265651877705,
+          "initial_distribution_exact_q_shortfall": 0.0013847410562624694,
+          "train_visit_weighted_shortfall": 0.008542339532924586,
+          "heldout_visit_weighted_shortfall": 0.021527165634361065
+        }
+      }
+    },
+    {
+      "seed": 47,
+      "test_count": 143,
+      "policies": {
+        "onehot": {
+          "model_value": 0.8548504342334381,
+          "visits_per_initial_case": 10.822982216372267,
+          "visit_mass_test_fraction": 0.19550963728128648,
+          "visit_weighted_action_match": 0.837024906834551,
+          "visit_weighted_exact_q_shortfall": 0.02029126503476694,
+          "train_visit_fraction": 0.8044903627187135,
+          "initial_distribution_exact_q_shortfall": 0.0009216750220089863,
+          "train_visit_weighted_shortfall": 0.0,
+          "heldout_visit_weighted_shortfall": 0.020291265034766935
+        },
+        "centroid": {
+          "model_value": 0.8528466722880395,
+          "visits_per_initial_case": 10.91546253680265,
+          "visit_mass_test_fraction": 0.19637260702569295,
+          "visit_weighted_action_match": 0.829240490693925,
+          "visit_weighted_exact_q_shortfall": 0.02229502716391618,
+          "train_visit_fraction": 0.8036273929743071,
+          "initial_distribution_exact_q_shortfall": 0.0010889938765100628,
+          "train_visit_weighted_shortfall": 0.005728804599829847,
+          "heldout_visit_weighted_shortfall": 0.016566222564086335
+        }
+      }
+    },
+    {
+      "seed": 83,
+      "test_count": 143,
+      "policies": {
+        "onehot": {
+          "model_value": 0.8569152150130066,
+          "visits_per_initial_case": 10.9538323535218,
+          "visit_mass_test_fraction": 0.18629753832480092,
+          "visit_weighted_action_match": 0.8447852913425984,
+          "visit_weighted_exact_q_shortfall": 0.018226484447961072,
+          "train_visit_fraction": 0.8137024616751992,
+          "initial_distribution_exact_q_shortfall": 0.0009401777984561181,
+          "train_visit_weighted_shortfall": 0.0,
+          "heldout_visit_weighted_shortfall": 0.018226484447961072
+        },
+        "centroid": {
+          "model_value": 0.8502644932098714,
+          "visits_per_initial_case": 11.07138796249652,
+          "visit_mass_test_fraction": 0.19460012862402193,
+          "visit_weighted_action_match": 0.8252557222779764,
+          "visit_weighted_exact_q_shortfall": 0.024877206280728044,
+          "train_visit_fraction": 0.805399871375978,
+          "initial_distribution_exact_q_shortfall": 0.0012005535544937626,
+          "train_visit_weighted_shortfall": 0.006736583275593191,
+          "heldout_visit_weighted_shortfall": 0.018140623005134852
+        }
+      }
+    }
+  ],
+  "limitations": "This is model-internal occupancy under two policies trained on exact same-model labels. It cannot estimate patient state visitation, causal clinical regret, independent transport or treatment safety."
+}

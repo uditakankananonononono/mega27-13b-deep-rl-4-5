@@ -83,6 +83,17 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual(s['first_finite_numeric_probe_count'],48)
   self.assertTrue(0<=p['external_auc']<=1)
   self.assertIn('Neither source validates',d['limitation'])
+ def test_sepsis_exact_occupancy_identity(self):
+  d=json.loads((ROOT/'results'/'sepsis_occupancy_audit.json').read_text())
+  self.assertEqual(len(d['splits']),3)
+  for split in d['splits']:
+   for name in ('onehot','centroid'):
+    p=split['policies'][name]
+    self.assertAlmostEqual(p['visit_weighted_exact_q_shortfall'],d['optimal_model_value']-p['model_value'],places=8)
+    self.assertAlmostEqual(p['train_visit_weighted_shortfall']+p['heldout_visit_weighted_shortfall'],p['visit_weighted_exact_q_shortfall'],places=8)
+    self.assertGreater(p['visits_per_initial_case'],10)
+   self.assertGreater(split['policies']['centroid']['visit_weighted_exact_q_shortfall'],split['policies']['onehot']['visit_weighted_exact_q_shortfall'])
+  self.assertIn('cannot estimate patient',d['limitations'])
  def test_sepsis_centroid_holdout_tradeoff(self):
   c=json.loads((ROOT/'results'/'sepsis_centroid_holdout.json').read_text())
   o=json.loads((ROOT/'results'/'sepsis_state_holdout.json').read_text())

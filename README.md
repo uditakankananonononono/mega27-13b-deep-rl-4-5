@@ -35,7 +35,7 @@ Counting 479+35 day-one (sepsis) or 438+72 (Parkinson) distinct GSM identifiers 
 
 ## Working manuscripts
 
-`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 9 sepsis and 9 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
+`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 10 sepsis and 9 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
 
 ### Sepsis representation pivot
 
@@ -126,3 +126,7 @@ Three fixed 570/143 state-ID splits of exact best-action labels left held-out op
 ### Sepsis centroid state-transfer pivot
 
 Replacing one-hot state IDs with the published 47-dimensional centroids on the same three state holdouts improves held-out exact-action agreement to .266/.371/.343 from .126/.182/.196. But whole same-model returns decline on every split to .845072/.852847/.850264 (one-hot .856390/.854850/.856915). Both are supervised on exact model labels, and the centroid run uses 150 rather than 100 epochs. This is neither a controlled single-factor causal comparison nor patient validation: `src/sepsis_centroid_holdout.py`, `results/sepsis_centroid_holdout.json`.
+
+### Exact in-model occupancy audit
+
+For the three holdout splits, sparse policy-induced visitation solves account for the centroid policies' lower full-model values despite their better unweighted held-out action agreement. One-hot weighted Q shortfalls .018752/.020291/.018226 versus centroid .030070/.022295/.024877 equal each policy's exact-model optimal value gap up to numerical residual. Centroid has nonzero training-state weighted shortfall in all splits; one-hot training-state shortfall is zero. These are expected state visits under the *estimated MDP*, not patient counts or clinical regret: `src/sepsis_occupancy_audit.py`, `results/sepsis_occupancy_audit.json`.
