@@ -54,6 +54,13 @@ class ResearchTests(unittest.TestCase):
   self.assertLess(pivot['neural_expected_return'],base['our_exact_values']['optimal'])
   self.assertLess(pivot['neural_expected_return'],base['neural_greedy']['expected_return'])
   self.assertAlmostEqual(sum(x['initial_mass'] for x in pivot['sofa_initial_state_strata'].values()),1.0,places=10)
+ def test_geo_cohort_split_audits(self):
+  s=json.loads((ROOT/'results'/'sepsis_geo_cohort.json').read_text())
+  p=json.loads((ROOT/'results'/'parkinson_geo_cohort.json').read_text())
+  self.assertEqual((s['train_count'],s['test_count']),(99,51))
+  self.assertEqual((p['train_count'],p['test_count']),(114,36))
+  self.assertLess(p['cohort_heldout_auc'],.5)
+  for d in (s,p):self.assertEqual(d['accessions_used'],150);self.assertEqual(len(d['test_accessions']),d['test_count'])
  def test_adaptive_native_threshold_honest(self):
   d=json.loads((ROOT/'results'/'parkinson_env0_threshold_1200_seed223.json').read_text())
   self.assertEqual(d['steps'],1200);self.assertTrue(0<d['action_on_fraction']<1)

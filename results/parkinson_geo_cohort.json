@@ -1,0 +1,57 @@
+{
+  "features_used": 48,
+  "accessions_used": 150,
+  "train_count": 114,
+  "test_count": 36,
+  "cohort_label_counts": {
+    "TRAINING": {
+      "CONTROL": 55,
+      "IPD": 59
+    },
+    "VALIDATION": {
+      "CONTROL": 19,
+      "IPD": 17
+    }
+  },
+  "positive_label": "IPD",
+  "cohort_heldout_auc": 0.42105263157894735,
+  "test_accessions": [
+    "GSM2630764",
+    "GSM2630765",
+    "GSM2630781",
+    "GSM2630791",
+    "GSM2630793",
+    "GSM2630802",
+    "GSM2630813",
+    "GSM2630818",
+    "GSM2630827",
+    "GSM2630838",
+    "GSM2630839",
+    "GSM2630841",
+    "GSM2630862",
+    "GSM2630864",
+    "GSM2630879",
+    "GSM2630898",
+    "GSM2630899",
+    "GSM2630900",
+    "GSM2630903",
+    "GSM2630905",
+    "GSM2630906",
+    "GSM2630907",
+    "GSM2630909",
+    "GSM2630916",
+    "GSM2630917",
+    "GSM2630922",
+    "GSM2630923",
+    "GSM2630924",
+    "GSM2630925",
+    "GSM2630927",
+    "GSM2630928",
+    "GSM2630929",
+    "GSM2630930",
+    "GSM2630931",
+    "GSM2630932",
+    "GSM2630956"
+  ],
+  "limitations": "Use original GEO cohort labels, not independent studies; only first 150 eligible GEO matrix samples and first 48 probes, no batch balancing, no policy effect, no clinical biomarker claim."
+}

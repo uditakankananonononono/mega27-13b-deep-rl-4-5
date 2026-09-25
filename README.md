@@ -35,7 +35,7 @@ Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-lev
 
 ## Working manuscripts
 
-`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 5 sepsis and 6 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
+`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 5 sepsis and 7 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
 
 ### Sepsis representation pivot
 
@@ -64,3 +64,7 @@ At 512 neurons and 1000 action steps (one seed, shorter than published ~5555), u
 ### Native observable-threshold negative
 
 An arbitrary threshold policy on true DBS-Gym Env0 LFP features (512 neurons, 1200 steps, seed 223) yields 65.8% high-amplitude actions, energy 3950 (versus fixed-high 6000 for 1200 steps), and mean beta component 11.178. This is **not deep RL** and is not compared with unmatched-seed controls or the published full episode. It is a next pilot, not a result gate. Details: `src/parkinson_env0_adaptive.py`, `results/parkinson_env0_threshold_1200_seed223.json`.
+
+### Cohort-split molecular stress tests
+
+Using original GEO cohort labels rather than random splitting, GSE65682 discovery-to-validation AUC is 0.642 (99 train, 51 test) versus prior random .523; GSE99039 training-to-validation AUC is 0.421 (114 train, 36 test) versus prior random .595. Same GSE, first 150 eligible sample accessions and first 48 arbitrary probes; neither result demonstrates clinical biomarkers or policy effects. The Parkinson decrease is kept as a negative. Scripts/results: `src/geo_cohort_audit.py`, `results/*_geo_cohort.json`.
