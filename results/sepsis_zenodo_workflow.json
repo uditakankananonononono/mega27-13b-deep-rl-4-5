@@ -1,0 +1,61 @@
+{
+  "source": "https://zenodo.org/records/3989590",
+  "source_sha256": "46021fd5d8e543bfe06eb78aec8f3f5333b561e1a915432e5c97dd330484679e",
+  "authentic_log_sha256": "1e0b6bf7ece28e56806cc82453d674ca263c933690472c751923824e12066718",
+  "real_events": 2654,
+  "real_case_ids": 1050,
+  "activities": {
+    "ER Sepsis Triage": 1049,
+    "IV Antibiotics": 823,
+    "Release A": 671,
+    "Release B": 56,
+    "Release C": 25,
+    "Release D": 24,
+    "Release E": 6
+  },
+  "event_fields": [
+    "case_id",
+    "activity_label",
+    "unix_timestamp"
+  ],
+  "top_patterns": [
+    [
+      "ER Sepsis Triage > IV Antibiotics > Release A",
+      589
+    ],
+    [
+      "ER Sepsis Triage > IV Antibiotics",
+      141
+    ],
+    [
+      "ER Sepsis Triage",
+      126
+    ],
+    [
+      "ER Sepsis Triage > Release A",
+      79
+    ],
+    [
+      "ER Sepsis Triage > IV Antibiotics > Release B",
+      45
+    ]
+  ],
+  "released_cases": 781,
+  "release_labels": {
+    "Release A": 670,
+    "Release B": 56,
+    "Release C": 25,
+    "Release D": 24,
+    "Release E": 6
+  },
+  "triage_to_antibiotic_pairs": 820,
+  "triage_to_antibiotic_median_hours": 1.5323611111111113,
+  "triage_to_release_pairs": 781,
+  "triage_to_release_median_hours": 131.04083333333332,
+  "excluded_synthetic_log_names": [
+    "x10.log",
+    "x100.log",
+    "x1000.log"
+  ],
+  "limitation": "Original event log is a simplified hospital workflow excerpt, not an ICU time-series; its Release A-E labels are not mortality or health outcomes. IV Antibiotics is an activity event without dose or fluid/vasopressor actions, physiologic state, transition or intervention propensity. The three amplified logs are synthetic and excluded. Case IDs are neither independent GEO GSM accessions nor validated treatment trajectories; durations are descriptive and may include nonclinical delays. No off-policy RL or clinical efficacy estimate."
+}
