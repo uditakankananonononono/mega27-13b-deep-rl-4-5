@@ -1,0 +1,827 @@
+{
+  "source": "https://physionet.org/content/tremordb/1.0.0/",
+  "records": [
+    {
+      "filename": "g1ren.let",
+      "group": "renh",
+      "subject": "g1",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 6234,
+      "rms_raw_instrument_units": 4.595145844829983,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 1.4233759171583877,
+      "source_sha256": "b3e499ed7cf66f6c58354de64ac7a40fe7ecb919c8684d1dd5d5c02fcb868722"
+    },
+    {
+      "filename": "g2ren.rit",
+      "group": "renh",
+      "subject": "g2",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 7680,
+      "rms_raw_instrument_units": 5.419415568506134,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 3.1882341871224895,
+      "source_sha256": "3a9facee99795da2663c8073682a68333a45c2e1b897f8d5a1a56b2dc24d5d1b"
+    },
+    {
+      "filename": "s6ren.let",
+      "group": "renh",
+      "subject": "s6",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 6288,
+      "rms_raw_instrument_units": 3.7755413055782117,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 1.2591063197105685,
+      "source_sha256": "ec37a0a95976984d646a60daed756afd6c9b3c522d51a8c66765ac658c10d233"
+    },
+    {
+      "filename": "s7ren.rit",
+      "group": "renh",
+      "subject": "s7",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 6468,
+      "rms_raw_instrument_units": 3.2029954430637195,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.5080083993261245,
+      "source_sha256": "8e03584ed115265858ad48107de558ad2b0f556f0c03c4f28a5ad063fddab8ab"
+    },
+    {
+      "filename": "s8ren.let",
+      "group": "renh",
+      "subject": "s8",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 6252,
+      "rms_raw_instrument_units": 3.485524402193356,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.7968528168558433,
+      "source_sha256": "a219f0b5aab84d051e5b718e02188f07131dea026372f7a423c302b362836df8"
+    },
+    {
+      "filename": "g9ren.rit",
+      "group": "renl",
+      "subject": "g9",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 6276,
+      "rms_raw_instrument_units": 10.087599802417879,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 30.003328331356713,
+      "source_sha256": "2997bf23f9a53ea7ca2a598cb235ddf99f486e169624658a7f0e9de61927ede2"
+    },
+    {
+      "filename": "g10ren.let",
+      "group": "renl",
+      "subject": "g10",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 6180,
+      "rms_raw_instrument_units": 11.442613518170296,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 14.95246646396255,
+      "source_sha256": "1f827f1e406257bf26b05857bc130ed193ac9f508e6034c7818e825b45066bb7"
+    },
+    {
+      "filename": "g11ren.let",
+      "group": "renl",
+      "subject": "g11",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 6276,
+      "rms_raw_instrument_units": 2.6986139273235112,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.5999524463618539,
+      "source_sha256": "702a6c9beaaf521e6e5138c5544a7b0d8a92c81a837c50ff53a3db1e50a30450"
+    },
+    {
+      "filename": "g12ren.rit",
+      "group": "renl",
+      "subject": "g12",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 6492,
+      "rms_raw_instrument_units": 3.0948058864888783,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.3292254439447409,
+      "source_sha256": "5d61b5794cc8045d3339aa5f39dee705c99b18564db4f5865313e47f69f9fcf8"
+    },
+    {
+      "filename": "g13ren.rit",
+      "group": "renl",
+      "subject": "g13",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 6282,
+      "rms_raw_instrument_units": 4.102829119190787,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.6619695578669922,
+      "source_sha256": "d9cda0835b19ca196abd523e0001c0b5e4e6c43fed3898347af1d91ef5c1d99e"
+    },
+    {
+      "filename": "s14ren.rit",
+      "group": "renl",
+      "subject": "s14",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 6408,
+      "rms_raw_instrument_units": 3.0397372799242532,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.9773016026580397,
+      "source_sha256": "d13c63d92c59ab3bd152bf8171a7114e66cf98cf1040e4aaa86e15427f4d2249"
+    },
+    {
+      "filename": "s15ren.rit",
+      "group": "renl",
+      "subject": "s15",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 7284,
+      "rms_raw_instrument_units": 2.4100298953851573,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.6744342017846141,
+      "source_sha256": "4a91f45bd956c8ffe03f269565e82dea284536c564408a4b8c18def244df710c"
+    },
+    {
+      "filename": "s16ren.let",
+      "group": "renl",
+      "subject": "s16",
+      "dbs_on": true,
+      "med_on": true,
+      "n_samples": 6300,
+      "rms_raw_instrument_units": 2.6706179060284905,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.2632291561937371,
+      "source_sha256": "27f4b5249767733a074332160000bb29f83dc8d45116ee9c91646910c8dda9d1"
+    },
+    {
+      "filename": "g1ref.let",
+      "group": "refh",
+      "subject": "g1",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 6690,
+      "rms_raw_instrument_units": 17.533075991876633,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 32.09181105879003,
+      "source_sha256": "af50bca71f5f9f44b40a432d1053404980a876fddb28a5b22b7936f2a6cd5b7c"
+    },
+    {
+      "filename": "g2ref.rit",
+      "group": "refh",
+      "subject": "g2",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 6336,
+      "rms_raw_instrument_units": 5.111577798330359,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 6.85962009720134,
+      "source_sha256": "6fa4405de4164017f31b57fbb7bbba686e331110bf4200f449d3a8be7636f5fa"
+    },
+    {
+      "filename": "s6ref.let",
+      "group": "refh",
+      "subject": "s6",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 7260,
+      "rms_raw_instrument_units": 19.668361135388636,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 171.4282438013639,
+      "source_sha256": "3fc1a21c0bb1ec8fd743782ee9c7343e33116bb7c7137be1fa37c1a056ccc95e"
+    },
+    {
+      "filename": "s7ref.rit",
+      "group": "refh",
+      "subject": "s7",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 6402,
+      "rms_raw_instrument_units": 14.31262921497299,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 163.73978304925248,
+      "source_sha256": "3b5e2f0dbed27051115243da8ecae2fc1f974db6114194964c4d97f42acbae33"
+    },
+    {
+      "filename": "s8ref.let",
+      "group": "refh",
+      "subject": "s8",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 7896,
+      "rms_raw_instrument_units": 7.396797805885667,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 28.557612843348885,
+      "source_sha256": "72b066141932fba707a312fbfa30643a07e7bceaec7c06c1bd10e9d2f40d1acf"
+    },
+    {
+      "filename": "g9ref.rit",
+      "group": "refl",
+      "subject": "g9",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 6174,
+      "rms_raw_instrument_units": 12.519684452302636,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 20.09050391967837,
+      "source_sha256": "59126de54ad5364bd7df6a80659e3ea46a948ddd0958495373b49f10bda32a50"
+    },
+    {
+      "filename": "g10ref.let",
+      "group": "refl",
+      "subject": "g10",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 6252,
+      "rms_raw_instrument_units": 4.131317986761794,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 5.203198189006133,
+      "source_sha256": "619078b3d5dee06356d4c2f26194c4047a4639afdc81ecd3dca5e677c419d462"
+    },
+    {
+      "filename": "g11ref.let",
+      "group": "refl",
+      "subject": "g11",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 6396,
+      "rms_raw_instrument_units": 3.5044755513387744,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.8551823540358329,
+      "source_sha256": "03d91f2b8463567c5fcce2c319fa2460170f8b7dee8f8aaf83c71c91630116c1"
+    },
+    {
+      "filename": "g12ref.rit",
+      "group": "refl",
+      "subject": "g12",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 6714,
+      "rms_raw_instrument_units": 2.6388035512909314,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.37306646438279145,
+      "source_sha256": "4f8f067333f023c4313c9f79d9841f1a81498ad79e42b980536b205c4b352446"
+    },
+    {
+      "filename": "g13ref.rit",
+      "group": "refl",
+      "subject": "g13",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 6564,
+      "rms_raw_instrument_units": 3.3324494562450284,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.46893599412208087,
+      "source_sha256": "5ade75aec08009252d589a2cc4558163f9ff6c303d164b0a8a3d94deea392097"
+    },
+    {
+      "filename": "s14ref.rit",
+      "group": "refl",
+      "subject": "s14",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 6282,
+      "rms_raw_instrument_units": 7.663909848599642,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 24.37313867303716,
+      "source_sha256": "b7c22c604aa39bf3709e7a6b79999959e87a3a4d286f5551e285def64789274f"
+    },
+    {
+      "filename": "s15ref.rit",
+      "group": "refl",
+      "subject": "s15",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 6228,
+      "rms_raw_instrument_units": 2.3975621014243313,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.307866327565958,
+      "source_sha256": "582bec5720938b8c8e64b01e34ce1e5010b40ff0c69e61b4ecaba1fbba54f05e"
+    },
+    {
+      "filename": "s16ref.let",
+      "group": "refl",
+      "subject": "s16",
+      "dbs_on": true,
+      "med_on": false,
+      "n_samples": 7128,
+      "rms_raw_instrument_units": 6.233947736154385,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 24.478182662719508,
+      "source_sha256": "4e5f43f24999b7c0b2ccc6651bbf2b7b1038b839d1e9cb264f576cc1de0c520d"
+    },
+    {
+      "filename": "g1ron.let",
+      "group": "ronh",
+      "subject": "g1",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 6264,
+      "rms_raw_instrument_units": 3.5353038968438897,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.6860247016721432,
+      "source_sha256": "ec52deefc25884f2bd798f95f3803504ce9d84a521f84b75527bc3bdfbe7b9f6"
+    },
+    {
+      "filename": "g2ron.rit",
+      "group": "ronh",
+      "subject": "g2",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 7134,
+      "rms_raw_instrument_units": 9.581626565143624,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 6.852189745024248,
+      "source_sha256": "4ad456a92745965c31b43118b3726a439cdee87712526c31e8387d2e93bec5c7"
+    },
+    {
+      "filename": "v4ron.rit",
+      "group": "ronh",
+      "subject": "v4",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 6432,
+      "rms_raw_instrument_units": 0.20588716162232049,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.026484626308134633,
+      "source_sha256": "fc07a1f45bd74b084b676ee0b2e106a69481ede82ccece5cb3cfedb61c42a7c7"
+    },
+    {
+      "filename": "v5ron.let",
+      "group": "ronh",
+      "subject": "v5",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 7344,
+      "rms_raw_instrument_units": 0.048204694503416946,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 2.6302445180941813e-06,
+      "source_sha256": "c8c2062fa0e9ece4aa88894cca7fad865131e1435b0bd62480027d9d0f5c6668"
+    },
+    {
+      "filename": "s6ron.let",
+      "group": "ronh",
+      "subject": "s6",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 7356,
+      "rms_raw_instrument_units": 13.393887567496787,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 5.536576442801867,
+      "source_sha256": "cf28df0cd7f8931fd08118b32da54cea97585fbaf403083898060bada84a8e87"
+    },
+    {
+      "filename": "s7ron.rit",
+      "group": "ronh",
+      "subject": "s7",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 6234,
+      "rms_raw_instrument_units": 3.463066798232673,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 1.2114616724608012,
+      "source_sha256": "cba0445332397e5ed22adffd3c47875cf3a1fd8a192326a93b5d41f993224881"
+    },
+    {
+      "filename": "s8ron.let",
+      "group": "ronh",
+      "subject": "s8",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 6720,
+      "rms_raw_instrument_units": 2.657110854902011,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.29586890183402426,
+      "source_sha256": "33aaf3adcbca1b8f5f863525d892f0a64bb582cd460845b4db0e059f18a6a3ef"
+    },
+    {
+      "filename": "g9ron.rit",
+      "group": "ronl",
+      "subject": "g9",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 9156,
+      "rms_raw_instrument_units": 4.535158271820149,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 3.1007285121714467,
+      "source_sha256": "5cf517bbda4c4a96121c93877715c1ddbb0b576fb103d18d7b76ea5c099e7a6a"
+    },
+    {
+      "filename": "g10ron.let",
+      "group": "ronl",
+      "subject": "g10",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 12108,
+      "rms_raw_instrument_units": 20.65392889158714,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 18.28964718404693,
+      "source_sha256": "515a76208084d1a491d103394e04566d4d4dc1681d81926dc8e37080985f472c"
+    },
+    {
+      "filename": "g11ron.let",
+      "group": "ronl",
+      "subject": "g11",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 6366,
+      "rms_raw_instrument_units": 3.9956281579214163,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 1.7770338068217355,
+      "source_sha256": "7a643ef295f7367f45f77a80933eda1eee4f1e3d7b7b52d5131438183c1bd16d"
+    },
+    {
+      "filename": "g12ron.rit",
+      "group": "ronl",
+      "subject": "g12",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 7176,
+      "rms_raw_instrument_units": 2.9945705234380307,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.4089311514809416,
+      "source_sha256": "125e05e39bd321249c31fd5d54f77b353041f72c5ac02faf7b6b8dba323674f4"
+    },
+    {
+      "filename": "g13ron.rit",
+      "group": "ronl",
+      "subject": "g13",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 6234,
+      "rms_raw_instrument_units": 4.184163967143986,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 1.2159329503343854,
+      "source_sha256": "2dfd89764b12828bba9df8c04ca1fe1e2bc2b929c2d1e970cd758d927d886d54"
+    },
+    {
+      "filename": "s14ron.rit",
+      "group": "ronl",
+      "subject": "s14",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 6228,
+      "rms_raw_instrument_units": 2.6883059724079996,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.34475446140077465,
+      "source_sha256": "8c48b98a8236740e850e6e156319936260dae436d60e04a43ede1395356b04b2"
+    },
+    {
+      "filename": "s15ron.rit",
+      "group": "ronl",
+      "subject": "s15",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 6102,
+      "rms_raw_instrument_units": 3.3581777548988105,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.37457044217498103,
+      "source_sha256": "abc735c97bb932c6ad1ca1872ee8e897472a3027467672840443120e65f80a68"
+    },
+    {
+      "filename": "s16ron.let",
+      "group": "ronl",
+      "subject": "s16",
+      "dbs_on": false,
+      "med_on": true,
+      "n_samples": 6696,
+      "rms_raw_instrument_units": 3.3375882341935887,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.48401605227605343,
+      "source_sha256": "81a85917311fd72b0c5eeb05e7f2098d78a520ece58b5121daeaf3afd3b3d7e2"
+    },
+    {
+      "filename": "g2rof.rit",
+      "group": "rofh",
+      "subject": "g2",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 7176,
+      "rms_raw_instrument_units": 0.31246168817549536,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.052796470504200804,
+      "source_sha256": "44110e89104f42703aa63258f21a6d6096b12b85996a76b3f24d7f9990ce49f5"
+    },
+    {
+      "filename": "v4rof.rit",
+      "group": "rofh",
+      "subject": "v4",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 6282,
+      "rms_raw_instrument_units": 0.17752671259148659,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.024067411305345447,
+      "source_sha256": "3ae1c1ad2fa64c12726da22cbf897d8f176865de49da4807faf14b6a5b551255"
+    },
+    {
+      "filename": "v5rof.let",
+      "group": "rofh",
+      "subject": "v5",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 3400,
+      "rms_raw_instrument_units": 0.08775518754567431,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.004766500144733355,
+      "source_sha256": "a1b8d38f52fac00c609232481ec5cfc53e534e9cbd1d30b65bc40d15d6c03c00"
+    },
+    {
+      "filename": "s6rof.let",
+      "group": "rofh",
+      "subject": "s6",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 9114,
+      "rms_raw_instrument_units": 0.2736049306089786,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.06440961143410945,
+      "source_sha256": "015cce0a1c9b4e8ae6604c079ba87f6c43b2256b0e8c0706942efca1c2104508"
+    },
+    {
+      "filename": "s7rof.rit",
+      "group": "rofh",
+      "subject": "s7",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 6264,
+      "rms_raw_instrument_units": 52.93142018740434,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 2399.4137407390162,
+      "source_sha256": "8eab18be5feeee17d505dd71e0a6307e0377837aae56a87ea39c13b7ac1d6006"
+    },
+    {
+      "filename": "s8rof.let",
+      "group": "rofh",
+      "subject": "s8",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 6216,
+      "rms_raw_instrument_units": 0.13068213274897153,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.009351854693582956,
+      "source_sha256": "ff5c752396163ea9a28eb4c7e2c634ea155b9999e902aa762d01eef4bbfce880"
+    },
+    {
+      "filename": "g9rof.rit",
+      "group": "rofl",
+      "subject": "g9",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 6354,
+      "rms_raw_instrument_units": 5.432886842450396,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 14.750501407855456,
+      "source_sha256": "4bf5c62a9794b5a0e48d35a07fcb75de1213b7bca10ebb73a8751f778db5ff7c"
+    },
+    {
+      "filename": "g10rof.let",
+      "group": "rofl",
+      "subject": "g10",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 6180,
+      "rms_raw_instrument_units": 4.58194447918741,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 3.9789562444601962,
+      "source_sha256": "34d4468a22f1a4a392f2eedb9538dbcfee4838632e7241c82db753a783198ac8"
+    },
+    {
+      "filename": "g11rof.let",
+      "group": "rofl",
+      "subject": "g11",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 6306,
+      "rms_raw_instrument_units": 6.6654461200333435,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 12.604938462303608,
+      "source_sha256": "1ae71b55c2f56f32fc4a155335080a21a2073239b6f680e91b57447783042dd7"
+    },
+    {
+      "filename": "g12rof.rit",
+      "group": "rofl",
+      "subject": "g12",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 6360,
+      "rms_raw_instrument_units": 3.10399316766414,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.42716351448082435,
+      "source_sha256": "a25e2b4bde773e7af07c73f49d99cdae7736ed7e954fba8be518ced511d50483"
+    },
+    {
+      "filename": "g13rof.rit",
+      "group": "rofl",
+      "subject": "g13",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 7230,
+      "rms_raw_instrument_units": 6.0665176368240825,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 4.570722758725175,
+      "source_sha256": "89cdd9443630b8688ab1dc3d350374c679111ae9998154a5230d3759edfb516c"
+    },
+    {
+      "filename": "s14rof.rit",
+      "group": "rofl",
+      "subject": "s14",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 6492,
+      "rms_raw_instrument_units": 3.4191871329353716,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.7295763363351443,
+      "source_sha256": "07eb8c146bb0d953c26d145d00a1dcfe7559917acccdf0e02ff8210e37254dc9"
+    },
+    {
+      "filename": "s15rof.rit",
+      "group": "rofl",
+      "subject": "s15",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 6300,
+      "rms_raw_instrument_units": 2.4267339570733126,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 0.3973804971081706,
+      "source_sha256": "55d2bd55c1663e585f46ffe85472b92cc418d2e046ae7d1949ceb54dd4afb75e"
+    },
+    {
+      "filename": "s16rof.let",
+      "group": "rofl",
+      "subject": "s16",
+      "dbs_on": false,
+      "med_on": false,
+      "n_samples": 6594,
+      "rms_raw_instrument_units": 5.640177263190072,
+      "tremor_4_6hz_welch_power_raw_instrument_units": 18.057312997198064,
+      "source_sha256": "d9293c768aeafcd31e1cc4ab74ddfa772761affe1281ef8fb9de6f26070e24c0"
+    }
+  ],
+  "paired_fixed_condition_records": [
+    {
+      "subject": "g1",
+      "med_on": true,
+      "on_file": "g1ren.let",
+      "off_file": "g1ron.let",
+      "on_off_rms_ratio": 1.2997880744940364,
+      "on_off_4_6hz_power_ratio": 2.0748172969413434
+    },
+    {
+      "subject": "g10",
+      "med_on": true,
+      "on_file": "g10ren.let",
+      "off_file": "g10ron.let",
+      "on_off_rms_ratio": 0.5540163122586889,
+      "on_off_4_6hz_power_ratio": 0.8175371735439914
+    },
+    {
+      "subject": "g11",
+      "med_on": true,
+      "on_file": "g11ren.let",
+      "off_file": "g11ron.let",
+      "on_off_rms_ratio": 0.6753916582486418,
+      "on_off_4_6hz_power_ratio": 0.3376145372466955
+    },
+    {
+      "subject": "g12",
+      "med_on": true,
+      "on_file": "g12ren.rit",
+      "off_file": "g12ron.rit",
+      "on_off_rms_ratio": 1.0334723668273367,
+      "on_off_4_6hz_power_ratio": 0.8050877091472562
+    },
+    {
+      "subject": "g13",
+      "med_on": true,
+      "on_file": "g13ren.rit",
+      "off_file": "g13ron.rit",
+      "on_off_rms_ratio": 0.9805612665775342,
+      "on_off_4_6hz_power_ratio": 0.5444128787569648
+    },
+    {
+      "subject": "g2",
+      "med_on": true,
+      "on_file": "g2ren.rit",
+      "off_file": "g2ron.rit",
+      "on_off_rms_ratio": 0.5656049660942822,
+      "on_off_4_6hz_power_ratio": 0.46528690911363657
+    },
+    {
+      "subject": "g9",
+      "med_on": true,
+      "on_file": "g9ren.rit",
+      "off_file": "g9ron.rit",
+      "on_off_rms_ratio": 2.224310420454037,
+      "on_off_4_6hz_power_ratio": 9.676219060644339
+    },
+    {
+      "subject": "s14",
+      "med_on": true,
+      "on_file": "s14ren.rit",
+      "off_file": "s14ron.rit",
+      "on_off_rms_ratio": 1.1307259334031332,
+      "on_off_4_6hz_power_ratio": 2.83477579575666
+    },
+    {
+      "subject": "s15",
+      "med_on": true,
+      "on_file": "s15ren.rit",
+      "off_file": "s15ron.rit",
+      "on_off_rms_ratio": 0.7176600142352432,
+      "on_off_4_6hz_power_ratio": 1.800553716594518
+    },
+    {
+      "subject": "s16",
+      "med_on": true,
+      "on_file": "s16ren.let",
+      "off_file": "s16ron.let",
+      "on_off_rms_ratio": 0.8001639862784786,
+      "on_off_4_6hz_power_ratio": 0.5438438559132893
+    },
+    {
+      "subject": "s6",
+      "med_on": true,
+      "on_file": "s6ren.let",
+      "off_file": "s6ron.let",
+      "on_off_rms_ratio": 0.28188539634604615,
+      "on_off_4_6hz_power_ratio": 0.22741604540609917
+    },
+    {
+      "subject": "s7",
+      "med_on": true,
+      "on_file": "s7ren.rit",
+      "off_file": "s7ron.rit",
+      "on_off_rms_ratio": 0.9249014326545254,
+      "on_off_4_6hz_power_ratio": 0.41933509814984427
+    },
+    {
+      "subject": "s8",
+      "med_on": true,
+      "on_file": "s8ren.let",
+      "off_file": "s8ron.let",
+      "on_off_rms_ratio": 1.311772294243213,
+      "on_off_4_6hz_power_ratio": 2.693263171344921
+    },
+    {
+      "subject": "g10",
+      "med_on": false,
+      "on_file": "g10ref.let",
+      "off_file": "g10rof.let",
+      "on_off_rms_ratio": 0.9016516907892492,
+      "on_off_4_6hz_power_ratio": 1.3076791674325192
+    },
+    {
+      "subject": "g11",
+      "med_on": false,
+      "on_file": "g11ref.let",
+      "off_file": "g11rof.let",
+      "on_off_rms_ratio": 0.5257675912803333,
+      "on_off_4_6hz_power_ratio": 0.06784502412235852
+    },
+    {
+      "subject": "g12",
+      "med_on": false,
+      "on_file": "g12ref.rit",
+      "off_file": "g12rof.rit",
+      "on_off_rms_ratio": 0.8501318813393911,
+      "on_off_4_6hz_power_ratio": 0.8733575123713864
+    },
+    {
+      "subject": "g13",
+      "med_on": false,
+      "on_file": "g13ref.rit",
+      "off_file": "g13rof.rit",
+      "on_off_rms_ratio": 0.549318349627286,
+      "on_off_4_6hz_power_ratio": 0.10259558911704203
+    },
+    {
+      "subject": "g2",
+      "med_on": false,
+      "on_file": "g2ref.rit",
+      "off_file": "g2rof.rit",
+      "on_off_rms_ratio": 16.359054539382186,
+      "on_off_4_6hz_power_ratio": 129.92573237742374
+    },
+    {
+      "subject": "g9",
+      "med_on": false,
+      "on_file": "g9ref.rit",
+      "off_file": "g9rof.rit",
+      "on_off_rms_ratio": 2.3044257713006,
+      "on_off_4_6hz_power_ratio": 1.3620217621198332
+    },
+    {
+      "subject": "s14",
+      "med_on": false,
+      "on_file": "s14ref.rit",
+      "off_file": "s14rof.rit",
+      "on_off_rms_ratio": 2.241442059364612,
+      "on_off_4_6hz_power_ratio": 33.40724946682058
+    },
+    {
+      "subject": "s15",
+      "med_on": false,
+      "on_file": "s15ref.rit",
+      "off_file": "s15rof.rit",
+      "on_off_rms_ratio": 0.9879789642519515,
+      "on_off_4_6hz_power_ratio": 0.7747393991561543
+    },
+    {
+      "subject": "s16",
+      "med_on": false,
+      "on_file": "s16ref.let",
+      "off_file": "s16rof.let",
+      "on_off_rms_ratio": 1.1052751438929913,
+      "on_off_4_6hz_power_ratio": 1.3555827861275798
+    },
+    {
+      "subject": "s6",
+      "med_on": false,
+      "on_file": "s6ref.let",
+      "off_file": "s6rof.let",
+      "on_off_rms_ratio": 71.88598937749991,
+      "on_off_4_6hz_power_ratio": 2661.53202890742
+    },
+    {
+      "subject": "s7",
+      "med_on": false,
+      "on_file": "s7ref.rit",
+      "off_file": "s7rof.rit",
+      "on_off_rms_ratio": 0.27039949361454785,
+      "on_off_4_6hz_power_ratio": 0.06824157929462421
+    },
+    {
+      "subject": "s8",
+      "med_on": false,
+      "on_file": "s8ref.let",
+      "off_file": "s8rof.let",
+      "on_off_rms_ratio": 56.601446963635354,
+      "on_off_4_6hz_power_ratio": 3053.6844058264196
+    }
+  ],
+  "record_count": 55,
+  "subject_count": 15,
+  "pair_count": 25,
+  "on_off_power_ratio_median": 0.8733575123713864,
+  "paired_by_medication": {
+    "True": {
+      "pair_count": 13,
+      "median_on_off_power_ratio": 0.8050877091472562
+    },
+    "False": {
+      "pair_count": 12,
+      "median_on_off_power_ratio": 1.3316309767800494
+    }
+  },
+  "limitation": "Fixed-condition finger tremor velocity, heterogeneous instrument ranges, medication conditions and within-subject repeated recordings. No LFP beta, step-level adaptive stimulation actions, randomized counterfactual, or clinical policy-value estimate. RMS/power in raw instrument units; paired ratios descriptive only."
+}

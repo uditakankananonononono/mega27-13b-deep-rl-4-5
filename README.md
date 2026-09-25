@@ -96,3 +96,7 @@ A two-layer tanh Bernoulli REINFORCE policy trained on 4 x 180 action steps in r
 ### Parkinson native optimizer pivot: all-OFF collapse
 
 After negligible REINFORCE parameter drift, Adam episode updates, broader initial weights and no prior-action shortcut made weights change measurably (0.293/0.390 L2 in hidden layers). Yet deterministic native 1000-step seed-222 evaluation chose OFF every step: mean reward -19.990, the archived OFF control, worse than matched fixed-high -6.831 on this single seed/horizon. This is a preserved negative, not an RL benchmark victory. Script, metrics and trained weights: `src/parkinson_native_reinforce_adam.py`, `results/parkinson_native_reinforce_adam.json`, `data/parkinson/native_reinforce_adam_weights.npz`.
+
+### Human Parkinson tremor recordings: fixed conditions only
+
+Fetched and numerically analyzed 55 PhysioNet Parkinsonian tremor finger-velocity recordings across 15 subjects; 25 within-subject DBS-on/off pairs at fixed medication state gave descriptive median 4-6 Hz power ratio .873 (med-on .805 across 13 pairs, med-off 1.332 across 12). Mixed results, heterogeneous calibration and nonrandomized condition order. These are *not* LFP or step-level adaptive DBS action trajectories and cannot validate a treatment policy. Script and all source hashes: `src/parkinson_tremordb.py`, `results/parkinson_tremordb.json`; source https://physionet.org/content/tremordb/1.0.0/ . Parkinson science/data tool count 9/40.

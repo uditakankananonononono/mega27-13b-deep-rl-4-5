@@ -1,7 +1,7 @@
 {
   "as_of": "2026-09-25",
   "counting_rules": {
-    "external_tools": "unique actually used science/data tools per project, no git/curl/build/pytest/literature DB; shared tools counted once per project",
+    "external_tools": "Unique actually-used science/data products or libraries per project, not submodules; Parkinson PhysioNet tremor database adds one, SciPy Welch is not an extra tool.",
     "datasets": "Unique GEO GSM sample accessions with measured numeric features and labels used across two studies per project; GSE54514 counts day-one sepsis samples only, not repeated follow-up days. Not independent treatment trajectories.",
     "papers": "rendered substantive pages, not title/inventory inflation"
   },
@@ -16,7 +16,7 @@
     "formula_target": 10,
     "working_paper_pages": 6,
     "paper_target_approx": 20,
-    "tests_total_repo": 26,
+    "tests_total_repo": 27,
     "published_model_baselines_reproduced": true,
     "neural_outperforms_optimal": false,
     "clinical_validation": false,
@@ -28,7 +28,7 @@
     "independent_series_gsm_samples_used": 35
   },
   "parkinson": {
-    "used_science_tools": 8,
+    "used_science_tools": 9,
     "science_tool_target": 40,
     "verified_gsm_samples_used": 510,
     "accession_target": 120,
@@ -36,9 +36,9 @@
     "policy_trajectory_datasets": 0,
     "numbered_formulas": 14,
     "formula_target": 10,
-    "working_paper_pages": 7,
+    "working_paper_pages": 8,
     "paper_target_approx": 20,
-    "tests_total_repo": 26,
+    "tests_total_repo": 27,
     "published_benchmark_comparable": false,
     "clinical_validation": false,
     "gate_complete": false,
@@ -47,6 +47,8 @@
     "independent_series_gsm_samples_used": 72,
     "independent_series_cross_platform_auc": 0.5336363636363637,
     "native_full_neuron_deep_rl_short_pilot": true,
-    "native_adam_pivot_all_off_negative": true
+    "native_adam_pivot_all_off_negative": true,
+    "tremordb_fixed_condition_records_used": 55,
+    "tremordb_subjects": 15
   }
 }

@@ -1,6 +1,6 @@
 {
   "rule": "Count only actually-used scientific analysis/data tools or science libraries; generic transfer, literature search, tests, builds and source control excluded. Do not treat modules or workflows as separate tools.",
-  "verified_distinct_count": 11,
+  "verified_distinct_count": 12,
   "used": [
     {
       "name": "NumPy",
@@ -63,6 +63,12 @@
       "url": "https://pandas.pydata.org/",
       "scope": "Sepsis project only",
       "evidence": "src/mimic_demo_audit.py; joined public demo ICD, inputevents and item dictionaries and summarized real event rows"
+    },
+    {
+      "name": "PhysioNet Parkinsonian Tremor database",
+      "url": "https://physionet.org/content/tremordb/1.0.0/",
+      "scope": "Parkinson project only",
+      "evidence": "src/parkinson_tremordb.py fetched and numerically analyzed 55 original fixed-condition finger-tremor records, results/parkinson_tremordb.json; neither adaptive stimulation trajectories nor LFP beta"
     }
   ],
   "not_counted": [
@@ -74,12 +80,12 @@
     "LaTeX",
     "web search",
     "article pages",
-    "pandas (not used)",
-    "DBS-Gym (read only, not executed)"
+    "SciPy signal Welch as separate tool (SciPy counted once)"
   ],
   "project_counts": {
     "sepsis": 8,
-    "parkinson": 8
+    "parkinson": 9
   },
-  "tool_count_interpretation": "11 unique science/data tool names globally (8 sepsis, 8 Parkinson); project-specific counts, do not count generic transfer/tests/build/literature."
+  "tool_count_interpretation": "11 unique science/data tool names globally (8 sepsis, 8 Parkinson); project-specific counts, do not count generic transfer/tests/build/literature.",
+  "used_science_tool_note": "Welch spectral estimate used in Parkinson PhysioNet analysis but SciPy library already counted; no extra submodule count."
 }
