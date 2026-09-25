@@ -54,6 +54,15 @@ class ResearchTests(unittest.TestCase):
   self.assertLess(pivot['neural_expected_return'],base['our_exact_values']['optimal'])
   self.assertLess(pivot['neural_expected_return'],base['neural_greedy']['expected_return'])
   self.assertAlmostEqual(sum(x['initial_mass'] for x in pivot['sofa_initial_state_strata'].values()),1.0,places=10)
+ def test_full_neuron_pilot_and_correct_action_mapping(self):
+  d={name:json.loads((ROOT/'results'/f'parkinson_env0_{name}_1000.json').read_text()) for name in ('off','high','negative5')}
+  self.assertEqual([d[k]['n_neurons'] for k in d],[512]*3)
+  self.assertEqual([d[k]['steps'] for k in d],[1000]*3)
+  self.assertEqual(d['off']['action_normalized'],0)
+  self.assertEqual(d['off']['absolute_stimulation_energy'],0)
+  self.assertEqual(d['negative5']['action_normalized'],-1)
+  self.assertIn('NOT DBS OFF',d['negative5']['policy'])
+  self.assertLess(d['high']['mean_step_beta_component'],d['off']['mean_step_beta_component'])
  def test_dbs_native_smoke_is_not_benchmark(self):
   d=json.loads((ROOT/'results'/'parkinson_native_smoke.json').read_text())
   self.assertEqual(d['policies']['off']['actions'],4)

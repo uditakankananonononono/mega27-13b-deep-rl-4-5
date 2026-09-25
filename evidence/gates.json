@@ -16,7 +16,7 @@
     "formula_target": 10,
     "working_paper_pages": 5,
     "paper_target_approx": 20,
-    "tests_total_repo": 16,
+    "tests_total_repo": 17,
     "published_model_baselines_reproduced": true,
     "neural_outperforms_optimal": false,
     "clinical_validation": false,
@@ -31,11 +31,12 @@
     "policy_trajectory_datasets": 0,
     "numbered_formulas": 14,
     "formula_target": 10,
-    "working_paper_pages": 5,
+    "working_paper_pages": 6,
     "paper_target_approx": 20,
-    "tests_total_repo": 16,
+    "tests_total_repo": 17,
     "published_benchmark_comparable": false,
     "clinical_validation": false,
-    "gate_complete": false
+    "gate_complete": false,
+    "full_512_neuron_env0_short_horizon_pilot": true
   }
 }

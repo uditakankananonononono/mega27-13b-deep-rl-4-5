@@ -1,0 +1,8 @@
+{
+  "source":"https://arxiv.org/html/2505.09624",
+  "location":"Table 1, Env0 Basic model, r1 reward, published means and SD; six evaluations",
+  "dbs_off":{"beta_band_power_pct":100,"beta_band_power_sd_pct":27,"stimulation_energy_pct":0},
+  "hf_dbs":{"beta_band_power_pct":19.8,"beta_band_power_sd_pct":1.9,"stimulation_energy_pct":100},
+  "sac":{"beta_band_power_pct":27.4,"beta_band_power_sd_pct":5.9,"stimulation_energy_pct":87.8,"stimulation_energy_sd_pct":0.5},
+  "protocol_caveat":"Paper methods say RL episode 50 seconds / 5555 steps; repository env0 config has total_episode_len 5000 model units (5555 steps). Six evaluation runs; benchmark normalization and config differences must be checked before direct comparison. This is literature reference only, not our result."
+}

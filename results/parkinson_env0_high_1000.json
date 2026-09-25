@@ -1,0 +1,26 @@
+{
+  "source": "https://github.com/NevVerVer/DBS-Gym",
+  "source_commit": "aa0b10b9502e4f62dea755ce6468da024235c319",
+  "policy": "HF-DBS",
+  "action_normalized": 1.0,
+  "n_neurons": 512,
+  "grid": [
+    8,
+    8,
+    8
+  ],
+  "env": "env0",
+  "seed": 222,
+  "steps": 1000,
+  "published_steps": 5555,
+  "reward_function": "bbpow_action",
+  "mean_step_reward": -6.831122001171111,
+  "total_reward": -6831.122001171233,
+  "mean_step_beta_component": 6.781122001171112,
+  "global_low_beta_power": 0.0005909920319176362,
+  "absolute_stimulation_energy": 5000.0,
+  "lfp_points": 17067,
+  "lfp_sha256": "1660280dbfe2eb5491a9d6cc7501a1377e892d1908e642e65835b981449095b5",
+  "runtime_seconds": 50.86735090600018,
+  "comparison_caveat": "512 neurons and actual upstream env0, but horizon is shorter than published 5555 steps, one seed, reward metrics and normalization may differ. Do not compare directly to published percent power benchmark."
+}

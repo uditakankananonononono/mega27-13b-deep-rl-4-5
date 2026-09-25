@@ -52,3 +52,7 @@ Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-lev
 ### Native DBS-Gym smoke, not a benchmark
 
 `src/parkinson_native.py` executed the unmodified upstream SpatialKuramoto class in a deliberately reduced 8-neuron env0 configuration for four steps each with off and high fixed actions. Off reward 0.0, high reward -0.2 over four steps. This reveals that the tiny configuration has no detectable beta penalty and high stimulation only pays energy cost. It is a configuration-induced negative, **not** the 512-neuron, long-horizon published DBS-Gym benchmark. JAX/Diffrax/Gymnasium/DBS-Gym were genuinely exercised and are added to Parkinson tool ledger (8/40); full-scale published baseline and neural controller in the native environment remain missing.
+
+### Full-neuron Env0 pilot
+
+At 512 neurons and 1000 action steps (one seed, shorter than published ~5555), upstream DBS-Gym OFF 0 V, high +5 V, and -5 V controls were executed. Mean per-step beta reward component OFF 19.9901, +5 V 6.7811, -5 V 8.0725; +5 V/OFF ratio 33.9%. Published Env0 Table 1 HF-DBS/OFF 19.8% over six evaluations, but this pilot differs in horizon/aggregation, so benchmark gate remains missing. An initial normalized -1 action was accidentally called OFF, but -1 actually rescales to -5 V; mislabeled result was corrected and kept as `results/parkinson_env0_negative5_1000.json`, then OFF 0 V was rerun. See `evidence/dbs_published_table1.json`.
