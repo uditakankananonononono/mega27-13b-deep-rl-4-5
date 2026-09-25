@@ -1,6 +1,6 @@
 {
   "rule": "Count only actually-used scientific analysis/data tools or science libraries; generic transfer, literature search, tests, builds and source control excluded. Do not treat modules or workflows as separate tools.",
-  "verified_distinct_count": 12,
+  "verified_distinct_count": 13,
   "used": [
     {
       "name": "NumPy",
@@ -69,6 +69,12 @@
       "url": "https://physionet.org/content/tremordb/1.0.0/",
       "scope": "Parkinson project only",
       "evidence": "src/parkinson_tremordb.py fetched and numerically analyzed 55 original fixed-condition finger-tremor records, results/parkinson_tremordb.json; neither adaptive stimulation trajectories nor LFP beta"
+    },
+    {
+      "name": "Dryad movement-responsive aDBS figure dataset",
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.4xgxd25hw",
+      "scope": "Parkinson project only",
+      "evidence": "src/parkinson_dryad_adaptive.py and results/parkinson_dryad_adaptive.json; public source ZIP verified SHA256, 8,389 time-indexed action rows from two hands of one participant, separate true movement and neural figure traces, no joined policy validation"
     }
   ],
   "not_counted": [
@@ -84,8 +90,8 @@
   ],
   "project_counts": {
     "sepsis": 8,
-    "parkinson": 9
+    "parkinson": 10
   },
-  "tool_count_interpretation": "11 unique science/data tool names globally (8 sepsis, 8 Parkinson); project-specific counts, do not count generic transfer/tests/build/literature.",
+  "tool_count_interpretation": "13 unique science/data products or libraries globally (8 sepsis, 10 Parkinson); project-specific counts; generic transfer/tests/build/literature excluded.",
   "used_science_tool_note": "Welch spectral estimate used in Parkinson PhysioNet analysis but SciPy library already counted; no extra submodule count."
 }

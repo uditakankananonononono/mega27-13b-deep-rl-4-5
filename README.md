@@ -29,7 +29,7 @@ The raw matrices are not in Git because they are 107 MB and 64 MB. `data/*/acces
 | Project | Genuinely used distinct science/data tools | Accession records fetched, numeric data used | Numbered formulas | Times New Roman paper | Benchmark |
 |---|---:|---:|---:|---|---|
 | Sepsis | 8/40 | 514/120, across two GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
-| Parkinson | 9/40 | 510/120, across two GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
+| Parkinson | 10/40 | 510/120, across two GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
 
 Counting 479+35 day-one (sepsis) or 438+72 (Parkinson) distinct GSM identifiers with measured numeric features and labels, across two series per project. These are accession-level blood sample records, not independent treatment datasets; GSE54514 repeated follow-up samples are not added. Strict project-specific tool evidence in `evidence/scientific_tools.json`; no tool-count padding. Next work: run Parkinson against the real DBS-Gym simulator, obtain policy-relevant datasets where permitted, robust independent validation, expand genuinely used tools, and write/check substantial manuscripts. This is a progress checkpoint, not completion.
 
@@ -134,3 +134,7 @@ For the three holdout splits, sparse policy-induced visitation solves account fo
 ### Equal-epoch sepsis feature comparison
 
 At 150 epochs for both representations on the three fixed state splits, centroid held-out optimal-action agreement remains higher (.266/.371/.343 versus one-hot .133/.196/.189), yet full same-model returns remain lower (.845072/.852847/.850264 versus .856932/.855019/.856675). Input dimensions and parameter counts are not matched, and these splits had already been viewed; this is an engineering follow-up, not fresh external validation: `src/sepsis_budget_match.py`, `results/sepsis_budget_match.json`.
+
+### One-participant human adaptive stimulation figure traces
+
+The public [Dryad movement-responsive aDBS dataset](https://datadryad.org/dataset/doi:10.5061/dryad.4xgxd25hw) was downloaded and SHA256-checked. Its Fig5b excerpt has 4,196 left- and 4,193 right-hand time-indexed records of movement prediction and stimulation amplitude from **one** person, plus separate true movement-state traces. It records high/low stimulation around 2.2/1.6 mA with ramps. The Fig2 beta/gamma neural traces are from a different time interval (615-795 seconds versus Fig5 965-1175 seconds) and cannot be joined to these actions. This is a genuine additional Parkinson-specific data product (10/40), but 8,389 samples are not patients or independent accessions; without synchronized implant LFP, reward and logged propensities, it does **not** provide off-policy RL treatment validation. `src/parkinson_dryad_adaptive.py`, `results/parkinson_dryad_adaptive.json`.

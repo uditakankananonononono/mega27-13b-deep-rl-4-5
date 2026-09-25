@@ -1,0 +1,96 @@
+{
+  "source": "https://datadryad.org/dataset/doi:10.5061/dryad.4xgxd25hw",
+  "api_version": "https://datadryad.org/api/v2/versions/359256",
+  "zip_sha256": "0f5f17fc319bc94b1146bad570e27a8d71807a5dc6d4721493c25595de6880e4",
+  "csv_file_count": 45,
+  "dataset_people_as_readme": 1,
+  "hands": [
+    {
+      "hand": "left",
+      "files": [
+        "move_adbs_min_data/Fig5/fig5b_left_accel_pred.csv",
+        "move_adbs_min_data/Fig5/fig5b_left_accel_true.csv",
+        "move_adbs_min_data/Fig2/fig2b_neural_left.csv"
+      ],
+      "action_rows": 4196,
+      "true_state_rows": 2100,
+      "neural_band_rows_separate_figure": 1798,
+      "action_start_s": 965.0009999275208,
+      "action_end_s": 1174.9509999752045,
+      "neural_start_s": 615.0299999713898,
+      "neural_end_s": 794.9400000572205,
+      "predicted_state_changes": 20,
+      "action_changes_including_ramps": 80,
+      "fraction_at_low_1_6mA": 0.6572926596758818,
+      "fraction_at_high_2_2mA": 0.31291706387035273,
+      "intermediate_ramp_rows": 125,
+      "mean_amplitude_mA_example": 1.796782650142993,
+      "near_match_true_state_rows": 4196,
+      "near_match_predicted_vs_true_state_agreement": 0.7745471877979028,
+      "neural_time_overlap_with_action_example_seconds": 0.0,
+      "source_columns": {
+        "prediction": [
+          "time",
+          "acceleration",
+          "state",
+          "stim"
+        ],
+        "true": [
+          "time",
+          "acceleration",
+          "state"
+        ],
+        "neural": [
+          "time",
+          "beta",
+          "gamma"
+        ]
+      }
+    },
+    {
+      "hand": "right",
+      "files": [
+        "move_adbs_min_data/Fig5/fig5b_right_accel_pred.csv",
+        "move_adbs_min_data/Fig5/fig5b_right_accel_true.csv",
+        "move_adbs_min_data/Fig2/fig2b_neural_right.csv"
+      ],
+      "action_rows": 4193,
+      "true_state_rows": 2100,
+      "neural_band_rows_separate_figure": 1799,
+      "action_start_s": 965.0499999523164,
+      "action_end_s": 1174.9500000476835,
+      "neural_start_s": 615.0160000324249,
+      "neural_end_s": 794.9100000858307,
+      "predicted_state_changes": 16,
+      "action_changes_including_ramps": 64,
+      "fraction_at_low_1_6mA": 0.6281898402098736,
+      "fraction_at_high_2_2mA": 0.3474839017409969,
+      "intermediate_ramp_rows": 102,
+      "mean_amplitude_mA_example": 1.8157166706415453,
+      "near_match_true_state_rows": 4193,
+      "near_match_predicted_vs_true_state_agreement": 0.9088957786787503,
+      "neural_time_overlap_with_action_example_seconds": 0.0,
+      "source_columns": {
+        "prediction": [
+          "time",
+          "acceleration",
+          "state",
+          "stim"
+        ],
+        "true": [
+          "time",
+          "acceleration",
+          "state"
+        ],
+        "neural": [
+          "time",
+          "beta",
+          "gamma"
+        ]
+      }
+    }
+  ],
+  "interpretation": "Fig5b example time series shows actual adaptive stimulation amplitude and movement prediction, paired with separate true movement trace. Fig2b example beta/gamma traces are from a different time interval and figure; cannot join to Fig5 action histories. Rows are time points, not independent patients or datasets.",
+  "policy_validation": "no",
+  "limitation": "One participant and figure-level excerpts; Fig5 actions respond to predicted movement, but no synchronized implant LFP state or rewards in these rows, no logged behavior propensities, no counterfactual adaptive action outcomes, and no independent held-out patient. Do not train/evaluate an RL treatment policy or infer clinical benefit from this descriptive trace."
+}

@@ -16,7 +16,7 @@
     "formula_target": 10,
     "working_paper_pages": 10,
     "paper_target_approx": 20,
-    "tests_total_repo": 35,
+    "tests_total_repo": 36,
     "published_model_baselines_reproduced": true,
     "neural_outperforms_optimal": false,
     "clinical_validation": false,
@@ -44,7 +44,7 @@
     "equal_epoch_centroid_policy_return_better": false
   },
   "parkinson": {
-    "used_science_tools": 9,
+    "used_science_tools": 10,
     "science_tool_target": 40,
     "verified_gsm_samples_used": 510,
     "accession_target": 120,
@@ -54,7 +54,7 @@
     "formula_target": 10,
     "working_paper_pages": 9,
     "paper_target_approx": 20,
-    "tests_total_repo": 35,
+    "tests_total_repo": 36,
     "published_benchmark_comparable": false,
     "clinical_validation": false,
     "gate_complete": false,
@@ -66,6 +66,9 @@
     "native_adam_pivot_all_off_negative": true,
     "tremordb_fixed_condition_records_used": 55,
     "tremordb_subjects": 15,
-    "published_eval_protocol_10x1500_x6_reproduced": false
+    "published_eval_protocol_10x1500_x6_reproduced": false,
+    "dryad_adaptive_example_action_rows": 8389,
+    "dryad_adaptive_source_participants": 1,
+    "dryad_adaptive_policy_validated": false
   }
 }
