@@ -83,6 +83,12 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual(s['first_finite_numeric_probe_count'],48)
   self.assertTrue(0<=p['external_auc']<=1)
   self.assertIn('Neither source validates',d['limitation'])
+ def test_sepsis_neural_action_rank_gap(self):
+  d=json.loads((ROOT/'results'/'sepsis_rank_audit.json').read_text())
+  self.assertAlmostEqual(d['model_policy_value'],json.loads((ROOT/'results'/'sepsis.json').read_text())['neural_greedy']['expected_return'],places=9)
+  self.assertGreater(d['state_regret_under_exact_q']['positive_regret_fraction'],.6)
+  self.assertLess(d['initial_mass_regret'],d['optimal_model_value']-d['model_policy_value'])
+  self.assertIn('not clinical regret',d['limitations'])
  def test_second_sepsis_series_perfect_auc_flagged(self):
   d=json.loads((ROOT/'results'/'sepsis_second_series.json').read_text())
   self.assertEqual((d['day1_subject_count'],d['day1_deaths'],d['first_finite_probe_count']),(35,9,48))

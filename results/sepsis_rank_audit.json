@@ -1,0 +1,106 @@
+{
+  "source": "https://github.com/icu-sepsis/icu-sepsis",
+  "epochs": 50,
+  "training_loss_last": 0.00034821878759682404,
+  "model_mse_nonterminal": 0.0005583127059402353,
+  "action_agreement_nonterminal": 0.05750350631136045,
+  "state_regret_under_exact_q": {
+    "mean": 0.009288097389782262,
+    "median": 0.005664351029811776,
+    "p95": 0.03332530645576818,
+    "max": 0.07700710379375308,
+    "positive_regret_fraction": 0.6185133239831697
+  },
+  "optimal_action_margin": {
+    "median": 0.0018544834202300908,
+    "p95": 0.022818547157934386
+  },
+  "initial_mass_mismatched_action": 0.9577647511051318,
+  "initial_mass_regret": 0.004863240736860717,
+  "model_policy_value": 0.7864485428365543,
+  "optimal_model_value": 0.8751416994800841,
+  "random_model_value": 0.7800709044652784,
+  "top_10_initial_mass_regret_states": [
+    {
+      "state": 49,
+      "initial_prob": 0.0010090332500480492,
+      "exact_best_action": 20,
+      "neural_action": 9,
+      "exact_q_gap": 0.06856530959347107,
+      "weighted_gap": 6.91846771796508e-05
+    },
+    {
+      "state": 534,
+      "initial_prob": 0.003651739381126274,
+      "exact_best_action": 0,
+      "neural_action": 2,
+      "exact_q_gap": 0.01771735529129026,
+      "weighted_gap": 6.46991640466106e-05
+    },
+    {
+      "state": 575,
+      "initial_prob": 0.0007687872381318471,
+      "exact_best_action": 2,
+      "neural_action": 0,
+      "exact_q_gap": 0.06345916296911236,
+      "weighted_gap": 4.8786594633182676e-05
+    },
+    {
+      "state": 643,
+      "initial_prob": 0.005093215452623487,
+      "exact_best_action": 5,
+      "neural_action": 21,
+      "exact_q_gap": 0.009105657886769314,
+      "weighted_gap": 4.63770774551964e-05
+    },
+    {
+      "state": 113,
+      "initial_prob": 0.0011531808571977706,
+      "exact_best_action": 11,
+      "neural_action": 12,
+      "exact_q_gap": 0.036826620779512154,
+      "weighted_gap": 4.2467754118215057e-05
+    },
+    {
+      "state": 209,
+      "initial_prob": 0.000528541226215645,
+      "exact_best_action": 22,
+      "neural_action": 3,
+      "exact_q_gap": 0.07369518573155265,
+      "weighted_gap": 3.8950943832744536e-05
+    },
+    {
+      "state": 295,
+      "initial_prob": 0.0013453776667307323,
+      "exact_best_action": 20,
+      "neural_action": 14,
+      "exact_q_gap": 0.02733069626898188,
+      "weighted_gap": 3.6770108376489175e-05
+    },
+    {
+      "state": 629,
+      "initial_prob": 0.0007207380357486067,
+      "exact_best_action": 12,
+      "neural_action": 22,
+      "exact_q_gap": 0.04986528782605215,
+      "weighted_gap": 3.593980959978774e-05
+    },
+    {
+      "state": 584,
+      "initial_prob": 0.0011051316548145302,
+      "exact_best_action": 20,
+      "neural_action": 24,
+      "exact_q_gap": 0.03196624230097722,
+      "weighted_gap": 3.532690625228119e-05
+    },
+    {
+      "state": 674,
+      "initial_prob": 0.0014414760714972134,
+      "exact_best_action": 20,
+      "neural_action": 5,
+      "exact_q_gap": 0.02371929550434937,
+      "weighted_gap": 3.4190796902291046e-05
+    }
+  ],
+  "limitations": "Q-gap is under the same fitted simulator and one step assuming optimal continuation, not clinical regret. Neural network trains on exact Q labels from all model states; no independent patient outcomes or off-policy evaluation. Initial-mass gap is not total policy-value gap because later mismatches compound."
+}

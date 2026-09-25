@@ -108,3 +108,7 @@ On only 35 distinct day-one GSE54514 sepsis subjects (9 deaths), a first-48-prob
 ### Treatment-trajectory availability audit
 
 [MIMIC-Sepsis](https://github.com/yongh7/MIMIC-sepsis) publishes preprocessing code, not an openly downloadable full MIMIC-IV patient trajectory table. Its README requires credentialed MIMIC-IV access, research training, DUA and a local PostgreSQL import. Current 13b sepsis data therefore do not support external off-policy treatment validation; simulator MDP, 100-patient public demo and GEO blood labels are distinct sources. The public demo source specifies [ODbL 1.0](https://physionet.org/content/mimiciii-demo/view-license/1.4/); row-level clinical exports remain withheld.
+
+### Neural Q-ranking failure analysis
+
+Reconstructed one-hot sepsis network at the original seed. Nonterminal Q MSE .000558 and loss .000348 still yielded exact-best action match 5.75%, positive exact-model one-step Q shortfall in 61.9% of nonterminal states, and full policy value .786449 vs exact optimal .875142. One-step initial-weighted regret .00486 is not the full .08869 policy-value gap because later mistakes compound. These are model-only diagnostics, not patient outcomes. Code/results: `src/sepsis_rank_audit.py`, `results/sepsis_rank_audit.json`.
