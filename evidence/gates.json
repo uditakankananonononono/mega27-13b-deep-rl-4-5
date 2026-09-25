@@ -16,7 +16,7 @@
     "formula_target": 10,
     "working_paper_pages": 10,
     "paper_target_approx": 20,
-    "tests_total_repo": 33,
+    "tests_total_repo": 34,
     "published_model_baselines_reproduced": true,
     "neural_outperforms_optimal": false,
     "clinical_validation": false,
@@ -39,7 +39,9 @@
       0.3706293706293706
     ],
     "centroid_holdout_model_value_improves_over_onehot": false,
-    "model_occupancy_identity_tested": true
+    "model_occupancy_identity_tested": true,
+    "equal_epoch_centroid_heldout_accuracy_better": true,
+    "equal_epoch_centroid_policy_return_better": false
   },
   "parkinson": {
     "used_science_tools": 9,
@@ -52,7 +54,7 @@
     "formula_target": 10,
     "working_paper_pages": 9,
     "paper_target_approx": 20,
-    "tests_total_repo": 33,
+    "tests_total_repo": 34,
     "published_benchmark_comparable": false,
     "clinical_validation": false,
     "gate_complete": false,

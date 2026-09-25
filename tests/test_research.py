@@ -83,6 +83,15 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual(s['first_finite_numeric_probe_count'],48)
   self.assertTrue(0<=p['external_auc']<=1)
   self.assertIn('Neither source validates',d['limitation'])
+ def test_sepsis_equal_epoch_feature_tradeoff(self):
+  d=json.loads((ROOT/'results'/'sepsis_budget_match.json').read_text())
+  self.assertEqual(len(d['split_results']),3)
+  for row in d['split_results']:
+   a=row['controllers']['onehot'];b=row['controllers']['centroid']
+   self.assertEqual(a['train_match'],1.0)
+   self.assertGreater(b['heldout_match'],a['heldout_match'])
+   self.assertLess(b['model_return'],a['model_return'])
+  self.assertIn('not equal parameter budget',d['limitation'])
  def test_sepsis_exact_occupancy_identity(self):
   d=json.loads((ROOT/'results'/'sepsis_occupancy_audit.json').read_text())
   self.assertEqual(len(d['splits']),3)

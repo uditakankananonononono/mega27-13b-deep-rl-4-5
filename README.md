@@ -130,3 +130,7 @@ Replacing one-hot state IDs with the published 47-dimensional centroids on the s
 ### Exact in-model occupancy audit
 
 For the three holdout splits, sparse policy-induced visitation solves account for the centroid policies' lower full-model values despite their better unweighted held-out action agreement. One-hot weighted Q shortfalls .018752/.020291/.018226 versus centroid .030070/.022295/.024877 equal each policy's exact-model optimal value gap up to numerical residual. Centroid has nonzero training-state weighted shortfall in all splits; one-hot training-state shortfall is zero. These are expected state visits under the *estimated MDP*, not patient counts or clinical regret: `src/sepsis_occupancy_audit.py`, `results/sepsis_occupancy_audit.json`.
+
+### Equal-epoch sepsis feature comparison
+
+At 150 epochs for both representations on the three fixed state splits, centroid held-out optimal-action agreement remains higher (.266/.371/.343 versus one-hot .133/.196/.189), yet full same-model returns remain lower (.845072/.852847/.850264 versus .856932/.855019/.856675). Input dimensions and parameter counts are not matched, and these splits had already been viewed; this is an engineering follow-up, not fresh external validation: `src/sepsis_budget_match.py`, `results/sepsis_budget_match.json`.
