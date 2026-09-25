@@ -92,3 +92,7 @@ Fetched and parsed GSE6613 (105 GSM, 50 PD and 22 healthy eligible) and GSE54514
 ### Native full-neuron short deep-RL pilot, not published SAC
 
 A two-layer tanh Bernoulli REINFORCE policy trained on 4 x 180 action steps in real 512-neuron DBS-Gym Env0, then evaluated for 1000 steps on seed 222. Native evaluation mean reward -13.554 and 50% on-time. Parameter audit found weight updates under 1e-6 L2 and output-bias update 2.9e-5, probabilities near 0.5 with prior-action threshold artifacts. Thus there is no evidence of effective learning despite running the update and native policy. It is not a 5555-step x six published SAC comparison or clinical evidence. Code, seeds, weight checksum and negative cautions in `src/parkinson_native_reinforce.py`, `results/parkinson_native_reinforce.json`.
+
+### Parkinson native optimizer pivot: all-OFF collapse
+
+After negligible REINFORCE parameter drift, Adam episode updates, broader initial weights and no prior-action shortcut made weights change measurably (0.293/0.390 L2 in hidden layers). Yet deterministic native 1000-step seed-222 evaluation chose OFF every step: mean reward -19.990, the archived OFF control, worse than matched fixed-high -6.831 on this single seed/horizon. This is a preserved negative, not an RL benchmark victory. Script, metrics and trained weights: `src/parkinson_native_reinforce_adam.py`, `results/parkinson_native_reinforce_adam.json`, `data/parkinson/native_reinforce_adam_weights.npz`.

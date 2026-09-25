@@ -83,6 +83,13 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual(s['first_finite_numeric_probe_count'],48)
   self.assertTrue(0<=p['external_auc']<=1)
   self.assertIn('Neither source validates',d['limitation'])
+ def test_native_adam_pivot_all_off_negative(self):
+  d=json.loads((ROOT/'results'/'parkinson_native_reinforce_adam.json').read_text())
+  self.assertEqual(len(d['training']),3);self.assertEqual(d['eval_steps'],1000)
+  self.assertEqual(d['eval_action_on_fraction'],0)
+  self.assertAlmostEqual(d['eval_mean_reward'],json.loads((ROOT/'results'/'parkinson_env0_off_1000.json').read_text())['mean_step_reward'])
+  self.assertGreater(d['parameter_drift_l2_from_initial']['w1'],.2)
+  self.assertIn('All-OFF deterministic collapse',d['limitations'])
  def test_native_deep_rl_short_pilot_scope(self):
   d=json.loads((ROOT/'results'/'parkinson_native_reinforce.json').read_text())
   self.assertEqual(len(d['training']),4);self.assertEqual(d['eval_steps'],1000)

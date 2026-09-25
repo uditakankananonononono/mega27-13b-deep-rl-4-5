@@ -16,7 +16,7 @@
     "formula_target": 10,
     "working_paper_pages": 6,
     "paper_target_approx": 20,
-    "tests_total_repo": 21,
+    "tests_total_repo": 26,
     "published_model_baselines_reproduced": true,
     "neural_outperforms_optimal": false,
     "clinical_validation": false,
@@ -38,7 +38,7 @@
     "formula_target": 10,
     "working_paper_pages": 7,
     "paper_target_approx": 20,
-    "tests_total_repo": 21,
+    "tests_total_repo": 26,
     "published_benchmark_comparable": false,
     "clinical_validation": false,
     "gate_complete": false,
@@ -46,6 +46,7 @@
     "full_512_neuron_env0_5555_step_one_seed_controls": true,
     "independent_series_gsm_samples_used": 72,
     "independent_series_cross_platform_auc": 0.5336363636363637,
-    "native_full_neuron_deep_rl_short_pilot": true
+    "native_full_neuron_deep_rl_short_pilot": true,
+    "native_adam_pivot_all_off_negative": true
   }
 }

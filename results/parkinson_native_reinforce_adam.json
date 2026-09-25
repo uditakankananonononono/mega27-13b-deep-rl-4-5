@@ -1,0 +1,52 @@
+{
+  "source": "https://github.com/NevVerVer/DBS-Gym",
+  "source_commit": "aa0b10b9502e4f62dea755ce6468da024235c319",
+  "algorithm": "two hidden tanh layers, Bernoulli REINFORCE, within-episode centered discounted returns gamma .99, Adam episode updates .03, norm clipping 1, NO previous-action input; binary physical 0 or +5 V actions",
+  "feature_source": "prior actual upstream LFP window, beta power, standard deviation, mean; fourth input fixed zero to remove prior-action shortcut",
+  "training": [
+    {
+      "seed": 820,
+      "steps": 220,
+      "mean_reward": -12.109894676208494,
+      "on_fraction": 0.4909090909090909,
+      "gradient_norm": 0.08706113497029744
+    },
+    {
+      "seed": 821,
+      "steps": 220,
+      "mean_reward": -7.995479767539284,
+      "on_fraction": 0.37727272727272726,
+      "gradient_norm": 0.03337883285785214
+    },
+    {
+      "seed": 822,
+      "steps": 220,
+      "mean_reward": -14.474495726498692,
+      "on_fraction": 0.4590909090909091,
+      "gradient_norm": 0.06727746730210912
+    }
+  ],
+  "eval_seed": 222,
+  "eval_steps": 1000,
+  "eval_mean_reward": -19.990091155052184,
+  "eval_beta_component": 19.990091155052184,
+  "eval_action_on_fraction": 0.0,
+  "eval_stimulation_energy": 0.0,
+  "eval_lfp_sha256": "98e1148f520358d5a94f97ea0a7aafb893b651f9a38b395e748ef575e8963fc8",
+  "trained_weight_sha256": "253ccd486aef26b593fc2c3c0819f34ee3d41c53a149e93b4c0ab54851bc3e83",
+  "parameter_drift_l2_from_initial": {
+    "w1": 0.29334299875705,
+    "b1": 0.12925003692879153,
+    "w2": 0.3902120626871308,
+    "b2": 0.10299673645115354,
+    "w3": 0.16911680257359965,
+    "b3": 0.03582632464349903
+  },
+  "decision_probe": {
+    "0": 0.4539439202074985,
+    "0.1": 0.45092927875153893,
+    "0.5": 0.43978434327749066,
+    "1.0": 0.427859380183941
+  },
+  "limitations": "Adam and no-last-action pivot after failed near-zero update; only 3 short training episodes, one 1000-step evaluation. All-OFF deterministic collapse, no demonstrated learning benefit. NOT six-run 5555-step SAC benchmark or clinical evidence."
+}
