@@ -28,10 +28,10 @@ The raw matrices are not in Git because they are 107 MB and 64 MB. `data/*/acces
 
 | Project | Genuinely used distinct science/data tools | Accession records fetched, numeric data used | Numbered formulas | Times New Roman paper | Benchmark |
 |---|---:|---:|---:|---|---|
-| Sepsis | 4/40 | 150/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
+| Sepsis | 6/40 | 150/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
 | Parkinson | 4/40 | 150/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
 
-Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-level sample records**, not 150 independent studies or treatment datasets. Strict tool evidence in `evidence/scientific_tools.json`; no tool-count padding. Next work: run Parkinson against the real DBS-Gym simulator, obtain policy-relevant datasets where permitted, robust independent validation, expand genuinely used tools, and write/check substantial manuscripts. This is a progress checkpoint, not completion.
+Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-level sample records**, not 150 independent studies or treatment datasets. Strict project-specific tool evidence in `evidence/scientific_tools.json`; no tool-count padding. Next work: run Parkinson against the real DBS-Gym simulator, obtain policy-relevant datasets where permitted, robust independent validation, expand genuinely used tools, and write/check substantial manuscripts. This is a progress checkpoint, not completion.
 
 ## Working manuscripts
 
@@ -44,3 +44,7 @@ Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-lev
 ### Parkinson reward-cost pivot
 
 `src/parkinson_pivot.py` trains two policies at synthetic energy coefficients 0.12 and 0.40, each evaluated under both coefficients on 100 matched new seeds. The return ordering flips (-3.785 versus +2.600 for heavy-minus-original), revealing sensitivity to the invented utility function. The heavy-weight controller cuts simulator energy from 37.635 to 14.830 but increases beta-burst steps from 0.5 to 10.01. This is a within-project negative/tradeoff, not DBS-Gym or patient validation.
+
+### Native ICU-Sepsis cross-check
+
+`src/sepsis_native.py` actually instantiates the official v2 environment via Gymnasium, verifies selected transition rows match the CSV tables, then samples 200 episodes per random/optimal/expert policy. Observed means .740/.865/.795, within ordinary Monte Carlo fluctuation around exact .780/.875/.782 at n=200 (per-policy SE .031/.024/.029). These additional native simulator/Gymnasium tools count for sepsis only, moving sepsis to 6/40; Parkinson stays 4/40. Runs are still simulated and not new patients. See `results/sepsis_native.json`.

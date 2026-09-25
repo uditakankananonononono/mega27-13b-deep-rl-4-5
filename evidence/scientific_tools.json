@@ -1,6 +1,6 @@
 {
   "rule": "Count only actually-used scientific analysis/data tools or science libraries; generic transfer, literature search, tests, builds and source control excluded. Do not treat modules or workflows as separate tools.",
-  "verified_distinct_count": 4,
+  "verified_distinct_count": 6,
   "used": [
     {
       "name": "NumPy",
@@ -21,6 +21,18 @@
       "name": "Matplotlib",
       "url": "https://matplotlib.org/",
       "evidence": "src/plots.py; renders numerical benchmark comparisons into papers/*.pdf"
+    },
+    {
+      "name": "ICU-Sepsis",
+      "url": "https://github.com/icu-sepsis/icu-sepsis",
+      "evidence": "src/sepsis_native.py; actual upstream v2 Gym environment reset/step on 600 simulated trajectories, exact table row equality verified in results/sepsis_native.json",
+      "scope": "Sepsis project only"
+    },
+    {
+      "name": "Gymnasium",
+      "url": "https://gymnasium.farama.org/",
+      "evidence": "src/sepsis_native.py; instantiated upstream v2 Gym environment and stepped 600 episodes",
+      "scope": "Sepsis project only"
     }
   ],
   "not_counted": [
@@ -34,5 +46,9 @@
     "article pages",
     "pandas (not used)",
     "DBS-Gym (read only, not executed)"
-  ]
+  ],
+  "project_counts": {
+    "sepsis": 6,
+    "parkinson": 4
+  }
 }

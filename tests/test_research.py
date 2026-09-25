@@ -40,6 +40,13 @@ class ResearchTests(unittest.TestCase):
   result=json.loads((ROOT/'results'/'sepsis.json').read_text())
   for key,expected in [('random',.78),('expert',.78),('optimal',.88)]:self.assertLess(abs(result['our_exact_values'][key]-expected),.01)
   self.assertLess(result['neural_greedy']['expected_return'],result['our_exact_values']['optimal'])
+ def test_native_simulator_audit(self):
+  d=json.loads((ROOT/'results'/'sepsis_native.json').read_text())
+  self.assertTrue(d['exact_table_rows_equal_official_gym_env'])
+  self.assertEqual(set(d['rollouts']),{'random','optimal','expert'})
+  for key,item in d['rollouts'].items():
+   self.assertEqual(item['n'],200)
+   self.assertLess(abs(item['mean_return']-d['exact_table_expected_returns'][key]),3*item['binomial_se_return_approx'])
  def test_sepsis_pivot_negative(self):
   base=json.loads((ROOT/'results'/'sepsis.json').read_text())
   pivot=json.loads((ROOT/'results'/'sepsis_pivot.json').read_text())
@@ -54,7 +61,7 @@ class ResearchTests(unittest.TestCase):
   self.assertGreater(d['evaluation']['0.4']['paired_heavy_minus_original_mean_reward'],0)
   self.assertLess(d['evaluation']['0.12']['heavier_weight_0_40']['mean_energy'],d['evaluation']['0.12']['original_weight_0_12']['mean_energy'])
  def test_tool_count_no_padding(self):
-  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],4)
+  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],6)
  def test_descriptive_probes_not_treatment(self):
   for disease in ('sepsis','parkinson'):
    result=json.loads((ROOT/'results'/f'{disease}_geo.json').read_text());self.assertEqual(result['accessions_used'],150);self.assertEqual(result['features_used'],48);self.assertEqual(result['test_n'],45);self.assertTrue(0<=result['heldout_auc']<=1)
