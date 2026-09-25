@@ -1,5 +1,5 @@
 """Full 512-neuron Env0 pilot at a short, explicit horizon.
-NOT a reproduction of the published 5,555-step DBS-Gym benchmark.
+NOT a reproduction of the published multi-episode DBS-Gym benchmark.
 """
 import argparse,copy,hashlib,json,sys,time,os
 from pathlib import Path

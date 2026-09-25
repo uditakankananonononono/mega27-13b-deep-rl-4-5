@@ -180,6 +180,14 @@ class ResearchTests(unittest.TestCase):
   self.assertLess(high['mean_step_beta_component'],off['mean_step_beta_component'])
   gate=json.loads((ROOT/'evidence'/'gates.json').read_text())['parkinson']
   self.assertFalse(gate['published_benchmark_comparable'])
+ def test_pilot_results_name_training_config_not_published_steps(self):
+  for name in ('off','high','negative5'):
+   d=json.loads((ROOT/'results'/f'parkinson_env0_{name}_1000.json').read_text())
+   self.assertEqual(d['training_config_steps'],5555)
+   self.assertNotIn('published_steps',d)
+   self.assertIn('10 x 1500',d['paper_eval_protocol'])
+  gate=json.loads((ROOT/'evidence'/'gates.json').read_text())['parkinson']
+  self.assertFalse(gate['published_eval_protocol_10x1500_x6_reproduced'])
  def test_full_neuron_pilot_and_correct_action_mapping(self):
   d={name:json.loads((ROOT/'results'/f'parkinson_env0_{name}_1000.json').read_text()) for name in ('off','high','negative5')}
   self.assertEqual([d[k]['n_neurons'] for k in d],[512]*3)
