@@ -88,6 +88,8 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual((d['rows'],d['columns']),(13717,169))
   self.assertEqual(d['year_counts'],{'2014':6397,'2015':7320})
   self.assertEqual(d['vasopressor_24h_value_counts']['1.0'],98)
+  self.assertEqual(d['descriptive_24h_vasopressor_by_28day_outcome']['1.0']['deaths'],18)
+  self.assertIn('confounded by indication',d['limitations'])
   self.assertEqual(d['policy_validation'],'no')
   self.assertEqual(json.loads((ROOT/'evidence'/'gates.json').read_text())['sepsis']['policy_trajectory_datasets'],0)
  def test_sepsis_equal_epoch_feature_tradeoff(self):

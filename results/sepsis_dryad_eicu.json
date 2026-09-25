@@ -11,6 +11,18 @@
   "unit_28day_mortality_n": 1276,
   "unit_28day_mortality_rate": 0.09302325581395349,
   "vasopressor_24h_field": "MEDS",
+  "descriptive_24h_vasopressor_by_28day_outcome": {
+    "0.0": {
+      "n": 13368,
+      "deaths": 1242,
+      "mortality_rate": 0.09290843806104129
+    },
+    "1.0": {
+      "n": 98,
+      "deaths": 18,
+      "mortality_rate": 0.1836734693877551
+    }
+  },
   "vasopressor_24h_value_counts": {
     "0.0": 13368,
     "nan": 251,
@@ -40,5 +52,5 @@
   "example_sofa_median": 4.0,
   "source_rows_are_independent_episode_trajectories": false,
   "policy_validation": "no",
-  "limitations": "13,717 rows from a static first-day risk cohort, not 13,717 separate accession IDs or time-indexed ICU action-response trajectories. MEDS summarizes first-24h vasopressor use, not a dose/time policy; no per-step fluids, timed state/action/outcome, behavior propensities, or known mapping into ICU-Sepsis 25 interventions. Mortality and discharge variables must not be used as baseline model features. This source cannot validate treatment-policy effects."
+  "limitations": "13,717 rows from a static first-day risk cohort, not 13,717 separate accession IDs or time-indexed ICU action-response trajectories. MEDS summarizes first-24h vasopressor use, not a dose/time policy; raw treatment-stratified mortality is confounded by indication and should never be read as drug effect; no per-step fluids, timed state/action/outcome, behavior propensities, or known mapping into ICU-Sepsis 25 interventions. Mortality and discharge variables must not be used as baseline model features. This source cannot validate treatment-policy effects."
 }
