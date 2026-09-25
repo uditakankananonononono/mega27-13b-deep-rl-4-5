@@ -1,0 +1,31 @@
+{
+  "source": "https://github.com/icu-sepsis/icu-sepsis",
+  "method": "QNet width sweep on exact-model best-action one-hot target, 150 epochs; no independent patients, no held-out model",
+  "initial_state_optimal_value": 0.8751416994800841,
+  "same_model_baseline_neural_q_regression": 0.7864485428365543,
+  "models": {
+    "32": {
+      "epochs": 150,
+      "terminal_huber_loss": 9.900784416389216e-05,
+      "exact_optimal_action_match": 1.0,
+      "model_expected_return": 0.8751416994696519,
+      "gap_from_exact_optimal": 1.0432210650890283e-11
+    },
+    "64": {
+      "epochs": 150,
+      "terminal_huber_loss": 3.0412294797132482e-05,
+      "exact_optimal_action_match": 1.0,
+      "model_expected_return": 0.8751416994696519,
+      "gap_from_exact_optimal": 1.0432210650890283e-11
+    },
+    "128": {
+      "epochs": 150,
+      "terminal_huber_loss": 2.1448963957605393e-05,
+      "exact_optimal_action_match": 1.0,
+      "model_expected_return": 0.8751416994696519,
+      "gap_from_exact_optimal": 1.0432210650890283e-11
+    }
+  },
+  "selection_note": "All 713 nonterminal exact-best actions were used as training labels. 100% agreement is training-state memorization, NOT out-of-sample generalization. All three models evaluated on the same simulator that generated their labels; no scientific or clinical improvement over exact value iteration.",
+  "clinical_limitation": "Exact-best labels are produced by the published model, not observed treatment benefit. This model-only matching is a tautological mimic of an exact dynamic-programming optimum, not deep RL discovery, independent validation or clinical safety."
+}

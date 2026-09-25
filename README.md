@@ -112,3 +112,7 @@ On only 35 distinct day-one GSE54514 sepsis subjects (9 deaths), a first-48-prob
 ### Neural Q-ranking failure analysis
 
 Reconstructed one-hot sepsis network at the original seed. Nonterminal Q MSE .000558 and loss .000348 still yielded exact-best action match 5.75%, positive exact-model one-step Q shortfall in 61.9% of nonterminal states, and full policy value .786449 vs exact optimal .875142. One-step initial-weighted regret .00486 is not the full .08869 policy-value gap because later mistakes compound. These are model-only diagnostics, not patient outcomes. Code/results: `src/sepsis_rank_audit.py`, `results/sepsis_rank_audit.json`.
+
+### Sepsis rank-target pivot: memorize exact MDP policy, not patient benefit
+
+Three neural widths trained on all 713 exact-model best-action labels reached 100% **training-state** agreement and identical exact-model value .875142. This fixes the prior Q-regression network's ranking error (.786449) by supervised memorization of value iteration, not independent validation or deep-RL treatment discovery. Full sweep `src/sepsis_rank_pivot.py`, `results/sepsis_rank_pivot.json`. Patient outcomes and clinical claim unchanged.
