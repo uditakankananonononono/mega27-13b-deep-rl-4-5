@@ -1,0 +1,45 @@
+{
+  "source": "https://github.com/NevVerVer/DBS-Gym",
+  "source_commit": "aa0b10b9502e4f62dea755ce6468da024235c319",
+  "algorithm": "two hidden tanh layers, Bernoulli REINFORCE, within-episode centered discounted returns gamma .99, learning rate .01, norm clipping 1; binary physical 0 or +5 V actions",
+  "feature_source": "prior actual upstream LFP window, beta power, standard deviation, mean, prior action only",
+  "training": [
+    {
+      "seed": 820,
+      "steps": 180,
+      "mean_reward": -9.677713541454738,
+      "on_fraction": 0.5055555555555555,
+      "gradient_norm": 0.03770055592262198
+    },
+    {
+      "seed": 821,
+      "steps": 180,
+      "mean_reward": -7.745571592119004,
+      "on_fraction": 0.4166666666666667,
+      "gradient_norm": 0.013691043316722228
+    },
+    {
+      "seed": 822,
+      "steps": 180,
+      "mean_reward": -13.873953915701971,
+      "on_fraction": 0.4666666666666667,
+      "gradient_norm": 0.020816788347403217
+    },
+    {
+      "seed": 823,
+      "steps": 180,
+      "mean_reward": -5.644598761664496,
+      "on_fraction": 0.5444444444444444,
+      "gradient_norm": 0.008399517834374492
+    }
+  ],
+  "eval_seed": 222,
+  "eval_steps": 1000,
+  "eval_mean_reward": -13.554029880523686,
+  "eval_beta_component": 13.529029880523682,
+  "eval_action_on_fraction": 0.5,
+  "eval_stimulation_energy": 2500.0,
+  "eval_lfp_sha256": "b7001ad0a50f61a29c02383abb12082a3603c650369a591c5f2ef6e0819e808a",
+  "trained_weight_sha256": "31173598d38fddbc999bb92258f3fd881906bd649a1898e09fccb76778e29102",
+  "limitations": "Pilot deep RL in native full-neuron Env0, but only 4 180-step training episodes and one 1000-step evaluation. NOT published six-run 5555-step SAC benchmark, no patient data or clinical validation."
+}

@@ -88,3 +88,7 @@ To reduce full-neuron rerun time, `src/parkinson_published_psd_audit.py` reuses 
 ### Second GEO series per disease: independent blood context, still no actions
 
 Fetched and parsed GSE6613 (105 GSM, 50 PD and 22 healthy eligible) and GSE54514 (163 serial whole-blood GSM, only 54 people / 35 distinct day-one sepsis patients). Parkinson 13 shared probes across the GSE99039/GSE6613 platforms gave independent blood-label AUC **0.534** with all 438 original samples as training source; this negative does not validate stimulation actions. Source hashes, accession IDs, cohort counts and numeric calculations: `results/geo_independent.json`, `src/geo_independent.py`. Sepsis repeated blood draws are GSM accessions but not independent people or policy trajectories.
+
+### Native full-neuron short deep-RL pilot, not published SAC
+
+A two-layer tanh Bernoulli REINFORCE policy trained on 4 x 180 action steps in real 512-neuron DBS-Gym Env0, then evaluated for 1000 steps on seed 222. Native evaluation mean reward -13.554 and 50% on-time. This is a low-dose training pilot, not a 5555-step x six published SAC comparison, and not evidence of clinical benefit. Code, seeds, weight checksum and negative cautions in `src/parkinson_native_reinforce.py`, `results/parkinson_native_reinforce.json`.

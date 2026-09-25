@@ -83,6 +83,12 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual(s['first_finite_numeric_probe_count'],48)
   self.assertTrue(0<=p['external_auc']<=1)
   self.assertIn('Neither source validates',d['limitation'])
+ def test_native_deep_rl_short_pilot_scope(self):
+  d=json.loads((ROOT/'results'/'parkinson_native_reinforce.json').read_text())
+  self.assertEqual(len(d['training']),4);self.assertEqual(d['eval_steps'],1000)
+  self.assertEqual(d['eval_seed'],222);self.assertEqual(len(d['trained_weight_sha256']),64)
+  self.assertIn('NOT published six-run',d['limitations'])
+  self.assertFalse(json.loads((ROOT/'evidence'/'gates.json').read_text())['parkinson']['published_benchmark_comparable'])
  def test_native_upstream_psd_distinct_estimands(self):
   d=json.loads((ROOT/'results'/'parkinson_published_psd_seed222.json').read_text())
   self.assertAlmostEqual(100*d['high_beta_psd']/d['off_beta_psd'],d['high_pct_of_off'])

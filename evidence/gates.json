@@ -45,6 +45,7 @@
     "full_512_neuron_env0_short_horizon_pilot": true,
     "full_512_neuron_env0_5555_step_one_seed_controls": true,
     "independent_series_gsm_samples_used": 72,
-    "independent_series_cross_platform_auc": 0.5336363636363637
+    "independent_series_cross_platform_auc": 0.5336363636363637,
+    "native_full_neuron_deep_rl_short_pilot": true
   }
 }
