@@ -12,5 +12,7 @@
     "IPD": 76,
     "CONTROL": 74
   },
-  "feature_accession_alignment_verified": true
+  "feature_accession_alignment_verified": true,
+  "collection_unit": "GEO GSM sample accession, nested within one GSE series; not independent intervention dataset",
+  "policy_relevance": "No action-policy trajectories or intervention outcome; used only for orthogonal descriptive probe."
 }

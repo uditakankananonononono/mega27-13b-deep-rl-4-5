@@ -65,6 +65,15 @@ class ResearchTests(unittest.TestCase):
   self.assertLess(d['evaluation']['0.12']['paired_heavy_minus_original_mean_reward'],0)
   self.assertGreater(d['evaluation']['0.4']['paired_heavy_minus_original_mean_reward'],0)
   self.assertLess(d['evaluation']['0.12']['heavier_weight_0_40']['mean_energy'],d['evaluation']['0.12']['original_weight_0_12']['mean_energy'])
+ def test_gate_ledger_conservative(self):
+  d=json.loads((ROOT/'evidence'/'gates.json').read_text())
+  for disease,tools in [('sepsis',6),('parkinson',8)]:
+   row=d[disease]
+   self.assertEqual(row['used_science_tools'],tools)
+   self.assertEqual(row['verified_gsm_samples_used'],150)
+   self.assertEqual(row['distinct_source_studies'],1)
+   self.assertEqual(row['policy_trajectory_datasets'],0)
+   self.assertFalse(row['gate_complete'])
  def test_tool_count_no_padding(self):
   tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],9);self.assertEqual(tools['project_counts'],{'sepsis':6,'parkinson':8})
  def test_descriptive_probes_not_treatment(self):
