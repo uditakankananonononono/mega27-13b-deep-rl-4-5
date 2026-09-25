@@ -1,10 +1,38 @@
 {
-  "rule":"Count only actually-used scientific analysis/data tools or science libraries; generic transfer, literature search, tests, builds and source control excluded. Do not treat modules or workflows as separate tools.",
-  "verified_distinct_count":3,
-  "used":[
-    {"name":"NumPy","url":"https://numpy.org/","evidence":"src/net.py, src/sepsis.py, src/parkinson.py, src/geo_analysis.py; neural array training and simulation"},
-    {"name":"SciPy","url":"https://scipy.org/","evidence":"src/sepsis.py sparse transition operator; src/geo_analysis.py Mann-Whitney U and expit"},
-    {"name":"NCBI GEO","url":"https://www.ncbi.nlm.nih.gov/geo/","evidence":"data/sepsis/provenance.json and data/parkinson/provenance.json; GEO series matrices fetched and parsed"}
+  "rule": "Count only actually-used scientific analysis/data tools or science libraries; generic transfer, literature search, tests, builds and source control excluded. Do not treat modules or workflows as separate tools.",
+  "verified_distinct_count": 4,
+  "used": [
+    {
+      "name": "NumPy",
+      "url": "https://numpy.org/",
+      "evidence": "src/net.py, src/sepsis.py, src/parkinson.py, src/geo_analysis.py; neural array training and simulation"
+    },
+    {
+      "name": "SciPy",
+      "url": "https://scipy.org/",
+      "evidence": "src/sepsis.py sparse transition operator; src/geo_analysis.py Mann-Whitney U and expit"
+    },
+    {
+      "name": "NCBI GEO",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/",
+      "evidence": "data/sepsis/provenance.json and data/parkinson/provenance.json; GEO series matrices fetched and parsed"
+    },
+    {
+      "name": "Matplotlib",
+      "url": "https://matplotlib.org/",
+      "evidence": "src/plots.py; renders numerical benchmark comparisons into papers/*.pdf"
+    }
   ],
-  "not_counted":["GitHub","git","curl","pytest","Python stdlib","LaTeX","web search","article pages","pandas (not used)","DBS-Gym (read only, not executed)"]
+  "not_counted": [
+    "GitHub",
+    "git",
+    "curl",
+    "pytest",
+    "Python stdlib",
+    "LaTeX",
+    "web search",
+    "article pages",
+    "pandas (not used)",
+    "DBS-Gym (read only, not executed)"
+  ]
 }
