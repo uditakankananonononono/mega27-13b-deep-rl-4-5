@@ -1,0 +1,48 @@
+{
+  "source": "https://physionet.org/content/mimiciii-demo/1.4/",
+  "license_scope": "Public 100-patient MIMIC-III demo; source license should be checked before redistribution; only aggregate JSON committed, row-level derived CSV retained locally",
+  "source_sha256": {
+    "INPUTEVENTS_MV.csv": "adccf467814869e89bf2607b395dc220e04de908f76cb833a7d7e7a47b1262f3",
+    "INPUTEVENTS_CV.csv": "fc65b3989c29c5a5154ea093170fd61c7b667e061c75c5fdde331c6e2a4fa75e",
+    "D_ITEMS.csv": "63ecc329d4bd95225d6ce450f8b2218b66d005b4466c02248772bbe54a2c6de0",
+    "ICUSTAYS.csv": "455cd8fd014bd75d9d26ddf8cb116c77ecccee2fe35fea342801a631d94b387b",
+    "ADMISSIONS.csv": "487e0b87cc81472cc2eb9ee911b3493c39e15d32e8230cec559907060c009b1c",
+    "PATIENTS.csv": "f65803a46bcb88127574bfd0b70d78d4123783d05bb411e70d4c9629edd7b703",
+    "DIAGNOSES_ICD.csv": "74dc979906bc2172f0cf025271dcd44c7cd52506b297e4b36e63dd40dce923da"
+  },
+  "source_rows": {
+    "INPUTEVENTS_MV.csv": 11584,
+    "INPUTEVENTS_CV.csv": 10440,
+    "D_ITEMS.csv": 11868,
+    "ICUSTAYS.csv": 136,
+    "ADMISSIONS.csv": 129,
+    "PATIENTS.csv": 100,
+    "DIAGNOSES_ICD.csv": 1761
+  },
+  "sample_subjects": 100,
+  "suspected_sepsis_icd9_admissions": 38,
+  "icd9_codes": "038*, 99591, 99592, 78552; rough administrative proxy NOT adjudicated sepsis",
+  "selected_input_rows": 1728,
+  "selected_distinct_stays": 23,
+  "category_counts": {
+    "norepinephrine": {
+      "input_rows": 272,
+      "distinct_stays": 6
+    },
+    "vasopressin": {
+      "input_rows": 17,
+      "distinct_stays": 3
+    },
+    "isotonic_saline": {
+      "input_rows": 1262,
+      "distinct_stays": 17
+    },
+    "lactated_ringers": {
+      "input_rows": 177,
+      "distinct_stays": 5
+    }
+  },
+  "derived_rows": 432,
+  "derived_table_sha256": "d3f4ade365a3c0395cb0deec9dc05df9154b852761823366267c8cb629ba606d",
+  "caveat": "Demo deliberately contains only 100 patients and may not be representative. These event rows do not form a cleaned sepsis policy benchmark, cannot be matched to ICU-Sepsis model state IDs, and are NOT added to GEO accession count or an efficacy claim."
+}

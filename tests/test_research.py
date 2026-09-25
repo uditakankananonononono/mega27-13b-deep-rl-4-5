@@ -54,6 +54,12 @@ class ResearchTests(unittest.TestCase):
   self.assertLess(pivot['neural_expected_return'],base['our_exact_values']['optimal'])
   self.assertLess(pivot['neural_expected_return'],base['neural_greedy']['expected_return'])
   self.assertAlmostEqual(sum(x['initial_mass'] for x in pivot['sofa_initial_state_strata'].values()),1.0,places=10)
+ def test_mimic_demo_scope_and_counts(self):
+  d=json.loads((ROOT/'results'/'sepsis_mimic_demo.json').read_text())
+  self.assertEqual(d['sample_subjects'],100)
+  self.assertEqual(d['suspected_sepsis_icd9_admissions'],38)
+  self.assertEqual(d['selected_input_rows'],1728)
+  self.assertFalse(json.loads((ROOT/'evidence'/'gates.json').read_text())['sepsis']['public_mimic_demo_policy_validated'])
  def test_geo_cohort_split_audits(self):
   s=json.loads((ROOT/'results'/'sepsis_geo_cohort.json').read_text())
   p=json.loads((ROOT/'results'/'parkinson_geo_cohort.json').read_text())
@@ -98,13 +104,13 @@ class ResearchTests(unittest.TestCase):
   d=json.loads((ROOT/'evidence'/'gates.json').read_text())
   for disease,tools in [('sepsis',6),('parkinson',8)]:
    row=d[disease]
-   self.assertEqual(row['used_science_tools'],tools)
+   self.assertEqual(row['used_science_tools'],{'sepsis':8,'parkinson':8}[disease])
    self.assertEqual(row['verified_gsm_samples_used'],{'sepsis':479,'parkinson':438}[disease])
    self.assertEqual(row['distinct_source_studies'],1)
    self.assertEqual(row['policy_trajectory_datasets'],0)
    self.assertFalse(row['gate_complete'])
  def test_tool_count_no_padding(self):
-  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],9);self.assertEqual(tools['project_counts'],{'sepsis':6,'parkinson':8})
+  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],11);self.assertEqual(tools['project_counts'],{'sepsis':8,'parkinson':8})
  def test_descriptive_probes_not_treatment(self):
   for disease in ('sepsis','parkinson'):
    result=json.loads((ROOT/'results'/f'{disease}_geo.json').read_text());self.assertEqual(result['accessions_used'],{'sepsis':479,'parkinson':438}[disease]);self.assertEqual(result['features_used'],48);self.assertEqual(result['test_n'],{'sepsis':144,'parkinson':132}[disease]);self.assertTrue(0<=result['heldout_auc']<=1)

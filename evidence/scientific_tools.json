@@ -1,6 +1,6 @@
 {
   "rule": "Count only actually-used scientific analysis/data tools or science libraries; generic transfer, literature search, tests, builds and source control excluded. Do not treat modules or workflows as separate tools.",
-  "verified_distinct_count": 9,
+  "verified_distinct_count": 11,
   "used": [
     {
       "name": "NumPy",
@@ -51,6 +51,18 @@
       "url": "https://docs.kidger.site/diffrax/",
       "scope": "Parkinson project only",
       "evidence": "upstream DBS-Gym ODE diffeqsolve executed during four action steps in src/parkinson_native.py"
+    },
+    {
+      "name": "PhysioNet MIMIC-III demo",
+      "url": "https://physionet.org/content/mimiciii-demo/1.4/",
+      "scope": "Sepsis project only",
+      "evidence": "src/mimic_demo_audit.py; seven public clinical tables fetched, joined and audited for sepsis-coded admissions and four fluid/vasopressor item labels; results/sepsis_mimic_demo.json hashes/counts; no treatment-policy validation"
+    },
+    {
+      "name": "pandas",
+      "url": "https://pandas.pydata.org/",
+      "scope": "Sepsis project only",
+      "evidence": "src/mimic_demo_audit.py; joined public demo ICD, inputevents and item dictionaries and summarized real event rows"
     }
   ],
   "not_counted": [
@@ -66,8 +78,8 @@
     "DBS-Gym (read only, not executed)"
   ],
   "project_counts": {
-    "sepsis": 6,
+    "sepsis": 8,
     "parkinson": 8
   },
-  "tool_count_interpretation": "Global distinct tool names exclude Gymnasium duplicate cross-project; project-specific 6 sepsis and 8 Parkinson, not their global union."
+  "tool_count_interpretation": "11 unique science/data tool names globally (8 sepsis, 8 Parkinson); project-specific counts, do not count generic transfer/tests/build/literature."
 }

@@ -6,7 +6,7 @@
     "papers": "rendered substantive pages, not title/inventory inflation"
   },
   "sepsis": {
-    "used_science_tools": 6,
+    "used_science_tools": 8,
     "science_tool_target": 40,
     "verified_gsm_samples_used": 479,
     "accession_target": 120,
@@ -14,13 +14,16 @@
     "policy_trajectory_datasets": 0,
     "numbered_formulas": 14,
     "formula_target": 10,
-    "working_paper_pages": 5,
+    "working_paper_pages": 6,
     "paper_target_approx": 20,
-    "tests_total_repo": 20,
+    "tests_total_repo": 21,
     "published_model_baselines_reproduced": true,
     "neural_outperforms_optimal": false,
     "clinical_validation": false,
-    "gate_complete": false
+    "gate_complete": false,
+    "public_mimic_demo_action_rows_rough_administrative_proxy": 1728,
+    "public_mimic_demo_rough_sepsis_admissions": 38,
+    "public_mimic_demo_policy_validated": false
   },
   "parkinson": {
     "used_science_tools": 8,
@@ -33,7 +36,7 @@
     "formula_target": 10,
     "working_paper_pages": 7,
     "paper_target_approx": 20,
-    "tests_total_repo": 20,
+    "tests_total_repo": 21,
     "published_benchmark_comparable": false,
     "clinical_validation": false,
     "gate_complete": false,

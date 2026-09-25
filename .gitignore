@@ -11,3 +11,5 @@ __pycache__/
 *.gz
 *.bundle
 .env
+# MIMIC-III demo derived row-level table retained locally pending license review
+results/sepsis_mimic_demo.csv
