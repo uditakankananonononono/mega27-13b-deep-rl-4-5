@@ -28,14 +28,14 @@ The raw matrices are not in Git because they are 107 MB and 64 MB. `data/*/acces
 
 | Project | Genuinely used distinct science/data tools | Accession records fetched, numeric data used | Numbered formulas | Times New Roman paper | Benchmark |
 |---|---:|---:|---:|---|---|
-| Sepsis | 8/40 | 479/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
-| Parkinson | 8/40 | 438/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
+| Sepsis | 8/40 | 514/120, across two GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
+| Parkinson | 9/40 | 510/120, across two GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
 
-Counting one GEO matrix with 479 (sepsis) or 438 (Parkinson) GSM identifiers as those numbers of distinct **accession-level sample records**, not independent studies or treatment datasets. Strict project-specific tool evidence in `evidence/scientific_tools.json`; no tool-count padding. Next work: run Parkinson against the real DBS-Gym simulator, obtain policy-relevant datasets where permitted, robust independent validation, expand genuinely used tools, and write/check substantial manuscripts. This is a progress checkpoint, not completion.
+Counting 479+35 day-one (sepsis) or 438+72 (Parkinson) distinct GSM identifiers with measured numeric features and labels, across two series per project. These are accession-level blood sample records, not independent treatment datasets; GSE54514 repeated follow-up samples are not added. Strict project-specific tool evidence in `evidence/scientific_tools.json`; no tool-count padding. Next work: run Parkinson against the real DBS-Gym simulator, obtain policy-relevant datasets where permitted, robust independent validation, expand genuinely used tools, and write/check substantial manuscripts. This is a progress checkpoint, not completion.
 
 ## Working manuscripts
 
-`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 6 sepsis and 7 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
+`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 7 sepsis and 8 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
 
 ### Sepsis representation pivot
 
@@ -47,7 +47,7 @@ Counting one GEO matrix with 479 (sepsis) or 438 (Parkinson) GSM identifiers as 
 
 ### Native ICU-Sepsis cross-check
 
-`src/sepsis_native.py` actually instantiates the official v2 environment via Gymnasium, verifies selected transition rows match the CSV tables, then samples 200 episodes per random/optimal/expert policy. Observed means .740/.865/.795, within ordinary Monte Carlo fluctuation around exact .780/.875/.782 at n=200 (per-policy SE .031/.024/.029). These additional native simulator/Gymnasium tools count for sepsis only, moving sepsis to 6/40 at that checkpoint; public MIMIC-III demo and pandas audit later raised it to 8/40; Parkinson now 8/40 after a separate tiny native smoke test. Runs are still simulated and not new patients. See `results/sepsis_native.json`.
+`src/sepsis_native.py` actually instantiates the official v2 environment via Gymnasium, verifies selected transition rows match the CSV tables, then samples 200 episodes per random/optimal/expert policy. Observed means .740/.865/.795, within ordinary Monte Carlo fluctuation around exact .780/.875/.782 at n=200 (per-policy SE .031/.024/.029). These additional native simulator/Gymnasium tools count for sepsis only, moving sepsis to 6/40 at that checkpoint; public MIMIC-III demo and pandas audit later raised it to 8/40; Parkinson rose from 8/40 after a separate tiny native smoke test to 9/40 after actual PhysioNet tremor data. Runs are still simulated and not new patients. See `results/sepsis_native.json`.
 
 ### Native DBS-Gym smoke, not a benchmark
 
