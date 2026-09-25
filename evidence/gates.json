@@ -6,7 +6,7 @@
     "papers": "rendered substantive pages, not title/inventory inflation"
   },
   "sepsis": {
-    "used_science_tools": 9,
+    "used_science_tools": 10,
     "science_tool_target": 40,
     "verified_gsm_samples_used": 514,
     "accession_target": 120,
@@ -44,7 +44,10 @@
     "equal_epoch_centroid_policy_return_better": false,
     "dryad_static_eicu_rows_analyzed": 13717,
     "dryad_static_policy_validated": false,
-    "paired_dirichlet_sensitivity_not_clinical": true
+    "paired_dirichlet_sensitivity_not_clinical": true,
+    "figshare_derived_eicu_stays_analyzed": 6860,
+    "figshare_derived_mimic_iv_stays_analyzed": 2423,
+    "figshare_policy_validated": false
   },
   "parkinson": {
     "used_science_tools": 10,

@@ -1,0 +1,58 @@
+{
+  "source": "https://figshare.com/articles/dataset/_b_Derived_ICU_Sepsis_Dataset_from_eICU_and_MIMIC-IV_Immune_Cell_Trajectories_SOFA_and_Outcomes_b_/31146940",
+  "source_api": "https://api.figshare.com/v2/articles/31146940",
+  "cohorts": {
+    "eicu": {
+      "source_sha256": "92c0f60145ee12e91671d4338d74d7dfd8338664063fe4d01487a7b7478ad8c4",
+      "rows": 6860,
+      "columns": 206,
+      "id_field": "patientunitstayid",
+      "unique_ids": 6860,
+      "outcome_field": "deathd28_unit",
+      "28day_death_count": 415,
+      "nlr_measurements_available_day1_to_day7": [
+        6860,
+        5915,
+        5884,
+        4774,
+        3859,
+        3145,
+        2536
+      ],
+      "baseline_nlr_case_median": 12.14,
+      "baseline_nlr_control_median": 11.6,
+      "baseline_nlr_rank_auc_descriptive": 0.5072356454522512,
+      "baseline_nlr_mann_whitney_p_exploratory": 0.6206853806927906,
+      "vasopressor_summary_fields": [
+        "vasopressor_use"
+      ]
+    },
+    "mimic_iv": {
+      "source_sha256": "10631bc2744e8aad74eb448447fa5718d31f7d53700fea8131a57761843eb963",
+      "rows": 2423,
+      "columns": 119,
+      "id_field": "stay_id",
+      "unique_ids": 2423,
+      "outcome_field": "death_within_28_days",
+      "28day_death_count": 569,
+      "nlr_measurements_available_day1_to_day7": [
+        2423,
+        1432,
+        1377,
+        1306,
+        1165,
+        1052,
+        976
+      ],
+      "baseline_nlr_case_median": 11.45,
+      "baseline_nlr_control_median": 9.365,
+      "baseline_nlr_rank_auc_descriptive": 0.5638229600938833,
+      "baseline_nlr_mann_whitney_p_exploratory": 3.984055809308652e-06,
+      "vasopressor_summary_fields": [
+        "vasopressin"
+      ]
+    }
+  },
+  "purpose": "Verify measured seven-day immune-trajectory availability and a single descriptive baseline rank statistic within each derived sepsis cohort; not cross-source policy validation.",
+  "limitation": "eICU deathd28_unit and MIMIC-IV death_within_28_days are not identical endpoints; rank AUCs are same-cohort retrospective descriptions, with no training/test split and no adjustment for case mix or missingness. Later-day NLR availability depends on survival/discharge/measurement and must not be treated as random. Cohort sizes are stays, not new GEO accessions. Source contains no timestamped vasopressor plus IV-fluid action sequence or matching ICU-Sepsis 25-action states. No treatment-policy training, off-policy evaluation, effect or clinical recommendation."
+}

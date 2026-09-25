@@ -237,14 +237,28 @@ class ResearchTests(unittest.TestCase):
   d=json.loads((ROOT/'evidence'/'gates.json').read_text())
   for disease,tools in [('sepsis',6),('parkinson',8)]:
    row=d[disease]
-   self.assertEqual(row['used_science_tools'],{'sepsis':9,'parkinson':10}[disease])
+   self.assertEqual(row['used_science_tools'],{'sepsis':10,'parkinson':10}[disease])
    self.assertEqual(row['verified_gsm_samples_used'],{'sepsis':514,'parkinson':510}[disease])
    self.assertEqual(row['distinct_source_studies'],2)
    self.assertEqual(row['policy_trajectory_datasets'],0)
    self.assertFalse(row['gate_complete'])
  def test_tool_count_no_padding(self):
-  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],14);self.assertEqual(tools['project_counts'],{'sepsis':9,'parkinson':10})
+  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],15);self.assertEqual(tools['project_counts'],{'sepsis':10,'parkinson':10})
  def test_descriptive_probes_not_treatment(self):
   for disease in ('sepsis','parkinson'):
    result=json.loads((ROOT/'results'/f'{disease}_geo.json').read_text());self.assertEqual(result['accessions_used'],{'sepsis':479,'parkinson':438}[disease]);self.assertEqual(result['features_used'],48);self.assertEqual(result['test_n'],{'sepsis':144,'parkinson':132}[disease]);self.assertTrue(0<=result['heldout_auc']<=1)
 if __name__=='__main__':unittest.main()
+
+class FigshareImmuneAuditTests(unittest.TestCase):
+ def test_derived_sepsis_immune_cohorts_not_policy_data(self):
+  d=json.loads((ROOT/'results'/'sepsis_figshare_immune.json').read_text())
+  e,m=d['cohorts']['eicu'],d['cohorts']['mimic_iv']
+  self.assertEqual((e['rows'],e['unique_ids'],m['rows'],m['unique_ids']),(6860,6860,2423,2423))
+  self.assertEqual(e['nlr_measurements_available_day1_to_day7'][0],6860)
+  self.assertEqual(m['nlr_measurements_available_day1_to_day7'][-1],976)
+  self.assertLess(e['baseline_nlr_rank_auc_descriptive'],.52)
+  self.assertLess(m['baseline_nlr_rank_auc_descriptive'],.57)
+  self.assertIn('No treatment-policy training',d['limitation'])
+  gate=json.loads((ROOT/'evidence'/'gates.json').read_text())['sepsis']
+  self.assertEqual(gate['policy_trajectory_datasets'],0)
+  self.assertFalse(gate['figshare_policy_validated'])
