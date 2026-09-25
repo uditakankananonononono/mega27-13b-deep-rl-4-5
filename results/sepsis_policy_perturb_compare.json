@@ -1,0 +1,85 @@
+{
+  "source": "https://github.com/icu-sepsis/icu-sepsis",
+  "seed": 781,
+  "pseudo_concentration": 10,
+  "draws": 12,
+  "protocol": "Same stochastic transition draw across three fixed policies; one-hot and centroid each trained 150 epochs with original-model best labels on split seed 31 train IDs; exact original best map included as reference. Nonzero transition support held fixed.",
+  "original_model_values": {
+    "exact_original_optimal": 0.8751416994696519,
+    "onehot": 0.8569317863290788,
+    "centroid": 0.8450721943555852
+  },
+  "perturbed_model_values": {
+    "exact_original_optimal": [
+      0.8709658805204988,
+      0.850945613885775,
+      0.8863524593962896,
+      0.8681186416885655,
+      0.8746014295759683,
+      0.8573140452463222,
+      0.888835375541857,
+      0.8858285913238518,
+      0.8747773019538401,
+      0.8727186386343093,
+      0.8850778459759452,
+      0.8897532495363201
+    ],
+    "onehot": [
+      0.848031629854508,
+      0.8300569041308685,
+      0.8653566840514976,
+      0.8584059912897226,
+      0.847138168811067,
+      0.8529008888927623,
+      0.8685039185449459,
+      0.8695994279622672,
+      0.8604928537971238,
+      0.8608933680957154,
+      0.8672337306666473,
+      0.8746856023900047
+    ],
+    "centroid": [
+      0.8346447914863434,
+      0.8270926918614413,
+      0.8574188160407166,
+      0.8453981325148582,
+      0.8462215549585853,
+      0.8347051168923169,
+      0.8606815725138183,
+      0.858892826222408,
+      0.8444944233311611,
+      0.8556225153055558,
+      0.844741431057816,
+      0.8588145236194931
+    ]
+  },
+  "paired_centroid_minus_onehot": [
+    -0.013386838368164566,
+    -0.0029642122694272244,
+    -0.007937868010781002,
+    -0.013007858774864434,
+    -0.0009166138524816514,
+    -0.01819577200044542,
+    -0.007822346031127636,
+    -0.010706601739859156,
+    -0.01599843046596272,
+    -0.005270852790159597,
+    -0.022492299608831368,
+    -0.015871078770511637
+  ],
+  "paired_original_optimal_minus_onehot": [
+    0.022934250665990863,
+    0.02088870975490653,
+    0.020995775344792023,
+    0.009712650398842837,
+    0.027463260764901354,
+    0.004413156353559877,
+    0.02033145699691108,
+    0.016229163361584642,
+    0.014284448156716256,
+    0.011825270538593946,
+    0.01784411530929786,
+    0.015067647146315366
+  ],
+  "limitation": "Pseudo concentration is invented, not patient transition counts. Perturbed models are NOT independent hospitals, holdout patients, uncertainty intervals, or clinically valid policy evaluations. Policies were trained with exact labels from original same MDP, and split 31 was previously inspected; no selection inference."
+}

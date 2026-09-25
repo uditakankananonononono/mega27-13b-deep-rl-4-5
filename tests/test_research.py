@@ -92,6 +92,14 @@ class ResearchTests(unittest.TestCase):
   self.assertIn('confounded by indication',d['limitations'])
   self.assertEqual(d['policy_validation'],'no')
   self.assertEqual(json.loads((ROOT/'evidence'/'gates.json').read_text())['sepsis']['policy_trajectory_datasets'],0)
+ def test_sepsis_paired_perturbations_not_patient_intervals(self):
+  d=json.loads((ROOT/'results'/'sepsis_policy_perturb_compare.json').read_text())
+  self.assertEqual(d['draws'],12)
+  self.assertEqual(len(d['paired_centroid_minus_onehot']),12)
+  self.assertTrue(all(v<0 for v in d['paired_centroid_minus_onehot']))
+  for a,b,c in zip(d['perturbed_model_values']['centroid'],d['perturbed_model_values']['onehot'],d['paired_centroid_minus_onehot']):
+   self.assertAlmostEqual(a-b,c)
+  self.assertIn('NOT independent hospitals',d['limitation'])
  def test_sepsis_equal_epoch_feature_tradeoff(self):
   d=json.loads((ROOT/'results'/'sepsis_budget_match.json').read_text())
   self.assertEqual(len(d['split_results']),3)

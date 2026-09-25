@@ -14,9 +14,9 @@
     "policy_trajectory_datasets": 0,
     "numbered_formulas": 14,
     "formula_target": 10,
-    "working_paper_pages": 10,
+    "working_paper_pages": 11,
     "paper_target_approx": 20,
-    "tests_total_repo": 37,
+    "tests_total_repo": 38,
     "published_model_baselines_reproduced": true,
     "neural_outperforms_optimal": false,
     "clinical_validation": false,
@@ -43,7 +43,8 @@
     "equal_epoch_centroid_heldout_accuracy_better": true,
     "equal_epoch_centroid_policy_return_better": false,
     "dryad_static_eicu_rows_analyzed": 13717,
-    "dryad_static_policy_validated": false
+    "dryad_static_policy_validated": false,
+    "paired_dirichlet_sensitivity_not_clinical": true
   },
   "parkinson": {
     "used_science_tools": 10,
@@ -56,7 +57,7 @@
     "formula_target": 10,
     "working_paper_pages": 9,
     "paper_target_approx": 20,
-    "tests_total_repo": 37,
+    "tests_total_repo": 38,
     "published_benchmark_comparable": false,
     "clinical_validation": false,
     "gate_complete": false,

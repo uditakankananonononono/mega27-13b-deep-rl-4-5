@@ -35,7 +35,7 @@ Counting 479+35 day-one (sepsis) or 438+72 (Parkinson) distinct GSM identifiers 
 
 ## Working manuscripts
 
-`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 10 sepsis and 9 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
+`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 11 sepsis and 9 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
 
 ### Sepsis representation pivot
 
@@ -142,3 +142,7 @@ The public [Dryad movement-responsive aDBS dataset](https://datadryad.org/datase
 ### Static public eICU sepsis cohort is not sequential treatment evidence
 
 Fetched and SHA256-checked the public [Dryad eICU sepsis risk cohort](https://datadryad.org/dataset/doi:10.5061/dryad.hmgqnk9wb). It contains 13,717 summary rows, 169 fields, 2014/2015 split 6,397/7,320, and first-24h vasopressor-use field `MEDS` (98 yes, 13,368 no, 251 missing); 28-day ICU deaths 1,276. We counted this as one genuinely analyzed Sepsis-specific data product, raising 9/40 tools. These are **not** 13,717 GSM accessions and not timed vasopressor/fluid dose actions. No patient policy-validation dataset was gained. `src/sepsis_dryad_eicu_audit.py`, `results/sepsis_dryad_eicu.json`; row-level data are not copied into Git.
+
+### Paired synthetic transition sensitivity
+
+For the already-trained seed-31 one-hot and centroid policies, 12 paired same-support Dirichlet perturbations (invented concentration 10) gave model-value means .858608 and .847394. Centroid minus one-hot was negative in all 12, average -.011214 (range -.022492 to -.000917). The exact original action map averaged .875441. These are synthetic models, not patient/hospital resampling or clinical uncertainty intervals; source transition counts are unavailable. `src/sepsis_policy_perturb_compare.py`, `results/sepsis_policy_perturb_compare.json`.
