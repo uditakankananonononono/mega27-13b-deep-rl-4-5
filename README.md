@@ -28,8 +28,8 @@ The raw matrices are not in Git because they are 107 MB and 64 MB. `data/*/acces
 
 | Project | Genuinely used distinct science/data tools | Accession records fetched, numeric data used | Numbered formulas | Times New Roman paper | Benchmark |
 |---|---:|---:|---:|---|---|
-| Sepsis | 4/40 | 150/120, from one GEO series; contextual only | 12/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
-| Parkinson | 4/40 | 150/120, from one GEO series; contextual only | 12/10 in working paper | Work in progress | Not comparable to DBS-Gym |
+| Sepsis | 4/40 | 150/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
+| Parkinson | 4/40 | 150/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
 
 Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-level sample records**, not 150 independent studies or treatment datasets. Strict tool evidence in `evidence/scientific_tools.json`; no tool-count padding. Next work: run Parkinson against the real DBS-Gym simulator, obtain policy-relevant datasets where permitted, robust independent validation, expand genuinely used tools, and write/check substantial manuscripts. This is a progress checkpoint, not completion.
 

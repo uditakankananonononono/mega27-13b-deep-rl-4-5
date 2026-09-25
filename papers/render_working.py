@@ -58,7 +58,7 @@ def render(name):
    eq=eq.replace('\\mathbf 1','\\mathrm{1}').replace('\\mathbb E','\\mathrm{E}').replace('\\mathcal N','N')
    eq=eq.replace('\\begin{cases}e^2/2&|e|\\leq 1\\\\|e|-1/2&|e|>1.\\end{cases}',r'\\mathrm{Huber}(e)')
    eq=eq.replace('\\simN','\\sim N')
-   if number==11 and name=='sepsis': eq=r'\ell_\delta(e)=\mathrm{Huber}(e)' 
+   if number==11 and name=='sepsis': eq=r'\ell_\delta(e)=e^2/2\ (|e|\leq 1);\quad |e|-1/2\ (|e|>1)'  
    if '\\begin{cases}' in eq: eq=r'\ell_\delta(e)=\mathrm{Huber}(e)'  
    eq=eq.replace('\\text{','\\mathrm{').replace('\\mathbf{','\\mathrm{')
    eq=eq.replace('\\arg\\min','\\min').replace('\\arg\\max','\\max')
