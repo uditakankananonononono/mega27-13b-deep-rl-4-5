@@ -54,6 +54,11 @@ class ResearchTests(unittest.TestCase):
   self.assertLess(pivot['neural_expected_return'],base['our_exact_values']['optimal'])
   self.assertLess(pivot['neural_expected_return'],base['neural_greedy']['expected_return'])
   self.assertAlmostEqual(sum(x['initial_mass'] for x in pivot['sofa_initial_state_strata'].values()),1.0,places=10)
+ def test_dbs_native_smoke_is_not_benchmark(self):
+  d=json.loads((ROOT/'results'/'parkinson_native_smoke.json').read_text())
+  self.assertEqual(d['policies']['off']['actions'],4)
+  self.assertEqual(d['policies']['high']['actions'],4)
+  self.assertIn('not published',d['configuration'])
  def test_parkinson_pivot_tradeoff(self):
   d=json.loads((ROOT/'results'/'parkinson_pivot.json').read_text())
   self.assertEqual(d['sample_size'],100)
@@ -61,7 +66,7 @@ class ResearchTests(unittest.TestCase):
   self.assertGreater(d['evaluation']['0.4']['paired_heavy_minus_original_mean_reward'],0)
   self.assertLess(d['evaluation']['0.12']['heavier_weight_0_40']['mean_energy'],d['evaluation']['0.12']['original_weight_0_12']['mean_energy'])
  def test_tool_count_no_padding(self):
-  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],6);self.assertEqual(tools['project_counts'],{'sepsis':6,'parkinson':4})
+  tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],9);self.assertEqual(tools['project_counts'],{'sepsis':6,'parkinson':8})
  def test_descriptive_probes_not_treatment(self):
   for disease in ('sepsis','parkinson'):
    result=json.loads((ROOT/'results'/f'{disease}_geo.json').read_text());self.assertEqual(result['accessions_used'],150);self.assertEqual(result['features_used'],48);self.assertEqual(result['test_n'],45);self.assertTrue(0<=result['heldout_auc']<=1)

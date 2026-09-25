@@ -1,6 +1,6 @@
 {
   "rule": "Count only actually-used scientific analysis/data tools or science libraries; generic transfer, literature search, tests, builds and source control excluded. Do not treat modules or workflows as separate tools.",
-  "verified_distinct_count": 6,
+  "verified_distinct_count": 9,
   "used": [
     {
       "name": "NumPy",
@@ -31,8 +31,26 @@
     {
       "name": "Gymnasium",
       "url": "https://gymnasium.farama.org/",
-      "evidence": "src/sepsis_native.py; instantiated upstream v2 Gym environment and stepped 600 episodes",
-      "scope": "Sepsis project only"
+      "evidence": "src/sepsis_native.py executed official ICU-Sepsis Gymnasium wrapper; src/parkinson_native.py instantiated upstream SpatialKuramoto Gymnasium Env and stepped 4 actions per controller",
+      "scope": "Both projects"
+    },
+    {
+      "name": "DBS-Gym",
+      "url": "https://github.com/NevVerVer/DBS-Gym",
+      "scope": "Parkinson project only",
+      "evidence": "src/parkinson_native.py, results/parkinson_native_smoke.json; actual SpatialKuramoto 8-neuron env0 4-step off/high smoke (not full benchmark)"
+    },
+    {
+      "name": "JAX",
+      "url": "https://jax.readthedocs.io/",
+      "scope": "Parkinson project only",
+      "evidence": "upstream DBS-Gym JAX neural oscillator state evolution actually executed in src/parkinson_native.py smoke run"
+    },
+    {
+      "name": "Diffrax",
+      "url": "https://docs.kidger.site/diffrax/",
+      "scope": "Parkinson project only",
+      "evidence": "upstream DBS-Gym ODE diffeqsolve executed during four action steps in src/parkinson_native.py"
     }
   ],
   "not_counted": [
@@ -49,7 +67,7 @@
   ],
   "project_counts": {
     "sepsis": 6,
-    "parkinson": 4
+    "parkinson": 8
   },
-  "tool_count_interpretation": "6 distinct tools across repository; project-specific: 6 sepsis, 4 Parkinson. Do not count global pool as 6 for each project."
+  "tool_count_interpretation": "Global distinct tool names exclude Gymnasium duplicate cross-project; project-specific 6 sepsis and 8 Parkinson, not their global union."
 }

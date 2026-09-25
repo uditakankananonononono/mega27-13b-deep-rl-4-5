@@ -1,0 +1,40 @@
+{
+  "upstream": "https://github.com/NevVerVer/DBS-Gym",
+  "upstream_snapshot": "aa0b10b9502e4f62dea755ce6468da024235c319",
+  "configuration": "actual upstream SpatialKuramoto env0, reduced to 8 neurons on 2x2x2 grid, 4 action steps, reward bbpow_action; not published 512-neuron 5000-unit benchmark",
+  "dependencies_used": [
+    "Gymnasium",
+    "JAX",
+    "Diffrax",
+    "DBS-Gym",
+    "SciPy",
+    "NumPy"
+  ],
+  "policies": {
+    "off": {
+      "actions": 4,
+      "mean_reward": 0.0,
+      "sum_reward": 0.0,
+      "mean_observed_lfp": -0.2670491598546505,
+      "individual_rewards": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ]
+    },
+    "high": {
+      "actions": 4,
+      "mean_reward": -0.05,
+      "sum_reward": -0.2,
+      "mean_observed_lfp": 0.024811048060655594,
+      "individual_rewards": [
+        -0.05,
+        -0.05,
+        -0.05,
+        -0.05
+      ]
+    }
+  },
+  "caveat": "Smoke test only. Reward and LFP at tiny size/episode cannot be compared with published KDD baselines or interpreted clinically. Prior synthetic neural policy has different observation/action semantics and was not evaluated here."
+}

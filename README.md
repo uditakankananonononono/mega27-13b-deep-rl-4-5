@@ -29,7 +29,7 @@ The raw matrices are not in Git because they are 107 MB and 64 MB. `data/*/acces
 | Project | Genuinely used distinct science/data tools | Accession records fetched, numeric data used | Numbered formulas | Times New Roman paper | Benchmark |
 |---|---:|---:|---:|---|---|
 | Sepsis | 6/40 | 150/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
-| Parkinson | 4/40 | 150/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
+| Parkinson | 8/40 | 150/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
 
 Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-level sample records**, not 150 independent studies or treatment datasets. Strict project-specific tool evidence in `evidence/scientific_tools.json`; no tool-count padding. Next work: run Parkinson against the real DBS-Gym simulator, obtain policy-relevant datasets where permitted, robust independent validation, expand genuinely used tools, and write/check substantial manuscripts. This is a progress checkpoint, not completion.
 
@@ -47,4 +47,8 @@ Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-lev
 
 ### Native ICU-Sepsis cross-check
 
-`src/sepsis_native.py` actually instantiates the official v2 environment via Gymnasium, verifies selected transition rows match the CSV tables, then samples 200 episodes per random/optimal/expert policy. Observed means .740/.865/.795, within ordinary Monte Carlo fluctuation around exact .780/.875/.782 at n=200 (per-policy SE .031/.024/.029). These additional native simulator/Gymnasium tools count for sepsis only, moving sepsis to 6/40; Parkinson stays 4/40. Runs are still simulated and not new patients. See `results/sepsis_native.json`.
+`src/sepsis_native.py` actually instantiates the official v2 environment via Gymnasium, verifies selected transition rows match the CSV tables, then samples 200 episodes per random/optimal/expert policy. Observed means .740/.865/.795, within ordinary Monte Carlo fluctuation around exact .780/.875/.782 at n=200 (per-policy SE .031/.024/.029). These additional native simulator/Gymnasium tools count for sepsis only, moving sepsis to 6/40; Parkinson now 8/40 after a separate tiny native smoke test. Runs are still simulated and not new patients. See `results/sepsis_native.json`.
+
+### Native DBS-Gym smoke, not a benchmark
+
+`src/parkinson_native.py` executed the unmodified upstream SpatialKuramoto class in a deliberately reduced 8-neuron env0 configuration for four steps each with off and high fixed actions. Off reward 0.0, high reward -0.2 over four steps. This reveals that the tiny configuration has no detectable beta penalty and high stimulation only pays energy cost. It is a configuration-induced negative, **not** the 512-neuron, long-horizon published DBS-Gym benchmark. JAX/Diffrax/Gymnasium/DBS-Gym were genuinely exercised and are added to Parkinson tool ledger (8/40); full-scale published baseline and neural controller in the native environment remain missing.
