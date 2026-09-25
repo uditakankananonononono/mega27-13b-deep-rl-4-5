@@ -1,0 +1,44 @@
+{
+  "source": "https://datadryad.org/dataset/doi:10.5061/dryad.hmgqnk9wb",
+  "source_tsv_sha256": "38fc9d3dbd88f50b1961a51fc74dd369130c47f148b386e97ea68831d0b7975b",
+  "rows": 13717,
+  "columns": 169,
+  "distinct_hospital_ids": 199,
+  "year_counts": {
+    "2014": 6397,
+    "2015": 7320
+  },
+  "unit_28day_mortality_n": 1276,
+  "unit_28day_mortality_rate": 0.09302325581395349,
+  "vasopressor_24h_field": "MEDS",
+  "vasopressor_24h_value_counts": {
+    "0.0": 13368,
+    "nan": 251,
+    "1.0": 98
+  },
+  "source_sepsis_type_code_counts": {
+    "0": 5373,
+    "1": 3275,
+    "2": 1646,
+    "3": 1484,
+    "4": 1090,
+    "5": 830,
+    "6": 19
+  },
+  "missing_fraction_early_measures": {
+    "AGE": 0.0,
+    "SOFA": 0.0008019246190858059,
+    "WBC": 0.167456440912736,
+    "TEMPERATURE": 0.060654662098126415,
+    "HEARTRATE": 0.016694612524604507,
+    "MEANBP": 0.01764234161988773,
+    "GCS_SCORE": 0.02544288109644966,
+    "CREATININE": 0.13217175767296055,
+    "URINE": 0.5324779470729751
+  },
+  "example_age_mean": 69.58358241598017,
+  "example_sofa_median": 4.0,
+  "source_rows_are_independent_episode_trajectories": false,
+  "policy_validation": "no",
+  "limitations": "13,717 rows from a static first-day risk cohort, not 13,717 separate accession IDs or time-indexed ICU action-response trajectories. MEDS summarizes first-24h vasopressor use, not a dose/time policy; no per-step fluids, timed state/action/outcome, behavior propensities, or known mapping into ICU-Sepsis 25 interventions. Mortality and discharge variables must not be used as baseline model features. This source cannot validate treatment-policy effects."
+}

@@ -28,7 +28,7 @@ The raw matrices are not in Git because they are 107 MB and 64 MB. `data/*/acces
 
 | Project | Genuinely used distinct science/data tools | Accession records fetched, numeric data used | Numbered formulas | Times New Roman paper | Benchmark |
 |---|---:|---:|---:|---|---|
-| Sepsis | 8/40 | 514/120, across two GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
+| Sepsis | 9/40 | 514/120, across two GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
 | Parkinson | 10/40 | 510/120, across two GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
 
 Counting 479+35 day-one (sepsis) or 438+72 (Parkinson) distinct GSM identifiers with measured numeric features and labels, across two series per project. These are accession-level blood sample records, not independent treatment datasets; GSE54514 repeated follow-up samples are not added. Strict project-specific tool evidence in `evidence/scientific_tools.json`; no tool-count padding. Next work: run Parkinson against the real DBS-Gym simulator, obtain policy-relevant datasets where permitted, robust independent validation, expand genuinely used tools, and write/check substantial manuscripts. This is a progress checkpoint, not completion.
@@ -138,3 +138,7 @@ At 150 epochs for both representations on the three fixed state splits, centroid
 ### One-participant human adaptive stimulation figure traces
 
 The public [Dryad movement-responsive aDBS dataset](https://datadryad.org/dataset/doi:10.5061/dryad.4xgxd25hw) was downloaded and SHA256-checked. Its Fig5b excerpt has 4,196 left- and 4,193 right-hand time-indexed records of movement prediction and stimulation amplitude from **one** person, plus separate true movement-state traces. It records high/low stimulation around 2.2/1.6 mA with ramps. The Fig2 beta/gamma neural traces are from a different time interval (615-795 seconds versus Fig5 965-1175 seconds) and cannot be joined to these actions. This is a genuine additional Parkinson-specific data product (10/40), but 8,389 samples are not patients or independent accessions; without synchronized implant LFP, reward and logged propensities, it does **not** provide off-policy RL treatment validation. `src/parkinson_dryad_adaptive.py`, `results/parkinson_dryad_adaptive.json`.
+
+### Static public eICU sepsis cohort is not sequential treatment evidence
+
+Fetched and SHA256-checked the public [Dryad eICU sepsis risk cohort](https://datadryad.org/dataset/doi:10.5061/dryad.hmgqnk9wb). It contains 13,717 summary rows, 169 fields, 2014/2015 split 6,397/7,320, and first-24h vasopressor-use field `MEDS` (98 yes, 13,368 no, 251 missing); 28-day ICU deaths 1,276. We counted this as one genuinely analyzed Sepsis-specific data product, raising 9/40 tools. These are **not** 13,717 GSM accessions and not timed vasopressor/fluid dose actions. No patient policy-validation dataset was gained. `src/sepsis_dryad_eicu_audit.py`, `results/sepsis_dryad_eicu.json`; row-level data are not copied into Git.

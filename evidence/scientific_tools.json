@@ -1,6 +1,6 @@
 {
   "rule": "Count only actually-used scientific analysis/data tools or science libraries; generic transfer, literature search, tests, builds and source control excluded. Do not treat modules or workflows as separate tools.",
-  "verified_distinct_count": 13,
+  "verified_distinct_count": 14,
   "used": [
     {
       "name": "NumPy",
@@ -75,6 +75,12 @@
       "url": "https://datadryad.org/dataset/doi:10.5061/dryad.4xgxd25hw",
       "scope": "Parkinson project only",
       "evidence": "src/parkinson_dryad_adaptive.py and results/parkinson_dryad_adaptive.json; public source ZIP verified SHA256, 8,389 time-indexed action rows from two hands of one participant, separate true movement and neural figure traces, no joined policy validation"
+    },
+    {
+      "name": "Dryad eICU sepsis static risk cohort",
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.hmgqnk9wb",
+      "scope": "Sepsis project only",
+      "evidence": "src/sepsis_dryad_eicu_audit.py, results/sepsis_dryad_eicu.json; 13,717-row public TSV actually fetched, SHA256 verified and analyzed as a static first-day risk cohort; not treatment-policy trajectories"
     }
   ],
   "not_counted": [
@@ -89,9 +95,9 @@
     "SciPy signal Welch as separate tool (SciPy counted once)"
   ],
   "project_counts": {
-    "sepsis": 8,
+    "sepsis": 9,
     "parkinson": 10
   },
-  "tool_count_interpretation": "13 unique science/data products or libraries globally (8 sepsis, 10 Parkinson); project-specific counts; generic transfer/tests/build/literature excluded.",
+  "tool_count_interpretation": "14 unique science/data products or libraries globally (9 sepsis, 10 Parkinson); project-specific counts; generic transfer/tests/build/literature excluded.",
   "used_science_tool_note": "Welch spectral estimate used in Parkinson PhysioNet analysis but SciPy library already counted; no extra submodule count."
 }
