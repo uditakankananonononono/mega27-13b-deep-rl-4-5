@@ -1,0 +1,32 @@
+{
+  "model": "ICU-Sepsis published tabular MDP v2; exact transition tables, not original MIMIC patient records",
+  "transition_source": "https://github.com/icu-sepsis/icu-sepsis/blob/main/icu-sepsis-csv-tables.tar.gz",
+  "published_reference": "https://github.com/icu-sepsis/icu-sepsis#baselines",
+  "published_reference_values": {
+    "random": 0.78,
+    "expert": 0.78,
+    "optimal": 0.88
+  },
+  "our_exact_values": {
+    "random": 0.7800709044652784,
+    "expert": 0.7818448901578219,
+    "optimal": 0.8751416994800841
+  },
+  "neural_greedy": {
+    "expected_return": 0.7864485428365543,
+    "iterations": 225,
+    "residual": 9.640416243072991e-11
+  },
+  "neural_agreement_with_optimal_states": 0.05750350631136045,
+  "training": {
+    "epochs": 50,
+    "start_loss": 0.33619895140304257,
+    "end_loss": 0.00034821878759682404,
+    "seed": 27
+  },
+  "value_iteration": {
+    "iterations": 264,
+    "residual": 9.297690395371205e-11
+  },
+  "negative_or_caveat": "Deep network is trained on exact model-derived Q labels and same published MDP, not held-out patient data. Does not demonstrate treatment benefit or a benchmark break."
+}

@@ -1,0 +1,13 @@
+*.TTF
+*.ttf
+*.exe
+*.aux
+*.log
+*.out
+*.toc
+__pycache__/
+.pytest_cache/
+*.pyc
+*.gz
+*.bundle
+.env

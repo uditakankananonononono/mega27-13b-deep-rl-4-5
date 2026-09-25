@@ -1,0 +1,46 @@
+\input{shared.tex}
+\title{A Neural Q-Network Distillation in ICU-Sepsis: Reproduced Model Baselines, Weak Neural Policy, and an Orthogonal GEO Expression Audit}
+\author{MEGA27 13b working research report}
+\date{September 25, 2026}
+\maketitle
+\begin{abstract}
+We examine treatment-policy simulation using the public ICU-Sepsis v2 tabular Markov decision process (MDP). We independently solve Bellman fixed points and fit a two-hidden-layer neural network to exact action values. Random, expert and optimal expected returns are 0.780071, 0.781845 and 0.875142; the learned neural greedy policy has 0.786449 under the same exact model. This is below optimal and essentially near the two weaker baselines. Independently, 150 accession-level GSE65682 blood-expression records with 48 measured probes were analyzed for descriptive mortality-label classification, attaining within-series holdout AUC 0.523. The GEO records cannot evaluate treatment actions. This negative is retained, not rewritten as a clinical claim.
+\end{abstract}
+\section{Scope and motivation}
+\caution\ The task is modeled ICU decisions in sepsis, not a prescription. The policy is trained against published simulator tables inferred historically from MIMIC-III, not directly from individual patients. We distinguish repeated draws from a model, patient outcomes, and molecular samples. Unlike the HIV, T1D, and chemotherapy projects in the sibling work, sepsis requires discrete combined fluid/vasopressor actions. Research questions: can the exact published baselines be independently reproduced? Does a modest neural approximate policy reach the exact optimum? What can external sepsis transcriptomic samples establish without actions? The answer to the last question is descriptive information only.
+\section{Source provenance and reproducibility}
+The model tables are from \url{https://github.com/icu-sepsis/icu-sepsis}, whose paper is \url{https://arxiv.org/abs/2406.05646}. Git source snapshot c9a6d19b85d34883304afaf7cbe1ff02ede9e12b. The archive includes transitionFunction.csv (716 states, 25 actions), expertPolicy.csv, initialStateDistribution.csv and rewardFunction.csv. Sepsis blood data GSE65682 are fetched from \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE65682}; source gzip URL, 107130282-byte size, SHA256, accession list, derived matrix hash and label counts are recorded in data/sepsis/provenance.json. There are 150 distinct GSM sample accessions used, \emph{not} 150 independent studies. The source matrix contains 802 samples; a deterministic first-150 subset with nonmissing observed 28-day mortality and first 48 finite numeric probes is used. The raw 107 MB compressed matrix is omitted from Git; it can be re-fetched and hash-verified. Data source is not a prospective policy trial.
+\section{Mathematical specification}
+Index a state $s\in\{0,\dots,715\}$ and action $a\in\{0,\dots,24\}$. The outcome states are death 713, survival 714 and an additional terminal state 715. State 714 has arrival reward one. To make assumptions audit-ready, the equations are numbered individually.
+\begin{equation}P_{sa,s'}=\Pr(S_{t+1}=s'\mid S_t=s,A_t=a).\end{equation}
+\begin{equation}\sum_{s'=0}^{715}P_{sa,s'}=1.\end{equation}
+\begin{equation}r(s')=\mathbf{1}\{s'=714\}.\end{equation}
+\begin{equation}V^{\pi}(s)=\sum_a\pi(a\mid s)\sum_{s'}P_{sa,s'}[r(s')+V^{\pi}(s')].\end{equation}
+\begin{equation}V^{\pi}(s)=0\quad\text{for }s\in\{713,714,715\}\text{ after arrival}.\end{equation}
+\begin{equation}V^*(s)=\max_a\sum_{s'}P_{sa,s'}[r(s')+V^*(s')].\end{equation}
+\begin{equation}Q^*(s,a)=\sum_{s'}P_{sa,s'}[r(s')+V^*(s')].\end{equation}
+\begin{equation}J(\pi)=\sum_s\mu(s)V^{\pi}(s).\end{equation}
+\begin{equation}\pi_{\rm greedy}(s)=\arg\max_a f_\theta(e_s)_a,\quad e_s\in\{0,1\}^{716}.\end{equation}
+\begin{equation}f_\theta(x)=W_3\sigma(W_2\sigma(W_1x+b_1)+b_2)+b_3.\end{equation}
+\begin{equation}\ell_\delta(e)=\begin{cases}e^2/2&|e|\leq 1\\|e|-1/2&|e|>1.\end{cases}\end{equation}
+\begin{equation}\widehat\theta=\arg\min_\theta\frac1{716\cdot25}\sum_{s,a}\ell_\delta(f_\theta(e_s)_a-Q^*(s,a)).\end{equation}
+\begin{equation}\widehat{\mathrm{AUC}}=\frac{1}{n_+n_-}\sum_{i:y_i=1}\sum_{j:y_j=0}[\mathbf{1}(z_i>z_j)+\tfrac12\mathbf{1}(z_i=z_j)].\end{equation}
+\begin{equation}\widetilde x_j=\mathrm{clip}((x_j-\mathrm{median}_{\rm train}(x_j))/\max(\mathrm{sd}_{\rm train}(x_j),10^{-6}),-5,5).\end{equation}
+The code uses direct sparse matrix-vector multiplication on the published transition table to a residual below $10^{-10}$. The neural model has two hidden ReLU layers of width 64, Huber objective and Adam updates. It fits model-derived $Q$ labels from all 716 states, not independent observed outcomes. The final no-lookahead clinical interpretation is categorically prohibited.
+\section{Protocol}
+The fixed simulator discount is one and the initial state distribution is taken unchanged. All policies are evaluated under the same transition law. Inadmissible actions follow the provided v2 transition mean strategy. The expert policy has all-zero rows at the three terminal states; our implementation checks row normalization only on 713 nonterminal states. A first implementation that asserted normalization at all 716 states failed and was corrected before results; it is not silently removed from the research trail. For the expression probe, train/test are a deterministic random 105/45 split. Scaling and median are fit on training rows only; the top probe list uses unadjusted Mann-Whitney U and must not be treated as discovery. Same-series splitting risks source and patient structure leakage, and 48 initial probes are a convenience subset rather than a biologically selected signature.
+\section{Observed model results}
+\begin{center}\begin{tabular}{lrr}\toprule Policy&Our exact $J$&Published rounded $J$\\\midrule Uniform random&0.780071&0.78\\Expert&0.781845&0.78\\Optimal&0.875142&0.88\\Neural greedy&0.786449&not reported\\\bottomrule\end{tabular}\end{center}
+Reference values are published in the source repository's README; results JSON records full precision and convergence residual. Neural agreement with optimal argmax is just 0.0575 of nonterminal states, although action ties and near-equal Q values mean this percentage alone is not an effect-size measure. Training loss fell from 0.3362 to 0.000348 over 50 epochs. A small regression loss is \emph{not} a good control policy when tiny Q errors change rankings. Neural expected return barely exceeds expert and remains about 0.089 below the exact optimum. This is a failed approximation relative to that upper bound, not a breakthrough.
+\section{Orthogonal GEO cohort results}
+150 fetched sample accessions have observed labels 117 alive and 33 deceased; 48 measured numeric expression features per accession are retained. A within-series random 45-sample holdout has AUC 0.523 (the positive label is death). This is close to chance, carries no evidence that any probe optimizes fluid or vasopressor choice and has no association with the MDP state IDs. No mapping from GEO blood vectors to ICU-Sepsis states is attempted. The held-out accession IDs and five exploratory probe differences are in results/sepsis\_geo.json. Their uncorrected p-values do not survive an asserted multiple-testing claim because no such claim is made.
+\section{Limitations and next experiment}
+The principal negative is that a neural distilled controller is substantially worse than exact value iteration on the same MDP. Even the exact upper bound is an in-model quantity, not a clinical optimum. Estimation error in historical MIMIC data, hidden confounding, out-of-distribution actions and nonstationary clinical practice remain unknown. The expression series does not resolve any of them. Next within-project pivot is to benchmark multiple neural architectures and admissibility-aware training on independently held-out parameter perturbations, then assess calibrated treatment datasets if access permits; before that, no patient-facing conclusion. The strict science-tool ledger counts 3 distinct used tools, far short of 40. The paper is a working report, not the requested 20 substantive pages. The missing gate remains conspicuous.
+\section{References and audit links}
+\begin{enumerate}
+\item Choudhary K., Gupta D., Thomas P., ICU-Sepsis: A Benchmark MDP Built from Real Medical Data, RLC 2024. \url{https://arxiv.org/abs/2406.05646}.
+\item ICU-Sepsis model source and rounded baselines. \url{https://github.com/icu-sepsis/icu-sepsis}.
+\item GEO GSE65682 accession page. \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE65682}.
+\item GEO matrix download and SHA256: data/sepsis/provenance.json.
+\end{enumerate}
+\end{document}

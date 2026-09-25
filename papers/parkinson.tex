@@ -1,0 +1,46 @@
+\input{shared.tex}
+\title{Adaptive Stimulation in a Synthetic Parkinson Beta-Burst Surrogate: A Deep Fitted-Q Control Exercise with Explicit Benchmark Noncomparability}
+\author{MEGA27 13b working research report}
+\date{September 25, 2026}
+\maketitle
+\begin{abstract}
+We train a two-hidden-layer fitted-Q network to choose three stimulation amplitudes in a custom nonlinear beta-burst surrogate. On 120 held-out shared random seeds, the neural controller has mean simulated reward $-10.440$; always-off, fixed-high and a predeclared beta-threshold controller achieve $-19.369$, $-11.226$ and $-15.365$ respectively. The paired difference from threshold is 4.925 with bootstrap 95\% interval 4.825 to 5.021 \emph{within our invented simulator}. These numbers are not DBS-Gym benchmarks, Parkinson clinical endpoints or independent patient data. Separately, 150 GEO sample accessions provide descriptive PD/control whole-blood expression and weak within-series AUC 0.595; they contain no deep-brain stimulation outcomes. The limits matter more than the attractive synthetic contrast.
+\end{abstract}
+\section{Treatment context and boundary}
+\caution\ Parkinson's disease adaptive deep-brain stimulation (aDBS) adjusts electrical input to neurophysiological signals. A serious benchmark is DBS-Gym, which models Kuramoto neural ensembles with beta-band, spatial and drift features: \url{https://github.com/NevVerVer/DBS-Gym}. This report does \emph{not} install, run or numerically compare against DBS-Gym. It isolates a tractable prototype controller with a different state, action, reward and timestep to expose engineering and safety questions, not to substitute a benchmark. No other MEGA27 13a disease is copied.
+\section{Data provenance}
+Parkinson blood-expression GEO GSE99039, \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE99039}, has 558 matrix columns. A deterministic first 150 with idiopathic Parkinson or control labels and first 48 finite measured probes yield 76 IPD and 74 controls. The source gzip is 63827685 bytes and SHA256, measured sample IDs and derived SHA256 are saved in data/parkinson/provenance.json. GSM accessions are independent identifiers but cannot be represented as 150 independent aDBS experiments. The 150 rows are used in a distinct descriptive probe and never passed to the simulated controller, since blood expression is not instantaneous beta neural feedback.
+\section{Formal surrogate}
+Let $s_t=(b_t,d_t,\delta_t)$ denote scaled beta amplitude, endogenous drive and electrode drift. Let the action index $a_t\in\{0,1,2\}$ map to $u_t\in\{0,.5,1\}$. These equations exactly describe \emph{our} assumed dynamics, not a fitted patient mechanism:
+\begin{equation}u_t=\{0,.5,1\}_{a_t}.\end{equation}
+\begin{equation}\epsilon_t\sim\mathcal N(0,0.05^2).\end{equation}
+\begin{equation}b_{t+1}=\mathrm{clip}_{[0,1.5]}(.85b_t+.12d_t+.04\delta_t-.19u_t(1-.25\delta_t)+\epsilon_t).\end{equation}
+\begin{equation}d_{t+1}=\mathrm{clip}_{[.05,1]}(.94d_t+.045+.035\sin(8b_{t+1})).\end{equation}
+\begin{equation}\delta_{t+1}=\mathrm{clip}_{[0,1]}(.99\delta_t+.01+.001\sin(3b_{t+1})).\end{equation}
+\begin{equation}r_t=-b_{t+1}^2-.12u_t^2-.035\mathbf 1(u_t>0).\end{equation}
+\begin{equation}G=\sum_{t=0}^{69}r_t.\end{equation}
+\begin{equation}Q(s,a)=\mathbb E[r_t+.95\max_{a'}Q(s_{t+1},a')\mid s_t=s,a_t=a].\end{equation}
+\begin{equation}f_\theta(s)=W_3\mathrm{ReLU}(W_2\mathrm{ReLU}(W_1s+b_1)+b_2)+b_3.\end{equation}
+\begin{equation}Y_{i,a_i}=r_i+.95\max_{a'}f_{\theta_{k-1}}(s_i')_{a'},\quad Y_{i,a\ne a_i}=f_{\theta_{k-1}}(s_i)_a.\end{equation}
+\begin{equation}\theta_k=\arg\min_\theta\sum_{i,a}\ell_{\mathrm{Huber}}(f_\theta(s_i)_a-Y_{i,a}).\end{equation}
+\begin{equation}\widehat\Delta=\frac1{120}\sum_{i=1}^{120}(G_i^{\rm neural}-G_i^{\rm threshold}).\end{equation}
+\begin{equation}\mathrm{CI}_{.95}=\mathrm{quantile}_{.025,.975}(\widehat\Delta^{*}_1,\ldots,\widehat\Delta^{*}_{3000}).\end{equation}
+\begin{equation}\mathrm{burst\ steps}=\sum_{t=0}^{69}\mathbf 1(b_t>.5).\end{equation}
+No adverse effects, stimulation contact location, sensory symptoms, hardware constraints or individualized therapy models appear in these equations. That omission makes the policy unfit for clinical interpretation.
+\section{Simulation protocol}
+Training uses 3000 independently sampled state/action/transition tuples from the custom process with seed 101, 12 successive fitted-Q target rounds of 20 epochs each, and a two-hidden-layer width-32 network. The 120 test episodes use seeds 60100 through 60219, all policies sharing per-seed initial state and noise; this paired setup reduces simulation variance but does not create independent patient validation. Horizon is 70. Comparators are always-off, always-high, and high amplitude iff beta exceeds 0.5. The fixed threshold and fixed high are intentionally simple controls, not the optimized DBS-Gym PID, PPO or SAC methods. The distinction blocks a false ``benchmark victory'' reading.
+\section{Simulated outcomes}
+\begin{center}\begin{tabular}{lrrr}\toprule Controller&Mean $G$&Mean burst steps&Mean energy\\\midrule Neural fitted-Q&$-10.440$&0.367&34.204\\Always off&$-19.369$&35.667&0\\Fixed high&$-11.226$&0.367&70.000\\Beta threshold&$-15.365$&11.967&12.542\\\bottomrule\end{tabular}\end{center}
+The neural-versus-threshold paired mean difference is +4.925 with naive paired-bootstrap interval +4.825 to +5.021. That interval quantifies only test-seed noise given a \emph{fixed chosen synthetic simulator}; it omits scientific model uncertainty, design choices and human variability. A larger reward can hide more energy or real-world harms. The neural controller uses nearly three times the threshold energy, an honest trade-off. Fixed high suppresses model bursts equally well at double the neural energy, but no safety limit is modeled.
+\section{Descriptive molecular arm}
+48 measured GEO probes were extracted for each of 150 distinct GSM samples. A same-series 105/45 split with training-only centering gives held-out AUC 0.595 for IPD versus control. This is not a meaningful clinical biomarker validation; series batch, subject and cohort leakage risks persist. No molecular signal enters the controller, no treatment response is predicted from it and no causal bridge from peripheral blood to beta LFP has been demonstrated. Results and sample IDs are recorded in results/parkinson\_geo.json.
+\section{Published comparison status and next pivot}
+DBS-Gym's source describes three settings (spectral features, spatial partial observability and nonstationary drift), tests RL and standard controls and reports relative robustness. Our surrogate cannot reproduce its architecture or numeric metrics. The benchmark gate is therefore explicitly \emph{missing}. The within-project pivot is to run identical policies and seeds under the actual DBS-Gym environment, audit action and feature compatibility, add neural safety constraints and independent parameter sweeps, and obtain properly intervention-linked data before any translational claims. Forty genuinely used science/data tools are also far away: three are documented, not 40. This is not a finished 20-substantive-page paper.
+\section{Sources}
+\begin{enumerate}
+\item Kuzmina E. et al., KDD 2025, DBS-Gym code. \url{https://github.com/NevVerVer/DBS-Gym}.
+\item Publisher record: \url{https://dl.acm.org/doi/10.1145/3711896.3737397}.
+\item GSE99039 GEO accession page: \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE99039}.
+\item Full checksum and accession-level manifest: data/parkinson/provenance.json and data/parkinson/accession\_features.csv.
+\end{enumerate}
+\end{document}

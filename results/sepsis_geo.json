@@ -1,0 +1,85 @@
+{
+  "accessions_used": 150,
+  "features_used": 48,
+  "label_positive": "1",
+  "train_n": 105,
+  "test_n": 45,
+  "heldout_auc": 0.5228571428571429,
+  "heldout_positive_n": 10,
+  "heldout_negative_n": 35,
+  "heldout_accessions": [
+    "GSM1602882",
+    "GSM1691909",
+    "GSM1602925",
+    "GSM1691863",
+    "GSM1691925",
+    "GSM1602937",
+    "GSM1691861",
+    "GSM1602863",
+    "GSM1602923",
+    "GSM1602860",
+    "GSM1691934",
+    "GSM1602805",
+    "GSM1602826",
+    "GSM1602843",
+    "GSM1602878",
+    "GSM1602933",
+    "GSM1691935",
+    "GSM1602866",
+    "GSM1691938",
+    "GSM1602842",
+    "GSM1602858",
+    "GSM1602825",
+    "GSM1602834",
+    "GSM1691886",
+    "GSM1602942",
+    "GSM1691904",
+    "GSM1691943",
+    "GSM1602841",
+    "GSM1602859",
+    "GSM1691901",
+    "GSM1691877",
+    "GSM1602853",
+    "GSM1602906",
+    "GSM1691929",
+    "GSM1691884",
+    "GSM1691927",
+    "GSM1602953",
+    "GSM1602869",
+    "GSM1691866",
+    "GSM1602813",
+    "GSM1602973",
+    "GSM1602824",
+    "GSM1602888",
+    "GSM1602810",
+    "GSM1602927"
+  ],
+  "probe_screen_top5_uncorrected": [
+    {
+      "probe": "11715200_s_at",
+      "train_median_difference": 0.3253832000000001,
+      "train_mann_whitney_p_uncorrected": 0.0058823287493212926
+    },
+    {
+      "probe": "11715113_x_at",
+      "train_median_difference": 0.20821330000000016,
+      "train_mann_whitney_p_uncorrected": 0.02861899637904014
+    },
+    {
+      "probe": "11715232_x_at",
+      "train_median_difference": 0.3042296499999999,
+      "train_mann_whitney_p_uncorrected": 0.03409326266347386
+    },
+    {
+      "probe": "11715199_s_at",
+      "train_median_difference": 0.11949350000000036,
+      "train_mann_whitney_p_uncorrected": 0.06351790744871742
+    },
+    {
+      "probe": "11715156_s_at",
+      "train_median_difference": 0.2332181500000008,
+      "train_mann_whitney_p_uncorrected": 0.06806770292157895
+    }
+  ],
+  "limitations": "Random split from same GEO series may leak batch/subject/site; no external cohort validation, treatment arms, stimulation measures, or policy effect. Probe p-values uncorrected descriptive only."
+}

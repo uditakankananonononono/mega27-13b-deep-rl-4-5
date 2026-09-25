@@ -1,0 +1,16 @@
+{
+  "series": "GSE99039",
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE99nnn/GSE99039/matrix/GSE99039_series_matrix.txt.gz",
+  "source_sha256": "197b7272a8a5040c2843cbefd44f8bd43e9b7820562732d5b1ffd30841bfcb50",
+  "source_bytes": 63827685,
+  "derived_sha256": "6e5f2843716a46841f1abc2aff6375390f2b70ce5b3b5bb75dd51c5150aaa773",
+  "used_accessions": 150,
+  "used_numeric_features": 48,
+  "label": "disease label",
+  "interpretation": "idiopathic Parkinson disease versus control; not stimulation outcome",
+  "labels": {
+    "IPD": 76,
+    "CONTROL": 74
+  },
+  "feature_accession_alignment_verified": true
+}

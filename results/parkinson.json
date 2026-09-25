@@ -1,0 +1,53 @@
+{
+  "model": "custom synthetic beta-burst control surrogate inspired by DBS-Gym, NOT execution of DBS-Gym",
+  "reference": "https://github.com/NevVerVer/DBS-Gym",
+  "published_benchmark_comparison": "NOT COMPARABLE: different simulator, observation/action/reward/horizon; no DBS-Gym score claimed",
+  "heldout_seed_range": [
+    60100,
+    60219
+  ],
+  "n_trajectories": 120,
+  "training_samples": 3000,
+  "training_rounds": 12,
+  "epochs_each_round": 20,
+  "loss_first_last": [
+    0.022649899493399205,
+    0.008524330704598494
+  ],
+  "controllers": {
+    "neural_fqi": {
+      "mean_return": -10.439630334579544,
+      "sd_return": 1.2681559266068916,
+      "mean_beta_burst_steps": 0.36666666666666664,
+      "mean_energy": 34.204166666666666
+    },
+    "always_off": {
+      "mean_return": -19.369366873515233,
+      "sd_return": 6.422573140033224,
+      "mean_beta_burst_steps": 35.666666666666664,
+      "mean_energy": 0.0
+    },
+    "fixed_high": {
+      "mean_return": -11.225862506067251,
+      "sd_return": 0.2467784004315957,
+      "mean_beta_burst_steps": 0.36666666666666664,
+      "mean_energy": 70.0
+    },
+    "threshold_beta_0_5": {
+      "mean_return": -15.364621888255947,
+      "sd_return": 0.8852181919995773,
+      "mean_beta_burst_steps": 11.966666666666667,
+      "mean_energy": 12.541666666666666
+    }
+  },
+  "paired_diff_neural_minus_threshold": 4.924991553676404,
+  "limitations": [
+    "Synthetic dynamics were chosen by us; not calibrated to patient stimulation responses",
+    "GEO blood expression is descriptive and does not establish neural state or treatment effect",
+    "No clinical or DBS-Gym published-benchmark result"
+  ],
+  "paired_bootstrap_95": [
+    4.824962499934365,
+    5.020902674430386
+  ]
+}
