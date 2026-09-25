@@ -14,9 +14,9 @@
     "policy_trajectory_datasets": 0,
     "numbered_formulas": 14,
     "formula_target": 10,
-    "working_paper_pages": 8,
+    "working_paper_pages": 9,
     "paper_target_approx": 20,
-    "tests_total_repo": 31,
+    "tests_total_repo": 32,
     "published_model_baselines_reproduced": true,
     "neural_outperforms_optimal": false,
     "clinical_validation": false,
@@ -33,7 +33,12 @@
     "state_holdout_optimal_action_match_range": [
       0.1258741258741259,
       0.1958041958041958
-    ]
+    ],
+    "centroid_holdout_action_match_range": [
+      0.26573426573426573,
+      0.3706293706293706
+    ],
+    "centroid_holdout_model_value_improves_over_onehot": false
   },
   "parkinson": {
     "used_science_tools": 9,
@@ -46,7 +51,7 @@
     "formula_target": 10,
     "working_paper_pages": 9,
     "paper_target_approx": 20,
-    "tests_total_repo": 31,
+    "tests_total_repo": 32,
     "published_benchmark_comparable": false,
     "clinical_validation": false,
     "gate_complete": false,

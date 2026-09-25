@@ -83,6 +83,14 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual(s['first_finite_numeric_probe_count'],48)
   self.assertTrue(0<=p['external_auc']<=1)
   self.assertIn('Neither source validates',d['limitation'])
+ def test_sepsis_centroid_holdout_tradeoff(self):
+  c=json.loads((ROOT/'results'/'sepsis_centroid_holdout.json').read_text())
+  o=json.loads((ROOT/'results'/'sepsis_state_holdout.json').read_text())
+  for a,b in zip(c['splits'],o['splits']):
+   self.assertEqual(a['test_states'],b['test_states'])
+   self.assertGreater(a['heldout_action_match'],b['heldout_action_match'])
+   self.assertLess(a['full_model_expected_return'],b['full_model_expected_return'])
+  self.assertIn('Neither independent transition model nor patient',c['limitation'])
  def test_sepsis_state_holdout_exposes_memorization(self):
   d=json.loads((ROOT/'results'/'sepsis_state_holdout.json').read_text())
   self.assertEqual(len(d['splits']),3)
