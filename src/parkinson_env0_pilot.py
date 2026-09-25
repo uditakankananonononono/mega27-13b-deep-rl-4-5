@@ -24,12 +24,12 @@ def run(upstream,out,action,steps,seed):
  wave=np.asarray(wave);dt=units2sec(p['verbose_dt']);power=calc_beta_band_power(wave,dt,12.5,21)
  result={'source':'https://github.com/NevVerVer/DBS-Gym','source_commit':'aa0b10b9502e4f62dea755ce6468da024235c319',
   'policy':'DBS OFF' if action==0. else ('HF-DBS' if action==1. else f'fixed {action}'),
-  'action_normalized':action,'n_neurons':512,'grid':[8,8,8],'env':'env0','seed':seed,'steps':len(rewards),'published_steps':5555,'configuration_total_episode_len_units':float(p['total_episode_len']),
+  'action_normalized':action,'n_neurons':512,'grid':[8,8,8],'env':'env0','seed':seed,'steps':len(rewards),'training_config_steps':5555,'paper_eval_protocol':'10 x 1500 steps per evaluation, six Env0 evaluations; checked repo eval0 config differs','configuration_total_episode_len_units':float(p['total_episode_len']),
   'reward_function':'bbpow_action','mean_step_reward':float(np.mean(rewards)),'total_reward':float(sum(rewards)),
   'mean_step_beta_component':float(np.mean([-r-.01*abs(float(env.rescale_action(action))) for r in rewards])),
   'global_low_beta_power':float(power),'episode_truncated_to_steps':len(rewards)<int(p['total_episode_len']/(p['electrode_width']+p['electrode_pause'])),'absolute_stimulation_energy':float(len(rewards)*abs(float(env.rescale_action(action)))),
   'lfp_points':len(wave),'lfp_sha256':hashlib.sha256(wave.tobytes()).hexdigest(),'runtime_seconds':float(time.monotonic()-t),
-  'comparison_caveat':'512 neurons and actual upstream env0, but horizon is shorter than published 5555 steps, one seed, reward metrics and normalization may differ. Do not compare directly to published percent power benchmark.'}
+  'comparison_caveat':'512 neurons and actual upstream env0, but horizon is shorter than repository training-config 5555 steps and mismatched to paper multi-episode evaluation, one seed, reward metrics and normalization may differ. Do not compare directly to published percent power benchmark.'}
  Path(out).write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2),flush=True);return result
 if __name__=='__main__':
  a=argparse.ArgumentParser();a.add_argument('--upstream',required=True);a.add_argument('--out',required=True);a.add_argument('--action',type=float,required=True);a.add_argument('--steps',type=int,default=1000);a.add_argument('--seed',type=int,default=222);x=a.parse_args();run(x.upstream,x.out,x.action,x.steps,x.seed)

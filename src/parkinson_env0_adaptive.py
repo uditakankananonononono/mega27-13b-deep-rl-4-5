@@ -22,7 +22,7 @@ def run(upstream,out,seed=223,steps=1200,threshold=0.001):
   if done or trunc:break
  d={'source':'https://github.com/NevVerVer/DBS-Gym','source_commit':'aa0b10b9502e4f62dea755ce6468da024235c319','model':'native 512-neuron Env0',
     'policy':'fixed, arbitrary threshold on upstream observable LFP beta spectral power; NOT deep RL','threshold':threshold,'threshold_selected':'pilot heuristic, no independent tuning or clinical grounding',
-    'seed':seed,'steps':len(r),'published_episode_steps':5555,'mean_reward':float(np.mean(r)),
+    'seed':seed,'steps':len(r),'training_config_steps':5555,'paper_eval_protocol':'10 x 1500 steps per evaluation, six Env0 evaluations; checked repo eval0 config differs','mean_reward':float(np.mean(r)),
     'mean_beta_reward_component':float(np.mean(-np.asarray(r)-.01*5*np.asarray(actions))),
     'action_on_fraction':float(np.mean(actions)),'energy':float(np.sum(actions)*5),
     'global_low_beta_power':float(calc_beta_band_power(np.asarray(lfp),dt,12.5,21)),

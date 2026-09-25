@@ -12,7 +12,8 @@
   "env": "env0",
   "seed": 222,
   "steps": 1000,
-  "published_steps": 5555,
+  "training_config_steps": 5555,
+  "paper_eval_protocol": "10 x 1500 steps per evaluation, six Env0 evaluations; checked repository eval0 config differs",
   "reward_function": "bbpow_action",
   "mean_step_reward": -6.831122001171111,
   "total_reward": -6831.122001171233,
@@ -22,5 +23,5 @@
   "lfp_points": 17067,
   "lfp_sha256": "1660280dbfe2eb5491a9d6cc7501a1377e892d1908e642e65835b981449095b5",
   "runtime_seconds": 50.86735090600018,
-  "comparison_caveat": "512 neurons and actual upstream env0, but horizon is shorter than published 5555 steps, one seed, reward metrics and normalization may differ. Do not compare directly to published percent power benchmark."
+  "comparison_caveat": "512 neurons and actual upstream env0, but horizon is shorter than repository training-config 5555 steps and mismatched to paper multi-episode evaluation, one seed, reward metrics and normalization may differ. Do not compare directly to published percent power benchmark."
 }

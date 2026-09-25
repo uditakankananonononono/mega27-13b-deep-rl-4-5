@@ -63,5 +63,5 @@
       "1.0": 0.4985100057211004
     }
   },
-  "limitations": "Pilot neural REINFORCE code in native full-neuron Env0 with only 4 180-step episodes; parameter drift near zero, probabilities around 0.5 and last-action threshold artifacts. No evidence of meaningful learning. One 1000-step evaluation, NOT published six-run 5555-step SAC benchmark, no patient data or clinical validation."
+  "limitations": "Pilot neural REINFORCE code in native full-neuron Env0 with only 4 180-step episodes; parameter drift near zero, probabilities around 0.5 and last-action threshold artifacts. No evidence of meaningful learning. One 1000-step evaluation, NOT published six-evaluation 10x1500-step SAC benchmark, no patient data or clinical validation."
 }
