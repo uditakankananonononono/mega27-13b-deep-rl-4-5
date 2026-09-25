@@ -104,3 +104,7 @@ Fetched and numerically analyzed 55 PhysioNet Parkinsonian tremor finger-velocit
 ### Suspicious perfect within-series sepsis AUC
 
 On only 35 distinct day-one GSE54514 sepsis subjects (9 deaths), a first-48-probe, five-fold descriptive classifier produced out-of-fold AUC 1.0. All nine eligible nonsurvivors precede all survivors in the source matrix; subject-split folds cannot rule out source status block/batch confounding. The outside GSE65682 probe IDs do not match the 48 convenience probes, so this is **not** verified external validation or a mortality biomarker, and contains no treatment actions. Exact folds, indices and scores in `results/sepsis_second_series.json`, code `src/sepsis_second_series.py`.
+
+### Treatment-trajectory availability audit
+
+[MIMIC-Sepsis](https://github.com/yongh7/MIMIC-sepsis) publishes preprocessing code, not an openly downloadable full MIMIC-IV patient trajectory table. Its README requires credentialed MIMIC-IV access, research training, DUA and a local PostgreSQL import. Current 13b sepsis data therefore do not support external off-policy treatment validation; simulator MDP, 100-patient public demo and GEO blood labels are distinct sources. The public demo source specifies [ODbL 1.0](https://physionet.org/content/mimiciii-demo/view-license/1.4/); row-level clinical exports remain withheld.

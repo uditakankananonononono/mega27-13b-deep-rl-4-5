@@ -16,8 +16,8 @@ import matplotlib.pyplot as plt
 ROOT=Path(__file__).resolve().parent
 for name,file in [('TNR','Times'),('TNR-Bold','Timesbd'),('TNR-Italic','Timesi')]:pdfmetrics.registerFont(TTFont(name,'/tmp/13b-fonts/'+file+'.TTF'))
 pdfmetrics.registerFontFamily('TNR',normal='TNR',bold='TNR-Bold',italic='TNR-Italic')
-base=ParagraphStyle('body',fontName='TNR',fontSize=11,leading=13.5,spaceAfter=5)
-heading=ParagraphStyle('heading',parent=base,fontName='TNR-Bold',fontSize=15,leading=19,spaceBefore=10,keepWithNext=True)
+base=ParagraphStyle('body',fontName='TNR',fontSize=11,leading=13.1,spaceAfter=4)
+heading=ParagraphStyle('heading',parent=base,fontName='TNR-Bold',fontSize=15,leading=19,spaceBefore=8,keepWithNext=True)
 title=ParagraphStyle('title',parent=heading,fontSize=18,leading=22,alignment=TA_CENTER,spaceAfter=17)
 small=ParagraphStyle('small',parent=base,fontSize=9,leading=12)
 formula=ParagraphStyle('formula',parent=base,fontSize=9,leading=12,leftIndent=12,rightIndent=8,spaceAfter=8)
@@ -46,7 +46,7 @@ def render(name):
  report_title=title_match.group(1) if title_match else name
  src=re.sub(r'\\(title|author|date)\{[^}]*\}|\\maketitle|\\begin\{abstract\}|\\end\{abstract\}','',src)
  pieces=re.split(r'(\\begin\{equation\}.*?\\end\{equation\})',src,flags=re.S)
- doc=SimpleDocTemplate(str(ROOT/(name+'.pdf')),pagesize=letter,leftMargin=65,rightMargin=65,topMargin=52,bottomMargin=50,title=report_title,author='MEGA27 13b')
+ doc=SimpleDocTemplate(str(ROOT/(name+'.pdf')),pagesize=letter,leftMargin=65,rightMargin=65,topMargin=48,bottomMargin=48,title=report_title,author='MEGA27 13b')
  story=[Paragraph(escape(report_title),title),Paragraph('WORKING RESEARCH REPORT - September 25, 2026',small),Spacer(1,8)]
  number=0
  for piece in pieces:
