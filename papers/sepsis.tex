@@ -105,9 +105,4 @@ We downloaded and checked the public Dryad eICU extract shared by She for a seps
 
 This source contains one `MEDS` summary field described in its README as vasopressor use in the first 24 hours: 98 yes, 13,368 no and 251 missing. In this extract, raw mortality was 18/98 (18.37\%) in the 24-hour vasopressor-use group and 1,242/13,368 (9.29\%) in the no-use group, excluding 251 missing-use rows. This unadjusted contrast is not an effect of giving or withholding vasopressors: sicker patients are more likely to receive them, and first-day treatment may even occur after a baseline variable was measured. It does not contain a timestamped vasopressor dose series or the paired fluid actions and four-hour state transitions used in ICU-Sepsis. Nor does the one-row extract supply a propensity for selecting one of the 25 modeled intervention combinations. A retrospective mortality row might support an appropriately designed risk prediction question, with discharge/mortality fields excluded from baseline predictors, but cannot serve as off-policy treatment validation here. We count Dryad as one distinct, actually used sepsis data product; its 13,717 rows do not become 13,717 GEO GSM accessions or independent sequential trajectories. Exact aggregate counts, source hash and script are in results/sepsis\_dryad\_eicu.json and src/sepsis\_dryad\_eicu\_audit.py. The policy-data gate remains zero.
 
-\section{References and audit links}
-\begin{enumerate}
-\item Choudhary K., Gupta D., Thomas P., ICU-Sepsis: A Benchmark MDP Built from Real Medical Data, RLC 2024. \url{https://arxiv.org/abs/2406.05646}.
-\item ICU-Sepsis model source and rounded baselines. \url{https://github.com/icu-sepsis/icu-sepsis}.
-\end{enumerate}
 \end{document}
