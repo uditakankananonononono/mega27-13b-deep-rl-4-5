@@ -41,5 +41,27 @@
   "eval_stimulation_energy": 2500.0,
   "eval_lfp_sha256": "b7001ad0a50f61a29c02383abb12082a3603c650369a591c5f2ef6e0819e808a",
   "trained_weight_sha256": "31173598d38fddbc999bb92258f3fd881906bd649a1898e09fccb76778e29102",
-  "limitations": "Pilot deep RL in native full-neuron Env0, but only 4 180-step training episodes and one 1000-step evaluation. NOT published six-run 5555-step SAC benchmark, no patient data or clinical validation."
+  "parameter_drift_l2_from_initial": {
+    "w1": 5.892386613991393e-07,
+    "b1": 2.504506945104291e-06,
+    "w2": 5.350823071248351e-07,
+    "b2": 8.57901935775612e-06,
+    "w3": 4.2971137203756454e-07,
+    "b3": 2.890717677451671e-05
+  },
+  "decision_probe": {
+    "0.0": {
+      "0": 0.4999286962195029,
+      "0.1": 0.500114899701211,
+      "0.5": 0.500857839778196,
+      "1.0": 0.5017738953013434
+    },
+    "1.0": {
+      "0": 0.49662798353067766,
+      "0.1": 0.49681733589559873,
+      "0.5": 0.4975740348049552,
+      "1.0": 0.4985100057211004
+    }
+  },
+  "limitations": "Pilot neural REINFORCE code in native full-neuron Env0 with only 4 180-step episodes; parameter drift near zero, probabilities around 0.5 and last-action threshold artifacts. No evidence of meaningful learning. One 1000-step evaluation, NOT published six-run 5555-step SAC benchmark, no patient data or clinical validation."
 }

@@ -87,7 +87,8 @@ class ResearchTests(unittest.TestCase):
   d=json.loads((ROOT/'results'/'parkinson_native_reinforce.json').read_text())
   self.assertEqual(len(d['training']),4);self.assertEqual(d['eval_steps'],1000)
   self.assertEqual(d['eval_seed'],222);self.assertEqual(len(d['trained_weight_sha256']),64)
-  self.assertIn('NOT published six-run',d['limitations'])
+  self.assertIn('No evidence of meaningful learning',d['limitations'])
+  self.assertLess(max(d['parameter_drift_l2_from_initial'].values()),.0001)
   self.assertFalse(json.loads((ROOT/'evidence'/'gates.json').read_text())['parkinson']['published_benchmark_comparable'])
  def test_native_upstream_psd_distinct_estimands(self):
   d=json.loads((ROOT/'results'/'parkinson_published_psd_seed222.json').read_text())

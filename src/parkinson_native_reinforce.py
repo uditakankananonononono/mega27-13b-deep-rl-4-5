@@ -72,7 +72,9 @@ def run(upstream,out,train_episodes=4,train_steps=180,eval_steps=1200,weights=No
   'eval_action_on_fraction':float(np.mean(actions)),'eval_stimulation_energy':float(np.sum(actions)*5),
   'eval_lfp_sha256':hashlib.sha256(np.asarray(wave).tobytes()).hexdigest(),
   'trained_weight_sha256':hashlib.sha256((Path(weights) if weights else weights_out).read_bytes()).hexdigest(),
-  'limitations':f'Pilot deep RL in native full-neuron Env0, but only {len(traces)} 180-step training episodes and one {len(rewards)}-step evaluation. NOT published six-run 5555-step SAC benchmark, no patient data or clinical validation.'}
+  'parameter_drift_l2_from_initial':{k:float(np.linalg.norm(par[k]-policy_params()[k])) for k in par},
+  'decision_probe':{str(last):{str(beta):forward(par,np.array([beta,.05,.03,last]))[0] for beta in (0,.1,.5,1.)} for last in (0.,1.)},
+  'limitations':f'Pilot neural REINFORCE code in native full-neuron Env0 with only {len(traces)} 180-step episodes; parameter drift near zero, probabilities around 0.5 and last-action threshold artifacts. No evidence of meaningful learning. One {len(rewards)}-step evaluation, NOT published six-run 5555-step SAC benchmark, no patient data or clinical validation.'}
  Path(out).write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2),flush=True);return result
 if __name__=='__main__':
  a=argparse.ArgumentParser();a.add_argument('--upstream',required=True);a.add_argument('--out',default='results/parkinson_native_reinforce.json');a.add_argument('--train-episodes',type=int,default=4);a.add_argument('--train-steps',type=int,default=180);a.add_argument('--eval-steps',type=int,default=1200);a.add_argument('--weights');x=a.parse_args();run(x.upstream,x.out,x.train_episodes,x.train_steps,x.eval_steps,x.weights)
