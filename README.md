@@ -100,3 +100,7 @@ After negligible REINFORCE parameter drift, Adam episode updates, broader initia
 ### Human Parkinson tremor recordings: fixed conditions only
 
 Fetched and numerically analyzed 55 PhysioNet Parkinsonian tremor finger-velocity recordings across 15 subjects; 25 within-subject DBS-on/off pairs at fixed medication state gave descriptive median 4-6 Hz power ratio .873 (med-on .805 across 13 pairs, med-off 1.332 across 12). Mixed results, heterogeneous calibration and nonrandomized condition order. These are *not* LFP or step-level adaptive DBS action trajectories and cannot validate a treatment policy. Script and all source hashes: `src/parkinson_tremordb.py`, `results/parkinson_tremordb.json`; source https://physionet.org/content/tremordb/1.0.0/ . Parkinson science/data tool count 9/40.
+
+### Suspicious perfect within-series sepsis AUC
+
+On only 35 distinct day-one GSE54514 sepsis subjects (9 deaths), a first-48-probe, five-fold descriptive classifier produced out-of-fold AUC 1.0. All nine eligible nonsurvivors precede all survivors in the source matrix; subject-split folds cannot rule out source status block/batch confounding. The outside GSE65682 probe IDs do not match the 48 convenience probes, so this is **not** verified external validation or a mortality biomarker, and contains no treatment actions. Exact folds, indices and scores in `results/sepsis_second_series.json`, code `src/sepsis_second_series.py`.

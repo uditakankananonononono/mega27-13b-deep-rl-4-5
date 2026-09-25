@@ -16,7 +16,7 @@
     "formula_target": 10,
     "working_paper_pages": 6,
     "paper_target_approx": 20,
-    "tests_total_repo": 27,
+    "tests_total_repo": 28,
     "published_model_baselines_reproduced": true,
     "neural_outperforms_optimal": false,
     "clinical_validation": false,
@@ -25,7 +25,9 @@
     "public_mimic_demo_rough_sepsis_admissions": 38,
     "public_mimic_demo_policy_validated": false,
     "independent_day1_sepsis_subjects": 35,
-    "independent_series_gsm_samples_used": 35
+    "independent_series_gsm_samples_used": 35,
+    "gse54514_day1_out_of_fold_auc": 1.0,
+    "gse54514_auc_validated": false
   },
   "parkinson": {
     "used_science_tools": 9,
@@ -38,7 +40,7 @@
     "formula_target": 10,
     "working_paper_pages": 8,
     "paper_target_approx": 20,
-    "tests_total_repo": 27,
+    "tests_total_repo": 28,
     "published_benchmark_comparable": false,
     "clinical_validation": false,
     "gate_complete": false,

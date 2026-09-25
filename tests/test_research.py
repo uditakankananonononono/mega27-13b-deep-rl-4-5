@@ -83,6 +83,12 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual(s['first_finite_numeric_probe_count'],48)
   self.assertTrue(0<=p['external_auc']<=1)
   self.assertIn('Neither source validates',d['limitation'])
+ def test_second_sepsis_series_perfect_auc_flagged(self):
+  d=json.loads((ROOT/'results'/'sepsis_second_series.json').read_text())
+  self.assertEqual((d['day1_subject_count'],d['day1_deaths'],d['first_finite_probe_count']),(35,9,48))
+  self.assertEqual(d['out_of_fold_auc'],1.0)
+  self.assertIn('suspicious',d['limitations'])
+  self.assertIn('precede all 26 eligible survivor',d['source_metadata_ordering'])
  def test_tremordb_fixed_conditions_not_adaptive(self):
   d=json.loads((ROOT/'results'/'parkinson_tremordb.json').read_text())
   self.assertEqual((d['record_count'],d['subject_count'],d['pair_count']),(55,15,25))
