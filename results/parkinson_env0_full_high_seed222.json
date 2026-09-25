@@ -1,0 +1,25 @@
+{
+  "source": "https://github.com/NevVerVer/DBS-Gym",
+  "source_commit": "aa0b10b9502e4f62dea755ce6468da024235c319",
+  "policy": "HF-DBS +5V",
+  "action_normalized": 1.0,
+  "physical_volts": 5.0,
+  "n_neurons": 512,
+  "grid": [
+    8,
+    8,
+    8
+  ],
+  "env": "env0",
+  "seed": 222,
+  "steps_completed": 5555,
+  "target_steps": 5555,
+  "upstream_config_episode_units": 5000,
+  "mean_step_reward": -4.5936142172285495,
+  "mean_step_beta_component": 4.5436142172285505,
+  "global_low_beta_power": 0.0004254098619782786,
+  "absolute_stimulation_energy": 27775.0,
+  "lfp_points": 98117,
+  "lfp_sha256": "0ab9309048169538406b27583a20f27717a8deaaa33622edae407d81086eaa41",
+  "comparison_caveat": "Full neuron count and upstream Env0 episode; one seed and custom full-LFP aggregation differ from published six-run Table 1. Not yet a reproduced published statistic."
+}

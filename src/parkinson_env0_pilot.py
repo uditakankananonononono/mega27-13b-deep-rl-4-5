@@ -1,7 +1,7 @@
 """Full 512-neuron Env0 pilot at a short, explicit horizon.
 NOT a reproduction of the published 5,555-step DBS-Gym benchmark.
 """
-import argparse,copy,hashlib,json,sys,time
+import argparse,copy,hashlib,json,sys,time,os
 from pathlib import Path
 import numpy as np
 
@@ -19,7 +19,7 @@ def run(upstream,out,action,steps,seed):
  env=SpatialKuramoto(p);obs,_=env.reset(seed=seed);rewards=[];wave=[];t=time.monotonic()
  for i in range(steps):
   obs,r,done,trunc,_=env.step(np.array([action],dtype=np.float32));rewards.append(float(r));wave.extend(np.asarray(env.theta_mean,dtype=float).tolist())
-  if i and (i+1)%250==0:print(f'{i+1}/{steps} elapsed {time.monotonic()-t:.1f}s',flush=True)
+  if i and (i+1)%500==0:print(f'{i+1}/{steps} elapsed {time.monotonic()-t:.1f}s',flush=True)
   if done or trunc:break
  wave=np.asarray(wave);dt=units2sec(p['verbose_dt']);power=calc_beta_band_power(wave,dt,12.5,21)
  result={'source':'https://github.com/NevVerVer/DBS-Gym','source_commit':'aa0b10b9502e4f62dea755ce6468da024235c319',

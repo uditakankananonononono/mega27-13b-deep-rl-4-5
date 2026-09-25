@@ -54,6 +54,14 @@ class ResearchTests(unittest.TestCase):
   self.assertLess(pivot['neural_expected_return'],base['our_exact_values']['optimal'])
   self.assertLess(pivot['neural_expected_return'],base['neural_greedy']['expected_return'])
   self.assertAlmostEqual(sum(x['initial_mass'] for x in pivot['sofa_initial_state_strata'].values()),1.0,places=10)
+ def test_full_env0_horizon_single_seed_not_benchmark(self):
+  off=json.loads((ROOT/'results'/'parkinson_env0_full_off_seed222.json').read_text())
+  high=json.loads((ROOT/'results'/'parkinson_env0_full_high_seed222.json').read_text())
+  self.assertEqual(off['steps_completed'],5555);self.assertEqual(high['steps_completed'],5555)
+  self.assertEqual(off['seed'],high['seed']);self.assertEqual(off['physical_volts'],0);self.assertEqual(high['physical_volts'],5)
+  self.assertLess(high['mean_step_beta_component'],off['mean_step_beta_component'])
+  gate=json.loads((ROOT/'evidence'/'gates.json').read_text())['parkinson']
+  self.assertFalse(gate['published_benchmark_comparable'])
  def test_full_neuron_pilot_and_correct_action_mapping(self):
   d={name:json.loads((ROOT/'results'/f'parkinson_env0_{name}_1000.json').read_text()) for name in ('off','high','negative5')}
   self.assertEqual([d[k]['n_neurons'] for k in d],[512]*3)
