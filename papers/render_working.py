@@ -1,12 +1,11 @@
 """Render work-in-progress TeX manuscript as readable TNR PDF when fontspec is absent.
-Math is displayed as TeX source, not typeset math; PDF is clearly labeled WORKING.
+Math equations are plotted through Matplotlib mathtext; PDF is clearly labeled WORKING.
 """
-import re,subprocess,sys
+import re,sys
 from pathlib import Path
-from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,PageBreak,Preformatted,KeepTogether,Image
+from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,Image
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_LEFT,TA_CENTER
-from reportlab.lib.colors import HexColor
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.pagesizes import letter
