@@ -55,15 +55,15 @@ Counting 479+35 day-one (sepsis) or 438+72 (Parkinson) distinct GSM identifiers 
 
 ### Full-neuron Env0 pilot
 
-At 512 neurons and 1000 action steps (one seed, shorter than published ~5555), upstream DBS-Gym OFF 0 V, high +5 V, and -5 V controls were executed. Mean per-step beta reward component OFF 19.9901, +5 V 6.7811, -5 V 8.0725; +5 V/OFF ratio 33.9%. Published Env0 Table 1 HF-DBS/OFF 19.8% over six evaluations, but this pilot differs in horizon/aggregation, so benchmark gate remains missing. An initial normalized -1 action was accidentally called OFF, but -1 actually rescales to -5 V; mislabeled result was corrected and kept as `results/parkinson_env0_negative5_1000.json`, then OFF 0 V was rerun. See `evidence/dbs_published_table1.json`.
+At 512 neurons and 1000 action steps (one seed, shorter than the repository training configuration's ~5555 steps; the published Table 1 protocol instead uses 10 x 1500-step evaluation episodes), upstream DBS-Gym OFF 0 V, high +5 V, and -5 V controls were executed. Mean per-step beta reward component OFF 19.9901, +5 V 6.7811, -5 V 8.0725; +5 V/OFF ratio 33.9%. Published Env0 Table 1 HF-DBS/OFF 19.8% over six evaluations, but this pilot differs in horizon/aggregation, so benchmark gate remains missing. An initial normalized -1 action was accidentally called OFF, but -1 actually rescales to -5 V; mislabeled result was corrected and kept as `results/parkinson_env0_negative5_1000.json`, then OFF 0 V was rerun. See `evidence/dbs_published_table1.json`.
 
 ### Full Env0 horizon checkpoint
 
-`src/parkinson_env0_chunk.py` resumed the 512-neuron upstream environment for the complete 5555 steps of its 5000-unit Env0 episode on matched seed 222. The 50+50 resume test exactly matched an uninterrupted 100-step run in reward and LFP. Full OFF versus +5 V upstream mean beta-component ratio is 22.48%; the published Table 1 Env0 high/zero mean is 19.8% (SD 1.9, six evaluations), source `evidence/dbs_published_table1.json`. One seed and no upstream-trained deep-RL policy means benchmark gate STILL OPEN. Outputs: `results/parkinson_env0_full_off_seed222.json`, `results/parkinson_env0_full_high_seed222.json`.
+`src/parkinson_env0_chunk.py` resumed the 512-neuron upstream environment for the complete 5555 steps of its 5000-unit Env0 episode on matched seed 222. The 50+50 resume test exactly matched an uninterrupted 100-step run in reward and LFP. Full OFF versus +5 V upstream mean beta-component ratio is 22.48%; the published Table 1 Env0 high/zero mean is 19.8% (SD 1.9, six evaluations), source `evidence/dbs_published_table1.json`. The paper actually evaluates Env0 with 10 x 1500-step episodes under varying initialization, repeated six times, not this 5555-step training-config trajectory. One seed and no upstream-trained deep-RL policy mean the benchmark gate STILL OPEN. Outputs: `results/parkinson_env0_full_off_seed222.json`, `results/parkinson_env0_full_high_seed222.json`.
 
 ### Native observable-threshold negative
 
-An arbitrary threshold policy on true DBS-Gym Env0 LFP features (512 neurons, 1200 steps, seed 223) yields 65.8% high-amplitude actions, energy 3950 (versus fixed-high 6000 for 1200 steps), and mean beta component 11.178. This is **not deep RL** and is not compared with unmatched-seed controls or the published full episode. It is a next pilot, not a result gate. Details: `src/parkinson_env0_adaptive.py`, `results/parkinson_env0_threshold_1200_seed223.json`.
+An arbitrary threshold policy on true DBS-Gym Env0 LFP features (512 neurons, 1200 steps, seed 223) yields 65.8% high-amplitude actions, energy 3950 (versus fixed-high 6000 for 1200 steps), and mean beta component 11.178. This is **not deep RL** and is not compared with matched-seed controls or the published multi-episode evaluation. It is a next pilot, not a result gate. Details: `src/parkinson_env0_adaptive.py`, `results/parkinson_env0_threshold_1200_seed223.json`.
 
 ### Cohort-split molecular stress tests
 
@@ -83,7 +83,7 @@ Fetched seven public files from [PhysioNet MIMIC-III 100-patient demo](https://p
 
 ### Parkinson filtered-PSD reuse and denominator check
 
-To reduce full-neuron rerun time, `src/parkinson_published_psd_audit.py` reuses cached one-seed OFF/+5V full-horizon LFP arrays and exactly applies upstream `evaluate_HF_DBS.py` filtered-PSD protocol. Ratio +5V/OFF = 27.536%, notably different from our windowed-reward ratio 22.48% and raw global-LFP ratio 20.97%; published six-evaluation fixed-high Env0 ratio 19.8% SD 1.9. Upstream filter utility matched the reproduced filter exactly in a local cross-check. The mismatch is retained, not advertised as benchmark replication, and no native deep-RL controller was evaluated. Checkpoint wave arrays are not in Git; their SHA256 digests and recalculation code are recorded.
+To reduce full-neuron rerun time, `src/parkinson_published_psd_audit.py` reuses cached one-seed OFF/+5V full-horizon LFP arrays and exactly applies upstream `evaluate_HF_DBS.py` filtered-PSD protocol. This reuses the 5555-step training-config trajectory, whereas the published protocol has 10 x 1500-step evaluation episodes. Ratio +5V/OFF = 27.536%, notably different from our windowed-reward ratio 22.48% and raw global-LFP ratio 20.97%; published six-evaluation fixed-high Env0 ratio 19.8% SD 1.9. Upstream filter utility matched the reproduced filter exactly in a local cross-check. The mismatch is retained, not advertised as benchmark replication, and no native deep-RL controller was evaluated. Checkpoint wave arrays are not in Git; their SHA256 digests and recalculation code are recorded.
 
 ### Second GEO series per disease: independent blood context, still no actions
 
@@ -91,7 +91,7 @@ Fetched and parsed GSE6613 (105 GSM, 50 PD and 22 healthy eligible) and GSE54514
 
 ### Native full-neuron short deep-RL pilot, not published SAC
 
-A two-layer tanh Bernoulli REINFORCE policy trained on 4 x 180 action steps in real 512-neuron DBS-Gym Env0, then evaluated for 1000 steps on seed 222. Native evaluation mean reward -13.554 and 50% on-time. Parameter audit found weight updates under 1e-6 L2 and output-bias update 2.9e-5, probabilities near 0.5 with prior-action threshold artifacts. Thus there is no evidence of effective learning despite running the update and native policy. It is not a 5555-step x six published SAC comparison or clinical evidence. Code, seeds, weight checksum and negative cautions in `src/parkinson_native_reinforce.py`, `results/parkinson_native_reinforce.json`.
+A two-layer tanh Bernoulli REINFORCE policy trained on 4 x 180 action steps in real 512-neuron DBS-Gym Env0, then evaluated for 1000 steps on seed 222. Native evaluation mean reward -13.554 and 50% on-time. Parameter audit found weight updates under 1e-6 L2 and output-bias update 2.9e-5, probabilities near 0.5 with prior-action threshold artifacts. Thus there is no evidence of effective learning despite running the update and native policy. It is not the published 10 x 1500-step, six-evaluation SAC comparison or clinical evidence. Code, seeds, weight checksum and negative cautions in `src/parkinson_native_reinforce.py`, `results/parkinson_native_reinforce.json`.
 
 ### Parkinson native optimizer pivot: all-OFF collapse
 

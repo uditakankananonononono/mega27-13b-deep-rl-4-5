@@ -53,6 +53,7 @@
     "native_full_neuron_deep_rl_short_pilot": true,
     "native_adam_pivot_all_off_negative": true,
     "tremordb_fixed_condition_records_used": 55,
-    "tremordb_subjects": 15
+    "tremordb_subjects": 15,
+    "published_eval_protocol_10x1500_x6_reproduced": false
   }
 }

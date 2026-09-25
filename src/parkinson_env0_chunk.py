@@ -39,7 +39,7 @@ def chunk(upstream,checkpoint,action,total_steps,chunk_steps=1600,seed=222):
   'global_low_beta_power':float(calc_beta_band_power(array,units2sec(p['verbose_dt']),12.5,21)),
   'absolute_stimulation_energy':float(limit*abs(float(env.rescale_action(action)))),'lfp_points':len(array),
   'lfp_sha256':hashlib.sha256(array.tobytes()).hexdigest(),
-  'comparison_caveat':'Full neuron count and upstream Env0 episode; one seed and custom full-LFP aggregation differ from published six-run Table 1. Not yet a reproduced published statistic.'}
+  'comparison_caveat':'Full neuron count and upstream Env0 training-config episode; this one 5555-step trajectory differs from the published six-evaluation Table 1 protocol of 10 episodes x 1500 steps per evaluation with varying initializations. Not yet a reproduced published statistic.'}
  out=c.with_suffix('.json');out.write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2),flush=True)
  return result
 if __name__=='__main__':
