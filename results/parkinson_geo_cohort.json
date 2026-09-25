@@ -1,20 +1,24 @@
 {
   "features_used": 48,
-  "accessions_used": 150,
-  "train_count": 114,
-  "test_count": 36,
+  "accessions_used": 438,
+  "train_count": 293,
+  "test_count": 75,
   "cohort_label_counts": {
+    "TEST": {
+      "CONTROL": 40,
+      "IPD": 30
+    },
     "TRAINING": {
-      "CONTROL": 55,
-      "IPD": 59
+      "CONTROL": 153,
+      "IPD": 140
     },
     "VALIDATION": {
-      "CONTROL": 19,
-      "IPD": 17
+      "CONTROL": 40,
+      "IPD": 35
     }
   },
   "positive_label": "IPD",
-  "cohort_heldout_auc": 0.42105263157894735,
+  "cohort_heldout_auc": 0.5657142857142857,
   "test_accessions": [
     "GSM2630764",
     "GSM2630765",
@@ -51,7 +55,46 @@
     "GSM2630930",
     "GSM2630931",
     "GSM2630932",
-    "GSM2630956"
+    "GSM2630956",
+    "GSM2630975",
+    "GSM2630982",
+    "GSM2630994",
+    "GSM2631021",
+    "GSM2631023",
+    "GSM2631058",
+    "GSM2631066",
+    "GSM2631077",
+    "GSM2631081",
+    "GSM2631094",
+    "GSM2631104",
+    "GSM2631111",
+    "GSM2631115",
+    "GSM2631131",
+    "GSM2631134",
+    "GSM2631137",
+    "GSM2631140",
+    "GSM2631144",
+    "GSM2631152",
+    "GSM2631153",
+    "GSM2631154",
+    "GSM2631158",
+    "GSM2631159",
+    "GSM2631161",
+    "GSM2631162",
+    "GSM2631163",
+    "GSM2631164",
+    "GSM2631165",
+    "GSM2631166",
+    "GSM2631167",
+    "GSM2631168",
+    "GSM2631170",
+    "GSM2631172",
+    "GSM2631175",
+    "GSM2631176",
+    "GSM2631177",
+    "GSM2631178",
+    "GSM2631184",
+    "GSM2631188"
   ],
-  "limitations": "Use original GEO cohort labels, not independent studies; only first 150 eligible GEO matrix samples and first 48 probes, no batch balancing, no policy effect, no clinical biomarker claim."
+  "limitations": "Use original GEO cohort labels, not independent studies; all eligible labelled GSM rows, first 48 finite measured probes, no batch balancing, no policy effect, no clinical biomarker claim."
 }

@@ -20,6 +20,6 @@ def audit(path,out):
  auc=float(np.mean([(u>v)+.5*(u==v) for u in p for v in n]))
  result={'features_used':len(features),'accessions_used':len(rows),'train_count':int(sum(train)),'test_count':int(sum(test)),'cohort_label_counts':counts,'positive_label':labels[1],
   'cohort_heldout_auc':auc,'test_accessions':[r['accession'] for r,t in zip(rows,test) if t],
-  'limitations':'Use original GEO cohort labels, not independent studies; only first 150 eligible GEO matrix samples and first 48 probes, no batch balancing, no policy effect, no clinical biomarker claim.'}
+  'limitations':'Use original GEO cohort labels, not independent studies; all eligible labelled GSM rows, first 48 finite measured probes, no batch balancing, no policy effect, no clinical biomarker claim.'}
  Path(out).write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if k!='test_accessions'},indent=2));return result
 if __name__=='__main__':audit(sys.argv[1],sys.argv[2])

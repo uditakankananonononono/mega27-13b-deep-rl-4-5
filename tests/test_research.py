@@ -11,7 +11,7 @@ class ResearchTests(unittest.TestCase):
  def test_data_counts_and_uniqueness(self):
   for disease in ('sepsis','parkinson'):
    with (ROOT/'data'/disease/'accession_features.csv').open() as f: rows=list(csv.DictReader(f))
-   self.assertEqual(len(rows),150);self.assertEqual(len({r['accession'] for r in rows}),150)
+   self.assertEqual(len(rows),{'sepsis':479,'parkinson':438}[disease]);self.assertEqual(len({r['accession'] for r in rows}),{'sepsis':479,'parkinson':438}[disease])
    self.assertEqual(len([k for k in rows[0] if k not in ('accession','label','cohort')]),48)
  def test_accession_prefix(self):
   for disease,prefix in [('sepsis','GSM'),('parkinson','GSM')]:
@@ -57,10 +57,10 @@ class ResearchTests(unittest.TestCase):
  def test_geo_cohort_split_audits(self):
   s=json.loads((ROOT/'results'/'sepsis_geo_cohort.json').read_text())
   p=json.loads((ROOT/'results'/'parkinson_geo_cohort.json').read_text())
-  self.assertEqual((s['train_count'],s['test_count']),(99,51))
-  self.assertEqual((p['train_count'],p['test_count']),(114,36))
-  self.assertLess(p['cohort_heldout_auc'],.5)
-  for d in (s,p):self.assertEqual(d['accessions_used'],150);self.assertEqual(len(d['test_accessions']),d['test_count'])
+  self.assertEqual((s['train_count'],s['test_count']),(263,216))
+  self.assertEqual((p['train_count'],p['test_count']),(293,75))
+  self.assertGreater(p['cohort_heldout_auc'],.5)
+  for d,expected in ((s,479),(p,438)):self.assertEqual(d['accessions_used'],expected);self.assertEqual(len(d['test_accessions']),d['test_count'])
  def test_adaptive_native_threshold_honest(self):
   d=json.loads((ROOT/'results'/'parkinson_env0_threshold_1200_seed223.json').read_text())
   self.assertEqual(d['steps'],1200);self.assertTrue(0<d['action_on_fraction']<1)
@@ -99,7 +99,7 @@ class ResearchTests(unittest.TestCase):
   for disease,tools in [('sepsis',6),('parkinson',8)]:
    row=d[disease]
    self.assertEqual(row['used_science_tools'],tools)
-   self.assertEqual(row['verified_gsm_samples_used'],150)
+   self.assertEqual(row['verified_gsm_samples_used'],{'sepsis':479,'parkinson':438}[disease])
    self.assertEqual(row['distinct_source_studies'],1)
    self.assertEqual(row['policy_trajectory_datasets'],0)
    self.assertFalse(row['gate_complete'])
@@ -107,5 +107,5 @@ class ResearchTests(unittest.TestCase):
   tools=json.loads((ROOT/'evidence'/'scientific_tools.json').read_text());self.assertEqual(len({t['name'] for t in tools['used']}),tools['verified_distinct_count']);self.assertEqual(tools['verified_distinct_count'],9);self.assertEqual(tools['project_counts'],{'sepsis':6,'parkinson':8})
  def test_descriptive_probes_not_treatment(self):
   for disease in ('sepsis','parkinson'):
-   result=json.loads((ROOT/'results'/f'{disease}_geo.json').read_text());self.assertEqual(result['accessions_used'],150);self.assertEqual(result['features_used'],48);self.assertEqual(result['test_n'],45);self.assertTrue(0<=result['heldout_auc']<=1)
+   result=json.loads((ROOT/'results'/f'{disease}_geo.json').read_text());self.assertEqual(result['accessions_used'],{'sepsis':479,'parkinson':438}[disease]);self.assertEqual(result['features_used'],48);self.assertEqual(result['test_n'],{'sepsis':144,'parkinson':132}[disease]);self.assertTrue(0<=result['heldout_auc']<=1)
 if __name__=='__main__':unittest.main()

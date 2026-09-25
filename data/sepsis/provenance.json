@@ -3,16 +3,14 @@
   "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE65nnn/GSE65682/matrix/GSE65682_series_matrix.txt.gz",
   "source_sha256": "a4ba01c787235ed47591e97b0ef0de35efe885601f7a63a29cd45dfd24a32b97",
   "source_bytes": 107130282,
-  "derived_sha256": "ba5597dbb0f92fe5036f25dffeb536d9a0b9c57a33be934ccf424e7332c7f003",
-  "used_accessions": 150,
+  "derived_sha256": "3813049a6d1dc91e3d3b8a1634b4dac87cdf683ed220087c57ca4b75a480b8be",
+  "used_accessions": 479,
   "used_numeric_features": 48,
   "label": "mortality_event_28days",
   "interpretation": "observed 28-day mortality; not treatment assignment/outcome under policy",
   "labels": {
-    "1": 33,
-    "0": 117
+    "1": 114,
+    "0": 365
   },
-  "feature_accession_alignment_verified": true,
-  "collection_unit": "GEO GSM sample accession, nested within one GSE series; not independent intervention dataset",
-  "policy_relevance": "No action-policy trajectories or intervention outcome; used only for orthogonal descriptive probe."
+  "feature_accession_alignment_verified": true
 }

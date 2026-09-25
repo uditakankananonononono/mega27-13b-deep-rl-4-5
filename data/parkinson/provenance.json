@@ -3,16 +3,14 @@
   "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE99nnn/GSE99039/matrix/GSE99039_series_matrix.txt.gz",
   "source_sha256": "197b7272a8a5040c2843cbefd44f8bd43e9b7820562732d5b1ffd30841bfcb50",
   "source_bytes": 63827685,
-  "derived_sha256": "6e5f2843716a46841f1abc2aff6375390f2b70ce5b3b5bb75dd51c5150aaa773",
-  "used_accessions": 150,
+  "derived_sha256": "55aa9cc040d9f2ab6e8196bd826c6cd32bc838b2dde8442573b74c40448c4d71",
+  "used_accessions": 438,
   "used_numeric_features": 48,
   "label": "disease label",
   "interpretation": "idiopathic Parkinson disease versus control; not stimulation outcome",
   "labels": {
-    "IPD": 76,
-    "CONTROL": 74
+    "CONTROL": 233,
+    "IPD": 205
   },
-  "feature_accession_alignment_verified": true,
-  "collection_unit": "GEO GSM sample accession, nested within one GSE series; not independent intervention dataset",
-  "policy_relevance": "No action-policy trajectories or intervention outcome; used only for orthogonal descriptive probe."
+  "feature_accession_alignment_verified": true
 }

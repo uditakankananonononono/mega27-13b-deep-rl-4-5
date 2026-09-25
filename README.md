@@ -4,11 +4,11 @@
 
 ## Sepsis: ICU treatment actions
 
-`src/sepsis.py` reads the unmodified ICU-Sepsis v2 model tables from [Choudhary et al.](https://github.com/icu-sepsis/icu-sepsis). It solves optimal, expert and random policies exactly by sparse Bellman updates, then trains a two-hidden-layer neural Q network on the model's Q values (distillation). The published rounded expected survival returns random/expert/optimal are 0.78/0.78/0.88; reproduced exact values are in `results/sepsis.json`. The neural policy is weaker, not a benchmark break. These are virtual simulator end states, not observed patient outcomes. GSE65682 blood-expression context was fetched and sampled to 150 accession-level records with measured features and a separate descriptive mortality-label probe. Critically, those records do **not** contain the action trajectories needed to test ICU policies.
+`src/sepsis.py` reads the unmodified ICU-Sepsis v2 model tables from [Choudhary et al.](https://github.com/icu-sepsis/icu-sepsis). It solves optimal, expert and random policies exactly by sparse Bellman updates, then trains a two-hidden-layer neural Q network on the model's Q values (distillation). The published rounded expected survival returns random/expert/optimal are 0.78/0.78/0.88; reproduced exact values are in `results/sepsis.json`. The neural policy is weaker, not a benchmark break. These are virtual simulator end states, not observed patient outcomes. GSE65682 blood-expression context was fetched and extracted to 479 accession-level records with measured features and a separate descriptive mortality-label probe. Critically, those records do **not** contain the action trajectories needed to test ICU policies.
 
 ## Parkinson disease: adaptive brain stimulation
 
-`src/parkinson.py` trains a neural fitted-Q controller in a deliberately simple **custom surrogate** of beta oscillations, action-energy penalty and drift, compared on the same 120 held-out simulated seeds with fixed-high, off and threshold policies. It is not DBS-Gym and its scores cannot be compared to [Kuzmina et al.'s DBS-Gym](https://github.com/NevVerVer/DBS-Gym). GSE99039 blood-expression features (150 accessions) have PD/control labels but no DBS intervention outcomes or neural beta waveform; they are analyzed separately and cannot validate the surrogate.
+`src/parkinson.py` trains a neural fitted-Q controller in a deliberately simple **custom surrogate** of beta oscillations, action-energy penalty and drift, compared on the same 120 held-out simulated seeds with fixed-high, off and threshold policies. It is not DBS-Gym and its scores cannot be compared to [Kuzmina et al.'s DBS-Gym](https://github.com/NevVerVer/DBS-Gym). GSE99039 blood-expression features (438 accessions) have PD/control labels but no DBS intervention outcomes or neural beta waveform; they are analyzed separately and cannot validate the surrogate.
 
 ## Reproduce
 
@@ -28,10 +28,10 @@ The raw matrices are not in Git because they are 107 MB and 64 MB. `data/*/acces
 
 | Project | Genuinely used distinct science/data tools | Accession records fetched, numeric data used | Numbered formulas | Times New Roman paper | Benchmark |
 |---|---:|---:|---:|---|---|
-| Sepsis | 6/40 | 150/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
-| Parkinson | 8/40 | 150/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
+| Sepsis | 6/40 | 479/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Baselines reproduced; neural worse than optimal |
+| Parkinson | 8/40 | 438/120, from one GEO series; contextual only | 14/10 in working paper | Work in progress | Not comparable to DBS-Gym |
 
-Counting one GEO matrix with 150 GSM identifiers as 150 distinct **accession-level sample records**, not 150 independent studies or treatment datasets. Strict project-specific tool evidence in `evidence/scientific_tools.json`; no tool-count padding. Next work: run Parkinson against the real DBS-Gym simulator, obtain policy-relevant datasets where permitted, robust independent validation, expand genuinely used tools, and write/check substantial manuscripts. This is a progress checkpoint, not completion.
+Counting one GEO matrix with 479 (sepsis) or 438 (Parkinson) GSM identifiers as those numbers of distinct **accession-level sample records**, not independent studies or treatment datasets. Strict project-specific tool evidence in `evidence/scientific_tools.json`; no tool-count padding. Next work: run Parkinson against the real DBS-Gym simulator, obtain policy-relevant datasets where permitted, robust independent validation, expand genuinely used tools, and write/check substantial manuscripts. This is a progress checkpoint, not completion.
 
 ## Working manuscripts
 
@@ -67,4 +67,8 @@ An arbitrary threshold policy on true DBS-Gym Env0 LFP features (512 neurons, 12
 
 ### Cohort-split molecular stress tests
 
-Using original GEO cohort labels rather than random splitting, GSE65682 discovery-to-validation AUC is 0.642 (99 train, 51 test) versus prior random .523; GSE99039 training-to-validation AUC is 0.421 (114 train, 36 test) versus prior random .595. Same GSE, first 150 eligible sample accessions and first 48 arbitrary probes; neither result demonstrates clinical biomarkers or policy effects. The Parkinson decrease is kept as a negative. Scripts/results: `src/geo_cohort_audit.py`, `results/*_geo_cohort.json`.
+Using original GEO cohort labels rather than random splitting, full eligible GSE65682 discovery-to-validation AUC is .595 (263 train, 216 test) versus random .553; full eligible GSE99039 TRAINING-to-VALIDATION AUC is .566 (293 train, 75 validation) versus random .596. Same GSE per disease and first 48 arbitrary probes; neither demonstrates clinical biomarkers or policy effects. Earlier first-150 Parkinson AUC .421 was subset-specific and is retained in Git history as a negative, not presented as the full-cohort result. Scripts/results: `src/geo_cohort_audit.py`, `results/*_geo_cohort.json`.
+
+### Expanded GEO accession accounting, same studies
+
+Re-extraction now retains all 479 GSE65682 mortality-labelled samples and all 438 GSE99039 IPD/control samples with 48 finite measured probes, rather than arbitrary first-150 cutoffs. Source gzip SHA256 hashes are unchanged. The larger sample counts do not add a second study or any action-policy trajectory. Updated random split AUC sepsis .553 and Parkinson .596; cohort split sepsis .595 (263/216) and Parkinson .566 (293/75). The earlier Parkinson first-150 cohort inversion (.421) remains documented in Git history as a subset-specific negative, not a robust all-cohort finding. Current data/results supersede that limited subset; benchmark and clinical gates are unchanged.
