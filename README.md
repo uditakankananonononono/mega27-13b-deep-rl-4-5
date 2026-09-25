@@ -84,3 +84,7 @@ Fetched seven public files from [PhysioNet MIMIC-III 100-patient demo](https://p
 ### Parkinson filtered-PSD reuse and denominator check
 
 To reduce full-neuron rerun time, `src/parkinson_published_psd_audit.py` reuses cached one-seed OFF/+5V full-horizon LFP arrays and exactly applies upstream `evaluate_HF_DBS.py` filtered-PSD protocol. Ratio +5V/OFF = 27.536%, notably different from our windowed-reward ratio 22.48% and raw global-LFP ratio 20.97%; published six-evaluation fixed-high Env0 ratio 19.8% SD 1.9. Upstream filter utility matched the reproduced filter exactly in a local cross-check. The mismatch is retained, not advertised as benchmark replication, and no native deep-RL controller was evaluated. Checkpoint wave arrays are not in Git; their SHA256 digests and recalculation code are recorded.
+
+### Second GEO series per disease: independent blood context, still no actions
+
+Fetched and parsed GSE6613 (105 GSM, 50 PD and 22 healthy eligible) and GSE54514 (163 serial whole-blood GSM, only 54 people / 35 distinct day-one sepsis patients). Parkinson 13 shared probes across the GSE99039/GSE6613 platforms gave independent blood-label AUC **0.534** with all 438 original samples as training source; this negative does not validate stimulation actions. Source hashes, accession IDs, cohort counts and numeric calculations: `results/geo_independent.json`, `src/geo_independent.py`. Sepsis repeated blood draws are GSM accessions but not independent people or policy trajectories.

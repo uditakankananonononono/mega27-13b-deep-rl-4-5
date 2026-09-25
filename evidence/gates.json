@@ -2,15 +2,15 @@
   "as_of": "2026-09-25",
   "counting_rules": {
     "external_tools": "unique actually used science/data tools per project, no git/curl/build/pytest/literature DB; shared tools counted once per project",
-    "datasets": "GSM sample accession records with measured numeric features and labels, not independent GSE studies nor treatment trajectories",
+    "datasets": "Unique GEO GSM sample accessions with measured numeric features and labels used across two studies per project; GSE54514 counts day-one sepsis samples only, not repeated follow-up days. Not independent treatment trajectories.",
     "papers": "rendered substantive pages, not title/inventory inflation"
   },
   "sepsis": {
     "used_science_tools": 8,
     "science_tool_target": 40,
-    "verified_gsm_samples_used": 479,
+    "verified_gsm_samples_used": 514,
     "accession_target": 120,
-    "distinct_source_studies": 1,
+    "distinct_source_studies": 2,
     "policy_trajectory_datasets": 0,
     "numbered_formulas": 14,
     "formula_target": 10,
@@ -23,14 +23,16 @@
     "gate_complete": false,
     "public_mimic_demo_action_rows_rough_administrative_proxy": 1728,
     "public_mimic_demo_rough_sepsis_admissions": 38,
-    "public_mimic_demo_policy_validated": false
+    "public_mimic_demo_policy_validated": false,
+    "independent_day1_sepsis_subjects": 35,
+    "independent_series_gsm_samples_used": 35
   },
   "parkinson": {
     "used_science_tools": 8,
     "science_tool_target": 40,
-    "verified_gsm_samples_used": 438,
+    "verified_gsm_samples_used": 510,
     "accession_target": 120,
-    "distinct_source_studies": 1,
+    "distinct_source_studies": 2,
     "policy_trajectory_datasets": 0,
     "numbered_formulas": 14,
     "formula_target": 10,
@@ -41,6 +43,8 @@
     "clinical_validation": false,
     "gate_complete": false,
     "full_512_neuron_env0_short_horizon_pilot": true,
-    "full_512_neuron_env0_5555_step_one_seed_controls": true
+    "full_512_neuron_env0_5555_step_one_seed_controls": true,
+    "independent_series_gsm_samples_used": 72,
+    "independent_series_cross_platform_auc": 0.5336363636363637
   }
 }

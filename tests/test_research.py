@@ -75,6 +75,14 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual((p['train_count'],p['test_count']),(293,75))
   self.assertGreater(p['cohort_heldout_auc'],.5)
   for d,expected in ((s,479),(p,438)):self.assertEqual(d['accessions_used'],expected);self.assertEqual(len(d['test_accessions']),d['test_count'])
+ def test_independent_geo_series_scope(self):
+  d=json.loads((ROOT/'results'/'geo_independent.json').read_text());p=d['parkinson'];s=d['sepsis']
+  self.assertEqual((p['source_gsm_count'],p['independent_eligible_pd_healthy'],p['shared_probe_count']),(105,72,13))
+  self.assertEqual((s['source_gsm_count'],s['measured_probe_rows'],s['unique_subject_group_ids'],s['sepsis_day1_count'],s['day1_unique_group_ids']),(163,24840,54,35,35))
+  self.assertEqual(s['day1_labels']['disease status: sepsis nonsurvivor'],9)
+  self.assertEqual(s['first_finite_numeric_probe_count'],48)
+  self.assertTrue(0<=p['external_auc']<=1)
+  self.assertIn('Neither source validates',d['limitation'])
  def test_native_upstream_psd_distinct_estimands(self):
   d=json.loads((ROOT/'results'/'parkinson_published_psd_seed222.json').read_text())
   self.assertAlmostEqual(100*d['high_beta_psd']/d['off_beta_psd'],d['high_pct_of_off'])
@@ -119,8 +127,8 @@ class ResearchTests(unittest.TestCase):
   for disease,tools in [('sepsis',6),('parkinson',8)]:
    row=d[disease]
    self.assertEqual(row['used_science_tools'],{'sepsis':8,'parkinson':8}[disease])
-   self.assertEqual(row['verified_gsm_samples_used'],{'sepsis':479,'parkinson':438}[disease])
-   self.assertEqual(row['distinct_source_studies'],1)
+   self.assertEqual(row['verified_gsm_samples_used'],{'sepsis':514,'parkinson':510}[disease])
+   self.assertEqual(row['distinct_source_studies'],2)
    self.assertEqual(row['policy_trajectory_datasets'],0)
    self.assertFalse(row['gate_complete'])
  def test_tool_count_no_padding(self):
