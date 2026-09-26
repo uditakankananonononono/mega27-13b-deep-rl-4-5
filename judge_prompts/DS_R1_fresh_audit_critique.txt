@@ -1,0 +1,9 @@
+You are an expert in biomarker reproducibility and transcriptomics. Fresh-eyes critique (no prior context): we audited a published Parkinson blood-expression classifier (Shamir 2017, independent test AUC 0.74) and extended to four public cohorts.
+
+GSE99039 (original, GPL570, 438 samples, batch x label confounded): correction-decay table - no correction 0.611, mean-centering 0.533, ComBat 0.536, outcome-informed frozen SVA 0.641 (published 0.74). 200 batch-structure-preserving permutation nulls: median 0.600, 33% meet/exceed the real 0.641, null max 0.842.
+GSE6613 (GPL96, 105 samples): within-cohort CV AUC 0.638, 4% of unstratified nulls exceed.
+GSE22491 (PBMC, n=18): naive AUC 1.0 - reported as a small-n artifact calibration case, not a biomarker.
+GSE72267 (GPL571, 59 samples, DRUG-NAIVE sporadic PD): within-cohort CV AUC 0.804, exceeds ALL 50 nulls (median 0.541).
+Transfer: recomputed GSE99039-train top-100 signature transfers to GSE6613 at 0.655 (0/100 nulls) but to GSE72267 only 0.612 (11% null exceedance) - within-cohort signal and cross-cohort transfer decouple.
+
+Critique: (1) weakest points of this audit design? (2) is the unstratified null on the annotation-lacking cohorts a credibility hole, and what is the cheapest fix? (3) does the 0.804 drug-naive result survive as 'strongest verified positive' given own-CV-split framing? (4) what would YOU add to make this audit series novel rather than a re-analysis?
