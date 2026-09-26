@@ -1,0 +1,9 @@
+You are an expert reviewer for a top-tier science fair (ISEF finalist level). Below is the current text of a research paper on Parkinson's disease: a DBS reinforcement-learning boundary audit plus a blood-expression classifier reproducibility audit (GSE99039 correction-decay + structure-preserving permutation nulls, and a second-cohort audit on GSE6613).
+
+Read it, then:
+1. List the 5 weakest points of the work as written (be specific: statistics, framing, missing controls, overclaims).
+2. For each weakness, say exactly what experiment or analysis would fix it, given only free public data and modest compute.
+3. Say what single addition would most increase the NOVELTY of this work.
+4. Rank: is this closer to a methods paper, a reproduction study, or a biology paper, and which framing is strongest?
+
+PAPER TEXT FOLLOWS:
