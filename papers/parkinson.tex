@@ -182,6 +182,72 @@ signal is real within cohorts, but the discriminative signature is not stable
 across cohorts - consistent with design-dependent signal rather than a single
 transferable blood biomarker. Code src/pd\_blood\_transfer2.py; results
 results/pd\_blood\_transfer\_gse72267.json.
+\section{The audit framework: methods and synthesis}
+The five-cohort audit series applies one pre-registered framework. Its design
+choices are the methodological contribution of this arm, so we state them
+exactly.
+
+\emph{Pipeline.} Each cohort is handled identically: probes filtered to the
+2000 highest-variance probes (variance computed on all samples; the permutation
+nulls below share this screen so it cannot inflate the real-null gap),
+log-scale expression verified per cohort, labels from the GEO series-matrix
+characteristics field, stratified 5-fold cross-validation with a logistic
+classifier on z-scored expression, AUC as the sole metric. Cohort-specific
+scripts (src/pd\_blood\_audit.py, pd\_blood\_gse6613.py, pd\_blood\_gse72267.py,
+pd\_blood\_gse22491.py) differ only in platform parsing; every number in this
+paper regenerates from the committed scripts and the public series matrices.
+
+\emph{Null construction.} The credibility test is a permutation null: labels
+are shuffled and the full pipeline rerun. Where batch annotation exists
+(GSE99039), the null must preserve it - structure-preserving permutations
+shuffle labels only within batch strata, because GSE99039 is batch$\times$label
+confounded and an unstratified null would count batch structure as disease
+signal. Where batch annotation is absent (GSE6613, GSE72267, GSE22491), the
+null is unstratified and we say so; a structure-preserving null would be
+stronger, so our exceedance fractions there are upper bounds on credibility.
+
+\emph{Calibration case.} The framework includes a deliberate small-$n$ case.
+GSE22491 (PBMC, 10 PD / 8 control) scores a naive AUC of 1.0. With fold sizes
+of 3-4 and 2000 features, perfect separation is trivially achievable by
+chance; the audit reports it as non-credible by construction. A framework that
+never says ``too small to know'' is not auditing anything.
+
+\begin{center}\begin{tabular}{llrrrl}\toprule
+Cohort & Platform & $n$ & AUC & Null exceedance & Reading\\\midrule
+GSE99039 (audit) & GPL570 & 438 & 0.641 & 33\% of 200 & structure-attributable\\
+GSE6613 & GPL96 & 105 & 0.638 & 4\% of 50 & real, modest\\
+GSE22491 & GPL6480 & 18 & 1.000 & 0\% & small-$n$ artifact\\
+GSE72267 (drug-na\"ive) & GPL571 & 59 & 0.804 & 0\% of 50 & real, strong\\
+\bottomrule\end{tabular}\end{center}
+
+\emph{Correction-decay.} On GSE99039, label-free batch corrections collapse
+the published-scale number: no correction 0.611, mean-centering 0.533, ComBat
+0.536; only the outcome-informed frozen SVA variant (following the published
+protocol, $k=2$ chosen on validation, test touched once) reaches 0.641. The
+published 0.74 required the exact original partition and correction chain;
+200 structure-preserving permutation nulls reach a median of 0.600, and 33\%
+of them meet or exceed the real 0.641 - batch structure alone reproduces
+published-scale performance. A stability-selected challenger (bootstrap lasso
+on the top-2000 train-filtered probes, ridge refit) keeps only 8 stable probes
+and scores 0.578 on test: the signal resists feature-level stabilization.
+
+\emph{Transfer matrix.} A recomputed GSE99039-train top-100 signature (65
+symbols mapped, 54 shared across platforms) transfers to GSE6613 at 0.655 with
+0/100 nulls reaching it, but to drug-na\"ive GSE72267 only at 0.612 with 11\%
+null exceedance - while GSE72267 carries the strongest within-cohort signal of
+the series. Within-cohort signal and cross-cohort signature transfer decouple:
+the cohorts agree that \emph{something} is there and disagree about
+\emph{what}. That asymmetry is the series' sharpest evidence that the signal
+is design-dependent rather than a stable transferable biomarker.
+
+\emph{Synthesis.} Reading the table top to bottom: published-scale performance
+(0.74) was not reproducible from the original partition; real within-cohort
+signal exists (0.638-0.804); its strength tracks cohort design (medication
+status, $n$, tissue fraction); the naive perfect score is an artifact; and the
+signature itself does not travel. The drug-na\"ive cohort's 0.804 exceeding all
+50 nulls is the strongest verified positive, and it is still not a beat of the
+published benchmark - different cohort, split and pipeline. The honest
+claim is a reproducibility map, not a biomarker.
 \section{Reproducibility note}
 The cited public sources are linked at their respective analyses above. Source archive hashes, accession manifests, per-experiment JSON results and scripts in this repository identify the exact figures and runs; none of those records substitutes for an independently evaluated clinical controller.
 \end{document}
