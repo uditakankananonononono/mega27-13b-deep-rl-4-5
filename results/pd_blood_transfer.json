@@ -1,0 +1,14 @@
+{
+ "transfer": "GSE99039-train top-100 signature -> GSE6613 (cross-platform GPL570->GPL96)",
+ "n_sig_mapped_symbols": 65,
+ "n_shared_symbols": 54,
+ "gse6613_auc_real": 0.6545454545454545,
+ "null_median": 0.5103636363636364,
+ "null_max": 0.6465454545454545,
+ "null_exceedance_frac": 0.0,
+ "caveats": [
+  "recomputed signature, not the published 87-gene list",
+  "unstratified null; GSE6613 lacks batch annotation",
+  "cross-platform scale handled by within-cohort z-scoring"
+ ]
+}

@@ -130,6 +130,22 @@ modest and cohort/structure-dependent; 0.74-scale performance survives neither
 audit leg. Feature screening (top-2000 variance probes) is applied to all
 samples but shared identically by real and null runs. Code
 src/pd\_blood\_gse6613.py; results results/pd\_blood\_gse6613.json.
+\section{Cross-platform signature transfer: the signal is real but modest}
+The audit's sharpest test: does the signature itself transfer to an independent
+platform? We recomputed the paper-style signature on GSE99039 TRAIN only
+(top-100 probes by absolute train mean difference, logistic on z-scored log
+expression), mapped probes to gene symbols via the platform annotation tables,
+and applied it to GSE6613 (GPL96) by symbol, z-scored within cohort. Transfer
+AUC is 0.655, and zero of 100 unstratified label-permutation nulls reach it.
+Sixty-five of 100 signature probes mapped to symbols; 54 are shared across
+platforms. The triad is now complete: (i) the published 0.74-scale number is
+structure-attributable within GSE99039 (33\% of batch-preserving nulls
+reproduce it); (ii) a modest signal ($\sim$0.64) survives its null in an
+independent cohort; (iii) the signature transfers across platforms above all
+100 nulls. Parkinson blood-expression signal is real, modest, and
+platform-transportable; what does not survive audit is the published
+performance scale. Code src/pd\_blood\_transfer.py; results
+results/pd\_blood\_transfer.json.
 \section{Reproducibility note}
 The cited public sources are linked at their respective analyses above. Source archive hashes, accession manifests, per-experiment JSON results and scripts in this repository identify the exact figures and runs; none of those records substitutes for an independently evaluated clinical controller.
 \end{document}
