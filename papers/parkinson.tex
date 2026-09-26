@@ -220,6 +220,21 @@ scripts (src/pd\_blood\_audit.py, pd\_blood\_gse6613.py, pd\_blood\_gse72267.py,
 pd\_blood\_gse22491.py) differ only in platform parsing; every number in this
 paper regenerates from the committed scripts and the public series matrices.
 
+\emph{Strict nested preprocessing.} The pipeline above screens the
+2000 highest-variance probes with variance computed on all samples - an
+unsupervised screen shared identically by real and null runs, so it cannot
+inflate the real-null gap, but a reviewer can still object that any
+all-samples statistic is leakage in a predictive pipeline. We therefore reran
+every cross-validation cohort under strict nesting: within each fold the
+variance screen and z-scoring are fit on the training folds only and the
+held-out fold is only transformed (audits/strict\_nested\_preprocessing.py;
+results/strict\_nested\_preprocessing.json). Conclusions are unchanged:
+GSE6613 0.655 strict versus 0.638 global (null exceedance 2\%), GSE72267
+0.769 strict versus 0.804 global (null exceedance 0\% - the strongest
+positive survives strict nesting), and GSE22491 remains a perfect-score
+calibration case, as predicted on $n \ll p$ grounds. The leakage criticism
+does not change any conclusion in this paper.
+
 \emph{Null construction.} The credibility test is a permutation null: labels
 are shuffled and the full pipeline rerun. Where batch annotation exists
 (GSE99039), the null must preserve it - structure-preserving permutations

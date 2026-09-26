@@ -1,5 +1,5 @@
-"""GSE72267 audit arm: third independent PD cohort (PBMC, GPL6480, 10 PD / 8 control).
-Small-n caveat: AUC on 18 samples is coarse; the permutation null is the point.
+"""GSE72267 audit arm: drug-na\u00efve sporadic PD cohort (whole blood, GPL571, 59 samples).
+Strongest within-cohort verified positive in the series.
 Same pipeline as GSE6613 arm: log2, top-2000 variance screen (shared by nulls),
 logistic, stratified 5-fold CV, 50 unstratified permutations.
 """

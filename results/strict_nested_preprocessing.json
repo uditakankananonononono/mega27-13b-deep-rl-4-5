@@ -1,0 +1,29 @@
+{
+ "GSE6613": {
+  "n_samples": 105,
+  "strict_nested_cv_auc": 0.6545454545454545,
+  "global_screen_cv_auc": 0.638,
+  "delta": 0.0165,
+  "null_median": 0.5163636363636364,
+  "null_max": 0.6654545454545455,
+  "null_exceedance_frac": 0.02
+ },
+ "GSE72267": {
+  "n_samples": 59,
+  "strict_nested_cv_auc": 0.76875,
+  "global_screen_cv_auc": 0.804,
+  "delta": -0.0353,
+  "null_median": 0.5322916666666666,
+  "null_max": 0.7645833333333333,
+  "null_exceedance_frac": 0.0
+ },
+ "GSE22491": {
+  "n_samples": 18,
+  "strict_nested_cv_auc": 1.0,
+  "global_screen_cv_auc": 1.0,
+  "delta": 0.0,
+  "null_median": 0.5,
+  "null_max": 1.0,
+  "null_exceedance_frac": 0.02
+ }
+}

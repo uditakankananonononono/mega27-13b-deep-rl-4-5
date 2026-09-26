@@ -1648,7 +1648,14 @@ control"; (3) pathway/cell-composition decomposition - the single highest-novelt
 the "reproducibility map, not a biomarker" framing defensible but supplied a stronger wording
 now quoted in the paper synthesis.
 
-Foldback status: (a) DONE 2026-09-27 00:24 IST; (b)(c) scheduled as R4 inputs.
+Foldback status: (a) DONE 2026-09-27 00:24 IST; (b) DONE 2026-09-27 00:31 IST; (c) scheduled as R4 input.
+(b) Strict nested preprocessing audit (audits/strict_nested_preprocessing.py,
+results/strict_nested_preprocessing.json): variance screen + z-scoring refit on training
+folds only, everything else identical. GSE6613: 0.655 strict vs 0.638 global (+0.017, 2% null
+exceedance); GSE72267: 0.769 strict vs 0.804 global (-0.035, 0% null exceedance - the
+strongest positive survives strict nesting); GSE22491: 1.000 both (calibration case unchanged,
+perfect separation persists on n<<p grounds as predicted). Conclusions hold; the unsupervised-
+leakage criticism is removed. Paper text updated.
 (a) Random-signature transfer null (audits/random_signature_null.py, results/random_signature_null.json):
 200 random 100-probe signatures trained on GSE99039-train and transferred by the identical path.
 GSE6613 leg: real transfer 0.655 vs null median 0.537 / max 0.690; only 2% of random signatures
