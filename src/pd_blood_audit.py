@@ -1,7 +1,7 @@
 """PD-BLOOD-2: reproducibility audit experiments (locked 2026-09-26 before outcomes).
 A. Correction-decay table: baseline pipeline (top-100 TRAIN mean-diff + linear SVM,
    TRAIN+VAL fit) TEST AUC under: none / mean-center / ComBat / fSVA(k=2).
-B. Label-permutation negative controls: 20 permutations of labels within batch
+B. Label-permutation negative controls: 200 permutations of labels within batch
    strata (preserving confounding structure), full fSVA(k=2) pipeline refit per
    permutation; SV estimation restricted to top-2000 TRAIN-variance probes
    (documented approximation); TEST AUC distribution. If permuted AUCs exceed
@@ -76,7 +76,7 @@ def main():
     except FileNotFoundError:
         pass
     perm_aucs = []
-    for pi in range(20):
+    for pi in range(200):
         if pi in done:
             continue
         yp = y.copy()
