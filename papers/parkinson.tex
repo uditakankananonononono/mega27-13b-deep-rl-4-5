@@ -88,6 +88,33 @@ A newly inspected public Dryad dataset from Dixon and colleagues' movement-respo
 
 Crucially, the same ZIP's Fig2b beta/gamma neural-band examples run over approximately 615--795 seconds, while Fig5b actions run over approximately 965--1175 seconds, with zero interval overlap. Its source README identifies them as examples for different manuscript figures, so matching numerical timestamps across them would manufacture synchronized neural state--action trajectories that are not present. The Fig5b action rows do contain predicted and true movement state, but no contemporaneous implant LFP, reward for each action, logging probability of alternate actions or the outcome under another amplitude. They illustrate deployed adaptive modulation for one participant, not the clinical four-person offline RL study described earlier, and not a safe training/validation cohort for our DBS-Gym neural controller. We therefore count this as one genuinely used Parkinson data product, while keeping validated policy trajectories at zero. Source ZIP hash, file paths, timing audit and exact descriptive outputs: src/parkinson\_dryad\_adaptive.py and results/parkinson\_dryad\_adaptive.json.
 
+\section{Blood-signature reproducibility audit: structure alone reproduces published-scale performance}
+We rebuilt the published blood-expression Parkinson classifier study (Shamir et
+al., Neurology 2017; GSE99039; 100 probes / 87 genes; published independent-test
+AUC 0.74) on the paper's own train/validation/test partition (293/75/70) and
+subjected it to an audit toolkit the original diagnostics did not include. The
+batch structure is maximally confounded: per-batch IPD fractions span 0.0 to 1.0
+across the 35 assay batches, so batch and label cannot be separated by design.
+
+Measured outcomes on the preserved partition. Label-free batch corrections
+destroy the signal (test AUC: none 0.611, mean-centering 0.533, ComBat 0.536);
+an outcome-informed frozen-SVA reconstruction reaches 0.641. Two independently
+selected challengers on the validation split (0.585, 0.673) do not significantly
+beat it. The decisive control is new: 200 label permutations that preserve the
+batch structure (labels permuted within batch strata, full pipeline refit each
+time, test evaluated against the true labels) yield median AUC 0.600 with
+maximum 0.842; 33\% of these structure-only nulls meet or exceed the real-label
+result (0.641), and the best null exceeds the published 0.74. On this partition,
+dataset structure alone transports to published-scale test performance; the
+real-label result is not separable from structure artifacts under this audit.
+
+This is a fragility map of a published signature, not a claim that Parkinson
+blood expression carries no signal: permutations preserve batch by construction
+(stated), and a second independent cohort for the generalization leg is still
+being sourced. The methodological contribution is the audit itself -
+correction-decay table plus structure-preserving permutation nulls - applied to
+a published classifier on its own partition. Code: src/pd\_blood\_*.py;
+results: results/pd\_blood\_*.json.
 \section{Reproducibility note}
 The cited public sources are linked at their respective analyses above. Source archive hashes, accession manifests, per-experiment JSON results and scripts in this repository identify the exact figures and runs; none of those records substitutes for an independently evaluated clinical controller.
 \end{document}
