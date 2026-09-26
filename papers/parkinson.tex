@@ -182,6 +182,29 @@ signal is real within cohorts, but the discriminative signature is not stable
 across cohorts - consistent with design-dependent signal rather than a single
 transferable blood biomarker. Code src/pd\_blood\_transfer2.py; results
 results/pd\_blood\_transfer\_gse72267.json.
+\section{Random-signature transfer null: is transfer gene-selection-specific?}
+Judge round R3 (ChatGPT, logged in JUDGE\_ROUNDS.md) identified the cleanest
+missing control in the transfer analysis: the label-permutation nulls test the
+labels, not the gene selection - any 100-probe signature carried through the
+same cross-platform mapping might transfer at the same level. We therefore
+trained 200 random signatures (100 random GPL570 probes each) on the identical
+GSE99039 training split with the identical logistic model, and transferred each
+to GSE6613 and GSE72267 by the identical symbol-mapping path
+(audits/random\_signature\_null.py; results/random\_signature\_null.json).
+The two legs dissociate. On GSE6613 the real signature transfers at 0.655
+against a random-signature null median of 0.537 (max 0.690); only 2\% of
+random signatures reach the real value, so transfer to GSE6613 is
+gene-selection-specific - the transferred signal is not an artifact of the
+mapping path. On drug-na\"ive GSE72267 the real signature transfers at 0.612
+against a null median of 0.558 (max 0.804); 27.5\% of random signatures match
+or exceed it, so transfer to GSE72267 is not gene-specific. Combined with the
+within-cohort results, this sharpens the audit's central finding: the strongest
+within-cohort signal (GSE72267, 0.804) sits in the cohort where the
+99039-trained signature carries no specific information, while the cohort with
+specific transfer (GSE6613) shows only modest within-cohort signal. Within-
+cohort detectability and cross-cohort signature specificity are independent
+axes in this series, and neither supports a single transferable blood
+signature.
 \section{The audit framework: methods and synthesis}
 The five-cohort audit series applies one pre-registered framework. Its design
 choices are the methodological contribution of this arm, so we state them

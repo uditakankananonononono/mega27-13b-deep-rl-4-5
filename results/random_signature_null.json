@@ -1,0 +1,21 @@
+{
+ "control": "random-signature transfer null (R3 judge fix #2)",
+ "n_random_signatures": 200,
+ "signature_size": 100,
+ "real_transfer_auc_gse6613": 0.655,
+ "real_transfer_auc_gse72267": 0.612,
+ "gse6613": {
+  "null_median": 0.5374545454545455,
+  "null_max": 0.6898181818181819,
+  "null_mean": 0.5323690909090909,
+  "null_std": 0.06762375715849724,
+  "frac_ge_real": 0.02
+ },
+ "gse72267": {
+  "null_median": 0.5578947368421052,
+  "null_max": 0.8039473684210526,
+  "null_mean": 0.5632565789473685,
+  "null_std": 0.08783000073289086,
+  "frac_ge_real": 0.275
+ }
+}
