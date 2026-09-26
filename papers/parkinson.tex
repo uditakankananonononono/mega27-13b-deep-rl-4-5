@@ -146,6 +146,16 @@ independent cohort; (iii) the signature transfers across platforms above all
 platform-transportable; what does not survive audit is the published
 performance scale. Code src/pd\_blood\_transfer.py; results
 results/pd\_blood\_transfer.json.
+\section{Third-cohort calibration case: GSE22491}
+A third cohort (PBMC, GPL6480; 10 Parkinson's disease, 8 controls) demonstrates
+why the audit framework is necessary. The naive pipeline returns a perfect
+cross-validated AUC of 1.0 - with 18 samples against 2{,}000 screened features
+and fold sizes of three to four, perfect separation is trivially achievable by
+overfitting, and variance screening on all samples leaks label structure. The
+permutation nulls (median 0.55, max 0.9) do not reach it, yet the estimate is
+non-credible on $n \ll p$ grounds alone. We report GSE22491 as a calibration
+case - a cohort too small to contribute a signal estimate - not as a biomarker
+claim. Code src/pd\_blood\_gse22491.py; results results/pd\_blood\_gse22491.json.
 \section{Reproducibility note}
 The cited public sources are linked at their respective analyses above. Source archive hashes, accession manifests, per-experiment JSON results and scripts in this repository identify the exact figures and runs; none of those records substitutes for an independently evaluated clinical controller.
 \end{document}
