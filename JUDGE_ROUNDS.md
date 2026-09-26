@@ -1065,3 +1065,590 @@ quantifies confounding that the original pipeline's own reported diagnostics did
 surface - a methodological contribution, with the 87-gene signature's fragility map
 as the biological output. Benchmark framing for this arm is now methodological
 (detection power of the audit vs the paper's own diagnostics), not raw AUC.
+
+## Round R3 (Parkinson arm full-paper critique, model=ChatGPT) - 2026-09-27 00:21 IST
+
+Trigger: minimum-10 judge rounds per project; this is the first full-paper critique of the
+rebuilt Parkinson manuscript (DBS RL boundary audit + four-cohort blood-expression
+reproducibility audit + audit-framework synthesis).
+Model: ChatGPT (Free tier), user's own account, cloud browser.
+Conversation URL: https://chatgpt.com/c/6ab7af3f-dec0-83e8-8eac-4cb4282a2f95
+Delivery: paper text sent as 8 sequential composer messages (PART 1/8..8/8, ~4-6KB each,
+"do not respond yet" prefixes, each acked), then the questions below. ChatGPT confirmed
+receipt of all 8 parts before reviewing.
+Verbatim full prompt (all 8 parts + questions): judge_prompts/R3_sent_prompt.txt (45,745 bytes).
+Verbatim full response: judge_prompts/R3_response.txt (8,589 bytes).
+
+### Verbatim final questions
+
+First: confirm you received all 8 paper-text parts (PART 1/8 through PART 8/8). If any are missing, list ONLY the missing part numbers and stop - I will resend them. If all 8 are present, proceed with the review below.
+
+You are an expert reviewer. Below is the CURRENT text of a research paper on Parkinson's disease: a DBS reinforcement-learning boundary audit plus a four-cohort blood-expression classifier reproducibility audit (GSE99039 correction-decay + structure-preserving permutation nulls; GSE6613; GSE22491 calibration case; drug-naive GSE72267; two cross-platform transfer legs) with an audit-framework methods+synthesis section.
+
+The full paper text is in my previous messages. Read it, then:
+1. List the 5 weakest points of the work as written (be specific: statistics, framing, missing controls, overclaims).
+2. For each weakness, say exactly what experiment or analysis would fix it, given only free public data and open tools.
+3. What single addition would most increase the NOVELTY of this paper?
+4. Is the 'reproducibility map, not a biomarker' framing defensible, or does it underclaim the GSE72267 0.804 result?
+
+### Verbatim response
+
+Show more
+
+I confirm I received all 8 paper-text parts:
+
+PART 1/8 ✅
+
+PART 2/8 ✅
+
+PART 3/8 ✅
+
+PART 4/8 ✅
+
+PART 5/8 ✅
+
+PART 6/8 ✅
+
+PART 7/8 ✅
+
+PART 8/8 ✅
+
+Proceeding with the review.
+
+Overall reviewer assessment
+
+This is much stronger than a failed classifier replication. The paper has two intertwined stories:
+
+DBS RL boundary audit
+
+largely a rigor/negative-result appendix demonstrating why synthetic controllers, simulator benchmarks, tremor traces, blood biomarkers, and clinical adaptive DBS trajectories are not interchangeable.
+
+Parkinson blood-expression reproducibility audit
+
+the real scientific contribution:
+
+a published classifier benchmark is stress-tested through:
+
+correction sensitivity,
+
+structure-preserving nulls,
+
+independent cohorts,
+
+cross-platform transfer,
+
+small-n calibration failure.
+
+The second arm is the publishable core.
+
+However, the current manuscript is still vulnerable because several claims are stronger than the evidence hierarchy supports.
+
+1. Weakest point: GSE99039 permutation null interpretation is not fully isolated from pipeline choices
+Problem
+
+The headline claim:
+
+"batch structure alone reproduces published-scale performance"
+
+is interesting, but the current evidence may invite criticism.
+
+Your structure-preserving null:
+
+permutes labels within batch strata
+
+preserves batch-label dependence
+
+This asks:
+
+"Can batch structure plus the classifier pipeline generate apparent disease separation?"
+
+Good.
+
+But critics may argue:
+
+"The null is testing a different biological question than the original classifier."
+
+Why?
+
+Because the real labels contain:
+
+disease biology
+
+batch
+
+possibly other covariates
+
+The null destroys biology but keeps batch.
+
+The comparison:
+
+real AUC 0.641
+null median 0.600
+
+is informative.
+
+But:
+
+33% exceedance is not proof that all signal is artifact.
+
+It demonstrates lack of identifiability.
+
+Your own later cohorts actually show this.
+
+Fix
+
+Add a variance decomposition analysis.
+
+Use nested models:
+
+Model A
+
+Expression only:
+
+PD ~ expression
+Model B
+
+Batch only:
+
+PD ~ batch
+Model C
+
+Expression + batch:
+
+PD ~ expression + batch
+
+Then compare:
+
+AUC
+
+likelihood ratio
+
+permutation importance
+
+Question:
+
+Does expression add information after batch?
+
+This directly answers the biological question.
+
+2. Weakest point: The feature-selection leakage argument needs tightening
+Problem
+
+Your framework says:
+
+variance filtering is applied identically to real and null runs so it cannot inflate the real-null gap.
+
+This is mostly correct.
+
+But:
+
+"variance computed on all samples"
+
+means test information enters feature preprocessing.
+
+Even though labels are not used, many reviewers consider this unacceptable for a predictive pipeline.
+
+Unsupervised preprocessing leakage is debated, but high-level journals increasingly expect:
+
+training-only preprocessing.
+
+Fix
+
+Repeat the entire audit with:
+
+Strict pipeline:
+
+Within every fold:
+
+calculate variance on training fold
+
+select top 2000
+
+standardize training fold
+
+transform validation fold
+
+Then compare:
+
+Current:
+
+global variance filtering
+
+versus
+
+Strict:
+
+nested variance filtering
+
+If conclusions remain:
+
+GSE99039 fragile
+
+GSE6613 modest
+
+GSE72267 positive
+
+the paper becomes much harder to attack.
+
+3. Weakest point: GSE72267 0.804 result risks looking cherry-picked
+Problem
+
+This is your most dangerous section.
+
+You write:
+
+"the strongest verified positive"
+
+Correct.
+
+But a skeptical reviewer will ask:
+
+Why did the strongest positive cohort appear after four mostly modest results?
+
+Possible concerns:
+
+different platform
+
+different preprocessing
+
+different sample size
+
+drug-naive status
+
+possible cell-composition differences
+
+The paper correctly avoids calling it a biomarker.
+
+But the result still needs more characterization.
+
+Fix
+
+Turn GSE72267 from "positive result" into a biological investigation.
+
+Add:
+
+Cell-composition adjustment
+
+Blood expression is heavily affected by:
+
+neutrophils
+
+lymphocytes
+
+monocytes
+
+Use:
+
+CIBERSORTx
+
+xCell
+
+MCP-counter
+
+Then test:
+
+Before adjustment:
+
+AUC 0.804
+
+After adjustment:
+
+AUC ?
+
+Interpretation:
+
+Case 1
+
+AUC collapses:
+
+→ signal is mainly cell composition.
+
+Case 2
+
+AUC survives:
+
+→ stronger biological evidence.
+
+This would substantially increase novelty.
+
+4. Weakest point: The cross-platform transfer experiment needs stronger negative controls
+Problem
+
+The transfer result:
+
+GSE99039 signature → GSE6613:
+
+AUC 0.655
+
+GSE99039 signature → GSE72267:
+
+AUC 0.612
+
+is interesting.
+
+But reviewers will ask:
+
+"Would any random gene signature transfer similarly?"
+
+You only show label permutations.
+
+That tests labels, not gene-selection specificity.
+
+Fix
+
+Add random-signature transfer nulls.
+
+Procedure:
+
+Generate:
+
+1000 random gene sets:
+
+same size as your signature.
+
+For each:
+
+train on GSE99039
+
+transfer to GSE6613/GSE72267
+
+Measure:
+
+distribution of transfer AUC.
+
+Then ask:
+
+Does the real signature outperform random transferable structure?
+
+This is probably the cleanest missing control.
+
+5. Weakest point: The DBS section is too large relative to its scientific contribution
+Problem
+
+The DBS work is extremely careful.
+
+However, currently it creates a manuscript identity problem.
+
+A reviewer may ask:
+
+"What is the actual paper?"
+
+Because the manuscript contains:
+
+synthetic RL
+
+DBS-Gym replication
+
+PhysioNet tremor
+
+Dryad adaptive DBS
+
+GEO biomarkers
+
+The common theme is:
+
+"Don't confuse evidence layers."
+
+That is intellectually interesting.
+
+But it risks looking like four incomplete papers.
+
+Fix
+
+Reframe DBS as a motivation and limitations section, not a parallel research arm.
+
+Suggested structure:
+
+Title:
+
+"Stress-testing Parkinson's digital biomarkers: a reproducibility audit across blood transcriptomics and adaptive stimulation benchmarks"
+
+Then:
+
+Part I:
+Blood reproducibility map (main contribution)
+
+Part II:
+Why stimulation translation is not justified from these data layers
+
+The DBS simulator experiments become a methodological case study.
+
+Single addition that would most increase NOVELTY
+Add: "Biological versus technical decomposition of Parkinson blood signatures"
+
+This is the missing piece.
+
+Current paper proves:
+
+benchmark instability
+
+cohort dependence
+
+transfer asymmetry
+
+The next question:
+
+Why?
+
+Add:
+
+Cross-cohort pathway stability analysis
+
+Pipeline:
+
+For every cohort:
+
+Train model.
+
+Extract important genes.
+
+Map to pathways:
+
+Examples:
+
+interferon signaling
+
+mitochondrial pathways
+
+immune activation
+
+oxidative stress
+
+Then compare:
+
+Gene overlap:
+
+probably low.
+
+Pathway overlap:
+
+possibly higher.
+
+Possible discovery:
+
+"Parkinson blood studies disagree at the gene level but converge on a smaller set of biological programs."
+
+That transforms the paper from:
+
+"benchmark auditing"
+
+into:
+
+"discovering the architecture of reproducibility."
+
+This is the highest-value addition.
+
+Is "reproducibility map, not a biomarker" defensible?
+Yes, but it is slightly too conservative.
+
+The framing is scientifically safe.
+
+I would not call GSE72267 a biomarker.
+
+Why?
+
+Because:
+
+A biomarker requires:
+
+predefined assay
+
+analytical validation
+
+clinical population validation
+
+prospective evaluation
+
+reproducibility
+
+You do not have that.
+
+However, saying only:
+
+"not a biomarker"
+
+undersells the positive biology.
+
+A better framing:
+
+"A reproducibility map of Parkinson blood-expression signals reveals that disease-associated transcriptional changes are detectable across cohorts but are not captured by a single transferable diagnostic signature."
+
+That preserves both findings:
+
+Supported:
+
+✅ Parkinson blood expression contains signal.
+
+Evidence:
+
+GSE6613:
+
+AUC 0.638
+
+GSE72267:
+
+AUC 0.804
+
+transfer above null in some cases
+
+Not supported:
+
+❌ universal diagnostic classifier
+
+Evidence:
+
+GSE99039 instability
+
+signature transfer failure
+
+cohort dependence
+
+Final reviewer verdict
+Current strongest contribution
+
+The audit framework.
+
+Not:
+
+"we found a Parkinson biomarker."
+
+Not:
+
+"we beat Shamir."
+
+The contribution is:
+
+Published-scale Parkinson blood classifiers can arise from different mixtures of biological signal and cohort structure, and reproducibility requires correction sensitivity, structure-aware nulls, and cross-cohort transfer testing.
+
+Three highest-impact next changes
+
+Ranked:
+
+Strict nested preprocessing audit
+
+removes leakage criticism.
+
+Random-signature transfer null
+
+strengthens the transfer claim.
+
+Pathway/cell-composition decomposition
+
+adds genuine biological discovery.
+
+If these are added, this moves from a careful replication report toward a publishable computational biology methods paper.
+
+### Critique folded back as concrete change (novelty foldback)
+
+Judge's ranked fixes: (1) strict nested (training-fold-only) preprocessing audit, removing
+the unsupervised-leakage criticism; (2) random-signature transfer null (1000 random gene sets,
+same size as the real signature, trained on GSE99039 and transferred) - "the cleanest missing
+control"; (3) pathway/cell-composition decomposition - the single highest-novelty addition
+("do cohorts disagree at gene level but converge on biological programs?"). Judge also ruled
+the "reproducibility map, not a biomarker" framing defensible but supplied a stronger wording
+now quoted in the paper synthesis.
+
+Foldback status: IN FLIGHT. Change set: (a) random-signature transfer null for both transfer
+legs (implementation: audits/random_signature_null.py); (b) strict nested preprocessing rerun
+of the GSE99039 audit; (c) pathway-convergence analysis across the four cohorts. Each lands
+with results + paper text before this round is counted toward the 10.
