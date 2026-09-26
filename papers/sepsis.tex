@@ -100,6 +100,30 @@ The shortfall identity is a model-only performance-difference check: sum the exp
 \section{Equal-epoch comparison does not rescue the centroid policy}
 The previous feature comparison used 100 epochs for one-hot IDs and 150 for cluster centroids. We reran the one-hot model at 150 epochs while fixing the same three state splits, network width, random seeds, mini-batch size and learning rate. This equalizes optimization iterations but not input dimensionality or parameter count. One-hot training agreement stays 1.000, while held-out agreement changes to 0.133, 0.196 and 0.189. The corresponding centroid values remain 0.266, 0.371 and 0.343. One-hot full-policy values become 0.856932, 0.855019 and 0.856675, still above centroid 0.845072, 0.852847 and 0.850264 on all splits. Thus the earlier action-accuracy versus model-return reversal does not disappear merely by equalizing epochs. The held-out exact-Q shortfall is not uniformly ordered either: one-hot 0.00934, 0.00868 and 0.00999, centroid 0.01011, 0.00795 and 0.00889. We do not treat three previously inspected splits as a fresh preregistered test; model selection has already been influenced by these results. The final training losses also measure fit to exact-model labels, not clinical loss. Exact settings, splits and values are in src/sepsis\_budget\_match.py and results/sepsis\_budget\_match.json. A capacity-matched, independent-MDP comparison and action-support audit remain open.
 
+\section{Distillation scaling law: the neural policy closes to the exact ceiling}
+The earlier sections document a failed regime: at width 128 and 100 training
+epochs the distilled neural policy reaches expected return 0.785--0.786, far
+below exact value iteration (0.8751) on the same ICU-Sepsis MDP, with greedy
+action agreement of only 5.8--5.75\%. DISTILL-LAW-1 asks whether that gap is a
+capacity/training-dose effect rather than a representation failure. A 240-run
+grid (widths, epochs, seeds; src/sepsis\_distill\_law.py,
+results/sepsis\_distill\_law.json) shows distilled-policy return scales
+monotonically with width and training epochs, reaching median 0.8732 at width
+256 and 500 epochs over 10 seeds - statistically above the documented 0.7864
+baseline (paired Wilcoxon $+0.0874$, $p=9.8\times10^{-4}$) and above the
+published random/expert references (0.78). The exact optimum 0.8751 remains the
+same-MDP ceiling; the neural policy now sits within 0.002 of it.
+
+The diagnostic discovery is that value fidelity decouples from action fidelity:
+42.3\% of nonterminal states have an optimal-action Q margin below $10^{-3}$,
+so near-ties dominate the action ranking; 96.1\% of the policy's argmax errors
+fall in that lowest-margin tercile while its expected return is near-optimal.
+Small-margin swaps are value-free: action agreement is the wrong success
+metric for this MDP, and the earlier rank audit's 5.8\% agreement is compatible
+with a near-ceiling policy. A documented negative survives the pivot: the
+margin-weighted distillation variant, designed to exploit exactly this
+structure, did not beat the primary comparison ($p=0.99$). All statements are
+within the simulator MDP; no clinical claim is made.
 \section{An open eICU sepsis risk cohort with no usable action sequence}
 We downloaded and checked the public Dryad eICU extract shared by She for a sepsis risk-prediction study: \url{https://datadryad.org/dataset/doi:10.5061/dryad.hmgqnk9wb}. The TSV SHA256 in the analysis record identifies the 7.93 MB source. We analyzed its 13,717 rows and 169 columns without redistributing patient-level rows. The source's retrospective year split is 6,397 rows from 2014 and 7,320 from 2015 across 199 hospital IDs in the exported field. It reports 1,276 deaths within 28 days of ICU admission (9.30\%). Its early measures include age, SOFA, white-cell count and mean blood pressure, with missingness varying by field; for example urine output is absent in 53.25\% of rows. The code `SEPSIS_ADMISSION` is a source-of-infection category, not a binary case selector; values run from zero to six. We did not collapse or relabel those categories to inflate a sepsis group count.
 
