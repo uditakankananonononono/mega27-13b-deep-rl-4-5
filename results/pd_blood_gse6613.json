@@ -1,0 +1,12 @@
+{
+ "cohort": "GSE6613 (GPL96 whole blood, PD vs non-PD pooled controls)",
+ "n_samples": 105,
+ "n_pd": 50,
+ "n_probes_used": 2000,
+ "cv_auc_real": 0.6381818181818182,
+ "null_median": 0.519090909090909,
+ "null_max": 0.6709090909090909,
+ "null_exceedance_frac": 0.04,
+ "split_note": "own stratified 5-fold CV; original 66/39 split not encoded in GEO record",
+ "null_note": "unstratified permutation (no batch annotation in series matrix)"
+}
