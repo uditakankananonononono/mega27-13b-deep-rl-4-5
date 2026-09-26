@@ -6,13 +6,18 @@ class QNet:
         self.m=[np.zeros_like(p) for p in self.w+self.b];self.v=[np.zeros_like(p) for p in self.w+self.b];self.t=0
     def predict(self,x):
         x=np.asarray(x,dtype=float);h=np.maximum(x@self.w[0]+self.b[0],0);h=np.maximum(h@self.w[1]+self.b[1],0);return h@self.w[2]+self.b[2]
-    def fit(self,x,y,epochs=80,batch=128,lr=.002,seed=0):
+    def fit(self,x,y,epochs=80,batch=128,lr=.002,seed=0,sample_weight=None):
         x=np.asarray(x,dtype=float);y=np.asarray(y,dtype=float);rng=np.random.default_rng(seed);loss=[]
+        sw=None if sample_weight is None else np.asarray(sample_weight,dtype=float)
+        if sw is not None: assert sw.shape==(len(x),) and np.all(sw>0)
         for epoch in range(epochs):
             for idx in np.array_split(rng.permutation(len(x)),max(1,int(np.ceil(len(x)/batch)))):
                 a=x[idx]; target=y[idx]
                 z1=a@self.w[0]+self.b[0];h1=np.maximum(z1,0);z2=h1@self.w[1]+self.b[1];h2=np.maximum(z2,0);p=h2@self.w[2]+self.b[2]
-                e=p-target;d=np.clip(e,-1,1)/np.prod(e.shape);dh2=d@self.w[2].T;dz2=dh2*(z2>0);dh1=dz2@self.w[1].T;dz1=dh1*(z1>0)
+                e=p-target
+                if sw is None: d=np.clip(e,-1,1)/np.prod(e.shape)
+                else: d=np.clip(e,-1,1)*sw[idx][:,None]/(sw[idx].sum()*e.shape[1])
+                dh2=d@self.w[2].T;dz2=dh2*(z2>0);dh1=dz2@self.w[1].T;dz1=dh1*(z1>0)
                 grads=[a.T@dz1,h1.T@dz2,h2.T@d,dz1.sum(0),dz2.sum(0),d.sum(0)]
                 self.t+=1
                 for i,(param,g) in enumerate(zip(self.w+self.b,grads)):
