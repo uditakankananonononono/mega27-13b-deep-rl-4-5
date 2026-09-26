@@ -1,0 +1,13 @@
+Follow-up on your last review of my Parkinson reproducibility-audit paper. I implemented your three ranked fixes; here are the results, then I need your next-round critique.
+
+FIX 2 (your "cleanest missing control" - random-signature transfer null): I trained 200 random 100-probe signatures on the GSE99039 training split and transferred each through the identical cross-platform mapping. The two transfer legs DISSOCIATE: on GSE6613 the real signature transfers at 0.655 against a random-signature null median of 0.537 (max 0.690) - only 2% of random signatures reach the real value, so transfer to GSE6613 IS gene-selection-specific. On drug-naive GSE72267 the real signature transfers at 0.612 against a null median of 0.558 - 27.5% of random signatures match or exceed it, so that leg is NOT gene-specific. Within-cohort detectability and cross-cohort signature specificity are independent axes.
+
+FIX 1 (strict nested preprocessing): every CV cohort rerun with the variance screen and z-scoring fit on training folds only. Conclusions unchanged: GSE6613 0.655 strict vs 0.638 global (2% null exceedance), GSE72267 0.769 strict vs 0.804 global (0% null exceedance - the strongest positive survives), GSE22491 stays a perfect-score calibration case. The leakage criticism is removed.
+
+FIX 3 (your top novelty add - pathway convergence): FALSIFIED under its own control. Top-100 importance genes per cohort mapped to Reactome human pathways. Gene overlap across cohorts is near zero (Jaccard 0.036/0.007/0.000), but pathway overlap (0.269/0.237/0.234) sits exactly ON the random-signature pathway null (medians 0.243/0.233/0.254; exceedance 27%/45%/74%). These cohorts do NOT converge above chance even at pathway level. The irreproducibility is deeper than gene identity - genuinely different signal composition per cohort.
+
+Questions:
+1. Given the pathway-convergence falsification, what is the next highest-novelty direction for this paper, using only free public data and open tools?
+2. Does the transfer-leg dissociation (6613 gene-specific, 72267 not) suggest any concrete new analysis that would turn it from an observation into a mechanism claim?
+3. What are now the 3 weakest remaining points of the audit, after these fixes?
+4. Any overclaim you see in: "within-cohort detectability and cross-cohort signature specificity are independent axes; neither supports a single transferable blood signature"?
