@@ -1,0 +1,32 @@
+{
+ "selection": "VALIDATION AUC over classifier family x sex covariate; single TEST touch",
+ "val_aucs": {
+  "linsvm": 0.5635714285714286,
+  "linsvm+sex": 0.5514285714285714,
+  "rbfsvm_c0.5": 0.6464285714285715,
+  "rbfsvm_c0.5+sex": 0.6485714285714286,
+  "rbfsvm_c1": 0.63,
+  "rbfsvm_c1+sex": 0.6292857142857142,
+  "rbfsvm_c4": 0.5828571428571429,
+  "rbfsvm_c4+sex": 0.5850000000000001,
+  "logit_c0.1": 0.5864285714285714,
+  "logit_c0.1+sex": 0.585,
+  "logit_c1": 0.5764285714285714,
+  "logit_c1+sex": 0.5664285714285714,
+  "gbm": 0.6428571428571428,
+  "gbm+sex": 0.6442857142857142
+ },
+ "chosen": {
+  "name": "rbfsvm_c0.5+sex",
+  "val_auc": 0.6485714285714286
+ },
+ "challenger2_test_auc": 0.6733333333333333,
+ "baseline_test_auc": 0.6408333333333334,
+ "beat": {
+  "challenger2_minus_baseline": 0.03249999999999997,
+  "bootstrap95_ci_diff": [
+   -0.1126669177861612,
+   0.1826128937029295
+  ]
+ }
+}

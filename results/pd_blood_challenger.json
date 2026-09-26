@@ -1,0 +1,29 @@
+{
+ "selection": "VALIDATION AUC over k x stab x C grid; single TEST touch",
+ "chosen": {
+  "k": 2,
+  "stab": 60,
+  "C": 0.01,
+  "val_auc": 0.6792857142857143
+ },
+ "challenger_test_auc": 0.585,
+ "n_stable_probes": 8,
+ "stable_probe_ids": [
+  "210890_x_at",
+  "212187_x_at",
+  "218638_s_at",
+  "203712_at",
+  "240737_at",
+  "203633_at",
+  "218555_at",
+  "202764_at"
+ ],
+ "baseline_test_auc": 0.6408333333333334,
+ "beat": {
+  "challenger_minus_baseline": -0.0558333333333334,
+  "bootstrap95_ci_diff": [
+   -0.23720307681525085,
+   0.12655545940139054
+  ]
+ }
+}
