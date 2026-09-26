@@ -1,0 +1,15 @@
+{
+ "transfer": "GSE99039-train top-100 signature -> GSE72267 drug-naive cohort (cross-platform GPL570->GPL571)",
+ "n_sig_mapped_symbols": 65,
+ "n_shared_symbols": 54,
+ "gse72267_auc_real": 0.6118421052631579,
+ "null_median": 0.5019736842105262,
+ "null_max": 0.6763157894736842,
+ "null_exceedance_frac": 0.11,
+ "caveats": [
+  "recomputed signature, not the published 87-gene list",
+  "unstratified null; GSE72267 lacks batch annotation",
+  "GSE72267 is DRUG-NAIVE: no medication confound",
+  "cross-platform scale handled by within-cohort z-scoring"
+ ]
+}

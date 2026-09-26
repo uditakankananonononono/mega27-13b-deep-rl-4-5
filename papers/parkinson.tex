@@ -169,6 +169,19 @@ structure-attributable. Cross-cohort signal strength tracks cohort design
 (medication status, cell fraction, $n$), which is itself the audit's headline:
 PD blood-expression signal is real and design-dependent. Code
 src/pd\_blood\_gse72267.py; results results/pd\_blood\_gse72267.json.
+\section{Transfer leg 2: GSE99039 signature to drug-na\"ive GSE72267}
+Applying the same GSE99039-train top-100 signature (65 symbols mapped, 54
+shared across GPL570/GPL571) to the drug-na\"ive cohort gives AUC 0.612 -
+above the unstratified null median 0.502 but with 11\% of 100 label
+permutations reaching it (null max 0.676). The transfer matrix is therefore
+asymmetric: GSE72267 carries the strongest WITHIN-cohort signal in the series
+(0.804, Section on the fourth cohort) yet receives the 99039-trained signature
+only weakly, while GSE6613 received it at 0.655 with 0/100 nulls. Read
+together with the audit series, the cross-cohort picture sharpens: blood
+signal is real within cohorts, but the discriminative signature is not stable
+across cohorts - consistent with design-dependent signal rather than a single
+transferable blood biomarker. Code src/pd\_blood\_transfer2.py; results
+results/pd\_blood\_transfer\_gse72267.json.
 \section{Reproducibility note}
 The cited public sources are linked at their respective analyses above. Source archive hashes, accession manifests, per-experiment JSON results and scripts in this repository identify the exact figures and runs; none of those records substitutes for an independently evaluated clinical controller.
 \end{document}
