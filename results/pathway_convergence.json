@@ -1,0 +1,40 @@
+{
+ "pathways": "Reactome (R-HSA only), ReactomePathways.gmt downloaded 2026-09-27",
+ "cohort_gene_counts": {
+  "GSE99039_sig": 55,
+  "GSE6613": 91,
+  "GSE72267": 85
+ },
+ "pairs": {
+  "99039sig_vs_6613": {
+   "gene_jaccard": 0.0355,
+   "gene_null_median": 0.0,
+   "pathway_jaccard": 0.2692,
+   "pathway_null_median": 0.2429,
+   "pathway_null_p95": 0.3206,
+   "pathway_exceedance": 0.268,
+   "n_pathways_A": 299,
+   "n_pathways_B": 427
+  },
+  "99039sig_vs_72267": {
+   "gene_jaccard": 0.0072,
+   "gene_null_median": 0.0,
+   "pathway_jaccard": 0.2369,
+   "pathway_null_median": 0.2329,
+   "pathway_null_p95": 0.295,
+   "pathway_exceedance": 0.448,
+   "n_pathways_A": 299,
+   "n_pathways_B": 338
+  },
+  "6613_vs_72267": {
+   "gene_jaccard": 0.0,
+   "gene_null_median": 0.0101,
+   "pathway_jaccard": 0.2339,
+   "pathway_null_median": 0.2541,
+   "pathway_null_p95": 0.3151,
+   "pathway_exceedance": 0.744,
+   "n_pathways_A": 427,
+   "n_pathways_B": 338
+  }
+ }
+}

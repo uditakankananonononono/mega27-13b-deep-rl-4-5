@@ -1648,7 +1648,15 @@ control"; (3) pathway/cell-composition decomposition - the single highest-novelt
 the "reproducibility map, not a biomarker" framing defensible but supplied a stronger wording
 now quoted in the paper synthesis.
 
-Foldback status: (a) DONE 2026-09-27 00:24 IST; (b) DONE 2026-09-27 00:31 IST; (c) scheduled as R4 input.
+Foldback status: (a) DONE 00:24; (b) DONE 00:31; (c) DONE 00:35 IST - all three judge fixes landed with results; R3 is fully folded back and counts toward the 10.
+(c) Pathway-convergence analysis (audits/pathway_convergence.py, results/pathway_convergence.json,
+Reactome R-HSA GMT 2026-09-27): the judge's hypothesized discovery is FALSIFIED with its own control.
+Gene-level overlap across cohorts is near zero (Jaccard 0.036 / 0.007 / 0.000) as predicted, but
+pathway-level overlap (0.269 / 0.237 / 0.234) does NOT exceed the random-signature pathway null
+(medians 0.243 / 0.233 / 0.254; exceedance fractions 0.27 / 0.45 / 0.74). Parkinson blood cohorts
+diverge at gene level and do NOT converge above chance at pathway level either - the
+non-reproducibility is deeper than gene identity. Honest negative, documented in the paper; the
+falsification + a request for the next novelty direction goes to the judge as the R4 consult.
 (b) Strict nested preprocessing audit (audits/strict_nested_preprocessing.py,
 results/strict_nested_preprocessing.json): variance screen + z-scoring refit on training
 folds only, everything else identical. GSE6613: 0.655 strict vs 0.638 global (+0.017, 2% null

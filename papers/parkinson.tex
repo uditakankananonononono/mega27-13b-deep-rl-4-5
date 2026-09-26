@@ -250,6 +250,22 @@ of 3-4 and 2000 features, perfect separation is trivially achievable by
 chance; the audit reports it as non-credible by construction. A framework that
 never says ``too small to know'' is not auditing anything.
 
+\emph{Pathway convergence test (falsified hypothesis).} A natural rescue
+for cross-cohort divergence is that studies disagree on genes but converge on
+biological programs. We tested it: per cohort, the top-100 genes by importance
+(fold-averaged strict-nested logistic weights; train-only signature for
+GSE99039) were mapped to Reactome human pathways, and cohort-pair overlap was
+compared against 500 random same-size gene-set pairs drawn from each cohort's
+own screened universe (audits/pathway\_convergence.py;
+results/pathway\_convergence.json). Gene overlap is near zero as expected
+(Jaccard 0.036, 0.007, 0.000 across the three pairs), but pathway overlap
+(0.269, 0.237, 0.234) sits exactly on the random null (medians 0.243, 0.233,
+0.254; exceedance 27\%, 45\%, 74\%). The hypothesis is falsified under its
+own control: these cohorts do not converge above chance even at pathway level.
+The irreproducibility of Parkinson blood classifiers is therefore not a
+gene-naming problem; it reflects genuinely different signal composition per
+cohort.
+
 \begin{center}\begin{tabular}{llrrrl}\toprule
 Cohort & Platform & $n$ & AUC & Null exceedance & Reading\\\midrule
 GSE99039 (audit) & GPL570 & 438 & 0.641 & 33\% of 200 & structure-attributable\\
