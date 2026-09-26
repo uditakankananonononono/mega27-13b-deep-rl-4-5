@@ -115,6 +115,21 @@ being sourced. The methodological contribution is the audit itself -
 correction-decay table plus structure-preserving permutation nulls - applied to
 a published classifier on its own partition. Code: src/pd\_blood\_*.py;
 results: results/pd\_blood\_*.json.
+\section{Second-cohort audit: GSE6613}
+The audit toolkit was applied to an independent Parkinson whole-blood cohort,
+GSE6613 (GPL96; 105 samples; 50 Parkinson's disease, healthy and neurological
+controls pooled as non-PD). With our own stratified 5-fold split (the original
+66/39 assignment is not encoded in the GEO record) and an unstratified label
+permutation null (the series matrix carries no batch annotation), the real
+cross-validated AUC is 0.638 against a null median of 0.519; only 4\% of nulls
+meet or exceed it. The cross-cohort contrast sharpens the audit's conclusion:
+in GSE99039, 33\% of batch-structure-preserving nulls reproduced the
+real-label result at published scale, while in GSE6613 a modest signal
+($\sim$0.64) survives its null. Parkinson blood-expression signal exists but is
+modest and cohort/structure-dependent; 0.74-scale performance survives neither
+audit leg. Feature screening (top-2000 variance probes) is applied to all
+samples but shared identically by real and null runs. Code
+src/pd\_blood\_gse6613.py; results results/pd\_blood\_gse6613.json.
 \section{Reproducibility note}
 The cited public sources are linked at their respective analyses above. Source archive hashes, accession manifests, per-experiment JSON results and scripts in this repository identify the exact figures and runs; none of those records substitutes for an independently evaluated clinical controller.
 \end{document}
