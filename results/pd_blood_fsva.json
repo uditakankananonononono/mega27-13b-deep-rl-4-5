@@ -1,0 +1,52 @@
+{
+ "design": "PD-BLOOD-1b: frozen SVA reproduction of Shamir 2017 + stability-selected challenger.\n\nLOCKED (2026-09-26, before TEST outcomes): label-free batch correction arms\n(mean-centering, ComBat) collapsed TEST to chance (~0.48-0.50) - documented negatives.\nThis script implements outcome-informed frozen SVA following the paper:\n  training: standardize probes (TRAIN stats); remove label effect (OLS on [1, y]);\n  SVD of residuals; keep k surrogate variables; regress probes on SVs and subtract.\n  frozen: new sample's SV coordinates from training probe-SV loadings via least\n  squares; subtract. k in {1,2,3,5,8} tuned on VALIDATION; TEST touched once at the\n  chosen k for baseline (top-100 mean-diff + linear SVM) and for the challenger\n  (bootstrap lasso stability selection on top-2000 TRAIN-filtered probes + ridge).\nPublished reference: independent test AUC 0.74 (Shamir et al., Neurology 2017).\n",
+ "k_val_aucs": {
+  "1": 0.5307142857142857,
+  "2": 0.5635714285714286,
+  "3": 0.5435714285714285,
+  "5": 0.5364285714285714,
+  "8": 0.5128571428571429
+ },
+ "k_chosen": 2,
+ "baseline_repro_fsva": {
+  "test_auc": 0.6408333333333334
+ },
+ "challenger": {
+  "stable_probes": 8,
+  "val_auc": 0.6792857142857143,
+  "C": 0.01,
+  "test_auc": 0.5783333333333334,
+  "stable_probe_ids": [
+   "210890_x_at",
+   "212187_x_at",
+   "218638_s_at",
+   "203712_at",
+   "240737_at",
+   "203633_at",
+   "218555_at",
+   "202764_at"
+  ]
+ },
+ "beat": {
+  "challenger_minus_baseline": -0.0625,
+  "bootstrap95_ci_diff": [
+   -0.24161592882523114,
+   0.12118890687634896
+  ],
+  "baseline_minus_published_0.74": -0.09916666666666663
+ },
+ "prior_negatives": {
+  "mean_centering": {
+   "baseline_test_auc": 0.4689,
+   "challenger_test_auc": 0.622
+  },
+  "combat": {
+   "baseline_test_auc": 0.4983,
+   "challenger_test_auc": 0.4825
+  }
+ },
+ "caveats": [
+  "single study, whole blood microarray; no clinical claim",
+  "fSVA here is a from-scratch reimplementation of the paper's described method"
+ ]
+}

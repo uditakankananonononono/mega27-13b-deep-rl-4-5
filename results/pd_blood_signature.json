@@ -1,0 +1,39 @@
+{
+ "design": "see src/pd_blood_signature.py docstring (locked 2026-09-26)",
+ "published_reference_test_auc": 0.74,
+ "published_reference": "Shamir et al., Neurology 2017, 10.1212/WNL.0000000000004516 (100-probe/87-gene signature, independent test AUC 0.74)",
+ "baseline_repro": {
+  "method": "top-100 probe mean-diff + linear SVM, trained on TRAIN+VAL",
+  "test_auc": 0.5358333333333334
+ },
+ "ours": {
+  "method": "100x bootstrap elastic-net stability selection (>=60%) + ridge refit, C tuned on VAL",
+  "stable_probes": 8,
+  "val_auc": 0.41714285714285715,
+  "C": 0.01,
+  "test_auc": 0.5983333333333334,
+  "stable_probe_ids": [
+   "1554260_a_at",
+   "1554595_at",
+   "1555058_a_at",
+   "1555933_at",
+   "1557505_a_at",
+   "1558237_x_at",
+   "1563853_at",
+   "1564498_at"
+  ]
+ },
+ "beat": {
+  "ours_minus_baseline_test_auc": 0.0625,
+  "bootstrap95_ci_diff": [
+   -0.10715562297248589,
+   0.23802299126100634
+  ],
+  "ours_minus_published_0.74": -0.1416666666666666
+ },
+ "caveats": [
+  "single microarray study, whole blood; no clinical claim",
+  "batch correction is a label-free mean-centering surrogate for fSVA",
+  "external-cohort replication (gate G2) not claimed here"
+ ]
+}
