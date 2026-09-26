@@ -1,15 +1,13 @@
 {
- "cohort": "GSE22491 (GPL6480 PBMC, 10 PD / 8 control)",
- "n_samples": 18,
- "cv_auc_real": 1.0,
- "null_median": 0.55,
- "null_max": 0.9,
+ "cohort": "GSE72267 (GPL6480 PBMC, 10 PD / 8 control)",
+ "n_samples": 59,
+ "cv_auc_real": 0.8041666666666666,
+ "null_median": 0.5406249999999999,
+ "null_max": 0.75,
  "null_exceedance_frac": 0.0,
  "caveats": [
-  "n=18: coarse AUC",
   "own CV split",
   "unstratified null",
   "variance screen on all samples, shared by nulls"
- ],
- "interpretation": "NOT a biomarker claim. AUC 1.0 at n=18 with p=2000 features is the classic small-n overfitting signature: fold sizes of 3-4 and variance screening on all samples make perfect separation trivially achievable. Reported as a CALIBRATION CASE for the audit framework: naive reading would claim a perfect blood biomarker; the audit flags it as non-credible. This cohort is too small to contribute a signal estimate."
+ ]
 }
