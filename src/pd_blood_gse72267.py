@@ -38,5 +38,5 @@ out = {"cohort": "GSE72267 (GPL6480 PBMC, 10 PD / 8 control)",
        "null_median": float(np.median(nulls)), "null_max": float(np.max(nulls)),
        "null_exceedance_frac": float(np.mean([z >= real for z in nulls])),
        "caveats": ["own CV split", "unstratified null", "variance screen on all samples, shared by nulls"]}
-json.dump(out, open("results/pd_blood_gse22491.json", "w"), indent=1)
+json.dump(out, open("results/pd_blood_gse72267.json", "w"), indent=1)
 print(json.dumps(out, indent=1))

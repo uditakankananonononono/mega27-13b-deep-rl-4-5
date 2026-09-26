@@ -1,0 +1,14 @@
+{
+ "cohort": "GSE72267 (GPL571 whole blood, DRUG-NAIVE sporadic PD: 40 PD / 19 control)",
+ "n_samples": 59,
+ "cv_auc_real": 0.8041666666666666,
+ "null_median": 0.5406249999999999,
+ "null_max": 0.75,
+ "null_exceedance_frac": 0.0,
+ "caveats": [
+  "own CV split",
+  "unstratified null",
+  "variance screen on all samples, shared by nulls"
+ ],
+ "interpretation": "Strongest verified signal in the audit series: 0.804 exceeds ALL 50 nulls in a drug-naive cohort (no medication confound). NOT a beat of Shamir 2017: different cohort, own CV split, own pipeline. Cross-cohort read: signal strength tracks cohort design (medication status, n) - published-scale blood performance achievable in drug-naive cohorts; GSE99039's partition number was structure-attributable."
+}
