@@ -29,6 +29,7 @@ Locked: 2026-09-27 10:58 IST, against 56pp build d381c5a. No execution began bef
 
 
 ## LANDED 2026-09-27 (second wave)
+- #14: requirements table LANDED - R1-R5 collected as one checklist with external-benchmark status per row; DBS-Gym noncomparability audit formalized as what the table forbids eliding. 59pp.
 - #13: predictive-biomarker label audit LANDED as data-readiness proof: enumerated every public record - tremordb (condition flags only), GEO blood (disease/control only), 1-participant adaptive excerpt (amplitude+LFP, no outcome scale). The public record for adaptive DBS has signals and actions but NO outcomes -> R5 (severity/response labels exist only in clinical/trial records). Paper section; 59pp.
 - #7: within-subject tremor variability LANDED. 55 traces/15 subjects: median per-subject CV 1.14 (max/min power ratio median 46.8, up to 4723); 25 med-matched DBS on/off pairs: DBS-on reduces 4-6Hz power in only 52% (median ratio 0.87). Framed as R4 (validation data must document condition structure finely enough to recover the expected physiological effect). results/parkinson_tremor_within_subject.json, paper section.
 - SPINE RESTRUCTURE LANDED (#1/#11/#12/#18): title now "Benchmarking Requirements for Trustworthy Adaptive Neurostimulation Algorithms: A Computational Methods Study in Which Tuned Classical Control Defeats Deep Fitted-Q". Abstract rewritten around R1/R2/R3 + data-readiness; strongest result (PID/MPC defeat neural) is the headline, not hidden. #19 cautious-language grep clean (no unnegated treat/therapy/patient-benefit). 58pp.
