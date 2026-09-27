@@ -1,0 +1,21 @@
+{
+ "design": "within-subject variability across FIXED conditions (verdict #7); per-subject CV and max/min ratio of 4-6 Hz Welch tremor power; paired DBS on/off at matched medication state",
+ "n_subjects": 15,
+ "n_records": 55,
+ "power_cv_within_subject": {
+  "mean": 1.1183053400847305,
+  "median": 1.1408773746571048,
+  "min": 0.06762256086003203,
+  "max": 1.9014205264572819
+ },
+ "power_max_min_ratio_within_subject": {
+  "median": 46.77938123885073,
+  "max": 4723.177301638811
+ },
+ "paired_dbs_on_off_matched_med": {
+  "n_pairs": 25,
+  "median_on_off_ratio": 0.8733575123713864,
+  "frac_pairs_dbs_reduces_power": 0.52
+ },
+ "limitation": "fixed conditions, not adaptive policy data; instrument units not calibrated across subjects"
+}
