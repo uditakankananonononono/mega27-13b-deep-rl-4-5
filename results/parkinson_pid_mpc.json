@@ -1,0 +1,106 @@
+{
+  "model": "custom synthetic beta-burst control surrogate, NOT DBS-Gym; identical protocol to results/parkinson.json",
+  "pid_gains_tuned_on_disjoint_seeds_50100_50139": [
+    2.0,
+    0.1,
+    0.1
+  ],
+  "mpc": "model-based, horizon 3, gamma 0.95, exhaustive 3^h search, uses known transition mean",
+  "heldout_seed_range": [
+    60100,
+    60219
+  ],
+  "n_trajectories": 120,
+  "controllers": {
+    "neural_fqi": {
+      "mean_return": -10.439630334579544,
+      "sd_return": 1.2681559266068916,
+      "mean_beta_burst_steps": 0.36666666666666664,
+      "mean_energy": 34.204166666666666
+    },
+    "always_off": {
+      "mean_return": -19.369366873515233,
+      "sd_return": 6.422573140033224,
+      "mean_beta_burst_steps": 35.666666666666664,
+      "mean_energy": 0.0
+    },
+    "fixed_high": {
+      "mean_return": -11.225862506067251,
+      "sd_return": 0.2467784004315957,
+      "mean_beta_burst_steps": 0.36666666666666664,
+      "mean_energy": 70.0
+    },
+    "threshold_beta_0_5": {
+      "mean_return": -15.364621888255947,
+      "sd_return": 0.8852181919995773,
+      "mean_beta_burst_steps": 11.966666666666667,
+      "mean_energy": 12.541666666666666
+    },
+    "pid": {
+      "mean_return": -9.034888359782512,
+      "sd_return": 1.1193050152343653,
+      "mean_beta_burst_steps": 0.36666666666666664,
+      "mean_energy": 42.1125
+    },
+    "mpc_h3": {
+      "mean_return": -9.614158640215397,
+      "sd_return": 1.1425819075292383,
+      "mean_beta_burst_steps": 0.36666666666666664,
+      "mean_energy": 39.06458333333333
+    }
+  },
+  "paired_neural_minus_baseline": {
+    "always_off": {
+      "paired_diff_mean": 8.929736538935693,
+      "bootstrap_95": [
+        8.004899206236235,
+        10.039466823322098
+      ]
+    },
+    "fixed_high": {
+      "paired_diff_mean": 0.7862321714877097,
+      "bootstrap_95": [
+        0.5670270614395574,
+        1.0062996886945044
+      ]
+    },
+    "threshold_beta_0_5": {
+      "paired_diff_mean": 4.924991553676404,
+      "bootstrap_95": [
+        4.831163072017399,
+        5.020241790770745
+      ]
+    },
+    "pid": {
+      "paired_diff_mean": -1.4047419747970318,
+      "bootstrap_95": [
+        -1.4562159900300968,
+        -1.3537475909544128
+      ]
+    },
+    "mpc_h3": {
+      "paired_diff_mean": -0.8254716943641457,
+      "bootstrap_95": [
+        -0.8636159964999294,
+        -0.7878126052288117
+      ]
+    }
+  },
+  "policy_trigger_stim_fraction_by_beta_bin": {
+    "beta 0.00-0.20": 0.7551939058171745,
+    "beta 0.20-0.40": 0.9832707408671901,
+    "beta 0.40-0.60": 0.9971377459749553,
+    "beta 0.60-0.80": 1.0,
+    "beta 0.80-1.00": 1.0,
+    "beta 1.00-1.20": 1.0,
+    "beta 1.20-1.40": 1.0
+  },
+  "policy_ablation_action_change_rate": {
+    "beta": 0.39555,
+    "drive": 0.12745,
+    "drift": 0.10205
+  },
+  "limitations": [
+    "Synthetic dynamics chosen by us; MPC exploits known model (upper bound); not calibrated to patients"
+  ]
+}
