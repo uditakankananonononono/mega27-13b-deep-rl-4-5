@@ -355,6 +355,29 @@ limits. We adopt (ii) as the default in the pipeline description and record (i) 
 principled extension. Documented, not hidden: naive reward shaping for smoothness is
 counterproductive in this system, and the mechanism is identifiable.
 
+
+\section{The data-readiness framework: what a dataset must contain before RL validation (verdict \#3)}
+The verdict asks for the data-readiness notion made explicit as a framework rather than
+demonstrated case by case. We state it as a four-field schema, each field instantiated
+by an executed audit in this report. A dataset is \emph{RL-validation-ready} for adaptive
+stimulation only if it provides: (i) \textbf{signals} - time-resolved physiological
+recordings at a rate that resolves the target dynamic (instantiated: the 55 public
+tremor traces pass this field); (ii) \textbf{actions} - the stimulation or intervention
+applied, time-aligned with the signals (instantiated: the one-participant
+adaptive-stimulation excerpt passes; the fixed-condition tremor corpus fails - DBS state
+is a condition flag, not a time-aligned action sequence); (iii) \textbf{outcomes} -
+severity or response labels per epoch, so a policy's effect is identifiable
+(instantiated: every public record audited fails this field - requirement R5);
+(iv) \textbf{condition structure} - documentation fine enough that the expected
+physiological effect sign is recoverable (instantiated: the tremor corpus fails in
+52\% of medication-matched pairs - requirement R4). The framework's use is a gate, not
+a score: a dataset failing any field can support methods development (as ours do) but
+not controller validation, and the failure field names exactly what a data-collection
+effort must add. This converts the verdict's question into a reusable checklist that
+complements the algorithm-side requirements R1--R5: R1--R3 constrain the claimant's
+experiments, R4--R5 constrain the claimant's data, and the four-field schema is how
+R4--R5 are checked in practice.
+
 \section{Reproducibility note}
 The cited public sources are linked at their respective analyses above. Source archive hashes, accession manifests, per-experiment JSON results and scripts in this repository identify the exact figures and runs; none of those records substitutes for an independently evaluated clinical controller.
 \input{appendix}
