@@ -10,10 +10,14 @@ The counted judge gate is now ONE round per project, provided by the user throug
 courier route. The retired minimum-10 rule is preserved here as history; the foldback
 standard (a round counts only if its critique is folded back as a concrete novelty
 change, critique AND change logged, verbatim prompt+response, model-tagged) is RETAINED.
-**JUDGE GATE STATUS: 3 of 1 counted (R1 redirection, R2, R3 full-paper critique with
-complete foldback) - requirement met.** Rounds R1-R3 remain counted history. The staged
-R4 prompt (judge_prompts/R4_prompt.txt) becomes a SUPPLEMENTARY consult - logged, never
-counted.
+**JUDGE GATE STATUS: 3 of 1, PENDING the user's provided verdict.** R1-R3 were
+agent-initiated rounds in the user's own ChatGPT account; whether agent-initiated rounds
+satisfy "JUST ONE WHICH I PROVIDE" is with the user for a direct answer (asked 2026-09-27
+~10:01 IST). Until her answer lands, the gate reads pending: if she confirms agent-initiated
+rounds count, R1-R3 meet it (all three carry complete foldback); if only her
+courier-provided verdicts count, the staged R1/R4 prompts remain valid for that route.
+Rounds R1-R3 remain logged history either way. The staged R4 prompt
+(judge_prompts/R4_prompt.txt) is a SUPPLEMENTARY consult - logged, never counted.
 
 ## Round R1 (rule-6 redirection, Parkinson arm) - 2026-09-26 16:44 IST
 
