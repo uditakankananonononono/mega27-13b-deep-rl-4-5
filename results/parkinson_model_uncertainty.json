@@ -1,0 +1,91 @@
+{
+ "design": "fitted-Q trained on nominal surrogate, evaluated unmodified on 6 perturbed replicas vs retrained-on-replica and fixed-gain PID; 60 held-out seeds 70100-70159",
+ "n_trajectories": 60,
+ "results": {
+  "nominal": {
+   "perturbation": {},
+   "transfer_mean_return": -10.587239174624703,
+   "transfer_sd": 1.1628967151279028,
+   "retrained_mean_return": -10.587239174624703,
+   "retrained_sd": 1.1628967151279028,
+   "pid_mean_return": -9.529307576286312,
+   "pid_sd": 1.0351039975517842,
+   "transfer_gap_retrained_minus_transfer": 0.0
+  },
+  "beta_decay_0.80": {
+   "perturbation": {
+    "beta_decay": 0.8
+   },
+   "transfer_mean_return": -9.412783519541202,
+   "transfer_sd": 1.0339329027625028,
+   "retrained_mean_return": -9.689114416065827,
+   "retrained_sd": 1.0327616232898185,
+   "pid_mean_return": -8.839175005931645,
+   "pid_sd": 0.9227076280418754,
+   "transfer_gap_retrained_minus_transfer": -0.27633089652462495
+  },
+  "beta_decay_0.90": {
+   "perturbation": {
+    "beta_decay": 0.9
+   },
+   "transfer_mean_return": -12.042834580327472,
+   "transfer_sd": 1.3187577164499062,
+   "retrained_mean_return": -11.163054018537085,
+   "retrained_sd": 1.2275347620419637,
+   "pid_mean_return": -10.358567059432165,
+   "pid_sd": 1.1913581150277008,
+   "transfer_gap_retrained_minus_transfer": 0.8797805617903869
+  },
+  "stim_gain_0.15": {
+   "perturbation": {
+    "stim_gain": 0.15
+   },
+   "transfer_mean_return": -13.582762411134304,
+   "transfer_sd": 1.332445697667666,
+   "retrained_mean_return": -13.463200155747645,
+   "retrained_sd": 1.1410216049489585,
+   "pid_mean_return": -12.52938142855828,
+   "pid_sd": 1.4312543169596132,
+   "transfer_gap_retrained_minus_transfer": 0.11956225538665954
+  },
+  "stim_gain_0.23": {
+   "perturbation": {
+    "stim_gain": 0.23
+   },
+   "transfer_mean_return": -8.419602774629746,
+   "transfer_sd": 1.028836616928129,
+   "retrained_mean_return": -9.036927664492016,
+   "retrained_sd": 1.4838369243611387,
+   "pid_mean_return": -7.626672058060774,
+   "pid_sd": 0.8292326779018282,
+   "transfer_gap_retrained_minus_transfer": -0.6173248898622692
+  },
+  "drive_sin_12": {
+   "perturbation": {
+    "drive_freq": 12.0
+   },
+   "transfer_mean_return": -9.641066903212822,
+   "transfer_sd": 0.766481610090796,
+   "retrained_mean_return": -9.597044094051345,
+   "retrained_sd": 0.7947295783422605,
+   "pid_mean_return": -9.398424601464784,
+   "pid_sd": 0.9270330244784342,
+   "transfer_gap_retrained_minus_transfer": 0.04402280916147738
+  },
+  "noise_0.10": {
+   "perturbation": {
+    "noise_sd": 0.1
+   },
+   "transfer_mean_return": -11.142012227519245,
+   "transfer_sd": 1.6597154925219497,
+   "retrained_mean_return": -11.406840252585901,
+   "retrained_sd": 1.5733079192573869,
+   "pid_mean_return": -10.481274965697482,
+   "pid_sd": 1.4560031220442762,
+   "transfer_gap_retrained_minus_transfer": -0.2648280250666559
+  }
+ },
+ "limitations": [
+  "All replicas are our own synthetic surrogate family; this measures sensitivity to OUR parameter choices, not to real neural dynamics"
+ ]
+}

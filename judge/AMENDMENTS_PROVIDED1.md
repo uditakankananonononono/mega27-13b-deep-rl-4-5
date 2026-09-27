@@ -29,10 +29,10 @@ Locked: 2026-09-27 10:58 IST, against 56pp build d381c5a. No execution began bef
 
 
 ## LANDED 2026-09-27 (second wave)
+- #2: model-uncertainty ensemble LANDED. Fitted-Q transferred unmodified to 6 perturbed simulator replicas vs retrained and fixed-gain PID (60 seeds 70100-70159). Transfer gap small/sign-variable (-0.28..+0.88); PID gap UNIVERSAL: PID beats transferred neural on 6/6 replicas and retrained on 5/6. R1 survives misspecification; R2 added (state the model family the uncertainty study spans). results/parkinson_model_uncertainty.json, src/parkinson_model_uncertainty.py, paper section.
 - #8/#15: PID (gains tuned on 40 disjoint seeds; Kp2.0 Ki0.1 Kd0.1) + MPC (h3, model-known upper bound) baselines on identical 120 held-out seeds. RESULT IS A POSITIVE-FRAMED NEGATIVE: neural fitted-Q (-10.44+/-1.27) LOSES to PID (-9.04+/-1.12) and MPC (-9.61+/-1.14), paired bootstrap CIs exclude zero; beats always-off/fixed-high/threshold. Framed as benchmarking requirement R1 (must clear tuned classical control). results/parkinson_pid_mpc.json, src/parkinson_pid_mpc.py, new paper section.
 - #16: policy-trigger interpretability LANDED: stimulation fraction by beta bin (0.755@low-beta -> 1.0@beta>0.6); permutation ablation beta 39.6% vs drive 12.7% vs drift 10.2% action-change - policy is beta-triggered as intended but magnitude selection suboptimal.
 
 ## First deliverables (cheap, existing data)
-2. Model-uncertainty study: simulator parameter ensemble, controller cross-environment transfer (#2)
 3. Ablations (#17) + policy-trigger interpretability (#16)
 4. Spine restructure: title/abstract to methods-paper framing (#1/#11/#12/#18/#19)
