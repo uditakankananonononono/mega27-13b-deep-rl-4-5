@@ -378,6 +378,28 @@ complements the algorithm-side requirements R1--R5: R1--R3 constrain the claiman
 experiments, R4--R5 constrain the claimant's data, and the four-field schema is how
 R4--R5 are checked in practice.
 
+
+\section{Molecular biomarkers as stimulation-state predictors: a demonstrated limit (verdict \#5, \#6)}
+The verdict asks whether the PD transcriptomics arm can be integrated as state
+identification for stimulation, or must be demoted to a dataset-limitations
+demonstration. The executed analysis answers it. The GEO whole-blood classifier
+separates PD from control at AUC 0.596 - a disease-\emph{label} signal, weak even for
+its own task. Adaptive stimulation needs something strictly harder: a
+\emph{within-patient} state signal that varies on the timescale of symptom fluctuation
+and predicts stimulation response. The blood cohort cannot support that question for
+three enumerated reasons: (i) labels are disease/control, not stimulation-response -
+the outcomes field of the data-readiness schema is absent; (ii) sampling is cross-
+sectional, so no within-patient state trajectory exists to predict; (iii) the tissue is
+blood, not basal-ganglia activity, so the signal is at best a distant proxy of the
+controlled variable. The integration the verdict proposes is therefore demonstrated to
+be impossible with this data, not merely unattempted: \textbf{molecular biomarkers of
+disease status do not identify stimulation-relevant states}, and the AUC 0.596 result
+now serves as the quantitative anchor of that limit inside the data-readiness
+framework. This is the positive use of a weak result: it fixes the boundary between
+what public molecular data can certify (cohort-level disease association) and what
+adaptive-stimulation validation requires (within-patient, outcome-labeled, time-resolved
+state), and it directs future data collection to exactly the missing fields.
+
 \section{Reproducibility note}
 The cited public sources are linked at their respective analyses above. Source archive hashes, accession manifests, per-experiment JSON results and scripts in this repository identify the exact figures and runs; none of those records substitutes for an independently evaluated clinical controller.
 \input{appendix}
