@@ -1,8 +1,14 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
-\usepackage{fontspec,amsmath,amssymb,booktabs,longtable,hyperref}
-\setmainfont{Times New Roman}[Path=/tmp/13b-fonts/,Extension=.TTF,UprightFont=Times,BoldFont=Timesbd,ItalicFont=Timesi,BoldItalicFont=Timesbi]
-\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\usepackage{amsmath,amssymb,longtable}
+% hyperref present but its dependency pdftexcmds.sty is missing in this sandbox -
+% force the no-hyperref fallback so the build is hermetic here.
+\providecommand{\url}[1]{\texttt{#1}}
+% Times family via TeX Gyre Termes (Times New Roman metric clone; fontspec/Times
+% TTF unavailable in this sandbox - pdflatex route). Liberation Serif TTFs remain
+% vendored at papers/fonts/ for any future fontspec build.
+\usepackage{tgtermes}
+\IfFileExists{booktabs.sty}{\usepackage{booktabs}}{\newcommand{\toprule}{\hline}\newcommand{\midrule}{\hline}\newcommand{\bottomrule}{\hline}}
 \newcommand{\caution}{\textbf{Nonclinical study.} No result in this manuscript supports patient treatment decisions.}
 \setlength{\parskip}{6pt}
 \begin{document}
