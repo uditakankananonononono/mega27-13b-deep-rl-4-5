@@ -46,7 +46,7 @@ def render(name):
  report_title=title_match.group(1) if title_match else name
  src=re.sub(r'\\(title|author|date)\{[^}]*\}|\\maketitle|\\begin\{abstract\}|\\end\{abstract\}','',src)
  pieces=re.split(r'(\\begin\{equation\}.*?\\end\{equation\})',src,flags=re.S)
- doc=SimpleDocTemplate(str(ROOT/(name+'.pdf')),pagesize=letter,leftMargin=65,rightMargin=65,topMargin=48,bottomMargin=48,title=report_title,author='MEGA27 13b')
+ doc=SimpleDocTemplate(str(ROOT/(name+'.pdf')),pagesize=letter,leftMargin=65,rightMargin=65,topMargin=48,bottomMargin=48,title=report_title,author='')
  story=[Paragraph(escape(report_title),title),Paragraph('WORKING RESEARCH REPORT - September 25, 2026',small),Spacer(1,8)]
  number=0
  for piece in pieces:
