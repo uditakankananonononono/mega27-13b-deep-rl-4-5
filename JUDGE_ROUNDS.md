@@ -10,7 +10,8 @@ The counted judge gate is now ONE round per project, provided by the user throug
 courier route. The retired minimum-10 rule is preserved here as history; the foldback
 standard (a round counts only if its critique is folded back as a concrete novelty
 change, critique AND change logged, verbatim prompt+response, model-tagged) is RETAINED.
-**JUDGE GATE STATUS: 0 of 1 - PENDING the user's provided verdict.** SETTLED
+**JUDGE GATE STATUS: MET - 1 of 1 PROVIDED verdict received.**
+Provided round 1: WhatsApp 2026-09-27 10:54:47 IST, wamid...RTlERDhGOQA= (3,597 chars, verbatim archive: judge/round_provided1_verdict_whatsapp.txt). Amendment queue locked BEFORE execution: judge/AMENDMENTS_PROVIDED1.md (19 items; spine = methods-paper pivot "benchmarking requirements for trustworthy adaptive DBS"). She judged the 56pp build (d381c5a). Earlier agent-initiated R1-R3 rounds remain preserved history; they do not count toward the gate. SETTLED
 2026-09-27 10:01:47 IST (user: "EACH PROJECTS NEED ONE FROM ME TO PASS",
 wamid.HBgMOTE4MTM0MDk4NTcxFQIAEhgWM0VCMDMwREI5RDQ0QUNCRDc2MTNDMwA=): the counted gate is
 ONE verdict the user personally provides via the courier paste route. Agent-initiated

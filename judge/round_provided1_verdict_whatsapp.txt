@@ -1,0 +1,242 @@
+LANE-13b PROVIDED JUDGE VERDICT #1
+Source: WhatsApp channel record, author=user (profile_name Meemee)
+wamid: wamid.HBgMOTE4MTM0MDk4NTcxFQIAEhgWM0VCMDNBM0YwRkNGNTczRTlERDhGOQA= (parent's delegation named the trailing 'NEXT' wamid ...MjkxMzkwRAA= in error; this 3,597-char verdict at 10:54:47 is the verdict body, content-verified)
+Timestamp: Sunday, September 27, 2026, 10:54:47 AM IST
+Retrieved from phone_messages and verified verbatim. She judged the 56pp build d381c5a.
+----- VERBATIM -----
+VERDICT: Main weaknesses + exact additions
+1. Weakness: The RL component is not clinically connected
+
+Biggest problem.
+
+The model controls:
+
+a synthetic beta-burst environment.
+
+Not:
+
+real DBS trajectories.
+
+The paper admits this.
+
+Fix:
+
+Pivot from:
+
+❌ “AI adaptive DBS”
+
+to:
+
+✅ “Benchmarking requirements for trustworthy adaptive DBS algorithms”
+
+That becomes a computational methods paper.
+
+2. Weakness: Synthetic environment may be arbitrary
+
+The equations define assumed dynamics, not patient physiology.
+
+Add:
+
+Perform a model uncertainty study:
+
+Create multiple plausible simulators.
+
+Question:
+
+Does the controller work across environments?
+
+3. Weakness: No real state-action-reward data
+
+RL requires trajectories.
+
+The paper correctly says tremor data cannot provide them.
+
+Add:
+
+Do not pretend to solve this.
+
+Instead create:
+
+a data-readiness framework:
+
+“What information is required before RL validation?”
+
+4. Weakness: Reinforcement learning is not the strongest novelty
+
+Fitted-Q learning for control is established.
+
+Add:
+
+Make novelty:
+
+safety-aware validation framework
+
+Examples:
+
+failure detection
+uncertainty estimation
+policy instability scoring
+5. Weakness: PD transcriptomics is disconnected
+
+The GEO analysis is separate.
+
+Blood expression cannot control DBS.
+
+The paper acknowledges this separation.
+
+Fix:
+
+Either remove it or integrate:
+
+Question:
+
+Can molecular biomarkers identify patient states relevant to adaptive stimulation?
+
+6. Weakness: AUC 0.596 is weak
+
+A weak classifier is not a discovery.
+
+Add:
+
+Do not focus on prediction.
+
+Use it as:
+
+a demonstration of dataset limitations.
+
+7. Weakness: Tremor dataset is descriptive, not causal
+
+The study analyzed:
+
+15 represented subjects
+fixed DBS conditions
+
+Add:
+
+Focus on:
+
+within-subject variability analysis.
+
+8. Weakness: No comparison against simple controllers
+Add:
+
+Benchmark:
+
+fixed stimulation
+threshold controller
+PID controller
+RL controller
+
+with identical conditions.
+
+9. Weakness: RL evaluation lacks statistical confidence
+
+The manuscript reports single-seed limitations.
+
+Add:
+
+Need:
+
+many seeds
+confidence intervals
+statistical testing
+10. Weakness: No safety objective
+
+For DBS, safety matters.
+
+Add:
+
+Multi-objective reward:
+
+symptom reduction
+energy use
+stimulation stability
+11. Weakness: The biological story is unclear
+
+Is this:
+
+Parkinson biology?
+AI control?
+neuroscience modeling?
+Fix:
+
+Choose one.
+
+12. Weakness: Too much emphasis on proving what cannot be proven
+
+The manuscript spends significant effort defining limitations.
+
+Good science, but weak competition story.
+
+Add:
+
+Convert limitation into contribution.
+
+13. Weakness: No predictive biomarker
+
+The GEO component could become stronger.
+
+Add:
+
+Instead of PD/control:
+
+Predict:
+
+tremor severity
+DBS response phenotype
+
+(if appropriate public labels exist).
+
+14. Weakness: No external benchmark
+Add:
+
+Compare with:
+
+published adaptive DBS simulations
+open computational neuroscience benchmarks
+15. Weakness: RL algorithm choice not justified
+
+Why fitted-Q?
+
+Add:
+
+Compare:
+
+DQN
+actor-critic
+model predictive control
+16. Weakness: Model interpretability is absent
+Add:
+
+Analyze:
+
+Which states trigger stimulation decisions?
+
+17. Weakness: No ablation studies
+Add:
+
+Remove:
+
+energy penalty
+noise
+drift term
+
+Measure effect.
+
+18. Weakness: The strongest result is hidden
+
+The strongest result:
+
+Many attractive AI-health claims fail without proper data alignment.
+
+That should be central.
+
+19. Weakness: Clinical language must remain cautious
+
+Avoid:
+
+“treat Parkinson disease.”
+
+Use:
+
+“computational model of adaptive stimulation.”
