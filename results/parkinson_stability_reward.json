@@ -1,0 +1,27 @@
+{
+ "design": "fitted-Q trained/evaluated under nominal reward vs reward + 0.05/action-change; 120 held-out seeds 90100-90219",
+ "switch_penalty": 0.05,
+ "results": {
+  "nominal_reward": {
+   "mean_return": -9.66090380723296,
+   "sd_return": 1.4035709258642397,
+   "mean_bursts": 0.375,
+   "mean_energy": 37.53333333333333,
+   "mean_switches": 30.5
+  },
+  "stability_reward": {
+   "mean_return": -11.568314837077912,
+   "sd_return": 1.88230892547098,
+   "mean_bursts": 0.35833333333333334,
+   "mean_energy": 34.62291666666667,
+   "mean_switches": 29.608333333333334
+  }
+ },
+ "reading": "stability term should cut switching without losing symptom control - check bursts row",
+ "delta_stab_minus_nominal": {
+  "mean_return": -1.9074,
+  "mean_bursts": -0.0167,
+  "mean_energy": -2.9104,
+  "mean_switches": -0.8917
+ }
+}

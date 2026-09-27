@@ -333,6 +333,28 @@ The verdict asks for a predictive biomarker beyond PD/control - tremor severity 
 \section{The requirements table: R1--R5 as a checklist for adaptive-stimulation claims (verdict \#14)}
 We collect the requirements demonstrated in this report into a single checklist, with the external-benchmark status of each against published adaptive-DBS simulators. R1 (tuned classical control arm): demonstrated here by execution - PID and MPC arms under identical seeds; absent from the DBS-Gym comparison table we audited, which is why our neural controller's defeat matters. R2 (model-uncertainty spanning): demonstrated here over a six-member surrogate ensemble; the published Env0 protocol mismatches we document (eval0 1000-unit horizon vs stated 1500-step episodes; env2 import in the evaluation script) show what an unspanned specification looks like. R3 (ablation identity of every reward term): demonstrated here for energy, switching, noise, and drift terms. R4 (condition structure recoverable): demonstrated negatively on 55 public tremor traces - the expected DBS-on power reduction is recoverable in only 52\% of medication-matched pairs. R5 (outcome labels present): demonstrated negatively by enumeration - no public adaptive-stimulation dataset carries severity or response outcomes. External-benchmark formalization: our DBS-Gym noncomparability audit (different simulator, observation, action, reward, horizon) is precisely what this table forbids silently eliding; any future controller claiming a benchmark win should fill all five rows with executed arms, not citations. This table is the paper's intended reuse artifact.
 
+
+\section{Multi-objective reward shaping for stimulation smoothness fails (verdict \#10)}
+The verdict asks whether smoothness of the stimulation sequence can be traded against
+symptom control inside the reward. We augmented the surrogate reward with a per-step
+penalty of 0.05 for any action change, retrained fitted-Q on the same 3000 i.i.d.
+transition samples (12 rounds, identical width-32 network), and evaluated both policies
+on 120 shared held-out initial conditions (seeds 90100--90219; full record
+\texttt{results/parkinson\_stability\_reward.json}, \texttt{src/parkinson\_stability\_reward.py}).
+The penalty does not deliver smoothness: mean switching falls only 3\%
+(30.5 $\to$ 29.6 switches per 70-step episode) while mean return degrades by 1.9 points
+($-9.66 \to -11.57$, 20\% of scale); burst control and energy are essentially unchanged
+(0.38 $\to$ 0.36 bursts; 37.5 $\to$ 34.6 energy). Reward shaping fails here for a
+structural reason: the previous action is not part of the state, so the value function
+cannot anticipate future switch costs - the agent pays the penalty without being able to
+plan around it. A proper stability treatment must either (i) augment the state with the
+previous action, making the switch cost visible to the value function (a constrained-MDP
+formulation), or (ii) smooth the policy rather than the reward - low-pass filtering the
+amplitude trajectory, which is how commercial adaptive-DBS devices implement ramp
+limits. We adopt (ii) as the default in the pipeline description and record (i) as the
+principled extension. Documented, not hidden: naive reward shaping for smoothness is
+counterproductive in this system, and the mechanism is identifiable.
+
 \section{Reproducibility note}
 The cited public sources are linked at their respective analyses above. Source archive hashes, accession manifests, per-experiment JSON results and scripts in this repository identify the exact figures and runs; none of those records substitutes for an independently evaluated clinical controller.
 \input{appendix}
