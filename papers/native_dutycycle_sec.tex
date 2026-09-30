@@ -1,0 +1,35 @@
+\section{Native open-loop duty cycle and the frozen-policy reward envelope}
+
+A neural policy that collapses to constant stimulation does not establish learned control. To test a simple energy-saving alternative without training another network, we evaluate a fixed two-ON/two-OFF four-step cycle on the six existing matched native evaluation initializations, seeds 1220--1225. Each run uses the pinned 512-neuron DBS-Gym Env0, the same 150-step horizon and physical 0/+5 V actions. The policy never reads its observation. It is periodic open-loop stimulation, not adaptive stimulation or a learned controller. The phase starts with two ON steps and has not been phase-tuned.
+
+All six runs execute 76 ON steps, an ON fraction of 0.5067, with 74 switches. Absolute-voltage sum is 380 rather than fixed ON's 750. This quantity is the simulator action-cost basis, not a physical energy measurement in joules. Saving 49.3\% of that action sum worsens the beta component in every seed. At the upstream penalty, the pooled mean reward difference versus fixed ON is $-3.2624$. The beta excess ranges from 1.8146 to 5.8705 across initializations. These are measured native-software outcomes, not clinical or published-SAC benchmark results.
+
+\begin{center}\begin{tabular}{rrrr}\hline
+Seed & Half-duty reward & Beta excess vs ON & Pairwise crossover $\lambda$\\\hline
+1220 & -21.701 & 5.871 & 2.380\\
+1221 & -23.887 & 3.987 & 1.616\\
+1222 & -13.400 & 2.941 & 1.192\\
+1223 & -11.928 & 1.977 & 0.802\\
+1224 & -11.611 & 3.132 & 1.270\\
+1225 & -10.001 & 1.815 & 0.736\\\hline
+\end{tabular}\end{center}
+
+The source reward is $r=-B-\lambda|u|$, with $B=10^4$ times beta-band power and $\lambda=0.01$. For a frozen trajectory at binary physical voltage $u\in\{0,5\}$, re-scoring any penalty is exact algebra. Let $\bar B_j$ and $\bar U_j$ be the mean beta component and mean absolute voltage of policy $j$. The mean cost is
+\[
+C_j(\lambda)=\bar B_j+\lambda\bar U_j.
+\]
+Mean reward is its negative. Changing this penalty does not change the stored simulator trajectory because these policies do not use the reward to choose actions. It is a frozen-policy sensitivity analysis, not policy re-optimization or retraining under a new objective.
+
+\begin{center}\begin{tabular}{lrr}\hline
+Policy & Mean beta component $\bar B$ & Mean absolute voltage $\bar U$\\\hline
+Fixed OFF & 24.0175 & 0.0000\\
+Fixed ON & 12.1090 & 5.0000\\
+Pilot threshold & 13.4117 & 2.8833\\
+Periodic half duty & 15.3961 & 2.5333\\\hline
+\end{tabular}\end{center}
+
+The ON-versus-half pairwise crossover is $\lambda=1.3326$, far above the actual 0.01 penalty. Individual-seed crossovers span 0.7356--2.3799. But this pairwise crossing is not the global optimum. Comparing all four cost lines gives a lower envelope: ON is best up to $\lambda=0.61545$, the fixed pilot threshold is best between 0.61545 and 3.67829, and OFF is best above 3.67829. Ties occur at the boundaries. Half duty never lies on this envelope for any nonnegative penalty. When half duty first beats ON, threshold is already better; by the time half duty can beat threshold, OFF is better. These comparisons use pooled means of the six same evaluation initializations, not a per-seed clinical decision rule.
+
+This is the positive use of the negative control. A plausible energy-saving waveform may lose at the actual objective and may never be the best measured choice even after reward reweighting. Pairwise thresholds are therefore insufficient to claim a controller advantage. The simple pilot threshold also remains untuned; outperforming it or crossing it at one penalty cannot certify optimal adaptive stimulation. Nothing in this experiment repairs the native neural collapse or establishes learned-control gain.
+
+Limits are explicit: short horizon, fixed cycle length and phase, six simulator initializations, no drift event in these configurations, a narrow policy set, no retraining for altered rewards, and no published multi-episode normalization. The reward scale and absolute-voltage cost are simulator conventions. There are no patient outcomes or clinical safety constraints. The full actions and individual rewards, waveform hashes, matched baseline summaries and envelope coefficients are retained in \texttt{results/parkinson\_native\_dutycycle.json} and its per-run files. The executable is \texttt{src/parkinson\_native\_dutycycle.py}. Source: \url{https://github.com/NevVerVer/DBS-Gym}, pinned commit aa0b10b9502e4f62dea755ce6468da024235c319. Future useful tests would vary phase, horizon and controller class while preserving these negative results, rather than relabel open-loop control as RL.
