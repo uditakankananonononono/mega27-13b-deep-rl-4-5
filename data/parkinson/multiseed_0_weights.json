@@ -1,0 +1,23 @@
+[
+  {
+    "episode": 0,
+    "seed": 1010,
+    "steps": 100,
+    "mean_reward": -33.010884857177736,
+    "on_fraction": 0.45
+  },
+  {
+    "episode": 1,
+    "seed": 1011,
+    "steps": 100,
+    "mean_reward": -19.75613694190979,
+    "on_fraction": 0.45
+  },
+  {
+    "episode": 2,
+    "seed": 1012,
+    "steps": 100,
+    "mean_reward": -8.310741850852965,
+    "on_fraction": 0.59
+  }
+]

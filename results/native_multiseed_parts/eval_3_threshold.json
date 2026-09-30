@@ -1,0 +1,8 @@
+{
+  "steps": 150,
+  "mean_reward": -10.926491053263346,
+  "on_fraction": 0.42,
+  "mean_beta_component": 10.905491053263347,
+  "switches": 1,
+  "lfp_sha256": "1b7a3bd3fd02d59498029b133a1873c084519076b1912f3079ef6712b46bd7c5"
+}

@@ -1,0 +1,420 @@
+{
+  "source": "https://github.com/NevVerVer/DBS-Gym",
+  "source_commit": "aa0b10b9502e4f62dea755ce6468da024235c319",
+  "planned_replicates": 6,
+  "completed_replicates": 6,
+  "eval_steps": 150,
+  "training_per_replicate": "3 episodes x 100 steps, Adam REINFORCE, binary 0/+5 V",
+  "replicates": [
+    {
+      "replicate": 0,
+      "training_init_seed": 910,
+      "eval_seed": 1220,
+      "training": [
+        {
+          "episode": 0,
+          "seed": 1010,
+          "steps": 100,
+          "mean_reward": -33.010884857177736,
+          "on_fraction": 0.45
+        },
+        {
+          "episode": 1,
+          "seed": 1011,
+          "steps": 100,
+          "mean_reward": -19.75613694190979,
+          "on_fraction": 0.45
+        },
+        {
+          "episode": 2,
+          "seed": 1012,
+          "steps": 100,
+          "mean_reward": -8.310741850852965,
+          "on_fraction": 0.59
+        }
+      ],
+      "weight_sha256": "302b8f32f0a0765d39c530d93532563764c1aaa428c37062b2ef33a4c8b40d1e",
+      "policies": {
+        "rl": {
+          "steps": 150,
+          "mean_reward": -15.854913013776143,
+          "on_fraction": 1.0,
+          "mean_beta_component": 15.804913013776144,
+          "switches": 0,
+          "lfp_sha256": "b6a83c8317d20ecaf82fe275bf51068e71cf8ac08f3396fcad6f151afc4de3af"
+        },
+        "off": {
+          "steps": 150,
+          "mean_reward": -25.471986300150554,
+          "on_fraction": 0.0,
+          "mean_beta_component": 25.471986300150554,
+          "switches": 0,
+          "lfp_sha256": "05d5ed6d17c68043f707afab3e7a36669ad5268df50f643da75716e2d620333d"
+        },
+        "on": {
+          "steps": 150,
+          "mean_reward": -15.854913013776143,
+          "on_fraction": 1.0,
+          "mean_beta_component": 15.804913013776144,
+          "switches": 0,
+          "lfp_sha256": "b6a83c8317d20ecaf82fe275bf51068e71cf8ac08f3396fcad6f151afc4de3af"
+        },
+        "threshold": {
+          "steps": 150,
+          "mean_reward": -15.993698554674786,
+          "on_fraction": 0.58,
+          "mean_beta_component": 15.964698554674785,
+          "switches": 1,
+          "lfp_sha256": "9a3e85449af06a2f3cc7f280353e63d78231dbc969cd47f01e1ef601135e8a94"
+        }
+      }
+    },
+    {
+      "replicate": 1,
+      "training_init_seed": 911,
+      "eval_seed": 1221,
+      "training": [
+        {
+          "episode": 0,
+          "seed": 1011,
+          "steps": 100,
+          "mean_reward": -20.870213363647462,
+          "on_fraction": 0.46
+        },
+        {
+          "episode": 1,
+          "seed": 1012,
+          "steps": 100,
+          "mean_reward": -8.611931639671324,
+          "on_fraction": 0.57
+        },
+        {
+          "episode": 2,
+          "seed": 1013,
+          "steps": 100,
+          "mean_reward": -18.887311119079595,
+          "on_fraction": 0.58
+        }
+      ],
+      "weight_sha256": "8b53ef05eba610a19307227f7c20e285eb50a8cc6df4d65fc46192ea33e52bb2",
+      "policies": {
+        "rl": {
+          "steps": 150,
+          "mean_reward": -19.9246507024765,
+          "on_fraction": 1.0,
+          "mean_beta_component": 19.8746507024765,
+          "switches": 0,
+          "lfp_sha256": "fff87248cbaa048d4a84cad9f0964429944c899973af83bc9e7c0463e5556037"
+        },
+        "off": {
+          "steps": 150,
+          "mean_reward": -40.43862510681152,
+          "on_fraction": 0.0,
+          "mean_beta_component": 40.43862510681152,
+          "switches": 0,
+          "lfp_sha256": "8ceb6ec4817c6319ac4455395d40cd9c63952ca70672785e9490370e8586f0f7"
+        },
+        "on": {
+          "steps": 150,
+          "mean_reward": -19.9246507024765,
+          "on_fraction": 1.0,
+          "mean_beta_component": 19.8746507024765,
+          "switches": 0,
+          "lfp_sha256": "fff87248cbaa048d4a84cad9f0964429944c899973af83bc9e7c0463e5556037"
+        },
+        "threshold": {
+          "steps": 150,
+          "mean_reward": -20.919018780390424,
+          "on_fraction": 0.7,
+          "mean_beta_component": 20.88401878039042,
+          "switches": 3,
+          "lfp_sha256": "a6a04b1afcc77aabf6f4f10ecbb986f939a352d91075d94684e98760650e41dc"
+        }
+      }
+    },
+    {
+      "replicate": 2,
+      "training_init_seed": 912,
+      "eval_seed": 1222,
+      "training": [
+        {
+          "episode": 0,
+          "seed": 1012,
+          "steps": 100,
+          "mean_reward": -10.064308504104613,
+          "on_fraction": 0.53
+        },
+        {
+          "episode": 1,
+          "seed": 1013,
+          "steps": 100,
+          "mean_reward": -17.682087816238404,
+          "on_fraction": 0.63
+        },
+        {
+          "episode": 2,
+          "seed": 1014,
+          "steps": 100,
+          "mean_reward": -17.092664392471313,
+          "on_fraction": 0.51
+        }
+      ],
+      "weight_sha256": "acefd14267a9a7d12a1e280ba5ae4af0fb95104844e041a15d8c885f30b5d56f",
+      "policies": {
+        "rl": {
+          "steps": 150,
+          "mean_reward": -10.484111585617063,
+          "on_fraction": 1.0,
+          "mean_beta_component": 10.434111585617066,
+          "switches": 0,
+          "lfp_sha256": "127a052671b226e94a1b0187be16805d318792581a668e720297bcc563c5520b"
+        },
+        "off": {
+          "steps": 150,
+          "mean_reward": -15.364644514719645,
+          "on_fraction": 0.0,
+          "mean_beta_component": 15.364644514719645,
+          "switches": 0,
+          "lfp_sha256": "6aac3dcffc8461bd9519ba19319b578c424dd7c9e81ba61a8400edbdb896531a"
+        },
+        "on": {
+          "steps": 150,
+          "mean_reward": -10.484111585617063,
+          "on_fraction": 1.0,
+          "mean_beta_component": 10.434111585617066,
+          "switches": 0,
+          "lfp_sha256": "127a052671b226e94a1b0187be16805d318792581a668e720297bcc563c5520b"
+        },
+        "threshold": {
+          "steps": 150,
+          "mean_reward": -11.593827838897704,
+          "on_fraction": 0.5,
+          "mean_beta_component": 11.568827838897706,
+          "switches": 3,
+          "lfp_sha256": "77cd9a6f5ead1a16898a2491b4ecd5f0fc8f203a7b89c6139ab7079190f5d52c"
+        }
+      }
+    },
+    {
+      "replicate": 3,
+      "training_init_seed": 913,
+      "eval_seed": 1223,
+      "training": [
+        {
+          "episode": 0,
+          "seed": 1013,
+          "steps": 100,
+          "mean_reward": -20.94749187660218,
+          "on_fraction": 0.44
+        },
+        {
+          "episode": 1,
+          "seed": 1014,
+          "steps": 100,
+          "mean_reward": -17.964400568008422,
+          "on_fraction": 0.5
+        },
+        {
+          "episode": 2,
+          "seed": 1015,
+          "steps": 100,
+          "mean_reward": -7.237233167648315,
+          "on_fraction": 0.52
+        }
+      ],
+      "weight_sha256": "8497ebaf3875c2532b9988e5ba54f933dd84433abcba49d86b2985ab6f65ec5d",
+      "policies": {
+        "rl": {
+          "steps": 150,
+          "mean_reward": -22.595423933664957,
+          "on_fraction": 0.0,
+          "mean_beta_component": 22.595423933664957,
+          "switches": 0,
+          "lfp_sha256": "3d32e78fe2ec0404b60736c334bab45c72cc82e63262e6b785bbc0e1f9d49410"
+        },
+        "off": {
+          "steps": 150,
+          "mean_reward": -22.595423933664957,
+          "on_fraction": 0.0,
+          "mean_beta_component": 22.595423933664957,
+          "switches": 0,
+          "lfp_sha256": "3d32e78fe2ec0404b60736c334bab45c72cc82e63262e6b785bbc0e1f9d49410"
+        },
+        "on": {
+          "steps": 150,
+          "mean_reward": -9.975985941886902,
+          "on_fraction": 1.0,
+          "mean_beta_component": 9.925985941886902,
+          "switches": 0,
+          "lfp_sha256": "a227632a314c3553ca14ab01ad8b894a6c83319c45a69eda7c8741ecf8f5730f"
+        },
+        "threshold": {
+          "steps": 150,
+          "mean_reward": -10.926491053263346,
+          "on_fraction": 0.42,
+          "mean_beta_component": 10.905491053263347,
+          "switches": 1,
+          "lfp_sha256": "1b7a3bd3fd02d59498029b133a1873c084519076b1912f3079ef6712b46bd7c5"
+        }
+      }
+    },
+    {
+      "replicate": 4,
+      "training_init_seed": 914,
+      "eval_seed": 1224,
+      "training": [
+        {
+          "episode": 0,
+          "seed": 1014,
+          "steps": 100,
+          "mean_reward": -18.489826375961304,
+          "on_fraction": 0.44
+        },
+        {
+          "episode": 1,
+          "seed": 1015,
+          "steps": 100,
+          "mean_reward": -6.393563917160033,
+          "on_fraction": 0.56
+        },
+        {
+          "episode": 2,
+          "seed": 1016,
+          "steps": 100,
+          "mean_reward": -14.892487148284912,
+          "on_fraction": 0.53
+        }
+      ],
+      "weight_sha256": "ee7822eb17e611e6a9aa2d918834c5d8ac536cba3bbeb540d8c4a18b9bd58b04",
+      "policies": {
+        "rl": {
+          "steps": 150,
+          "mean_reward": -8.503129119873044,
+          "on_fraction": 1.0,
+          "mean_beta_component": 8.453129119873047,
+          "switches": 0,
+          "lfp_sha256": "1f4318aa60a61362f2664a51528fcf525fdaab33d32b2a1551d453bf04647098"
+        },
+        "off": {
+          "steps": 150,
+          "mean_reward": -17.78075160344442,
+          "on_fraction": 0.0,
+          "mean_beta_component": 17.78075160344442,
+          "switches": 0,
+          "lfp_sha256": "6dcc85a65a447683b04fc5b5ecab8e074abef1642e5bfe26c152a995c27759f5"
+        },
+        "on": {
+          "steps": 150,
+          "mean_reward": -8.503129119873044,
+          "on_fraction": 1.0,
+          "mean_beta_component": 8.453129119873047,
+          "switches": 0,
+          "lfp_sha256": "1f4318aa60a61362f2664a51528fcf525fdaab33d32b2a1551d453bf04647098"
+        },
+        "threshold": {
+          "steps": 150,
+          "mean_reward": -10.246869402567546,
+          "on_fraction": 0.58,
+          "mean_beta_component": 10.217869402567546,
+          "switches": 11,
+          "lfp_sha256": "82c40655050ed205cf00704f546d7d64a5bddac390bdee94ee1698118eda63d1"
+        }
+      }
+    },
+    {
+      "replicate": 5,
+      "training_init_seed": 915,
+      "eval_seed": 1225,
+      "training": [
+        {
+          "episode": 0,
+          "seed": 1015,
+          "steps": 100,
+          "mean_reward": -11.712130060195921,
+          "on_fraction": 0.45
+        },
+        {
+          "episode": 1,
+          "seed": 1016,
+          "steps": 100,
+          "mean_reward": -14.697454227447508,
+          "on_fraction": 0.48
+        },
+        {
+          "episode": 2,
+          "seed": 1017,
+          "steps": 100,
+          "mean_reward": -7.106566316604613,
+          "on_fraction": 0.54
+        }
+      ],
+      "weight_sha256": "65a99ab8c45ce7afb61aec52d0f53846e919e9636943b2c5f67e0fbeb74e3c65",
+      "policies": {
+        "rl": {
+          "steps": 150,
+          "mean_reward": -8.211440289815267,
+          "on_fraction": 1.0,
+          "mean_beta_component": 8.161440289815268,
+          "switches": 0,
+          "lfp_sha256": "f84df8669f4d7bc8b9e45add4b6ff547e4c608f75aff56ac948a4a1036de00dd"
+        },
+        "off": {
+          "steps": 150,
+          "mean_reward": -22.453523635864258,
+          "on_fraction": 0.0,
+          "mean_beta_component": 22.453523635864258,
+          "switches": 0,
+          "lfp_sha256": "23d4c9f3104a3cee67026e25bcd2b60b6e4a45ae68ddee77e059af919d41c940"
+        },
+        "on": {
+          "steps": 150,
+          "mean_reward": -8.211440289815267,
+          "on_fraction": 1.0,
+          "mean_beta_component": 8.161440289815268,
+          "switches": 0,
+          "lfp_sha256": "f84df8669f4d7bc8b9e45add4b6ff547e4c608f75aff56ac948a4a1036de00dd"
+        },
+        "threshold": {
+          "steps": 150,
+          "mean_reward": -10.963561977386473,
+          "on_fraction": 0.68,
+          "mean_beta_component": 10.929561977386475,
+          "switches": 10,
+          "lfp_sha256": "c686b6cc8d35f19473ea623f96315d84409c0592362e5764a04d35cc51b75435"
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Short horizon and little training; not six-evaluation published SAC benchmark",
+    "Simulator only, no clinical evidence",
+    "Matched environment seeds differ across replicates; training and evaluation variation mixed",
+    "Threshold .001 is a fixed pilot heuristic, no tuning"
+  ],
+  "comparisons": {
+    "off": {
+      "paired_mean_rl_minus_baseline": 9.75521440823873,
+      "t95": [
+        2.259910055090245,
+        17.250518761387216
+      ],
+      "n": 6
+    },
+    "on": {
+      "paired_mean_rl_minus_baseline": -2.1032396652963423,
+      "t95": [
+        -7.509789344896921,
+        3.303310014304237
+      ],
+      "n": 6
+    },
+    "threshold": {
+      "paired_mean_rl_minus_baseline": -0.8217001730071161,
+      "t95": [
+        -6.472443865037498,
+        4.829043519023266
+      ],
+      "n": 6
+    }
+  }
+}

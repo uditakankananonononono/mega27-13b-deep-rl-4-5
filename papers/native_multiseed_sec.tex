@@ -1,0 +1,29 @@
+\section{Six-seed native pilot: deterministic collapse, not learned-control gain}
+
+A fresh checkpointed pilot trains six independent Bernoulli REINFORCE policies with bias-corrected Adam in the pinned native 512-neuron Env0. Each uses three 100-step training episodes and one disjoint 150-step evaluation seed; fixed OFF, fixed +5 V and a pilot threshold controller use the identical evaluation initialization. This shorter training/evaluation budget replaces a wiped unfinished run, not a recovered result or published SAC reproduction.
+
+\begin{center}\begin{tabular}{rrrr}\hline Replicate & RL ON fraction & RL mean reward & Fixed ON reward\\\hline
+
+0 & 1.0 & -15.855 & -15.855 \\
+
+1 & 1.0 & -19.925 & -19.925 \\
+
+2 & 1.0 & -10.484 & -10.484 \\
+
+3 & 0.0 & -22.595 & -9.976 \\
+
+4 & 1.0 & -8.503 & -8.503 \\
+
+5 & 1.0 & -8.211 & -8.211 \\
+
+\hline\end{tabular}\end{center}
+
+Five policies collapse to always-ON and one to always-OFF. Identical waveform hashes confirm that the collapsed policies reproduce their matched fixed-action controls. Stimulation switches are zero. Thus the native neural policies establish no benefit beyond fixed stimulation. A favorable mean versus OFF is not learning when the network merely chooses ON.
+
+Paired RL minus off mean reward difference: 9.755; Student-t 95\% interval 2.260 to 17.251 across six seed pairs.
+
+Paired RL minus on mean reward difference: -2.103; Student-t 95\% interval -7.510 to 3.303 across six seed pairs.
+
+Paired RL minus threshold mean reward difference: -0.822; Student-t 95\% interval -6.472 to 4.829 across six seed pairs.
+
+These small-sample intervals mix training and simulator variation and are sensitive to the single OFF collapse. The threshold is an arbitrary fixed pilot heuristic; no controller here is clinically calibrated. The short horizon omits published multi-episode conditions. The contribution is a reproducible policy-instability failure detector, not a successful DBS controller. Full training traces, weights, action statistics and hashes are retained in results/parkinson\_native\_multiseed.json and data/parkinson/.

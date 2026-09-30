@@ -1,0 +1,63 @@
+{
+  "replicate": 4,
+  "training_init_seed": 914,
+  "eval_seed": 1224,
+  "training": [
+    {
+      "episode": 0,
+      "seed": 1014,
+      "steps": 100,
+      "mean_reward": -18.489826375961304,
+      "on_fraction": 0.44
+    },
+    {
+      "episode": 1,
+      "seed": 1015,
+      "steps": 100,
+      "mean_reward": -6.393563917160033,
+      "on_fraction": 0.56
+    },
+    {
+      "episode": 2,
+      "seed": 1016,
+      "steps": 100,
+      "mean_reward": -14.892487148284912,
+      "on_fraction": 0.53
+    }
+  ],
+  "weight_sha256": "ee7822eb17e611e6a9aa2d918834c5d8ac536cba3bbeb540d8c4a18b9bd58b04",
+  "policies": {
+    "rl": {
+      "steps": 150,
+      "mean_reward": -8.503129119873044,
+      "on_fraction": 1.0,
+      "mean_beta_component": 8.453129119873047,
+      "switches": 0,
+      "lfp_sha256": "1f4318aa60a61362f2664a51528fcf525fdaab33d32b2a1551d453bf04647098"
+    },
+    "off": {
+      "steps": 150,
+      "mean_reward": -17.78075160344442,
+      "on_fraction": 0.0,
+      "mean_beta_component": 17.78075160344442,
+      "switches": 0,
+      "lfp_sha256": "6dcc85a65a447683b04fc5b5ecab8e074abef1642e5bfe26c152a995c27759f5"
+    },
+    "on": {
+      "steps": 150,
+      "mean_reward": -8.503129119873044,
+      "on_fraction": 1.0,
+      "mean_beta_component": 8.453129119873047,
+      "switches": 0,
+      "lfp_sha256": "1f4318aa60a61362f2664a51528fcf525fdaab33d32b2a1551d453bf04647098"
+    },
+    "threshold": {
+      "steps": 150,
+      "mean_reward": -10.246869402567546,
+      "on_fraction": 0.58,
+      "mean_beta_component": 10.217869402567546,
+      "switches": 11,
+      "lfp_sha256": "82c40655050ed205cf00704f546d7d64a5bddac390bdee94ee1698118eda63d1"
+    }
+  }
+}
