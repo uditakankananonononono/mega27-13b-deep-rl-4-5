@@ -3,7 +3,7 @@
 \usepackage{amsmath,amssymb,longtable}
 % hyperref present but its dependency pdftexcmds.sty is missing in this sandbox -
 % force the no-hyperref fallback so the build is hermetic here.
-\providecommand{\url}[1]{\texttt{#1}}
+\usepackage{url}
 % Times family via TeX Gyre Termes (Times New Roman metric clone; fontspec/Times
 % TTF unavailable in this sandbox - pdflatex route). Liberation Serif TTFs remain
 % vendored at papers/fonts/ for any future fontspec build.
@@ -11,4 +11,6 @@
 \IfFileExists{booktabs.sty}{\usepackage{booktabs}}{\newcommand{\toprule}{\hline}\newcommand{\midrule}{\hline}\newcommand{\bottomrule}{\hline}}
 \newcommand{\caution}{\textbf{Nonclinical study.} No result in this manuscript supports patient treatment decisions.}
 \setlength{\parskip}{6pt}
+\sloppy
+\setlength{\emergencystretch}{3em}
 \begin{document}

@@ -1,0 +1,46 @@
+[
+  {
+    "file": "papers/parkinson.tex",
+    "before": "the one nonlinearity PID cannot track",
+    "after": "a tested model coupling associated with a larger neural-PID gap"
+  },
+  {
+    "file": "papers/parkinson.tex",
+    "before": "Policy-trigger analysis shows the learned controller is physiologically sensible - stimulation probability rises monotonically with beta state - yet still loses on magnitude selection.",
+    "after": "In the synthetic surrogate, stimulation probability rises with its assigned beta state. This is consistency with an assumed feedback variable, not physiological validation. The learned controller still loses to tuned classical controls."
+  },
+  {
+    "file": "papers/parkinson.tex",
+    "before": "A native DBS-Gym pilot at 512 neurons is reported with its protocol mismatches preserved rather than patched.",
+    "after": "Native 512-neuron REINFORCE pilots collapse to constant actions (five ON and one OFF across six seed pairs), and a periodic half-duty open-loop control is never on the pooled four-policy reward envelope. These negative results retain their short-horizon and overlapping-training-seed limitations; none reproduces the published SAC protocol."
+  },
+  {
+    "file": "papers/parkinson.tex",
+    "before": "None tests a learned RL controller at published scale.",
+    "after": "Later native REINFORCE pilots use the 512-neuron spatial scale, but not the published SAC algorithm, episode protocol or evaluation replication. They show collapse rather than an effective learned controller."
+  },
+  {
+    "file": "papers/parkinson.tex",
+    "before": "Forty genuinely used science/data tools are also far away: eight are documented after a reduced native-simulator smoke test, not 40. This is not a finished 20-substantive-page paper.",
+    "after": "The earlier eight-tool tally was a smoke-test checkpoint, not a current final count; later data products are described individually. A fresh deduplicated used-tool audit and the substantive body-page gate remain open. PDF total pages do not establish either gate."
+  },
+  {
+    "file": "papers/parkinson.tex",
+    "before": "the policy is overwhelmingly beta-triggered, which is the physiologically intended behavior, yet it still loses to PID because its magnitude selection among the 3 levels is suboptimal.",
+    "after": "the policy is beta-triggered within this assigned synthetic model. It still loses to PID in the tested objective. Trigger probability alone does not identify magnitude selection as the complete causal explanation or validate physiological appropriateness."
+  },
+  {
+    "file": "papers/parkinson.tex",
+    "before": "be impossible with this data, not merely unattempted: \\textbf{molecular biomarkers of\ndisease status do not identify stimulation-relevant states}",
+    "after": "be unsupported by this data: \\textbf{the available molecular disease-status labels do not establish stimulation-relevant states}"
+  },
+  {
+    "file": "papers/sepsis.tex",
+    "before": "The strict sepsis science-tool ledger counts 8 distinct used tools, far short of 40. The paper is a working report, not the requested 20 substantive pages. The missing gate remains conspicuous.",
+    "after": "The earlier eight-tool ledger was a checkpoint; later public data products are discussed below. A fresh deduplicated used-tool audit and substantive body-page audit are still required. This working report does not claim completion from PDF page totals."
+  },
+  {
+    "file": "papers/sepsis.tex",
+    "typesetting_bare_prose_underscores_escaped": 27
+  }
+]
