@@ -59,7 +59,7 @@ def run(upstream,i):
  file.with_suffix('.tmp').write_text(json.dumps(row,indent=2)+'\n');file.with_suffix('.tmp').replace(file)
  aggregate(upstream)
 def aggregate(upstream):
- parts=[json.loads(p.read_text()) for p in sorted((ROOT/'results/native_multiseed_parts').glob('replicate_*.json'))];out={'source':'https://github.com/NevVerVer/DBS-Gym','source_commit':'aa0b10b9502e4f62dea755ce6468da024235c319','planned_replicates':6,'completed_replicates':len(parts),'eval_steps':150,'training_per_replicate':'3 episodes x 100 steps, Adam REINFORCE, binary 0/+5 V','replicates':parts,'limits':['Short horizon and little training; not six-evaluation published SAC benchmark','Simulator only, no clinical evidence','Matched environment seeds differ across replicates; training and evaluation variation mixed','Threshold .001 is a fixed pilot heuristic, no tuning']}
+ parts=[json.loads(p.read_text()) for p in sorted((ROOT/'results/native_multiseed_parts').glob('replicate_*.json'))];out={'source':'https://github.com/NevVerVer/DBS-Gym','source_commit':'aa0b10b9502e4f62dea755ce6468da024235c319','planned_replicates':6,'completed_replicates':len(parts),'eval_steps':150,'training_per_replicate':'3 episodes x 100 steps, Adam REINFORCE, binary 0/+5 V','replicates':parts,'limits':['Short horizon and little training; not six-evaluation published SAC benchmark','Simulator only, no clinical evidence','Evaluation seeds differ, but adjacent training seed sets overlap; paired Student-t intervals are descriptive and do not establish independent-training uncertainty','Threshold .001 is a fixed pilot heuristic, no tuning']}
  if len(parts)>=2:
   from scipy.stats import t
   comparisons={}

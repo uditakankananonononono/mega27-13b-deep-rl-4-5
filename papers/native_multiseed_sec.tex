@@ -1,6 +1,6 @@
 \section{Six-seed native pilot: deterministic collapse, not learned-control gain}
 
-A fresh checkpointed pilot trains six independent Bernoulli REINFORCE policies with bias-corrected Adam in the pinned native 512-neuron Env0. Each uses three 100-step training episodes and one disjoint 150-step evaluation seed; fixed OFF, fixed +5 V and a pilot threshold controller use the identical evaluation initialization. This shorter training/evaluation budget replaces a wiped unfinished run, not a recovered result or published SAC reproduction.
+A fresh checkpointed pilot trains six independently initialized Bernoulli REINFORCE policies with bias-corrected Adam in the pinned native 512-neuron Env0. Each uses three 100-step training episodes and one disjoint 150-step evaluation seed; fixed OFF, fixed +5 V and a pilot threshold controller use the identical evaluation initialization. This shorter training/evaluation budget replaces a wiped unfinished run, not a recovered result or published SAC reproduction.
 
 \begin{center}\begin{tabular}{rrrr}\hline Replicate & RL ON fraction & RL mean reward & Fixed ON reward\\\hline
 
@@ -26,4 +26,4 @@ Paired RL minus on mean reward difference: -2.103; Student-t 95\% interval -7.51
 
 Paired RL minus threshold mean reward difference: -0.822; Student-t 95\% interval -6.472 to 4.829 across six seed pairs.
 
-These small-sample intervals mix training and simulator variation and are sensitive to the single OFF collapse. The threshold is an arbitrary fixed pilot heuristic; no controller here is clinically calibrated. The short horizon omits published multi-episode conditions. The contribution is a reproducible policy-instability failure detector, not a successful DBS controller. Full training traces, weights, action statistics and hashes are retained in results/parkinson\_native\_multiseed.json and data/parkinson/.
+Training environment seed sets overlap between adjacent replicates, although policy initialization and evaluation seeds are distinct. The paired Student-t intervals are therefore descriptive rather than valid independent-training uncertainty. They also mix training and simulator variation and are sensitive to the single OFF collapse. The threshold is an arbitrary fixed pilot heuristic; no controller here is clinically calibrated. The short horizon omits published multi-episode conditions. The contribution is a reproducible policy-instability failure detector, not a successful DBS controller. Full training traces, weights, action statistics and hashes are retained in results/parkinson\_native\_multiseed.json and data/parkinson/.

@@ -389,7 +389,8 @@
     "Short horizon and little training; not six-evaluation published SAC benchmark",
     "Simulator only, no clinical evidence",
     "Matched environment seeds differ across replicates; training and evaluation variation mixed",
-    "Threshold .001 is a fixed pilot heuristic, no tuning"
+    "Threshold .001 is a fixed pilot heuristic, no tuning",
+    "Adjacent replicates share training environment seeds; their Student-t intervals are descriptive, not independent-training uncertainty. Initialization and evaluation seeds are distinct."
   ],
   "comparisons": {
     "off": {
