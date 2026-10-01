@@ -152,4 +152,18 @@ The 58-field Stata file uses `intervention=0` for static CVP (62 rows) and 1 for
 
 Crucially, the `intervention` column is an assigned monitoring/guidance strategy, not a repeated action chosen at every ICU decision step. Accumulated norepinephrine and 72-hour fluid fields contain no dose timestamps, patient observations at each decision or logged propensities. It cannot train or score a 25-action ICU-Sepsis policy. We count the Zenodo record as one distinct actually used sepsis scientific data product, not 123 treatment-policy trajectories or GEO accessions. Only aggregate calculations and source SHA256 appear in results/sepsis\_zenodo\_fluid\_trial.json; the Stata patient rows remain outside Git. Clinical and policy-trajectory gates stay open.
 
+
+\section{Source qualification is separate from simulated return}
+A live source audit distinguishes estimated models, randomized strategy summaries and a potential credentialed clinical source. It does not land a new independent patient action trajectory. The current upstream ICU-Sepsis README at \url{https://github.com/icu-sepsis/icu-sepsis} describes 716 states and 25 actions derived from MIMIC-III. It explicitly fills inadmissible-action transitions with a mean over admissible transitions. Public transition/reward/expert-policy tables are estimated models, not original timed patient records. Simulator agreement remains implementation evidence, not observed causal treatment benefit.
+\begin{table}[ht]\centering\small
+\caption{Current source qualification, not a patient-data rerun. No new independent sequential action/outcome file is landed; the owner's access status is not inferred.}
+\begin{tabular}{p{.23\linewidth}p{.29\linewidth}p{.38\linewidth}}\hline
+Source & observed surface & unresolved requirement\\\hline
+ICU-Sepsis & estimated model tables & original timed patient states/actions not supplied by this surface\\
+CVP/IVC Zenodo trial & release metadata; prior summary audit & dose timing and sequential decisions not re-read this run\\
+MIMIC-IV PhysioNet & official credentialed source page & access and time-aligned sepsis cohort not checked/extracted\\\hline
+\end{tabular}\end{table}
+The trial record at \url{https://zenodo.org/records/10579408} is not treated as a sequential-action benchmark. The prior local summary has 123 records and 58 variables; these cached counts are not a fresh file read here. Guidance-strategy assignment and accumulated 72-hour doses do not define repeated state-conditioned fluid/vasopressor decisions or action propensities. A static arm label cannot substitute for a twenty-five-action history.
+The official MIMIC-IV page \url{https://physionet.org/content/mimiciv/} requires credentialed users, a signed Data Use Agreement and CITI Data or Specimens Only Research training. We did not inspect the owner's credential status or claim they lack access. No account mutation or request was made. An eligible extraction still needs frozen patient/stay/sepsis definitions, timestamps, doses, missingness, censoring, outcome linkage, action support and training overlap. A credentialed raw source is not already an independent validated policy cohort.
+Observed URLs, cached versus current evidence and unresolved gates are retained in \path{research/sepsis_trajectory_qualification.md} and \path{results/sepsis_source_qualification.json}. No patient records are published. Another simulator return, aggregate arm outcome or clinical homepage cannot close the independent action-trajectory gap. Existing failed transfer/value results remain unchanged; clinical policy inference needs appropriate authorized longitudinal data and justified off-policy assumptions.
 \end{document}

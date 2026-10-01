@@ -1,0 +1,38 @@
+{
+  "sources": [
+    {
+      "url": "https://github.com/icu-sepsis/icu-sepsis",
+      "current_read": "README",
+      "classification": "estimated_tabular_simulator",
+      "new_patient_files_landed": false,
+      "claims": [
+        "716states/25actions",
+        "inadmissibletransitionmeanfill",
+        "publicmodeltablesnotpatientevents"
+      ]
+    },
+    {
+      "url": "https://zenodo.org/records/10579408",
+      "current_read": "recordmetadata",
+      "classification": "guidance_strategy_release_not_yetqualifiedsequential",
+      "new_patient_files_landed": false,
+      "cached_counts_not_rerun": {
+        "rows": 123,
+        "columns": 58
+      }
+    },
+    {
+      "url": "https://physionet.org/content/mimiciv/",
+      "current_read": "officialsourcepage",
+      "classification": "credentialedpotentialclinicalsource",
+      "new_patient_files_landed": false,
+      "access_requirements": [
+        "credentialeduser",
+        "signedDUA",
+        "CITIDataorSpecimensOnlyResearch"
+      ],
+      "user_access_status": "NOT CHECKED"
+    }
+  ],
+  "limits": "Sourcequalificationonly,no newtrajectories/accountmutation/accessdenial/clinicalefficacyclaim"
+}
