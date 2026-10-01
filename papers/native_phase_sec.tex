@@ -69,3 +69,18 @@ Tsit5, $10^{-5}$ &16.48794&16.19139&15.42888\\\hline
 \end{tabular}\end{table}
 The phase-zero, ON, OFF ordering persists in this narrow test. Compared with the upstream variant, the largest absolute beta change is .00343 for OFF, .00253 for ON and .00097 for phase zero. These observed differences are not rigorous solver error bounds or a convergence study. The baseline reproduces prior beta values; a trace-byte hash can differ because numerical implementations do not guarantee identical byte representations. Selection of a previously interesting seed, unchanged initialization and only two tolerances limit the inference. No learned-policy, stationary, physiological or clinical benefit follows.
 Complete plans and results are in \path{src/native_solver_plan.json} and \path{results/native_solver_*}. Tests preserve all solver/policy outcomes, source/plan identity, fixed action costs and reward decomposition. Full initialization-solver checks, wider tolerances/horizons, independent dynamics models and observed treatment trajectories remain open. Agreement between numerical variants of one model is not evidence that the model describes the real system.
+
+\subsection{Changing numerical integration before initialization gives larger shifts}
+A second frozen audit retains the selected seed, three policies, sixty steps and all three numerical variants, but changes the solver and controller before the native simulator constructor runs. The constructor is wrapped only while the environment is created; its original implementation is restored immediately afterwards. The configured solver therefore governs transient integration, reset and evaluation. This addresses the shared-initialization limitation of the preceding audit without replacing its results. All nine additional native runs are retained separately.
+\begin{table}[ht]\centering
+\caption{Mean beta component when each numerical variant governs initialization and evaluation at selected seed 1931. Costs and action schedules are unchanged.}
+\begin{tabular}{lrrr}\hline
+Full integration variant & OFF & ON & phase zero\\\hline
+Dopri5, $10^{-5}$ &16.49136&16.19294&15.42985\\
+Dopri5, $10^{-6}$ &16.47239&16.15673&15.40346\\
+Tsit5, $10^{-5}$ &16.46668&16.15614&15.39775\\\hline
+\end{tabular}\end{table}
+
+
+Relative to the upstream variant, the largest absolute beta changes are .02468 for OFF, .03680 for ON and .03209 for phase zero. These are larger than the after-reset changes, consistent with numerical differences propagating through initialization as well as evaluation. They are observed sensitivity differences, not rigorous error bounds, a convergence rate or a statistical effect. The phase-zero, ON, OFF ordering survives this selected-seed grid. It does not establish that ordering at untested seeds or horizons; the previously recorded seed and horizon reversals remain.
+The baseline exactly reproduces the preceding beta values. Complete action/reward and source/plan ledgers remain in \path{results/native_full_solver_*}; the frozen plan, constructor-scoped runner and deterministic merger are \path{src/native_full_solver_plan.json}, \path{src/native_full_solver_audit.py} and \path{src/merge_native_full_solver.py}. Tests require all numerical/policy combinations, the baseline agreement and unchanged action costs and reward decomposition. Numerical agreement within these same state equations is not independent-model validation. No new physiological measurements, patient trajectories, treatment recommendation or learned-controller benefit are established.

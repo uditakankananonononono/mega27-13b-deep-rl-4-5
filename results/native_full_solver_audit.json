@@ -1,0 +1,45 @@
+{
+  "plan_sha256": "7f6841b3d694de11c679bec0e29297ad4fa13b6af241d0f2896680d94f8abd22",
+  "rows": [
+    {
+      "variant": "Dopri5_1e-5",
+      "beta": {
+        "off": 16.49136225382487,
+        "on": 16.192944224675497,
+        "phase0": 15.429846715927123
+      },
+      "reward": {
+        "off": -16.49136225382487,
+        "on": -16.242944224675494,
+        "phase0": -15.454846715927122
+      }
+    },
+    {
+      "variant": "Dopri5_1e-6",
+      "beta": {
+        "off": 16.472391351064047,
+        "on": 16.15672648747762,
+        "phase0": 15.403459707895914
+      },
+      "reward": {
+        "off": -16.472391351064047,
+        "on": -16.206726487477617,
+        "phase0": -15.428459707895913
+      }
+    },
+    {
+      "variant": "Tsit5_1e-5",
+      "beta": {
+        "off": 16.46667807896932,
+        "on": 16.156142139434813,
+        "phase0": 15.397754160563151
+      },
+      "reward": {
+        "off": -16.46667807896932,
+        "on": -16.20614213943481,
+        "phase0": -15.42275416056315
+      }
+    }
+  ],
+  "limits": "Selectedseedfull-integrationnumericalsensitivityofsameequations,notindependentphysiologicalmodelorclinicalvalidation. All9runsretained,noexternalparameters/tolerancefit. Comparisonwithafter-resetsolverauditkeptseparate. V-stepnotjoules."
+}
