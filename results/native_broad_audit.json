@@ -1,0 +1,98 @@
+{
+  "plan_sha256": "68c9ce679378f1955a4687f935ecd66481625a918f8fb61e3d22385c2d9688a5",
+  "rows": [
+    {
+      "seed": 1561,
+      "beta": {
+        "off": 26.694902356465658,
+        "on": 26.367288494110106,
+        "phase0": 26.826401933034262,
+        "phase1": 26.543036270141602,
+        "phase2": 26.553806877136232,
+        "phase3": 26.761993344624837
+      },
+      "reward": {
+        "off": -26.694902356465658,
+        "on": -26.417288494110107,
+        "phase0": -26.85140193303426,
+        "phase1": -26.5680362701416,
+        "phase2": -26.57880687713623,
+        "phase3": -26.786993344624836
+      },
+      "half_duty_phases_worse_than_off": [
+        "phase0",
+        "phase3"
+      ],
+      "half_duty_phases_better_than_on": []
+    },
+    {
+      "seed": 1687,
+      "beta": {
+        "off": 16.153163385391235,
+        "on": 13.716204516092937,
+        "phase0": 15.09940865834554,
+        "phase1": 15.464126427968344,
+        "phase2": 15.364508899052938,
+        "phase3": 15.143132416407267
+      },
+      "reward": {
+        "off": -16.153163385391235,
+        "on": -13.766204516092932,
+        "phase0": -15.124408658345539,
+        "phase1": -15.48912642796834,
+        "phase2": -15.389508899052936,
+        "phase3": -15.168132416407266
+      },
+      "half_duty_phases_worse_than_off": [],
+      "half_duty_phases_better_than_on": []
+    },
+    {
+      "seed": 1801,
+      "beta": {
+        "off": 38.901243146260576,
+        "on": 28.142171732584636,
+        "phase0": 31.920637130737305,
+        "phase1": 32.387411975860594,
+        "phase2": 32.35680176417033,
+        "phase3": 32.097844155629474
+      },
+      "reward": {
+        "off": -38.901243146260576,
+        "on": -28.192171732584637,
+        "phase0": -31.945637130737303,
+        "phase1": -32.41241197586059,
+        "phase2": -32.381801764170326,
+        "phase3": -32.12284415562947
+      },
+      "half_duty_phases_worse_than_off": [],
+      "half_duty_phases_better_than_on": []
+    },
+    {
+      "seed": 1931,
+      "beta": {
+        "off": 16.49136225382487,
+        "on": 16.192944224675497,
+        "phase0": 15.429846715927123,
+        "phase1": 15.422549359003703,
+        "phase2": 15.434794378280639,
+        "phase3": 15.425730307896933
+      },
+      "reward": {
+        "off": -16.49136225382487,
+        "on": -16.242944224675494,
+        "phase0": -15.454846715927122,
+        "phase1": -15.4475493590037,
+        "phase2": -15.459794378280638,
+        "phase3": -15.45073030789693
+      },
+      "half_duty_phases_worse_than_off": [],
+      "half_duty_phases_better_than_on": [
+        "phase0",
+        "phase1",
+        "phase2",
+        "phase3"
+      ]
+    }
+  ],
+  "limits": "Four fresh held-out environment seeds,24actualnative runs,allpolicies retained; no adaptation, learning or phase selected fordeployment. Short60stephorizon. Seedrange descriptive, not clinical/population inference. Actioncost0/150/300V-step notjoules. Source/solver/tolerancesfixed, not numericalrobustness."
+}

@@ -1,0 +1,58 @@
+\section{Native open-loop phase audit: equal action cost does not fix the trajectory}
+The earlier duty-cycle controls evaluated one phase offset for each periodic schedule. A new frozen local plan tests whether the same half-duty waveform is sensitive to its alignment with the simulated dynamics. This is an open-loop control audit, not a learned policy or an adaptive feedback experiment. We use the actual pinned upstream 512-neuron Env0 source at commit \texttt{aa0b10b9502e4f62dea755ce6468da024235c319}, the unchanged native initialization wrapper and the \texttt{bbpow\_action} reward. Two held-out environment seeds, 1331 and 1447, each receive all four phase offsets. The new horizon is 60 steps and differs from the older 150-step duty-cycle audit. Their absolute reward summaries are therefore not silently pooled.
+
+For step $t$ and phase $\phi\in\{0,1,2,3\}$, the applied binary action is $a_t=\mathbb{1}[(t+\phi)\bmod4<2]$. The upstream conversion makes these actions physical 0 or +5 V. Sixty steps contain fifteen cycles, so every phase has exactly thirty ON actions, ON fraction .5 and total absolute voltage 150 V-step units. This is an action-magnitude accounting measure, not physical joule energy: no impedance, pulse width or tissue-current model is used. Phases 0 and 2 have 29 action switches; phases 1 and 3 have 30 within the finite observation interval. Equal duty and action-magnitude cost do not imply identical switching or identical interaction with the initial state.
+
+\begin{table}[ht]\centering
+\caption{Mean native beta reward component over 60 steps, all phase offsets retained. Each entry is one actual deterministic simulator run for its seed and phase. These are not independent training replicates or a confidence interval.}
+\begin{tabular}{lrrrr}\hline
+Environment seed & phase 0 & phase 1 & phase 2 & phase 3\\\hline
+1331 & 16.0806 & 16.5743 & 16.3820 & 16.0847\\
+1447 & 18.0763 & 18.1054 & 17.9033 & 17.9740\\\hline
+\end{tabular}\end{table}
+
+Under the wrapper's decomposition, the native reward is the negative beta component minus .05 times the binary ON action. Since all phases share ON fraction .5, their mean action penalty is .025 and all reward differences within a seed come from the recorded beta component. The four-phase beta range is .4936 for seed 1331 and .2021 for seed 1447. The minimum is phase 0 in the first seed but phase 2 in the second. A phase selected on one initial condition does not become a generally best waveform. Reporting only the best of the eight runs would hide the seed dependence and create selection bias.
+
+All eight LFP traces have different saved SHA-256 hashes, consistent with a changed simulated trajectory rather than merely relabeling the same observation. Hash differences alone do not measure clinical effect or numerical error. The state equations, reward scale and sampling window remain the upstream implementation; a large raw beta component should not be compared to clinical symptom severity. At the time of this phase plan there were no matched OFF/ON controls; the separate frozen control audit below supplies them without changing or selecting these eight outcomes. The earlier frozen-policy cost-envelope negative remains untouched.
+
+The plan is stored in \path{src/native_phase_plan.json}, each bounded run in \path{src/native_phase_audit.py}, and the complete merged grid in \path{results/native_phase_audit.json}. Individual files retain the actions and per-step rewards, source commit, plan hash, LFP hash, switch count and duration. Tests verify all eight expected phase/seed pairs, exact action schedules, reward decomposition and deterministic aggregation. CPU JAX 0.5.3 and Diffrax 0.7.0 were installed for this rerun with the pinned source; that is environment preparation, not a new physiological validation. No prior model, weights or result file is replaced.
+
+The narrow result is that phase alignment changes finite-horizon outcomes at equal duty and action-magnitude cost in this native simulator. The order of phases changes with seed. Longer horizons, repeated initialization distributions, numerical tolerances and matched new OFF/ON baselines would be needed for a stable simulator-policy conclusion. Published SAC protocol reproduction, independently validated neural dynamics and clinical treatment inference remain separate open gaps. This audit adds actual method and result analysis to the body; appendix tables and total PDF length are not counted toward the owner's fifty-plus research-content-page gate.
+
+\subsection{Matched sixty-step controls retain the suppression--cost tradeoff}
+A separately frozen plan restarts the identical native environment at each of the two phase seeds and applies either sixty OFF or sixty ON actions. All four runs use the same sixty-step horizon, reward, source commit and initialization wrapper. They charge zero and 300 V-step action magnitude respectively. This matched comparison does not pool the older 150-step experiments.
+\begin{table}[ht]\centering
+\caption{Matched native controls. Half-duty columns give the complete four-phase range, not a selected best policy. Lower beta component means greater suppression within this simulator.}
+\begin{tabular}{lrrr}\hline
+Seed & all-OFF beta & half-duty beta range & all-ON beta\\\hline
+1331 &19.0657&16.0806--16.5743&13.8673\\
+1447 &20.7061&17.9033--18.1054&16.2394\\\hline
+\end{tabular}\end{table}
+Every phase suppresses the recorded beta component relative to OFF, but no half-duty phase suppresses it as much as ON. All-ON also has the better native reward at this short horizon, despite its .05 mean action penalty. Half-duty costs 150 rather than 300 V-step units, so a lesser action budget accompanies lesser suppression. This is a tradeoff, not evidence that periodic stimulation wins under the native scalar reward or that a learned controller has improved. Selecting a different penalty after viewing these outcomes would change the objective after the test.
+The ratio of OFF-to-half-duty suppression to OFF-to-ON suppression is descriptive within each deterministic seed and phase. It does not identify a clinical dose response, confidence interval or efficient physical-energy frontier. Two seeds cannot establish stable ordering over initialization distributions. The earlier failed learned-policy evaluation and duty-envelope negative remain unchanged. The control plans, four complete reward/action ledgers and reproducible merger are saved in \path{src/native_matched_plan.json}, \path{src/native_matched_audit.py} and \path{results/native_matched_audit.json}. Tests recheck exact action counts, reward decomposition, source/plan identity and complete outcome retention.
+
+\subsection{Four fresh seeds break a universal short-horizon ordering}
+A further frozen plan adds four fresh environment seeds, each restarted for OFF, ON and all four half-duty phases. All 24 actual native runs retain the same sixty-step horizon, source, solver and reward. No phase is selected for training or deployment. This grid is a descriptive initialization sensitivity check, not a confidence interval, numerical-tolerance audit or clinical validation.
+\begin{table}[ht]\centering
+\caption{All six policies at each of four new native seeds. Beta component over sixty steps; OFF/half-duty/ON costs remain 0/150/300 V-step.}
+\begin{tabular}{lrrrrrr}\hline
+Seed&OFF&ON&phase 0&phase 1&phase 2&phase 3\\\hline
+1561&26.6949&26.3673&26.8264&26.5430&26.5538&26.7620\\
+1687&16.1532&13.7162&15.0994&15.4641&15.3645&15.1431\\
+1801&38.9012&28.1422&31.9206&32.3874&32.3568&32.0978\\
+1931&16.4914&16.1929&15.4298&15.4225&15.4348&15.4257\\\hline
+\end{tabular}\end{table}
+The earlier matched result that every half-duty phase lies between OFF and ON holds for seeds 1331 and 1447 only. Seed 1561 has phases zero and three worse than OFF despite nonzero stimulation cost. Seed 1931 reverses the half-duty-versus-ON ordering: all four phases have lower beta component and better native reward than ON at half its action-magnitude cost. Seeds 1687 and 1801 retain the intermediate half-duty ordering. Hence neither universal superiority nor universal inferiority of half-duty follows from this simulator. A fixed periodic waveform can interact differently with different initialized native dynamics.
+The eight-phase suppression ratio from the previous two-seed audit is not extended into a population effect. Ratios become unstable when OFF and ON are close, as in the new 1561 and 1931 outcomes. A selected winning seed or phase would conceal reversals. All 24 complete action/reward files and LFP hashes remain in \path{results/native_broad_*}; the frozen plan and deterministic merger are \path{src/native_broad_plan.json} and \path{src/merge_native_broad.py}. Tests require every seed/policy pair, exact schedules, costs, reward decomposition and the observed negative/reversal cases. No learned controller or prior weights change. Longer windows, broader initialization distributions and numerical/model checks are needed before a stable policy conclusion.
+
+\subsection{A selected-seed horizon extension tests persistence, not independent replication}
+After observing the sixty-step reversals, we deliberately select seeds 1561 and 1931 for a separately frozen 120-step extension. This selection makes the experiment exploratory, not a fresh held-out confirmation. OFF, ON and phases zero and one are fixed before the new outcomes; phases two and three are not run at 120 steps. Eight actual native runs restart the same environment and preserve every selected outcome. Costs now equal 0, 300 and 600 V-step for OFF, half-duty and ON, so absolute action totals cannot be silently pooled with sixty-step totals.
+\begin{table}[ht]\centering
+\caption{Mean native beta component over 120 steps at two seeds selected because of the prior reversals. These are conditional follow-ups, not a population estimate.}
+\begin{tabular}{lrrrr}\hline
+Selected seed & OFF & ON & phase 0 & phase 1\\\hline
+1561 &21.5398&18.7820&20.9909&20.3160\\
+1931 &14.5805&13.1297&12.2113&12.1780\\\hline
+\end{tabular}\end{table}
+Seed 1561 no longer has phase zero worse than OFF over this doubled averaging window: both retained half-duty phases lie between OFF and ON. Thus its sixty-step negative is horizon-dependent. At seed 1931 both retained phases remain below ON in beta component and have better native reward at half its action-magnitude cost. This persistence over one longer window does not establish stationary benefit, an optimal waveform, or a learned-controller improvement. The averaged transient trajectory and initialization remain part of the estimand.
+Plans, source identity, actions, rewards and LFP hashes are retained in \path{src/native_horizon_plan.json} and \path{results/native_horizon_*}; tests reproduce complete aggregation, 120-step schedules, cost and reward decomposition. The choice of seeds and omitted phases is explicit rather than hidden as favorable post-hoc confirmation. Larger predeclared horizons, independent seed distributions, solver/model checks and real physiological validation remain needed. All earlier failed learned-policy results and phase reversals remain visible.

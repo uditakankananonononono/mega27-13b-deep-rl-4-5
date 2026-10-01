@@ -1,0 +1,37 @@
+{
+  "plan_sha256": "b25b684be8209545bf3dc13d136057bfa7ed35e9d606de9b2d90e2c2b8f69459",
+  "rows": [
+    {
+      "seed": 1561,
+      "beta": {
+        "off": 21.539768624305726,
+        "on": 18.781979888677597,
+        "phase0": 20.990910478432973,
+        "phase1": 20.316030820210774
+      },
+      "reward": {
+        "off": -21.539768624305726,
+        "on": -18.831979888677605,
+        "phase0": -21.01591047843298,
+        "phase1": -20.34103082021078
+      }
+    },
+    {
+      "seed": 1931,
+      "beta": {
+        "off": 14.580466445287069,
+        "on": 13.129721120993297,
+        "phase0": 12.21126251022021,
+        "phase1": 12.177957820892335
+      },
+      "reward": {
+        "off": -14.580466445287069,
+        "on": -13.1797211209933,
+        "phase0": -12.236262510220211,
+        "phase1": -12.202957820892335
+      }
+    }
+  ],
+  "selection": "1561chosenforhalf-dutyworseOFF;1931chosenforhalf-dutybetterON at60steps. Phase0/1retainedfrozenbefore120stepoutcomes,notnewheldoutpopulation.",
+  "limits": "Exploratoryhorizonsensitivityonselectedseeds,notindependentconfirmationorallphases. All8runsretained;cost0/300/600V-stepnotjoules. No learned/clinical/steady-stateclaim. Source/solverunchanged."
+}

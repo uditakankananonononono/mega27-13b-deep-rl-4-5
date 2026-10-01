@@ -1,0 +1,22 @@
+{
+  "status": "frozen before outcomes",
+  "source_commit": "aa0b10b9502e4f62dea755ce6468da024235c319",
+  "seeds": [
+    1331,
+    1447
+  ],
+  "policies": [
+    "off",
+    "on"
+  ],
+  "horizon_steps": 60,
+  "environment": "same native512-neuron Env0 make_env and bbpow_action as native phase pilot",
+  "metrics": [
+    "mean_reward",
+    "mean_beta_component",
+    "on_fraction",
+    "voltage_step_magnitude",
+    "LFP hash"
+  ],
+  "limits": "Matched short-horizon native controls only; stimulation quantity is amplitude sum in V-step, not joules. No learned benefit or stationary/clinical inference. Two seeds, not population inference."
+}

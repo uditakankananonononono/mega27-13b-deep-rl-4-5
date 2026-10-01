@@ -1,0 +1,46 @@
+{
+  "plan_sha256": "a97d05b7ff668405dcb5cdc3698b8377b31e5e86bba08e5bf83a05a301d34b71",
+  "rows": [
+    {
+      "seed": 1331,
+      "off_beta": 19.06569749514262,
+      "on_beta": 13.86733144124349,
+      "off_reward": -19.06569749514262,
+      "on_reward": -13.917331441243485,
+      "phase_beta": [
+        16.08063317934672,
+        16.5742786248525,
+        16.3819704691569,
+        16.084703826904295
+      ],
+      "all_phases_between_controls": true,
+      "half_duty_fraction_of_off_on_suppression": [
+        0.5742312651408797,
+        0.4792696098077558,
+        0.5162635716991765,
+        0.5734482022485459
+      ]
+    },
+    {
+      "seed": 1447,
+      "off_beta": 20.7061154683431,
+      "on_beta": 16.23940773010254,
+      "off_reward": -20.7061154683431,
+      "on_reward": -16.289407730102536,
+      "phase_beta": [
+        18.0763188680013,
+        18.105423911412558,
+        17.903333997726442,
+        17.97399861017863
+      ],
+      "all_phases_between_controls": true,
+      "half_duty_fraction_of_off_on_suppression": [
+        0.5887550192342955,
+        0.5822390246546455,
+        0.6274826191607233,
+        0.6116623290066998
+      ]
+    }
+  ],
+  "limits": "Matched short-horizon native controls only; stimulation quantity is amplitude sum in V-step, not joules. No learned benefit or stationary/clinical inference. Two seeds, not population inference."
+}
