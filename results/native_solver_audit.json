@@ -1,0 +1,45 @@
+{
+  "plan_sha256": "ca786b125485b4fe6a03e8bf44757f5b35827ac52b8b697fb142d3e395f85de0",
+  "rows": [
+    {
+      "variant": "Dopri5_1e-5",
+      "beta": {
+        "off": 16.49136225382487,
+        "on": 16.192944224675497,
+        "phase0": 15.429846715927123
+      },
+      "reward": {
+        "off": -16.49136225382487,
+        "on": -16.242944224675494,
+        "phase0": -15.454846715927122
+      }
+    },
+    {
+      "variant": "Dopri5_1e-6",
+      "beta": {
+        "off": 16.491672849655153,
+        "on": 16.190419133504232,
+        "phase0": 15.429950348536174
+      },
+      "reward": {
+        "off": -16.491672849655153,
+        "on": -16.24041913350423,
+        "phase0": -15.45495034853617
+      }
+    },
+    {
+      "variant": "Tsit5_1e-5",
+      "beta": {
+        "off": 16.48793977101644,
+        "on": 16.19138592084249,
+        "phase0": 15.428881374994914
+      },
+      "reward": {
+        "off": -16.48793977101644,
+        "on": -16.241385920842486,
+        "phase0": -15.453881374994912
+      }
+    }
+  ],
+  "limits": "Selectedseednumericaltrajectorysensitivity,notsolver-independentfullinitialization/modelvalidation. Newsolverandtoleranceonlyafterreset;all9runsretained. No clinical/steady-state/learnedclaim;costV-stepnotjoules."
+}

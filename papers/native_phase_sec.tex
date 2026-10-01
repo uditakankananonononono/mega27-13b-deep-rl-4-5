@@ -56,3 +56,16 @@ Selected seed & OFF & ON & phase 0 & phase 1\\\hline
 \end{tabular}\end{table}
 Seed 1561 no longer has phase zero worse than OFF over this doubled averaging window: both retained half-duty phases lie between OFF and ON. Thus its sixty-step negative is horizon-dependent. At seed 1931 both retained phases remain below ON in beta component and have better native reward at half its action-magnitude cost. This persistence over one longer window does not establish stationary benefit, an optimal waveform, or a learned-controller improvement. The averaged transient trajectory and initialization remain part of the estimand.
 Plans, source identity, actions, rewards and LFP hashes are retained in \path{src/native_horizon_plan.json} and \path{results/native_horizon_*}; tests reproduce complete aggregation, 120-step schedules, cost and reward decomposition. The choice of seeds and omitted phases is explicit rather than hidden as favorable post-hoc confirmation. Larger predeclared horizons, independent seed distributions, solver/model checks and real physiological validation remain needed. All earlier failed learned-policy results and phase reversals remain visible.
+
+\subsection{Evaluation-solver sensitivity does not validate the model}
+A frozen numerical audit retains selected seed 1931 and the OFF, ON and phase-zero policies over sixty steps. After identical native reset, it changes the evaluation solver/controller from the upstream Dopri5 with relative and absolute tolerances $10^{-5}$ to either Dopri5 at $10^{-6}$ or Tsit5 at $10^{-5}$. All nine runs are retained. Transient initialization and reset still use the upstream solver before this change. This is therefore evaluation-trajectory sensitivity, not a wholly solver-independent simulation or model validation.
+\begin{table}[ht]\centering
+\caption{Mean beta component under three evaluation numerical variants at selected seed 1931. Identical action schedules and 0/300/150 V-step OFF/ON/phase-zero costs are preserved.}
+\begin{tabular}{lrrr}\hline
+Evaluation variant & OFF & ON & phase zero\\\hline
+Dopri5, $10^{-5}$ &16.49136&16.19294&15.42985\\
+Dopri5, $10^{-6}$ &16.49167&16.19042&15.42995\\
+Tsit5, $10^{-5}$ &16.48794&16.19139&15.42888\\\hline
+\end{tabular}\end{table}
+The phase-zero, ON, OFF ordering persists in this narrow test. Compared with the upstream variant, the largest absolute beta change is .00343 for OFF, .00253 for ON and .00097 for phase zero. These observed differences are not rigorous solver error bounds or a convergence study. The baseline reproduces prior beta values; a trace-byte hash can differ because numerical implementations do not guarantee identical byte representations. Selection of a previously interesting seed, unchanged initialization and only two tolerances limit the inference. No learned-policy, stationary, physiological or clinical benefit follows.
+Complete plans and results are in \path{src/native_solver_plan.json} and \path{results/native_solver_*}. Tests preserve all solver/policy outcomes, source/plan identity, fixed action costs and reward decomposition. Full initialization-solver checks, wider tolerances/horizons, independent dynamics models and observed treatment trajectories remain open. Agreement between numerical variants of one model is not evidence that the model describes the real system.
