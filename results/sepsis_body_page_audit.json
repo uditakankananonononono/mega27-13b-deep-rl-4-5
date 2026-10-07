@@ -217,10 +217,10 @@
     "pdf_sha256": "3868e6273a8b266d0e32d0ab45ed387c0deaf0d84d68a02831ded02f9b75941b"
   },
   "after_capacity_build": {
-    "physical_pages": 23,
-    "full_body_candidates": 22,
+    "physical_pages": 22,
+    "full_body_candidates": 21,
     "mixed_frontmatter_body_pages": 1,
-    "conservative_shortfall": 28,
+    "conservative_shortfall": 29,
     "certified": false,
     "pdf_sha256": "900ba6ee38e2e2bacd7137cc0bc5346b911e51212c6402f184e1d185e130f105"
   }
