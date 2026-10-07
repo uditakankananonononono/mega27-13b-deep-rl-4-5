@@ -1,0 +1,211 @@
+{
+  "plan_sha256": "e86931c3fc6c1cccf52455f1d29bee404adf1bd409f1d6c3df9e9dc8e80d41b4",
+  "baseline_pdf_sha256": "a27f41c42659e2ca671516eea4315d420a8eba1f4d900972fefd188d3a6b2e9e",
+  "physical_pages": 19,
+  "full_body_candidates": 18,
+  "mixed_frontmatter_body_pages": 1,
+  "references_appendix_pages": 0,
+  "conservative_full_body_shortfall_to50": 32,
+  "certified": false,
+  "pages": [
+    {
+      "physical_page": 1,
+      "classification": "mixed_frontmatter_body",
+      "words": 260,
+      "first_lines": [
+        "A Neural Q-Network Distillation in ICU-Sepsis:",
+        "Reproduced Model Baselines, Weak Neural Policy, and"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 2,
+      "classification": "body_candidate",
+      "words": 348,
+      "first_lines": [
+        "c9a6d19b85d34883304afaf7cbe1ff02ede9e12b.           The archive includes transitionFunction.csv",
+        "(716 states, 25 actions), expertPolicy.csv, initialStateDistribution.csv and rewardFunction.csv."
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 3,
+      "classification": "body_candidate",
+      "words": 385,
+      "first_lines": [
+        "ej = clip((xj \u2212 mediantrain (xj ))/ max(sdtrain (xj ), 10\u22126 ), \u22125, 5).",
+        "x                                                                                 (14)"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 4,
+      "classification": "body_candidate",
+      "words": 423,
+      "first_lines": [
+        "probe optimizes fluid or vasopressor choice and has no association with the MDP state IDs. No",
+        "mapping from GEO blood vectors to ICU-Sepsis states is attempted. The held-out accession IDs"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 5,
+      "classification": "body_candidate",
+      "words": 447,
+      "first_lines": [
+        "deviations from exact model values 0.780, 0.875, 0.782 do not exceed three estimated SEs at this",
+        "small episode count. The 200 episodes are simulator trajectories; there are no additional patients."
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 6,
+      "classification": "body_candidate",
+      "words": 470,
+      "first_lines": [
+        "12     Transition-uncertainty perturbation: an explicitly hypo-",
+        "thetical audit"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 7,
+      "classification": "body_candidate",
+      "words": 452,
+      "first_lines": [
+        "14     A perfect within-series mortality AUC that we do not accept",
+        "as validation"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 8,
+      "classification": "body_candidate",
+      "words": 485,
+      "first_lines": [
+        "are small (median 0.00185), so a small Q error can swap rankings. Under exact model Q values,",
+        "61.9% of nonterminal states have a positive one-step Q shortfall under the neural action; the median"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 9,
+      "classification": "body_candidate",
+      "words": 492,
+      "first_lines": [
+        "a new patient with matching needs. The initial distribution and survival arrival reward define a",
+        "mathematically clear but bounded in-model estimand."
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 10,
+      "classification": "body_candidate",
+      "words": 517,
+      "first_lines": [
+        "100 epochs. Labels for test states were not included in the training target. The network classified",
+        "every training state correctly in all three splits, yet exact optimal-action agreement on the held-out"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 11,
+      "classification": "body_candidate",
+      "words": 513,
+      "first_lines": [
+        "second-best actions are. In particular, a modest decrease in accuracy over 570 trained states can",
+        "outweigh a larger gain on 143 test IDs along frequently visited paths. We have not computed a full"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 12,
+      "classification": "body_candidate",
+      "words": 463,
+      "first_lines": [
+        "smaller, roughly 0.0009\u20130.0014, because later errors accumulate. Script and exact visit partition:",
+        "src/sepsis occupancy audit.py and results/sepsis occupancy audit.json. No uncertainty interval,"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 13,
+      "classification": "body_candidate",
+      "words": 470,
+      "first_lines": [
+        "exploit exactly this structure, did not beat the primary comparison (p = 0.99). All statements are",
+        "within the simulator MDP; no clinical claim is made."
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 14,
+      "classification": "body_candidate",
+      "words": 462,
+      "first_lines": [
+        "exact original-model-optimal policies on each draw. This pairing removes Monte Carlo differences",
+        "attributable solely to using different perturbations for the compared policies, but not uncertainty"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 15,
+      "classification": "body_candidate",
+      "words": 424,
+      "first_lines": [
+        "two files can characterize immune trajectories and missingness, not fit or independently score our",
+        "treatment policy. We count the Figshare collection as one actually used scientific data product, not"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 16,
+      "classification": "body_candidate",
+      "words": 464,
+      "first_lines": [
+        "The 58-field Stata file uses \u2018intervention=0\u2018 for static CVP (62 rows) and 1 for dynamic IVC (61",
+        "rows), as verified against its embedded variable label. Observed 30-day deaths are 28/61 (45.9%) in"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 17,
+      "classification": "body_candidate",
+      "words": 431,
+      "first_lines": [
+        "five-action history. The official MIMIC-IV page https://physionet.org/content/mimiciv/",
+        "requires credentialed users, a signed Data Use Agreement and CITI Data or Specimens Only Re-"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 18,
+      "classification": "body_candidate",
+      "words": 386,
+      "first_lines": [
+        "not certify patient safety.",
+        "Plan, runner and full output are src/sepsis_admissibility_plan.json, src/sepsis_"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    },
+    {
+      "physical_page": 19,
+      "classification": "body_candidate",
+      "words": 195,
+      "first_lines": [
+        "0.093297. The prior expert occupancy reproduces exactly. Weighting optimal continuation short-",
+        "falls V \u2217 (s) \u2212 Q\u2217 (s, a) by that occupancy and the expert action probability reproduces the value"
+      ],
+      "caveat": "contains ordinary section headings; not a standalone heading-only page; content substance not mechanically certified"
+    }
+  ],
+  "after_first_theory_build": {
+    "physical_pages": 21,
+    "full_body_candidates": 20,
+    "mixed_frontmatter_body_pages": 1,
+    "conservative_shortfall": 30,
+    "certified": false,
+    "new_section": "absorbing model/occupancy/performance-difference/mean-fill derivations",
+    "pdf_sha256": "a3e1649fcc1edbb8909c03828a314afd9978f5b5dfc42b328a6211695f3c1d3b"
+  }
+}

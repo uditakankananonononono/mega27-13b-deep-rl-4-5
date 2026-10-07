@@ -1,0 +1,51 @@
+\section{Why the model comparisons require occupancy and support assumptions}
+The exact tabular comparisons use an undiscounted absorbing model. It is useful to state what makes the calculations finite before interpreting their small numerical residuals. Let $T$ be the 713 transient states, and let $P_\pi$ be the policy-weighted transition matrix restricted to $T$. Arrival rewards into the terminal survival state are already counted in the one-step reward vector $b_\pi$. Terminal continuation value is zero. Thus
+\begin{equation}
+V_\pi=b_\pi+P_\pi V_\pi.
+\end{equation}
+If the policy is proper for the relevant initial distribution, and the transient restriction has spectral radius less than one, the fundamental matrix exists:
+\begin{equation}
+N_\pi=(I-P_\pi)^{-1}=\sum_{t=0}^{\infty}P_\pi^t.
+\end{equation}
+This is an assumption about the released finite model, not a guarantee that a real ICU process terminates according to the same law. A row-stochastic transition table by itself does not imply properness: a closed recurrent class entirely inside $T$ would invalidate the undiscounted inverse. A finite linear solve and a small residual support the implemented calculation but cannot replace checking the relevant state and terminal conventions.
+
+For initial transient mass $\mu_T$, expected state visits are
+\begin{equation}
+d_\pi=N_\pi^T\mu_T,
+\qquad d_\pi=\mu_T+P_\pi^T d_\pi.
+\end{equation}
+The sum of these visits is expected transient decision count. It is not a probability distribution until divided by its total. Consequently a fraction computed by averaging over states, a fraction weighted by initial-state mass, and a fraction weighted by visits answer different questions. Initial mass asks about the first decision; visit mass includes subsequent decisions under the model. The expert support audit reports all three rather than silently treating uniform state weighting as patient exposure.
+
+\subsection{Performance difference with optimal continuation}
+Define the nonnegative optimal-continuation shortfall
+\begin{equation}
+g_\pi(s)=V^*(s)-\sum_a\pi(a\mid s)Q^*(s,a).
+\end{equation}
+Using the same arrival rewards and transition law for both policies gives
+\begin{equation}
+V^*-V_\pi=g_\pi+P_\pi(V^*-V_\pi).
+\end{equation}
+Multiplication by the fundamental matrix and the initial distribution yields
+\begin{equation}
+J^*-J_\pi=\mu_T^TN_\pi g_\pi=d_\pi^Tg_\pi.
+\end{equation}
+This equality explains why a low average Q-regression loss is not a sufficient policy metric. Regression weights can emphasize states rarely visited by the induced policy, while a small ranking error in a frequently visited state can accumulate. The identity also uses optimal continuation after the considered action; it does not assert that a patient could receive such continuation, nor that the resulting difference is a causal treatment effect.
+
+The supported and unsupported partition is algebraic. Insert the source admissibility indicator $M(s,a)$ into the sum over actions:
+\begin{align}
+G_{\mathrm{supported}}&=\sum_{s\in T,a}d_\pi(s)\pi(a\mid s)M(s,a)[V^*(s)-Q^*(s,a)],\\
+G_{\mathrm{unsupported}}&=\sum_{s\in T,a}d_\pi(s)\pi(a\mid s)[1-M(s,a)][V^*(s)-Q^*(s,a)].
+\end{align}
+Their sum equals the model-value gap under the assumptions above. The indicator changes attribution, not the policy or transition table. Removing unsupported actions would be a different policy experiment and could change occupancy, so it cannot be inferred from this partition by subtracting one reported contribution.
+
+\subsection{What mean-filled transitions preserve and what they do not}
+For an unsupported action $u$ in state $s$, the source defines its transition row as the arithmetic mean of the admissible rows $A_s$. With action-independent arrival rewards and a fixed continuation vector $V$, linearity gives
+\begin{equation}
+Q_V(s,u)=\frac{1}{|A_s|}\sum_{a\in A_s}Q_V(s,a)
+\leq\max_{a\in A_s}Q_V(s,a).
+\end{equation}
+Therefore adding these mean rows cannot improve the exact Bellman maximum. This explains the agreement between full-action and admissible-only optimum values, while leaving arbitrary argmax identifiers unresolved when numerical ties occur. A model solver may select an unsupported identifier without a material value advantage; action-ID agreement and value agreement are distinct tests.
+
+The result depends on the actual fill rule and reward convention. It need not hold under a different unsupported-action penalty, termination rule, action-specific reward, or empirical transition estimate. It does not show that an unsupported real treatment has average effects. Mean filling is a simulator completion rule. Nor does it force the empirical expert probability to be zero outside $A_s$: a treatment can occur with positive estimated frequency yet not meet the source threshold for reliably estimating its transition row. That distinction is why the expert occupancy audit remains necessary even after the exact optimal-value equivalence is verified.
+
+These derivations explain the existing finite-table audits, not new clinical results. They are grounded in \path{src/sepsis.py}, \path{src/sepsis_admissibility_audit.py}, \path{src/sepsis_expert_support_audit.py} and \path{src/sepsis_expert_gap_audit.py}. The source definition of mean-filled actions is at \url{https://github.com/icu-sepsis/icu-sepsis}. Independent patient-level policy evaluation still requires authorized longitudinal data, timing, action support and justified causal assumptions that these tables do not supply.

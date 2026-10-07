@@ -35,7 +35,7 @@ Counting 479+35 day-one (sepsis) or 438+72 (Parkinson) distinct GSM identifiers 
 
 ## Working manuscripts
 
-`papers/sepsis.tex` and `papers/parkinson.tex` each include 14 numbered formulas. Current working PDFs are 12 sepsis and 9 Parkinson rendered pages, not the ~20 substantive pages requested. The renderer `papers/render_working.py` uses embedded Times New Roman regular/bold and Matplotlib equation/plot images. Because the installed LuaLaTeX lacks a compatible fontspec, these PDFs are an interim readable edition, not verified final LaTeX typesetting. Source TeX remains the primary manuscript source.
+`papers/sepsis.tex` and `papers/parkinson.tex` are the primary manuscript sources. The committed PDFs currently have 21 sepsis and 70 Parkinson physical pages. Physical page totals are not substantive body-page counts. Neither manuscript is certified against the current requirement of 50+ content pages excluding headings, appendices and references. The earlier interim renderer description and 12/9-page checkpoint are stale; current revisions are built from the TeX sources and visually inspected.
 
 ### Sepsis representation pivot
 
