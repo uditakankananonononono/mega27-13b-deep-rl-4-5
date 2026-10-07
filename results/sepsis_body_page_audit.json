@@ -207,5 +207,13 @@
     "certified": false,
     "new_section": "absorbing model/occupancy/performance-difference/mean-fill derivations",
     "pdf_sha256": "a3e1649fcc1edbb8909c03828a314afd9978f5b5dfc42b328a6211695f3c1d3b"
+  },
+  "after_absorption_build": {
+    "physical_pages": 22,
+    "full_body_candidates": 21,
+    "mixed_frontmatter_body_pages": 1,
+    "conservative_shortfall": 29,
+    "certified": false,
+    "pdf_sha256": "3868e6273a8b266d0e32d0ab45ed387c0deaf0d84d68a02831ded02f9b75941b"
   }
 }

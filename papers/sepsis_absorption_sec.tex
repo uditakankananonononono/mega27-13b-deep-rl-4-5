@@ -1,0 +1,16 @@
+\section{Numerical properness and absorption checks for the released policies}
+A separately frozen audit tests the properness assumption needed by the preceding derivations. It keeps all 713 transient states and the three terminal destinations. The expert policy is unchanged; uniform means probability $1/25$ on every action; optimal argmax is the deterministic action map from the converged full-action Bellman table. No neural model is retrained and no patient trajectory is inferred.
+
+\begin{center}
+\begin{tabular}{lrrr}\hline
+Policy & Transient spectral radius & Survival absorption & Expected decisions\\\hline
+Expert & 0.902193 & 0.781845 & 9.237950\\
+Uniform & 0.904541 & 0.780071 & 9.462296\\
+Optimal argmax & 0.921020 & 0.875142 & 10.991744\\\hline
+\end{tabular}
+\end{center}
+For each policy the numerical transient spectral radius is below one. Solving $(I-P_\pi)B=C$, where $C$ contains the three terminal-transition columns, gives maximum absolute equation residual below $8.4\times10^{-16}$. Absorption probabilities sum to one for each starting state within $5.2\times10^{-15}$, and none is negative. Survival absorption under the initial distribution agrees with iterative Bellman return within $1.5\times10^{-10}$, consistent with the Bellman stopping tolerance. The additional terminal destination 715 has zero absorption in these three calculations; its clinical meaning is not inferred.
+
+The optimal map has the largest survival probability but also the longest expected number of model decisions among these three policies. This is not evidence that it prolongs a real ICU stay: the model decision count is not a measured duration, and the table's time discretization and terminal construction do not establish that interpretation. Maximum statewise expected decision counts are 15.31, 15.58 and 21.37 for expert, uniform and optimal respectively. A high-value absorbing policy can spend more model steps in transient states; an objective that penalizes duration would be a different optimization problem.
+
+These checks support numerical properness and the fundamental-matrix identities for the three released-model policies evaluated here. They do not establish properness of every conceivable policy, independence of transition estimates, safety of actions, prospective termination, or causal survival benefit. Full statewise absorption vectors and decision expectations, source hashes and residuals are retained in \path{results/sepsis_absorption_audit.json}. Source: \url{https://github.com/icu-sepsis/icu-sepsis}. This new evidence contributes methods and results content rather than page padding; the 50-content-page gate remains uncertified.
