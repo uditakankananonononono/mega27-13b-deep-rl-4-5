@@ -431,5 +431,17 @@ For seed 1561, phase0 is above both constant-policy beta means in each of the fi
 
 The complete fourteen seed/window rows, exact costs, full-precision means, ordering comparisons and eight source-record hashes are in \path{results/native_window_audit.json}, with the frozen plan and runner in \path{src/native_window_plan.json} and \path{src/native_window_audit.py}. Tests reproduce every row, reconcile disjoint quarter windows with the full average and reject tampered schedules, identities, rewards or accounting. This remains a selected-seed native-model sensitivity analysis, not learned-control validation, clinical benefit, solver convergence or physiological steady state. The manuscript content-page gate remains uncertified.
 
+
+\section{Analytical duty-penalty envelopes of the saved policies}
+A frozen retrospective plan at head \texttt{487f22d} changes only the objective weight, not the simulated dynamics or policy actions. All fourteen previously saved seed/window rows and four policies remain. The objective is to minimize mean beta proxy plus $\lambda$ times ON fraction for $\lambda\geq0$. The original reward used $\lambda=.05$. Pairwise affine inequalities give each policy's exact nonnegative winner interval, including ties. The preregistration SHA256 is \path{0a496c060af242496d4a24dc160a48fa90607a0fd3faee7c2931d684d2dd116e}.
+
+For seed 1561 over the full 120-step trajectory, ON wins from zero through weight 2.757789, then OFF wins; neither tested half-duty phase has any optimal interval. But phase1 does have a winner interval in the 30--60-step window, [.138037,.803656], and in the 90--120-step window, [6.445852,10.960433]. Thus changing the objective can expose window-specific half-duty tradeoffs that disappear when the full trajectory is pooled. Phase0 remains off the nonnegative envelope in every seed-1561 window.
+
+For seed 1931 over the full horizon, phase1 wins from zero through 4.805017, then OFF wins. ON has no nonnegative winner interval in any specified window. In the final quarter, phase1 wins through 3.459953, phase0 from there through 9.923446, then OFF. The phase difference in ON fraction in that quarter matters: phase0 uses fourteen ON actions while phase1 uses fifteen. This can switch the selected phase as the cost weight rises, without any change in the trajectory.
+
+At the original .05 weight, ON wins all seven seed-1561 windows; seed1931 selects phase0 only in the 30--60 window and phase1 in the other six. All crossover values, parallel pairs, complete intervals and original-weight scores are retained in \path{results/native_penalty_audit.json}. Tests reproduce the validated window inputs, evaluate direct affine scores within the intervals and check parallel/tied policies. The frozen plan and runner are \path{src/native_penalty_plan.json} and \path{src/native_penalty_audit.py}.
+
+These are objective-sensitivity calculations on two selected seeds with overlapping windows. Arbitrary model reward weights are not willingness to pay, clinical utility or calibrated energy: the saved action cost is voltage-step magnitude, not joules. No policies are retrained, no new dynamics are measured, and the result establishes no universal duty schedule, solver convergence, physiological steady state or clinical benefit. The content-page gate remains uncertified.
+
 \input{appendix}
 \end{document}

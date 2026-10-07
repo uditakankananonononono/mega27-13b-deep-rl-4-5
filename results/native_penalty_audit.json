@@ -1,0 +1,971 @@
+{
+  "plan_sha256": "0a496c060af242496d4a24dc160a48fa90607a0fd3faee7c2931d684d2dd116e",
+  "source_sha256": "eab9c7efba6a1c04b125e2ff75dc8035f1e52f688252d7203d740b22c6277e14",
+  "rows": [
+    {
+      "seed": 1561,
+      "window": [
+        0,
+        30
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 0.18438154856363909,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": {
+          "lower": 0.0,
+          "upper": 0.18438154856363909,
+          "endpoints": "inclusive ties"
+        },
+        "phase0": null,
+        "phase1": null
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 0.18438154856363909,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": -0.4921444654464713,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": -0.19619140625000142,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": 0.9575541360037652,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": 0.5649545033772796,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": -4.93144035339352,
+          "parallel": false
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 27.831850814819337,
+        "on": 27.6974692662557,
+        "phase0": 28.120994529724122,
+        "phase1": 27.954946517944336
+      },
+      "original_lambda_winners": [
+        "on"
+      ]
+    },
+    {
+      "seed": 1561,
+      "window": [
+        30,
+        60
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 0.8036557515462235,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": {
+          "lower": 0.0,
+          "upper": 0.1380366007486984,
+          "endpoints": "inclusive ties"
+        },
+        "phase0": null,
+        "phase1": {
+          "lower": 0.1380366007486984,
+          "upper": 0.8036557515462235,
+          "endpoints": "inclusive ties"
+        }
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 0.47084617614746094,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": -0.0011187962123366496,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 0.8036557515462235,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": 0.8838155269622838,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": 0.1380366007486984,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": 12.070499420166069,
+          "parallel": false
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 25.55795389811198,
+        "on": 25.13710772196452,
+        "phase0": 25.581809336344403,
+        "phase1": 25.181126022338866
+      },
+      "original_lambda_winners": [
+        "on"
+      ]
+    },
+    {
+      "seed": 1561,
+      "window": [
+        60,
+        90
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 1.6727847894032806,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": {
+          "lower": 0.0,
+          "upper": 1.6727847894032806,
+          "endpoints": "inclusive ties"
+        },
+        "phase0": null,
+        "phase1": null
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 1.6727847894032806,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": -3.4382476806640594,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": -1.7779948552449483,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": 7.513964755194526,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": 5.123564434051509,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": -28.342040061950733,
+          "parallel": false
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 19.27198371887207,
+        "on": 17.649198929468792,
+        "phase0": 21.132382481892904,
+        "phase1": 20.185981146494544
+      },
+      "original_lambda_winners": [
+        "on"
+      ]
+    },
+    {
+      "seed": 1561,
+      "window": [
+        90,
+        120
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 10.96043294270833,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": {
+          "lower": 0.0,
+          "upper": 6.445851914087934,
+          "endpoints": "inclusive ties"
+        },
+        "phase0": null,
+        "phase1": {
+          "lower": 6.445851914087934,
+          "upper": 10.96043294270833,
+          "endpoints": "inclusive ties"
+        }
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 8.703142428398131,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": 9.197493927819385,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 10.96043294270833,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": 8.270584866404533,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": 6.445851914087934,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": 35.64157915115355,
+          "parallel": false
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 13.497286065419514,
+        "on": 4.844143637021382,
+        "phase0": 9.228455565770467,
+        "phase1": 8.04206959406535
+      },
+      "original_lambda_winners": [
+        "on"
+      ]
+    },
+    {
+      "seed": 1561,
+      "window": [
+        0,
+        60
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 0.3276138623555518,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": {
+          "lower": 0.0,
+          "upper": 0.3276138623555518,
+          "endpoints": "inclusive ties"
+        },
+        "phase0": null,
+        "phase1": null
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 0.3276138623555518,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": -0.26299915313720845,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 0.30373217264811103,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": 0.918226877848312,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": 0.35149555206299254,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": null,
+          "parallel": true
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 26.694902356465658,
+        "on": 26.417288494110107,
+        "phase0": 26.85140193303426,
+        "phase1": 26.5680362701416
+      },
+      "original_lambda_winners": [
+        "on"
+      ]
+    },
+    {
+      "seed": 1561,
+      "window": [
+        60,
+        120
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 5.1879636089007075,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": {
+          "lower": 0.0,
+          "upper": 5.1879636089007075,
+          "endpoints": "inclusive ties"
+        },
+        "phase0": null,
+        "phase1": null
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 5.1879636089007075,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": 2.458431736628217,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 4.591219043731691,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": 7.917495481173198,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": 5.784708174069724,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": null,
+          "parallel": true
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 16.384634892145794,
+        "on": 11.246671283245087,
+        "phase0": 15.180419023831686,
+        "phase1": 14.114025370279949
+      },
+      "original_lambda_winners": [
+        "on"
+      ]
+    },
+    {
+      "seed": 1561,
+      "window": [
+        0,
+        120
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 2.7577887356281288,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": {
+          "lower": 0.0,
+          "upper": 2.7577887356281288,
+          "endpoints": "inclusive ties"
+        },
+        "phase0": null,
+        "phase1": null
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 2.7577887356281288,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": 1.0977162917455061,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 2.4474756081899045,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": 4.417861179510751,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": 3.068101863066353,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": null,
+          "parallel": true
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 21.539768624305726,
+        "on": 18.831979888677598,
+        "phase0": 21.01591047843297,
+        "phase1": 20.341030820210772
+      },
+      "original_lambda_winners": [
+        "on"
+      ]
+    },
+    {
+      "seed": 1931,
+      "window": [
+        0,
+        30
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 0.603691546122235,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": null,
+        "phase0": null,
+        "phase1": {
+          "lower": 0.0,
+          "upper": 0.603691546122235,
+          "endpoints": "inclusive ties"
+        }
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": -0.33886521657307966,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": 0.45613270998001165,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 0.603691546122235,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": -1.2474342754908982,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": -1.2814219792683943,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": -1.7572498321533385,
+          "parallel": false
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 16.07813924153646,
+        "on": 16.46700445810954,
+        "phase0": 15.86153512954712,
+        "phase1": 15.801293468475341
+      },
+      "original_lambda_winners": [
+        "phase1"
+      ]
+    },
+    {
+      "seed": 1931,
+      "window": [
+        30,
+        60
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 4.028057779584608,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": null,
+        "phase0": {
+          "lower": 0.0,
+          "upper": 4.028057779584608,
+          "endpoints": "inclusive ties"
+        },
+        "phase1": null
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 0.9357012748718248,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": 4.028057779584608,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 3.6715600331624323,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": -1.7701106667518607,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": -1.8001574834187828,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": -1.3194084167480293,
+          "parallel": false
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 16.90458526611328,
+        "on": 16.018883991241456,
+        "phase0": 15.04815830230713,
+        "phase1": 15.093805249532064
+      },
+      "original_lambda_winners": [
+        "phase0"
+      ]
+    },
+    {
+      "seed": 1931,
+      "window": [
+        60,
+        90
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 5.452271080017088,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": null,
+        "phase0": null,
+        "phase1": {
+          "lower": 0.0,
+          "upper": 5.452271080017088,
+          "endpoints": "inclusive ties"
+        }
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 2.0994098981221505,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": 5.105331122875213,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 5.452271080017088,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": -1.335928644452778,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": -1.2534512837727867,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": -0.0987682342529084,
+          "parallel": false
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 16.093239084879556,
+        "on": 14.043829186757407,
+        "phase0": 13.397062486012777,
+        "phase1": 13.392103544871013
+      },
+      "original_lambda_winners": [
+        "phase1"
+      ]
+    },
+    {
+      "seed": 1931,
+      "window": [
+        90,
+        120
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 9.923445854868206,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": null,
+        "phase0": {
+          "lower": 3.4599530696868905,
+          "upper": 9.923445854868206,
+          "endpoints": "inclusive ties"
+        },
+        "phase1": {
+          "lower": 0.0,
+          "upper": 3.4599530696868905,
+          "endpoints": "inclusive ties"
+        }
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 3.1067353407541907,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": 9.923445854868206,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 9.492546335856119,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": -2.8578863590955734,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": -3.2790756543477375,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": 3.4599530696868905,
+          "parallel": false
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 9.245902188618977,
+        "on": 6.1891668478647865,
+        "phase0": 4.638294123013814,
+        "phase1": 4.524629020690918
+      },
+      "original_lambda_winners": [
+        "phase1"
+      ]
+    },
+    {
+      "seed": 1931,
+      "window": [
+        0,
+        60
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 2.1376257896423354,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": null,
+        "phase0": null,
+        "phase1": {
+          "lower": 0.0,
+          "upper": 2.1376257896423354,
+          "endpoints": "inclusive ties"
+        }
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 0.2984180291493743,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": 2.1230310757954953,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 2.1376257896423354,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": -1.5261950174967467,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": -1.5407897313435868,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": null,
+          "parallel": true
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 16.49136225382487,
+        "on": 16.242944224675497,
+        "phase0": 15.454846715927124,
+        "phase1": 15.447549359003704
+      },
+      "original_lambda_winners": [
+        "phase1"
+      ]
+    },
+    {
+      "seed": 1931,
+      "window": [
+        60,
+        120
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 7.472408707936605,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": null,
+        "phase0": null,
+        "phase1": {
+          "lower": 0.0,
+          "upper": 7.472408707936605,
+          "endpoints": "inclusive ties"
+        }
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 2.603072619438171,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": 7.353784664471942,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 7.472408707936605,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": -2.1476394255955995,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": -2.266263469060263,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": null,
+          "parallel": true
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 12.669570636749267,
+        "on": 10.116498017311097,
+        "phase0": 9.017678304513296,
+        "phase1": 8.958366282780965
+      },
+      "original_lambda_winners": [
+        "phase1"
+      ]
+    },
+    {
+      "seed": 1931,
+      "window": [
+        0,
+        120
+      ],
+      "optimal_lambda_intervals": {
+        "off": {
+          "lower": 4.8050172487894685,
+          "upper": null,
+          "endpoints": "inclusive ties"
+        },
+        "on": null,
+        "phase0": null,
+        "phase1": {
+          "lower": 0.0,
+          "upper": 4.8050172487894685,
+          "endpoints": "inclusive ties"
+        }
+      },
+      "pair_crossovers": [
+        {
+          "a": "off",
+          "b": "on",
+          "lambda": 1.4507453242937718,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase0",
+          "lambda": 4.738407870133717,
+          "parallel": false
+        },
+        {
+          "a": "off",
+          "b": "phase1",
+          "lambda": 4.8050172487894685,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase0",
+          "lambda": -1.836917221546173,
+          "parallel": false
+        },
+        {
+          "a": "on",
+          "b": "phase1",
+          "lambda": -1.9035266002019249,
+          "parallel": false
+        },
+        {
+          "a": "phase0",
+          "b": "phase1",
+          "lambda": null,
+          "parallel": true
+        }
+      ],
+      "original_lambda_scores": {
+        "off": 14.580466445287069,
+        "on": 13.179721120993298,
+        "phase0": 12.236262510220211,
+        "phase1": 12.202957820892335
+      },
+      "original_lambda_winners": [
+        "phase1"
+      ]
+    }
+  ],
+  "limits": "changes objective not dynamics;voltage-stepcost notjoules;lambda arbitrary model reward scale not willingness to pay/clinicalutility;two selected seeds and overlapping windows;nolearned/clinical/steady-state validation"
+}
