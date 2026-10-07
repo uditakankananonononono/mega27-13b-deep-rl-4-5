@@ -1,0 +1,4298 @@
+{
+  "plan_sha256": "70a17fa0ce25ed019acba8c7133e287967cb2a0f947c2869fe20dcdd51f1f1e0",
+  "source_commit": "c9a6d19b85d34883304afaf7cbe1ff02ede9e12b",
+  "prior_sha256": "6be33b3c725c198b918aa02ecf929460d1a02e1799838cf2d061faeb84a35608",
+  "optimal_model_value": 0.8751416994800841,
+  "expert_model_value": 0.7818448901578219,
+  "optimal_minus_expert_model_gap": 0.09329680932226232,
+  "occupancy_weighted_Q_shortfall": 0.09329680932886289,
+  "performance_difference_identity_residual": 6.60056731494052e-12,
+  "supported_gap_contribution": 0.07681189410636945,
+  "unsupported_gap_contribution": 0.016484915222493443,
+  "unsupported_gap_share": 0.1766932368024706,
+  "minimum_Q_shortfall": 0.0,
+  "occupancy_replay_max_abs_error": 0.0,
+  "optimal_bellman_residual": 9.297690395371205e-11,
+  "expert_bellman_residual": 9.066974948623852e-11,
+  "states": [
+    {
+      "state": 0,
+      "occupancy": 0.013056558215097401,
+      "supported_gap": 0.0002841880619430314,
+      "unsupported_gap": 1.8041698641257712e-05
+    },
+    {
+      "state": 1,
+      "occupancy": 0.014389858123606757,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.3178248134912364e-19
+    },
+    {
+      "state": 2,
+      "occupancy": 0.032042895977913405,
+      "supported_gap": 0.0001371364468888945,
+      "unsupported_gap": 4.655631900209848e-06
+    },
+    {
+      "state": 3,
+      "occupancy": 0.016426728697380533,
+      "supported_gap": 0.0001399044154315369,
+      "unsupported_gap": 1.175334262378441e-05
+    },
+    {
+      "state": 4,
+      "occupancy": 0.013220851761950952,
+      "supported_gap": 0.00013067290157545088,
+      "unsupported_gap": 8.847051108932728e-05
+    },
+    {
+      "state": 5,
+      "occupancy": 0.008943716973193285,
+      "supported_gap": 0.0,
+      "unsupported_gap": 8.058741282966956e-20
+    },
+    {
+      "state": 6,
+      "occupancy": 0.013412071009016813,
+      "supported_gap": 5.9646255826470066e-05,
+      "unsupported_gap": 8.010944942538758e-06
+    },
+    {
+      "state": 7,
+      "occupancy": 0.017503379568447948,
+      "supported_gap": 0.0001853801087039358,
+      "unsupported_gap": 1.2375162471131632e-05
+    },
+    {
+      "state": 8,
+      "occupancy": 0.009342489947524436,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.8588257073603405e-19
+    },
+    {
+      "state": 9,
+      "occupancy": 0.0142395137089107,
+      "supported_gap": 0.00034613209524756393,
+      "unsupported_gap": 0.00012355591003959305
+    },
+    {
+      "state": 10,
+      "occupancy": 0.006366712500030233,
+      "supported_gap": 6.912866666494343e-05,
+      "unsupported_gap": 4.7291080623808795e-05
+    },
+    {
+      "state": 11,
+      "occupancy": 0.030875108073749068,
+      "supported_gap": 0.00028930139482395446,
+      "unsupported_gap": 1.4700878816790944e-05
+    },
+    {
+      "state": 12,
+      "occupancy": 0.01547873649318079,
+      "supported_gap": 0.00030143438836378303,
+      "unsupported_gap": 0.00012782010815317132
+    },
+    {
+      "state": 13,
+      "occupancy": 0.02619119892953254,
+      "supported_gap": 0.00014948560073431799,
+      "unsupported_gap": 4.414419899599165e-06
+    },
+    {
+      "state": 14,
+      "occupancy": 0.01498011538835132,
+      "supported_gap": 6.548813777428571e-05,
+      "unsupported_gap": 2.2547600293473366e-06
+    },
+    {
+      "state": 15,
+      "occupancy": 0.008893194878360183,
+      "supported_gap": 2.8900767955391812e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 16,
+      "occupancy": 0.028404612428359552,
+      "supported_gap": 1.2229606819220394e-05,
+      "unsupported_gap": 1.239946246949216e-05
+    },
+    {
+      "state": 17,
+      "occupancy": 0.014151439077309797,
+      "supported_gap": 0.00034460659811152283,
+      "unsupported_gap": 3.164481842335183e-05
+    },
+    {
+      "state": 18,
+      "occupancy": 0.00509226699302048,
+      "supported_gap": 8.814890349558672e-05,
+      "unsupported_gap": 3.8230606647948745e-05
+    },
+    {
+      "state": 19,
+      "occupancy": 0.014987852730113695,
+      "supported_gap": 5.324412253055891e-05,
+      "unsupported_gap": 1.3375879746557954e-05
+    },
+    {
+      "state": 20,
+      "occupancy": 0.013728208740170979,
+      "supported_gap": 0.00026788412558636615,
+      "unsupported_gap": 2.9575115911533715e-05
+    },
+    {
+      "state": 21,
+      "occupancy": 0.019736967939221462,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.70351035083023e-19
+    },
+    {
+      "state": 22,
+      "occupancy": 0.01256716369767015,
+      "supported_gap": 0.0002619947095666009,
+      "unsupported_gap": 7.864174480374444e-05
+    },
+    {
+      "state": 23,
+      "occupancy": 0.019828146421119103,
+      "supported_gap": 0.00017889908505841167,
+      "unsupported_gap": 3.171459304871807e-05
+    },
+    {
+      "state": 24,
+      "occupancy": 0.022356573158392415,
+      "supported_gap": 9.593821509179477e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 25,
+      "occupancy": 0.007372723403667267,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 26,
+      "occupancy": 0.00521314527537375,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.8231282628631574e-20
+    },
+    {
+      "state": 27,
+      "occupancy": 0.004039853550898205,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 28,
+      "occupancy": 0.017193811473795742,
+      "supported_gap": 0.00019005061940187605,
+      "unsupported_gap": 6.251702785313646e-06
+    },
+    {
+      "state": 29,
+      "occupancy": 0.018345394736410676,
+      "supported_gap": 3.5703706999525066e-05,
+      "unsupported_gap": 3.218986457825631e-06
+    },
+    {
+      "state": 30,
+      "occupancy": 0.011236956959400461,
+      "supported_gap": 7.033031990371026e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 31,
+      "occupancy": 0.006956158313176387,
+      "supported_gap": 0.00011179791775304481,
+      "unsupported_gap": 0.00010976248255729256
+    },
+    {
+      "state": 32,
+      "occupancy": 0.01837406730395914,
+      "supported_gap": 7.713203099532709e-05,
+      "unsupported_gap": 1.306716388862047e-05
+    },
+    {
+      "state": 33,
+      "occupancy": 0.02182004002306883,
+      "supported_gap": 2.3300488281019347e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 34,
+      "occupancy": 0.012640437597565711,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.7323683144029124e-20
+    },
+    {
+      "state": 35,
+      "occupancy": 0.02381088840768368,
+      "supported_gap": 0.00011656340202160158,
+      "unsupported_gap": 2.303830623020369e-06
+    },
+    {
+      "state": 36,
+      "occupancy": 0.015621615418858334,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.1511157380435319e-19
+    },
+    {
+      "state": 37,
+      "occupancy": 0.023334177873214228,
+      "supported_gap": 0.0002851067488156311,
+      "unsupported_gap": 1.420729319601452e-05
+    },
+    {
+      "state": 38,
+      "occupancy": 0.007274085543324509,
+      "supported_gap": 4.05558430602589e-05,
+      "unsupported_gap": 3.7802291275514946e-05
+    },
+    {
+      "state": 39,
+      "occupancy": 0.03139036603677673,
+      "supported_gap": 0.00012751043161266952,
+      "unsupported_gap": 1.0358770846509895e-05
+    },
+    {
+      "state": 40,
+      "occupancy": 0.011035048105477554,
+      "supported_gap": 1.5147141544531324e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 41,
+      "occupancy": 0.020875094140699806,
+      "supported_gap": 0.0001736312675956471,
+      "unsupported_gap": 3.519000226728839e-05
+    },
+    {
+      "state": 42,
+      "occupancy": 0.02133576262056001,
+      "supported_gap": 0.00023952538159514733,
+      "unsupported_gap": 2.3604863749058907e-05
+    },
+    {
+      "state": 43,
+      "occupancy": 0.01442966087843889,
+      "supported_gap": 6.45951401597723e-05,
+      "unsupported_gap": 9.304497831099082e-06
+    },
+    {
+      "state": 44,
+      "occupancy": 0.011268383397344598,
+      "supported_gap": 4.398028883140479e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 45,
+      "occupancy": 0.018038127368992737,
+      "supported_gap": 0.00019530103112270247,
+      "unsupported_gap": 1.032596036248442e-05
+    },
+    {
+      "state": 46,
+      "occupancy": 0.024687479610046786,
+      "supported_gap": 0.0003074596662385003,
+      "unsupported_gap": 3.031321044776919e-05
+    },
+    {
+      "state": 47,
+      "occupancy": 0.011139926523962436,
+      "supported_gap": 5.24457465575243e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 48,
+      "occupancy": 0.02786283553406086,
+      "supported_gap": 8.93504259667691e-05,
+      "unsupported_gap": 1.6317143281073346e-06
+    },
+    {
+      "state": 49,
+      "occupancy": 0.006798993098317929,
+      "supported_gap": 0.00024287421006460855,
+      "unsupported_gap": 0.000195627036922964
+    },
+    {
+      "state": 50,
+      "occupancy": 0.021031251509031727,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.6048289646849495e-18
+    },
+    {
+      "state": 51,
+      "occupancy": 0.0066744371943308015,
+      "supported_gap": 6.348497367774407e-05,
+      "unsupported_gap": 4.073164667894317e-05
+    },
+    {
+      "state": 52,
+      "occupancy": 0.010910747434458625,
+      "supported_gap": 0.0,
+      "unsupported_gap": 5.056012389957212e-19
+    },
+    {
+      "state": 53,
+      "occupancy": 0.011562185698507135,
+      "supported_gap": 0.0001384579117970123,
+      "unsupported_gap": 5.6833191903820735e-06
+    },
+    {
+      "state": 54,
+      "occupancy": 0.01679697819389699,
+      "supported_gap": 8.568501711135433e-05,
+      "unsupported_gap": 1.2594953209304855e-05
+    },
+    {
+      "state": 55,
+      "occupancy": 0.008591383317599257,
+      "supported_gap": 0.00026979491821460386,
+      "unsupported_gap": 8.669597180330297e-05
+    },
+    {
+      "state": 56,
+      "occupancy": 0.017479056285500127,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.6462251004838143e-19
+    },
+    {
+      "state": 57,
+      "occupancy": 0.013934461148004385,
+      "supported_gap": 0.0003275618062744981,
+      "unsupported_gap": 4.863608347180475e-05
+    },
+    {
+      "state": 58,
+      "occupancy": 0.020326875712739858,
+      "supported_gap": 0.00023733445840590535,
+      "unsupported_gap": 1.0380550235715552e-05
+    },
+    {
+      "state": 59,
+      "occupancy": 0.019187388447943318,
+      "supported_gap": 0.0005990030176553685,
+      "unsupported_gap": 0.0001225799618961176
+    },
+    {
+      "state": 60,
+      "occupancy": 0.018883685026296865,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.254953283103484e-18
+    },
+    {
+      "state": 61,
+      "occupancy": 0.022444614281625103,
+      "supported_gap": 0.00019225144860420408,
+      "unsupported_gap": 2.193912254761083e-06
+    },
+    {
+      "state": 62,
+      "occupancy": 0.008305284959969834,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.9152827928908225e-19
+    },
+    {
+      "state": 63,
+      "occupancy": 0.005732995254459403,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 64,
+      "occupancy": 0.008448227727692574,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.4598314304375039e-19
+    },
+    {
+      "state": 65,
+      "occupancy": 0.010842717161652289,
+      "supported_gap": 0.00047663513553866644,
+      "unsupported_gap": 5.7280829687359446e-05
+    },
+    {
+      "state": 66,
+      "occupancy": 0.024507002207584276,
+      "supported_gap": 7.558597170473926e-05,
+      "unsupported_gap": 5.112892401520476e-06
+    },
+    {
+      "state": 67,
+      "occupancy": 0.020710459383232203,
+      "supported_gap": 0.0002375842798649336,
+      "unsupported_gap": 1.0408754948672803e-05
+    },
+    {
+      "state": 68,
+      "occupancy": 0.017387512495620174,
+      "supported_gap": 0.00016901771227100876,
+      "unsupported_gap": 3.671103515014238e-05
+    },
+    {
+      "state": 69,
+      "occupancy": 0.018804543762234137,
+      "supported_gap": 2.3078141056109415e-05,
+      "unsupported_gap": 4.638111340488231e-06
+    },
+    {
+      "state": 70,
+      "occupancy": 0.006449644805010704,
+      "supported_gap": 1.533575926599456e-05,
+      "unsupported_gap": 1.961395859525352e-06
+    },
+    {
+      "state": 71,
+      "occupancy": 0.02217141555838002,
+      "supported_gap": 0.00038930047137346465,
+      "unsupported_gap": 8.715309739227362e-05
+    },
+    {
+      "state": 72,
+      "occupancy": 0.009982218289790493,
+      "supported_gap": 0.0002880939565342998,
+      "unsupported_gap": 0.00010072095261581457
+    },
+    {
+      "state": 73,
+      "occupancy": 0.009171322135818668,
+      "supported_gap": 0.00010035331854953788,
+      "unsupported_gap": 2.2727902190682677e-05
+    },
+    {
+      "state": 74,
+      "occupancy": 0.015696339529433213,
+      "supported_gap": 9.583181132229046e-05,
+      "unsupported_gap": 1.206547156282394e-05
+    },
+    {
+      "state": 75,
+      "occupancy": 0.01779766302251496,
+      "supported_gap": 1.0589087273673302e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 76,
+      "occupancy": 0.0173011967906879,
+      "supported_gap": 3.375330662654452e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 77,
+      "occupancy": 0.008675451296957251,
+      "supported_gap": 0.00011627611550540808,
+      "unsupported_gap": 0.00011732860630748999
+    },
+    {
+      "state": 78,
+      "occupancy": 0.00400016688901462,
+      "supported_gap": 4.298962906286343e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 79,
+      "occupancy": 0.017083679885216765,
+      "supported_gap": 7.949683922404619e-05,
+      "unsupported_gap": 1.3075574843329819e-05
+    },
+    {
+      "state": 80,
+      "occupancy": 0.01331192418807699,
+      "supported_gap": 8.56777559042365e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 81,
+      "occupancy": 0.003090668777931819,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 82,
+      "occupancy": 0.0029466141634857386,
+      "supported_gap": 7.808776884900395e-06,
+      "unsupported_gap": 8.657556981085221e-06
+    },
+    {
+      "state": 83,
+      "occupancy": 0.023627225055823795,
+      "supported_gap": 0.00015726706809607812,
+      "unsupported_gap": 1.212108026305341e-05
+    },
+    {
+      "state": 84,
+      "occupancy": 0.016399919674196912,
+      "supported_gap": 3.800802774217376e-05,
+      "unsupported_gap": 3.6373199041310205e-07
+    },
+    {
+      "state": 85,
+      "occupancy": 0.010842010305492322,
+      "supported_gap": 0.0002035003618811559,
+      "unsupported_gap": 1.8159920550489352e-05
+    },
+    {
+      "state": 86,
+      "occupancy": 0.015404692203167168,
+      "supported_gap": 0.0002096149232342879,
+      "unsupported_gap": 5.0021871081367113e-05
+    },
+    {
+      "state": 87,
+      "occupancy": 0.0020633412244423005,
+      "supported_gap": 0.0,
+      "unsupported_gap": 9.996082625603368e-20
+    },
+    {
+      "state": 88,
+      "occupancy": 0.023585237087391343,
+      "supported_gap": 5.111526223098111e-05,
+      "unsupported_gap": 1.6020663251829803e-06
+    },
+    {
+      "state": 89,
+      "occupancy": 0.01787814422951611,
+      "supported_gap": 0.00019510252618893422,
+      "unsupported_gap": 1.8055542750074067e-05
+    },
+    {
+      "state": 90,
+      "occupancy": 0.014967470400767064,
+      "supported_gap": 3.331140591218964e-05,
+      "unsupported_gap": 2.0481865809694095e-06
+    },
+    {
+      "state": 91,
+      "occupancy": 0.0067402831789572515,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.1003931932997173e-20
+    },
+    {
+      "state": 92,
+      "occupancy": 0.02255946019414908,
+      "supported_gap": 5.235838965927262e-05,
+      "unsupported_gap": 1.3548021075173866e-05
+    },
+    {
+      "state": 93,
+      "occupancy": 0.011490477028112707,
+      "supported_gap": 0.00019029510681624042,
+      "unsupported_gap": 1.5163736902118973e-05
+    },
+    {
+      "state": 94,
+      "occupancy": 0.010972884230269497,
+      "supported_gap": 0.00012265665023581345,
+      "unsupported_gap": 4.639223820319402e-06
+    },
+    {
+      "state": 95,
+      "occupancy": 0.018545161178566125,
+      "supported_gap": 5.681575340753199e-05,
+      "unsupported_gap": 1.8833184508781293e-06
+    },
+    {
+      "state": 96,
+      "occupancy": 0.009894037566476359,
+      "supported_gap": 9.890829824248761e-05,
+      "unsupported_gap": 1.5854461520915483e-05
+    },
+    {
+      "state": 97,
+      "occupancy": 0.01310079901584559,
+      "supported_gap": 0.0001800784621445185,
+      "unsupported_gap": 6.636576721360067e-05
+    },
+    {
+      "state": 98,
+      "occupancy": 0.012669344265826723,
+      "supported_gap": 1.233244695200822e-05,
+      "unsupported_gap": 4.627429839532452e-06
+    },
+    {
+      "state": 99,
+      "occupancy": 0.013022898871528459,
+      "supported_gap": 1.9280306139869196e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 100,
+      "occupancy": 0.01681212986727064,
+      "supported_gap": 0.0002198452377597182,
+      "unsupported_gap": 1.2426748908901208e-05
+    },
+    {
+      "state": 101,
+      "occupancy": 0.023920792913582904,
+      "supported_gap": 0.00029081012482749303,
+      "unsupported_gap": 6.249262268359285e-06
+    },
+    {
+      "state": 102,
+      "occupancy": 0.015620342519851567,
+      "supported_gap": 0.00021150975180557382,
+      "unsupported_gap": 3.6620728969194055e-05
+    },
+    {
+      "state": 103,
+      "occupancy": 0.016511671093938866,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.009671815803199e-19
+    },
+    {
+      "state": 104,
+      "occupancy": 0.014712707075717799,
+      "supported_gap": 8.818326105581976e-05,
+      "unsupported_gap": 1.837789604107387e-05
+    },
+    {
+      "state": 105,
+      "occupancy": 0.019334068883603943,
+      "supported_gap": 0.0002457256685641776,
+      "unsupported_gap": 4.699172752044932e-05
+    },
+    {
+      "state": 106,
+      "occupancy": 0.010223963365907222,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.0009563277131e-19
+    },
+    {
+      "state": 107,
+      "occupancy": 0.009519939308788554,
+      "supported_gap": 0.00020866364169259863,
+      "unsupported_gap": 4.637000591329089e-05
+    },
+    {
+      "state": 108,
+      "occupancy": 0.006091686289609683,
+      "supported_gap": 0.0002448763188104444,
+      "unsupported_gap": 2.1770083442283705e-05
+    },
+    {
+      "state": 109,
+      "occupancy": 0.018219646822215142,
+      "supported_gap": 0.00047444903183688946,
+      "unsupported_gap": 3.1514676664733655e-05
+    },
+    {
+      "state": 110,
+      "occupancy": 0.01180225539971807,
+      "supported_gap": 1.2989524684204736e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 111,
+      "occupancy": 0.01517890928214039,
+      "supported_gap": 0.00021800170126348115,
+      "unsupported_gap": 3.322674296022567e-05
+    },
+    {
+      "state": 112,
+      "occupancy": 0.017782044039134477,
+      "supported_gap": 0.00012859708149258963,
+      "unsupported_gap": 1.1733569501371723e-05
+    },
+    {
+      "state": 113,
+      "occupancy": 0.011402306869613106,
+      "supported_gap": 0.00021978669948869215,
+      "unsupported_gap": 0.00014728131538542391
+    },
+    {
+      "state": 114,
+      "occupancy": 0.0166630347486296,
+      "supported_gap": 0.000570418857518265,
+      "unsupported_gap": 6.364432747776535e-05
+    },
+    {
+      "state": 115,
+      "occupancy": 0.008667272795230871,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 116,
+      "occupancy": 0.008083161020553974,
+      "supported_gap": 8.940632155987925e-05,
+      "unsupported_gap": 2.3056792518640653e-05
+    },
+    {
+      "state": 117,
+      "occupancy": 0.005407404154178753,
+      "supported_gap": 7.758073461112422e-05,
+      "unsupported_gap": 2.5679452601412633e-05
+    },
+    {
+      "state": 118,
+      "occupancy": 0.007884675708617464,
+      "supported_gap": 0.0002058954466384841,
+      "unsupported_gap": 0.00019636163871499605
+    },
+    {
+      "state": 119,
+      "occupancy": 0.022992807234853675,
+      "supported_gap": 0.0002141143109765126,
+      "unsupported_gap": 8.319761410543659e-06
+    },
+    {
+      "state": 120,
+      "occupancy": 0.004321351323824841,
+      "supported_gap": 1.8218755047010033e-05,
+      "unsupported_gap": 1.628646284505322e-05
+    },
+    {
+      "state": 121,
+      "occupancy": 0.030841271008537677,
+      "supported_gap": 0.0004378738132516279,
+      "unsupported_gap": 4.456884334567535e-05
+    },
+    {
+      "state": 122,
+      "occupancy": 0.0192901198914567,
+      "supported_gap": 0.00046869941374616,
+      "unsupported_gap": 5.456965408964156e-05
+    },
+    {
+      "state": 123,
+      "occupancy": 0.012802196414509762,
+      "supported_gap": 0.00014794296176458705,
+      "unsupported_gap": 9.07676819108246e-06
+    },
+    {
+      "state": 124,
+      "occupancy": 0.007250756701063305,
+      "supported_gap": 7.05089986767999e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 125,
+      "occupancy": 0.01140006262843856,
+      "supported_gap": 0.00011593463492444046,
+      "unsupported_gap": 6.647604567560619e-05
+    },
+    {
+      "state": 126,
+      "occupancy": 0.022303262327406047,
+      "supported_gap": 9.167220495729171e-05,
+      "unsupported_gap": 8.872421645337383e-06
+    },
+    {
+      "state": 127,
+      "occupancy": 0.012071578244609098,
+      "supported_gap": 0.0002716833971918019,
+      "unsupported_gap": 5.7399567434866886e-05
+    },
+    {
+      "state": 128,
+      "occupancy": 0.013897161646111364,
+      "supported_gap": 4.046215642966934e-05,
+      "unsupported_gap": 2.1678597876369204e-06
+    },
+    {
+      "state": 129,
+      "occupancy": 0.01215322992151548,
+      "supported_gap": 0.00024581276878036135,
+      "unsupported_gap": 3.9708672927640016e-05
+    },
+    {
+      "state": 130,
+      "occupancy": 0.01647765587807767,
+      "supported_gap": 0.00013182676318323182,
+      "unsupported_gap": 3.5151836976195126e-06
+    },
+    {
+      "state": 131,
+      "occupancy": 0.008986115914944252,
+      "supported_gap": 7.678474517121613e-05,
+      "unsupported_gap": 4.468659442596906e-06
+    },
+    {
+      "state": 132,
+      "occupancy": 0.015970056888594233,
+      "supported_gap": 0.00020736554959913881,
+      "unsupported_gap": 1.8522144768143686e-06
+    },
+    {
+      "state": 133,
+      "occupancy": 0.008711324408696798,
+      "supported_gap": 0.00010113607247449601,
+      "unsupported_gap": 2.491659652270241e-05
+    },
+    {
+      "state": 134,
+      "occupancy": 0.005567604453882627,
+      "supported_gap": 4.0735092009167946e-05,
+      "unsupported_gap": 4.073509200916707e-05
+    },
+    {
+      "state": 135,
+      "occupancy": 0.010177268018650765,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.6648672835111617e-19
+    },
+    {
+      "state": 136,
+      "occupancy": 0.013756228729177627,
+      "supported_gap": 8.337915232981017e-05,
+      "unsupported_gap": 5.481852659267742e-06
+    },
+    {
+      "state": 137,
+      "occupancy": 0.012054244386011357,
+      "supported_gap": 1.3344220761051669e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 138,
+      "occupancy": 0.003791414444398308,
+      "supported_gap": 3.834314650015574e-05,
+      "unsupported_gap": 8.801494992081333e-05
+    },
+    {
+      "state": 139,
+      "occupancy": 0.01203188017581656,
+      "supported_gap": 0.00021173251895567635,
+      "unsupported_gap": 6.813825122796075e-05
+    },
+    {
+      "state": 140,
+      "occupancy": 0.006076959025873091,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.4209024491296744e-20
+    },
+    {
+      "state": 141,
+      "occupancy": 0.011652652538646863,
+      "supported_gap": 7.152024962727696e-05,
+      "unsupported_gap": 4.225583451485732e-05
+    },
+    {
+      "state": 142,
+      "occupancy": 0.00090719125195458,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 143,
+      "occupancy": 0.015307157427007558,
+      "supported_gap": 0.00020315178895648748,
+      "unsupported_gap": 8.913964093636727e-06
+    },
+    {
+      "state": 144,
+      "occupancy": 0.008982699345828288,
+      "supported_gap": 6.26624189104248e-05,
+      "unsupported_gap": 3.8151833739355144e-05
+    },
+    {
+      "state": 145,
+      "occupancy": 0.019922865126595298,
+      "supported_gap": 2.1067471819387283e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 146,
+      "occupancy": 0.0036974289188161373,
+      "supported_gap": 0.0,
+      "unsupported_gap": 9.658754629610763e-21
+    },
+    {
+      "state": 147,
+      "occupancy": 0.0083571481284285,
+      "supported_gap": 5.32702297362757e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 148,
+      "occupancy": 0.0142452022318155,
+      "supported_gap": 1.0929896869282439e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 149,
+      "occupancy": 0.026252017852280356,
+      "supported_gap": 0.00033030427588866967,
+      "unsupported_gap": 4.303171515502133e-05
+    },
+    {
+      "state": 150,
+      "occupancy": 0.013127245416089211,
+      "supported_gap": 0.00013693330072383993,
+      "unsupported_gap": 1.7721588266157732e-05
+    },
+    {
+      "state": 151,
+      "occupancy": 0.01274832835866858,
+      "supported_gap": 0.00030041477849448815,
+      "unsupported_gap": 0.0001423862907555359
+    },
+    {
+      "state": 152,
+      "occupancy": 0.014785694548771848,
+      "supported_gap": 0.00019335800131885835,
+      "unsupported_gap": 3.3572252658005455e-05
+    },
+    {
+      "state": 153,
+      "occupancy": 0.012928243934016483,
+      "supported_gap": 8.635635374461993e-05,
+      "unsupported_gap": 1.7489211980641317e-05
+    },
+    {
+      "state": 154,
+      "occupancy": 0.01762558213200791,
+      "supported_gap": 0.0002860663867544572,
+      "unsupported_gap": 3.947149214705125e-05
+    },
+    {
+      "state": 155,
+      "occupancy": 0.007801774155933948,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.464683720337346e-19
+    },
+    {
+      "state": 156,
+      "occupancy": 0.009914654503606811,
+      "supported_gap": 0.00017700472349025287,
+      "unsupported_gap": 2.950682898195452e-05
+    },
+    {
+      "state": 157,
+      "occupancy": 0.01754716333282756,
+      "supported_gap": 0.00015150942900153677,
+      "unsupported_gap": 2.750944646882048e-06
+    },
+    {
+      "state": 158,
+      "occupancy": 0.02079388397335873,
+      "supported_gap": 0.00027421268917587774,
+      "unsupported_gap": 3.886318616227374e-05
+    },
+    {
+      "state": 159,
+      "occupancy": 0.017650399989109115,
+      "supported_gap": 8.863034818363081e-05,
+      "unsupported_gap": 1.7883734218803494e-05
+    },
+    {
+      "state": 160,
+      "occupancy": 0.004267551603655368,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 161,
+      "occupancy": 0.01644508798788642,
+      "supported_gap": 0.00023055583815075688,
+      "unsupported_gap": 4.475201348349614e-05
+    },
+    {
+      "state": 162,
+      "occupancy": 0.016264412301204206,
+      "supported_gap": 0.0001129232924942423,
+      "unsupported_gap": 1.7605638971339962e-05
+    },
+    {
+      "state": 163,
+      "occupancy": 0.011000589511538055,
+      "supported_gap": 5.950972889504495e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 164,
+      "occupancy": 0.016476040496723,
+      "supported_gap": 6.8586876410211814e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 165,
+      "occupancy": 0.019267924061100283,
+      "supported_gap": 9.72211010809488e-05,
+      "unsupported_gap": 1.2645802091342082e-06
+    },
+    {
+      "state": 166,
+      "occupancy": 0.017153307009971464,
+      "supported_gap": 0.0,
+      "unsupported_gap": 8.600514499131674e-19
+    },
+    {
+      "state": 167,
+      "occupancy": 0.0053868613521098905,
+      "supported_gap": 0.00010313193960902975,
+      "unsupported_gap": 8.765895667789828e-05
+    },
+    {
+      "state": 168,
+      "occupancy": 0.01626712567300719,
+      "supported_gap": 0.00010976381186886424,
+      "unsupported_gap": 5.568300703133978e-06
+    },
+    {
+      "state": 169,
+      "occupancy": 0.020207522086840367,
+      "supported_gap": 0.00018732679271585674,
+      "unsupported_gap": 4.972201035465287e-06
+    },
+    {
+      "state": 170,
+      "occupancy": 0.00510930787215639,
+      "supported_gap": 5.2959403632627034e-06,
+      "unsupported_gap": 1.3791511362665459e-05
+    },
+    {
+      "state": 171,
+      "occupancy": 0.010737393874824107,
+      "supported_gap": 0.0,
+      "unsupported_gap": 5.451631968429351e-19
+    },
+    {
+      "state": 172,
+      "occupancy": 0.009709635027546282,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 173,
+      "occupancy": 0.016765771446248603,
+      "supported_gap": 0.0002176595681534748,
+      "unsupported_gap": 1.1254650690666063e-05
+    },
+    {
+      "state": 174,
+      "occupancy": 0.01950501713538946,
+      "supported_gap": 8.749293290775678e-05,
+      "unsupported_gap": 1.640024995803287e-06
+    },
+    {
+      "state": 175,
+      "occupancy": 0.02914418950567035,
+      "supported_gap": 0.0001967760685180696,
+      "unsupported_gap": 1.5098910201760955e-05
+    },
+    {
+      "state": 176,
+      "occupancy": 0.024675064100667422,
+      "supported_gap": 0.0002803159136916943,
+      "unsupported_gap": 6.176218262481444e-05
+    },
+    {
+      "state": 177,
+      "occupancy": 0.01122514557315985,
+      "supported_gap": 0.00014756729809915,
+      "unsupported_gap": 2.5104395766728938e-05
+    },
+    {
+      "state": 178,
+      "occupancy": 0.008420088339358336,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.022780631524629e-19
+    },
+    {
+      "state": 179,
+      "occupancy": 0.011135621748460528,
+      "supported_gap": 4.4953337714418376e-05,
+      "unsupported_gap": 8.682605882377825e-06
+    },
+    {
+      "state": 180,
+      "occupancy": 0.012537038526332468,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.332696481032367e-19
+    },
+    {
+      "state": 181,
+      "occupancy": 0.00524535224523883,
+      "supported_gap": 6.52609564145989e-05,
+      "unsupported_gap": 8.676616710959674e-05
+    },
+    {
+      "state": 182,
+      "occupancy": 0.017554087587344194,
+      "supported_gap": 0.0003677859807916488,
+      "unsupported_gap": 2.9780710376895386e-05
+    },
+    {
+      "state": 183,
+      "occupancy": 0.00449455165005253,
+      "supported_gap": 9.405444089946419e-05,
+      "unsupported_gap": 5.517996243606398e-05
+    },
+    {
+      "state": 184,
+      "occupancy": 0.007192813433425898,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.0553692183642147e-19
+    },
+    {
+      "state": 185,
+      "occupancy": 0.013496980184538269,
+      "supported_gap": 0.000150336012769226,
+      "unsupported_gap": 1.547004983983472e-05
+    },
+    {
+      "state": 186,
+      "occupancy": 0.02171238913447931,
+      "supported_gap": 0.00039014215637032674,
+      "unsupported_gap": 4.791181450384535e-05
+    },
+    {
+      "state": 187,
+      "occupancy": 0.02067243657895608,
+      "supported_gap": 0.00032919605374988185,
+      "unsupported_gap": 7.608096372083239e-06
+    },
+    {
+      "state": 188,
+      "occupancy": 0.0027906572158892667,
+      "supported_gap": 5.657677373325965e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 189,
+      "occupancy": 0.016049067573515152,
+      "supported_gap": 7.315941228749056e-05,
+      "unsupported_gap": 1.2693855658627782e-05
+    },
+    {
+      "state": 190,
+      "occupancy": 0.014514066238919076,
+      "supported_gap": 0.00016403869701515548,
+      "unsupported_gap": 3.529557388845145e-06
+    },
+    {
+      "state": 191,
+      "occupancy": 0.013131347666868104,
+      "supported_gap": 0.0003476272427535247,
+      "unsupported_gap": 0.0001119153237004047
+    },
+    {
+      "state": 192,
+      "occupancy": 0.009008937760191389,
+      "supported_gap": 9.636568257928216e-05,
+      "unsupported_gap": 0.00011134926090434534
+    },
+    {
+      "state": 193,
+      "occupancy": 0.014491519248680492,
+      "supported_gap": 0.00021514986664083064,
+      "unsupported_gap": 3.2490513250971646e-05
+    },
+    {
+      "state": 194,
+      "occupancy": 0.02723215577624606,
+      "supported_gap": 0.0,
+      "unsupported_gap": 7.964016502732857e-19
+    },
+    {
+      "state": 195,
+      "occupancy": 0.016141362929782174,
+      "supported_gap": 3.975457324847252e-05,
+      "unsupported_gap": 7.013419383576208e-06
+    },
+    {
+      "state": 196,
+      "occupancy": 0.0025507131815837554,
+      "supported_gap": 1.648931432364835e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 197,
+      "occupancy": 0.01998086715462185,
+      "supported_gap": 0.00039822516020627104,
+      "unsupported_gap": 3.133935518949845e-05
+    },
+    {
+      "state": 198,
+      "occupancy": 0.0034195640165429362,
+      "supported_gap": 3.059491914642148e-05,
+      "unsupported_gap": 2.564574104920606e-05
+    },
+    {
+      "state": 199,
+      "occupancy": 0.016617597340548462,
+      "supported_gap": 0.00038603293588513937,
+      "unsupported_gap": 8.32450930185153e-05
+    },
+    {
+      "state": 200,
+      "occupancy": 0.005618688001932848,
+      "supported_gap": 6.121330536561425e-05,
+      "unsupported_gap": 2.2946620180228133e-05
+    },
+    {
+      "state": 201,
+      "occupancy": 0.009608769886374345,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.4067530856497996e-19
+    },
+    {
+      "state": 202,
+      "occupancy": 0.02169853938222465,
+      "supported_gap": 5.55299034605743e-05,
+      "unsupported_gap": 7.017527219450139e-06
+    },
+    {
+      "state": 203,
+      "occupancy": 0.01109749782806993,
+      "supported_gap": 4.119065985150592e-05,
+      "unsupported_gap": 1.8572819248725057e-05
+    },
+    {
+      "state": 204,
+      "occupancy": 0.01548986495001915,
+      "supported_gap": 0.0002231714413526899,
+      "unsupported_gap": 4.35670249714287e-05
+    },
+    {
+      "state": 205,
+      "occupancy": 0.013150862496188789,
+      "supported_gap": 0.00013551049488821765,
+      "unsupported_gap": 9.210402346253977e-06
+    },
+    {
+      "state": 206,
+      "occupancy": 0.014862395416274137,
+      "supported_gap": 0.00018352674137785683,
+      "unsupported_gap": 8.688045149439223e-06
+    },
+    {
+      "state": 207,
+      "occupancy": 0.0129225201188278,
+      "supported_gap": 0.0002656744070554046,
+      "unsupported_gap": 4.4154302161319265e-05
+    },
+    {
+      "state": 208,
+      "occupancy": 0.015955250672233193,
+      "supported_gap": 0.00019174973084585257,
+      "unsupported_gap": 8.662277785700342e-06
+    },
+    {
+      "state": 209,
+      "occupancy": 0.009060431164993447,
+      "supported_gap": 0.00044071677028123416,
+      "unsupported_gap": 0.0002261949719259367
+    },
+    {
+      "state": 210,
+      "occupancy": 0.014474059233320328,
+      "supported_gap": 0.0,
+      "unsupported_gap": 7.65590891702022e-19
+    },
+    {
+      "state": 211,
+      "occupancy": 0.017042088290384224,
+      "supported_gap": 0.00015726685535302087,
+      "unsupported_gap": 9.915785426331543e-06
+    },
+    {
+      "state": 212,
+      "occupancy": 0.022181136832933265,
+      "supported_gap": 5.988189834198373e-05,
+      "unsupported_gap": 4.53126092462415e-06
+    },
+    {
+      "state": 213,
+      "occupancy": 0.02400158004093422,
+      "supported_gap": 0.0001717210103040262,
+      "unsupported_gap": 1.3796244410306182e-05
+    },
+    {
+      "state": 214,
+      "occupancy": 0.013340882480142735,
+      "supported_gap": 0.0002478779280669491,
+      "unsupported_gap": 7.538928641635742e-05
+    },
+    {
+      "state": 215,
+      "occupancy": 0.01720482012488011,
+      "supported_gap": 7.536150131666616e-05,
+      "unsupported_gap": 2.2101628488766655e-06
+    },
+    {
+      "state": 216,
+      "occupancy": 0.008661376290689655,
+      "supported_gap": 6.591708559186062e-05,
+      "unsupported_gap": 1.2933348111194404e-05
+    },
+    {
+      "state": 217,
+      "occupancy": 0.012445517603042737,
+      "supported_gap": 0.0,
+      "unsupported_gap": 8.38907511916741e-19
+    },
+    {
+      "state": 218,
+      "occupancy": 0.024362894146518817,
+      "supported_gap": 0.00012099592024149344,
+      "unsupported_gap": 1.9958812353512837e-06
+    },
+    {
+      "state": 219,
+      "occupancy": 0.013457655701836192,
+      "supported_gap": 0.00036803764972845315,
+      "unsupported_gap": 5.62589806036422e-05
+    },
+    {
+      "state": 220,
+      "occupancy": 0.01729587307046207,
+      "supported_gap": 0.00014972532845166853,
+      "unsupported_gap": 2.3945117490874728e-05
+    },
+    {
+      "state": 221,
+      "occupancy": 0.013349123852335627,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.657872892965563e-19
+    },
+    {
+      "state": 222,
+      "occupancy": 0.022228482961855717,
+      "supported_gap": 7.354703613474064e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 223,
+      "occupancy": 0.009690887790441013,
+      "supported_gap": 0.0001484399868499391,
+      "unsupported_gap": 5.889604796768704e-05
+    },
+    {
+      "state": 224,
+      "occupancy": 0.00721615993326977,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.0421524432251878e-19
+    },
+    {
+      "state": 225,
+      "occupancy": 0.022254326911265925,
+      "supported_gap": 0.000235069176631551,
+      "unsupported_gap": 1.3458357126306313e-05
+    },
+    {
+      "state": 226,
+      "occupancy": 0.014653593424631179,
+      "supported_gap": 3.1248148285178506e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 227,
+      "occupancy": 0.013923359080809836,
+      "supported_gap": 0.00012148886551064162,
+      "unsupported_gap": 1.8059185984672234e-05
+    },
+    {
+      "state": 228,
+      "occupancy": 0.010148721957427236,
+      "supported_gap": 0.00010392260817622154,
+      "unsupported_gap": 4.303693181689733e-05
+    },
+    {
+      "state": 229,
+      "occupancy": 0.01932797315260875,
+      "supported_gap": 0.00030789292678851414,
+      "unsupported_gap": 9.230321645783009e-06
+    },
+    {
+      "state": 230,
+      "occupancy": 0.026122048600914567,
+      "supported_gap": 0.00021349188216290526,
+      "unsupported_gap": 2.6702127419625696e-05
+    },
+    {
+      "state": 231,
+      "occupancy": 0.0025188755004719727,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 232,
+      "occupancy": 0.012043642534734243,
+      "supported_gap": 0.00025994230027167475,
+      "unsupported_gap": 9.06713655622777e-05
+    },
+    {
+      "state": 233,
+      "occupancy": 0.01951338608240271,
+      "supported_gap": 0.0001280556955398395,
+      "unsupported_gap": 5.346418415598934e-06
+    },
+    {
+      "state": 234,
+      "occupancy": 0.008882409537800088,
+      "supported_gap": 0.0001987668626211353,
+      "unsupported_gap": 7.672570632388783e-05
+    },
+    {
+      "state": 235,
+      "occupancy": 0.006805501847133455,
+      "supported_gap": 0.00018994657296445212,
+      "unsupported_gap": 3.734126652819006e-05
+    },
+    {
+      "state": 236,
+      "occupancy": 0.0019304303100384462,
+      "supported_gap": 2.225639261394307e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 237,
+      "occupancy": 0.009430584279678574,
+      "supported_gap": 5.47534114032022e-05,
+      "unsupported_gap": 1.0101031637577132e-05
+    },
+    {
+      "state": 238,
+      "occupancy": 0.007006656624699192,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.1786290167247616e-19
+    },
+    {
+      "state": 239,
+      "occupancy": 0.011228751245889047,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.603397835495104e-20
+    },
+    {
+      "state": 240,
+      "occupancy": 0.01491098620395054,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.8111449402159538e-19
+    },
+    {
+      "state": 241,
+      "occupancy": 0.008829737396712053,
+      "supported_gap": 0.00012557738239012898,
+      "unsupported_gap": 8.467013207540477e-05
+    },
+    {
+      "state": 242,
+      "occupancy": 0.013465076813435934,
+      "supported_gap": 2.8101219454159442e-05,
+      "unsupported_gap": 1.6037962481705399e-06
+    },
+    {
+      "state": 243,
+      "occupancy": 0.005378720926911722,
+      "supported_gap": 4.462279423012724e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 244,
+      "occupancy": 0.00818843089918705,
+      "supported_gap": 1.787610413992649e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 245,
+      "occupancy": 0.013335057793963087,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.6438291355512275e-18
+    },
+    {
+      "state": 246,
+      "occupancy": 0.004258012303977503,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 247,
+      "occupancy": 0.011519620296370258,
+      "supported_gap": 8.845965484178924e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 248,
+      "occupancy": 0.013115555258901134,
+      "supported_gap": 0.00025779740283460274,
+      "unsupported_gap": 6.476319770713237e-06
+    },
+    {
+      "state": 249,
+      "occupancy": 0.01243120043924035,
+      "supported_gap": 0.0001663793636983815,
+      "unsupported_gap": 5.9681206877097084e-05
+    },
+    {
+      "state": 250,
+      "occupancy": 0.013283648817528446,
+      "supported_gap": 0.0,
+      "unsupported_gap": 9.438600171683082e-19
+    },
+    {
+      "state": 251,
+      "occupancy": 0.005329944426140262,
+      "supported_gap": 0.0003822451694956013,
+      "unsupported_gap": 0.00014725838496961667
+    },
+    {
+      "state": 252,
+      "occupancy": 0.009557515413350398,
+      "supported_gap": 0.00014792964176013043,
+      "unsupported_gap": 6.463013483112861e-05
+    },
+    {
+      "state": 253,
+      "occupancy": 0.019766574183414227,
+      "supported_gap": 0.00013393840162083517,
+      "unsupported_gap": 4.503970589076083e-06
+    },
+    {
+      "state": 254,
+      "occupancy": 0.023959869092384935,
+      "supported_gap": 0.00016503851241041185,
+      "unsupported_gap": 7.271854381093379e-06
+    },
+    {
+      "state": 255,
+      "occupancy": 0.005114139877735949,
+      "supported_gap": 1.0291077466191743e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 256,
+      "occupancy": 0.005294507899859263,
+      "supported_gap": 1.9442895130984004e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 257,
+      "occupancy": 0.016718961196908792,
+      "supported_gap": 7.735470844761401e-05,
+      "unsupported_gap": 8.849960985365061e-06
+    },
+    {
+      "state": 258,
+      "occupancy": 0.01824197212308332,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.1669652271232215e-18
+    },
+    {
+      "state": 259,
+      "occupancy": 0.019736880926639208,
+      "supported_gap": 8.831358847261944e-05,
+      "unsupported_gap": 1.35416705971688e-05
+    },
+    {
+      "state": 260,
+      "occupancy": 0.007053105344808407,
+      "supported_gap": 0.00020765172781030524,
+      "unsupported_gap": 7.272215038073589e-05
+    },
+    {
+      "state": 261,
+      "occupancy": 0.011251419699675035,
+      "supported_gap": 0.00028156215713485077,
+      "unsupported_gap": 5.896511342350936e-05
+    },
+    {
+      "state": 262,
+      "occupancy": 0.01730292927069572,
+      "supported_gap": 0.00015918093190934034,
+      "unsupported_gap": 2.0434391514315726e-05
+    },
+    {
+      "state": 263,
+      "occupancy": 0.018267795899086496,
+      "supported_gap": 0.0002275352298307644,
+      "unsupported_gap": 3.795192699815486e-05
+    },
+    {
+      "state": 264,
+      "occupancy": 0.007188965766003173,
+      "supported_gap": 5.747816841711884e-05,
+      "unsupported_gap": 1.0179857597998213e-05
+    },
+    {
+      "state": 265,
+      "occupancy": 0.002475968009162975,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 266,
+      "occupancy": 0.005097641827617021,
+      "supported_gap": 3.860082413669673e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 267,
+      "occupancy": 0.008557363804640181,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.2180347842814304e-19
+    },
+    {
+      "state": 268,
+      "occupancy": 0.006692954426826721,
+      "supported_gap": 6.917504144209597e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 269,
+      "occupancy": 0.0053692670751824285,
+      "supported_gap": 7.762514733688055e-05,
+      "unsupported_gap": 4.628944115125679e-05
+    },
+    {
+      "state": 270,
+      "occupancy": 0.01223106767656521,
+      "supported_gap": 0.00017962600291731548,
+      "unsupported_gap": 2.8503754145893775e-05
+    },
+    {
+      "state": 271,
+      "occupancy": 0.01221461799093838,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.7127438544077098e-18
+    },
+    {
+      "state": 272,
+      "occupancy": 0.010694625142613172,
+      "supported_gap": 7.690379369345776e-05,
+      "unsupported_gap": 1.1915541306326648e-05
+    },
+    {
+      "state": 273,
+      "occupancy": 0.01014465735377763,
+      "supported_gap": 0.00029203394460028756,
+      "unsupported_gap": 5.443651251940122e-05
+    },
+    {
+      "state": 274,
+      "occupancy": 0.025498135530309985,
+      "supported_gap": 0.00037806198265669143,
+      "unsupported_gap": 4.5851143877013024e-05
+    },
+    {
+      "state": 275,
+      "occupancy": 0.004319936927692564,
+      "supported_gap": 1.788618306209144e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 276,
+      "occupancy": 0.00965958003940759,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.503724864115148e-19
+    },
+    {
+      "state": 277,
+      "occupancy": 0.023155768003665828,
+      "supported_gap": 0.00024039935487703707,
+      "unsupported_gap": 4.121881380834691e-05
+    },
+    {
+      "state": 278,
+      "occupancy": 0.012888236388035214,
+      "supported_gap": 0.00043282495437071397,
+      "unsupported_gap": 4.706745484559698e-05
+    },
+    {
+      "state": 279,
+      "occupancy": 0.01367709508948932,
+      "supported_gap": 4.885179630145779e-05,
+      "unsupported_gap": 6.099000594662229e-06
+    },
+    {
+      "state": 280,
+      "occupancy": 0.023803865533464558,
+      "supported_gap": 0.0001789994781175624,
+      "unsupported_gap": 6.217085238453231e-06
+    },
+    {
+      "state": 281,
+      "occupancy": 0.004592359587986013,
+      "supported_gap": 1.9070662956859625e-05,
+      "unsupported_gap": 2.105719034819905e-05
+    },
+    {
+      "state": 282,
+      "occupancy": 0.012074686868755166,
+      "supported_gap": 8.59020064405272e-05,
+      "unsupported_gap": 1.0947947143721309e-05
+    },
+    {
+      "state": 283,
+      "occupancy": 0.011421008821349844,
+      "supported_gap": 0.0001260658670695653,
+      "unsupported_gap": 2.3657179384704574e-05
+    },
+    {
+      "state": 284,
+      "occupancy": 0.01631204332281421,
+      "supported_gap": 3.2419952193173006e-05,
+      "unsupported_gap": 4.899927912072951e-06
+    },
+    {
+      "state": 285,
+      "occupancy": 0.023291917533577865,
+      "supported_gap": 3.598430409073084e-05,
+      "unsupported_gap": 1.1276512235130987e-05
+    },
+    {
+      "state": 286,
+      "occupancy": 0.010907476489233743,
+      "supported_gap": 0.00017125387216604973,
+      "unsupported_gap": 5.18991446808864e-05
+    },
+    {
+      "state": 287,
+      "occupancy": 0.01352563030364554,
+      "supported_gap": 0.0,
+      "unsupported_gap": 7.843796583020194e-19
+    },
+    {
+      "state": 288,
+      "occupancy": 0.011946862827433943,
+      "supported_gap": 4.9189814718616654e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 289,
+      "occupancy": 0.01393677768331143,
+      "supported_gap": 7.760956785634175e-05,
+      "unsupported_gap": 8.996926338724382e-06
+    },
+    {
+      "state": 290,
+      "occupancy": 0.01805421081224445,
+      "supported_gap": 0.0002287485202353683,
+      "unsupported_gap": 7.084545218776273e-05
+    },
+    {
+      "state": 291,
+      "occupancy": 0.010949831230260259,
+      "supported_gap": 0.00024534804164803316,
+      "unsupported_gap": 7.218976634951611e-05
+    },
+    {
+      "state": 292,
+      "occupancy": 0.015481631589242881,
+      "supported_gap": 0.0001159267701147733,
+      "unsupported_gap": 9.910527575406528e-06
+    },
+    {
+      "state": 293,
+      "occupancy": 0.01118299040198864,
+      "supported_gap": 0.0,
+      "unsupported_gap": 9.172484854791502e-20
+    },
+    {
+      "state": 294,
+      "occupancy": 0.006384204898235398,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.8252080528615388e-19
+    },
+    {
+      "state": 295,
+      "occupancy": 0.014965877948902778,
+      "supported_gap": 0.0004460918694056529,
+      "unsupported_gap": 1.581293291057147e-05
+    },
+    {
+      "state": 296,
+      "occupancy": 0.00921656085691287,
+      "supported_gap": 4.259566352977202e-05,
+      "unsupported_gap": 2.854295346580933e-05
+    },
+    {
+      "state": 297,
+      "occupancy": 0.01683540283374299,
+      "supported_gap": 4.871478988288005e-05,
+      "unsupported_gap": 2.5219922831997204e-06
+    },
+    {
+      "state": 298,
+      "occupancy": 0.009507142759522328,
+      "supported_gap": 5.6554212035416e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 299,
+      "occupancy": 0.005970865418721007,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 300,
+      "occupancy": 0.012760930106104122,
+      "supported_gap": 1.7192294697979792e-05,
+      "unsupported_gap": 7.6679752572238e-07
+    },
+    {
+      "state": 301,
+      "occupancy": 0.02551423486000457,
+      "supported_gap": 2.801569877629769e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 302,
+      "occupancy": 0.01555318809536032,
+      "supported_gap": 0.00021844062445569302,
+      "unsupported_gap": 6.944047354985716e-06
+    },
+    {
+      "state": 303,
+      "occupancy": 0.01954365480954243,
+      "supported_gap": 0.00010931965127720744,
+      "unsupported_gap": 1.3136437965518878e-06
+    },
+    {
+      "state": 304,
+      "occupancy": 0.014162021482035055,
+      "supported_gap": 0.00013289578686354725,
+      "unsupported_gap": 3.0055808227080073e-05
+    },
+    {
+      "state": 305,
+      "occupancy": 0.016682062506800214,
+      "supported_gap": 8.724044641029814e-05,
+      "unsupported_gap": 1.0749063558596655e-05
+    },
+    {
+      "state": 306,
+      "occupancy": 0.019978476632598757,
+      "supported_gap": 9.32241566886456e-05,
+      "unsupported_gap": 4.959872896432187e-06
+    },
+    {
+      "state": 307,
+      "occupancy": 0.011872518911766501,
+      "supported_gap": 0.0,
+      "unsupported_gap": 5.163747077663396e-19
+    },
+    {
+      "state": 308,
+      "occupancy": 0.017456978267758938,
+      "supported_gap": 1.320464474528817e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 309,
+      "occupancy": 0.0035829552591797225,
+      "supported_gap": 1.027330599311398e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 310,
+      "occupancy": 0.01867911794212862,
+      "supported_gap": 0.00010498429144285738,
+      "unsupported_gap": 3.477951900289931e-06
+    },
+    {
+      "state": 311,
+      "occupancy": 0.009140175031253268,
+      "supported_gap": 0.00010673946637712101,
+      "unsupported_gap": 7.2153077084150374e-06
+    },
+    {
+      "state": 312,
+      "occupancy": 0.012773163430716722,
+      "supported_gap": 0.00023403289532291727,
+      "unsupported_gap": 7.827477614489043e-05
+    },
+    {
+      "state": 313,
+      "occupancy": 0.012439800304558529,
+      "supported_gap": 2.898075308812523e-05,
+      "unsupported_gap": 5.15955480557701e-06
+    },
+    {
+      "state": 314,
+      "occupancy": 0.01424409993357435,
+      "supported_gap": 8.609584592850951e-05,
+      "unsupported_gap": 1.8579392919135372e-05
+    },
+    {
+      "state": 315,
+      "occupancy": 0.028914038491224377,
+      "supported_gap": 0.0004063423857370307,
+      "unsupported_gap": 4.343706849969681e-05
+    },
+    {
+      "state": 316,
+      "occupancy": 0.017361467743439236,
+      "supported_gap": 0.00016100716860553227,
+      "unsupported_gap": 1.4467711024966558e-05
+    },
+    {
+      "state": 317,
+      "occupancy": 0.01728570057290887,
+      "supported_gap": 0.00020693235731422715,
+      "unsupported_gap": 5.2779821327631385e-05
+    },
+    {
+      "state": 318,
+      "occupancy": 0.020666571629302962,
+      "supported_gap": 0.00020697356636960223,
+      "unsupported_gap": 1.4382483832879037e-05
+    },
+    {
+      "state": 319,
+      "occupancy": 0.0023660281586663327,
+      "supported_gap": 1.4405136115247753e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 320,
+      "occupancy": 0.004227371822631738,
+      "supported_gap": 0.0,
+      "unsupported_gap": 5.688879431681659e-20
+    },
+    {
+      "state": 321,
+      "occupancy": 0.023995358985387398,
+      "supported_gap": 0.00022099403950963517,
+      "unsupported_gap": 4.1808471584108635e-06
+    },
+    {
+      "state": 322,
+      "occupancy": 0.023939620260274977,
+      "supported_gap": 0.00026599296294622325,
+      "unsupported_gap": 7.82873547171736e-06
+    },
+    {
+      "state": 323,
+      "occupancy": 0.007600127920780639,
+      "supported_gap": 2.3636666913684015e-05,
+      "unsupported_gap": 5.150589280080025e-06
+    },
+    {
+      "state": 324,
+      "occupancy": 0.010278050537128484,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.87382024636341e-19
+    },
+    {
+      "state": 325,
+      "occupancy": 0.005100691064771005,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.3068241526789018e-19
+    },
+    {
+      "state": 326,
+      "occupancy": 0.012527628599689656,
+      "supported_gap": 0.0,
+      "unsupported_gap": 9.34708448610757e-20
+    },
+    {
+      "state": 327,
+      "occupancy": 0.009796576361379948,
+      "supported_gap": 7.441210388796344e-05,
+      "unsupported_gap": 1.3438389387290204e-05
+    },
+    {
+      "state": 328,
+      "occupancy": 0.005030596825436878,
+      "supported_gap": 7.655832262839477e-06,
+      "unsupported_gap": 1.0774875036588895e-05
+    },
+    {
+      "state": 329,
+      "occupancy": 0.010736289467552238,
+      "supported_gap": 0.00014046731271386757,
+      "unsupported_gap": 9.937725715146419e-05
+    },
+    {
+      "state": 330,
+      "occupancy": 0.004727867491855902,
+      "supported_gap": 2.0237902672999187e-05,
+      "unsupported_gap": 1.5668053682321524e-05
+    },
+    {
+      "state": 331,
+      "occupancy": 0.009411076856498208,
+      "supported_gap": 0.0,
+      "unsupported_gap": 9.151110367412505e-19
+    },
+    {
+      "state": 332,
+      "occupancy": 0.02082228125798756,
+      "supported_gap": 7.77283236304508e-05,
+      "unsupported_gap": 8.45605270229554e-06
+    },
+    {
+      "state": 333,
+      "occupancy": 0.006899236591330583,
+      "supported_gap": 8.210366860995078e-05,
+      "unsupported_gap": 2.256417693257859e-06
+    },
+    {
+      "state": 334,
+      "occupancy": 0.01617054401537995,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.70987325080594e-19
+    },
+    {
+      "state": 335,
+      "occupancy": 0.004821381775694222,
+      "supported_gap": 5.304645628909199e-05,
+      "unsupported_gap": 9.521792685897258e-05
+    },
+    {
+      "state": 336,
+      "occupancy": 0.01493490142926288,
+      "supported_gap": 0.0002578677998521357,
+      "unsupported_gap": 2.228836690025919e-05
+    },
+    {
+      "state": 337,
+      "occupancy": 0.007042955003976908,
+      "supported_gap": 0.00011101201192784973,
+      "unsupported_gap": 2.704140507592875e-06
+    },
+    {
+      "state": 338,
+      "occupancy": 0.005595668283401435,
+      "supported_gap": 3.255875653224917e-05,
+      "unsupported_gap": 5.769695457053706e-05
+    },
+    {
+      "state": 339,
+      "occupancy": 0.018028713945342056,
+      "supported_gap": 7.889476201685894e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 340,
+      "occupancy": 0.02170874931636936,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.263056650408347e-19
+    },
+    {
+      "state": 341,
+      "occupancy": 0.00971683941681834,
+      "supported_gap": 7.367957761221694e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 342,
+      "occupancy": 0.004655237719711971,
+      "supported_gap": 2.266856773096941e-05,
+      "unsupported_gap": 2.1122983567493187e-05
+    },
+    {
+      "state": 343,
+      "occupancy": 0.01210029709709761,
+      "supported_gap": 0.0001370353436933115,
+      "unsupported_gap": 7.254682528515539e-05
+    },
+    {
+      "state": 344,
+      "occupancy": 0.02438830054134334,
+      "supported_gap": 0.00018897562149221037,
+      "unsupported_gap": 2.2535760615893122e-05
+    },
+    {
+      "state": 345,
+      "occupancy": 0.016600955892919267,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.8835430924371438e-18
+    },
+    {
+      "state": 346,
+      "occupancy": 0.009472788119705549,
+      "supported_gap": 9.24156423985557e-05,
+      "unsupported_gap": 4.7179156426364575e-05
+    },
+    {
+      "state": 347,
+      "occupancy": 0.009557411946769156,
+      "supported_gap": 0.00024441249561391027,
+      "unsupported_gap": 1.3166568431626404e-05
+    },
+    {
+      "state": 348,
+      "occupancy": 0.009037362719269288,
+      "supported_gap": 0.0,
+      "unsupported_gap": 5.380734982270355e-19
+    },
+    {
+      "state": 349,
+      "occupancy": 0.008848993324240686,
+      "supported_gap": 0.00019829239367213504,
+      "unsupported_gap": 0.00015755725291891501
+    },
+    {
+      "state": 350,
+      "occupancy": 0.015518097283056163,
+      "supported_gap": 0.00034237492943434275,
+      "unsupported_gap": 2.8626895098421137e-05
+    },
+    {
+      "state": 351,
+      "occupancy": 0.013263352256547825,
+      "supported_gap": 6.727284849258923e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 352,
+      "occupancy": 0.018929947570786004,
+      "supported_gap": 5.994242495023673e-05,
+      "unsupported_gap": 1.4398851330664071e-05
+    },
+    {
+      "state": 353,
+      "occupancy": 0.011315784310490127,
+      "supported_gap": 0.00017777901175224637,
+      "unsupported_gap": 3.242170427092942e-06
+    },
+    {
+      "state": 354,
+      "occupancy": 0.0186005913858058,
+      "supported_gap": 0.00023724107460908382,
+      "unsupported_gap": 7.579530962107294e-06
+    },
+    {
+      "state": 355,
+      "occupancy": 0.023425538041008418,
+      "supported_gap": 8.857215723963149e-05,
+      "unsupported_gap": 1.1446700723142591e-05
+    },
+    {
+      "state": 356,
+      "occupancy": 0.01686284425104356,
+      "supported_gap": 0.0003223884710350503,
+      "unsupported_gap": 6.665595457882541e-05
+    },
+    {
+      "state": 357,
+      "occupancy": 0.005065744456092646,
+      "supported_gap": 1.5085837624715947e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 358,
+      "occupancy": 0.014794466966499898,
+      "supported_gap": 0.00014223774881776054,
+      "unsupported_gap": 5.4464390079247656e-05
+    },
+    {
+      "state": 359,
+      "occupancy": 0.014999345154764416,
+      "supported_gap": 4.197792317125093e-05,
+      "unsupported_gap": 1.1459981655775119e-05
+    },
+    {
+      "state": 360,
+      "occupancy": 0.009783113437315102,
+      "supported_gap": 0.00027925527840820356,
+      "unsupported_gap": 6.844284998735237e-05
+    },
+    {
+      "state": 361,
+      "occupancy": 0.005892262416031545,
+      "supported_gap": 1.2674592965235118e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 362,
+      "occupancy": 0.007199755865564869,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 363,
+      "occupancy": 0.007215542718947682,
+      "supported_gap": 7.903871856576951e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 364,
+      "occupancy": 0.007963957962497843,
+      "supported_gap": 1.738633665818653e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 365,
+      "occupancy": 0.018000733683862343,
+      "supported_gap": 0.00019144180949618952,
+      "unsupported_gap": 9.755549747328125e-06
+    },
+    {
+      "state": 366,
+      "occupancy": 0.007034873481411916,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 367,
+      "occupancy": 0.009474836105603426,
+      "supported_gap": 0.00039054915887015587,
+      "unsupported_gap": 0.00020300822614537875
+    },
+    {
+      "state": 368,
+      "occupancy": 0.02579674775584866,
+      "supported_gap": 0.00025095607871727737,
+      "unsupported_gap": 1.6629399136373e-05
+    },
+    {
+      "state": 369,
+      "occupancy": 0.011861607505035475,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.54929761895964e-19
+    },
+    {
+      "state": 370,
+      "occupancy": 0.007738845496977908,
+      "supported_gap": 0.00013807629485317922,
+      "unsupported_gap": 5.220936797739554e-05
+    },
+    {
+      "state": 371,
+      "occupancy": 0.030606879055750713,
+      "supported_gap": 6.928159035367754e-05,
+      "unsupported_gap": 5.214160084829395e-06
+    },
+    {
+      "state": 372,
+      "occupancy": 0.008511845255125324,
+      "supported_gap": 0.00022302877509887374,
+      "unsupported_gap": 0.00011411933777485432
+    },
+    {
+      "state": 373,
+      "occupancy": 0.020591731089305402,
+      "supported_gap": 0.00014656776905228665,
+      "unsupported_gap": 2.5696540769077537e-05
+    },
+    {
+      "state": 374,
+      "occupancy": 0.003702256948293545,
+      "supported_gap": 0.0,
+      "unsupported_gap": 6.004657325116744e-19
+    },
+    {
+      "state": 375,
+      "occupancy": 0.017029888471741927,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.0375778572752295e-18
+    },
+    {
+      "state": 376,
+      "occupancy": 0.014918747168447119,
+      "supported_gap": 6.411920846433323e-05,
+      "unsupported_gap": 6.293297088456963e-06
+    },
+    {
+      "state": 377,
+      "occupancy": 0.0075979342616327595,
+      "supported_gap": 8.315435636778996e-05,
+      "unsupported_gap": 4.1412968662258135e-05
+    },
+    {
+      "state": 378,
+      "occupancy": 0.017140926722387068,
+      "supported_gap": 6.081432744809341e-05,
+      "unsupported_gap": 1.0329921268580075e-05
+    },
+    {
+      "state": 379,
+      "occupancy": 0.0037234024669402658,
+      "supported_gap": 7.881996493608146e-06,
+      "unsupported_gap": 1.3256085011976737e-05
+    },
+    {
+      "state": 380,
+      "occupancy": 0.01626818505488273,
+      "supported_gap": 5.4970685103181086e-05,
+      "unsupported_gap": 4.526057246139985e-06
+    },
+    {
+      "state": 381,
+      "occupancy": 0.01567781317405272,
+      "supported_gap": 0.00020093734147439308,
+      "unsupported_gap": 7.259358354433249e-05
+    },
+    {
+      "state": 382,
+      "occupancy": 0.009526642178785419,
+      "supported_gap": 1.3307751882947286e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 383,
+      "occupancy": 0.012138514176431007,
+      "supported_gap": 0.00012529119692715178,
+      "unsupported_gap": 1.5187404884459929e-05
+    },
+    {
+      "state": 384,
+      "occupancy": 0.011041912149520241,
+      "supported_gap": 0.00012736228343783216,
+      "unsupported_gap": 3.848491625625772e-06
+    },
+    {
+      "state": 385,
+      "occupancy": 0.008954867731760616,
+      "supported_gap": 5.826951626833649e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 386,
+      "occupancy": 0.020040039131803283,
+      "supported_gap": 0.0004943529688582433,
+      "unsupported_gap": 8.530757599134261e-05
+    },
+    {
+      "state": 387,
+      "occupancy": 0.008864813986446481,
+      "supported_gap": 7.447939911070705e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 388,
+      "occupancy": 0.007311811667771459,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 389,
+      "occupancy": 0.011378568446634109,
+      "supported_gap": 7.364762244009102e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 390,
+      "occupancy": 0.015603630218379159,
+      "supported_gap": 0.00017544046409063397,
+      "unsupported_gap": 3.3876305659887286e-06
+    },
+    {
+      "state": 391,
+      "occupancy": 0.007976223545841337,
+      "supported_gap": 0.00011273322077941502,
+      "unsupported_gap": 2.093301039986198e-05
+    },
+    {
+      "state": 392,
+      "occupancy": 0.02555986570018711,
+      "supported_gap": 0.00039098953489043284,
+      "unsupported_gap": 1.2372040353794477e-05
+    },
+    {
+      "state": 393,
+      "occupancy": 0.01510123087031603,
+      "supported_gap": 0.00024358696739615158,
+      "unsupported_gap": 4.065670076211382e-05
+    },
+    {
+      "state": 394,
+      "occupancy": 0.007964972996517973,
+      "supported_gap": 2.882011841895796e-05,
+      "unsupported_gap": 3.534550333236145e-05
+    },
+    {
+      "state": 395,
+      "occupancy": 0.011359682522348218,
+      "supported_gap": 2.4557837662537624e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 396,
+      "occupancy": 0.01329530035401534,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.73606906064219e-19
+    },
+    {
+      "state": 397,
+      "occupancy": 0.006240700961923934,
+      "supported_gap": 6.449673090459551e-05,
+      "unsupported_gap": 7.647917233284814e-05
+    },
+    {
+      "state": 398,
+      "occupancy": 0.022422276311805184,
+      "supported_gap": 6.551172229775102e-05,
+      "unsupported_gap": 6.6482086396976255e-06
+    },
+    {
+      "state": 399,
+      "occupancy": 0.007927311304824032,
+      "supported_gap": 9.674172333970174e-05,
+      "unsupported_gap": 1.0140960268839645e-05
+    },
+    {
+      "state": 400,
+      "occupancy": 0.009898155829408395,
+      "supported_gap": 0.00017832442113373771,
+      "unsupported_gap": 1.2416768736773803e-05
+    },
+    {
+      "state": 401,
+      "occupancy": 0.02488702248608924,
+      "supported_gap": 6.225347171125147e-05,
+      "unsupported_gap": 9.495486953360028e-06
+    },
+    {
+      "state": 402,
+      "occupancy": 0.02118133495552442,
+      "supported_gap": 8.543872409679994e-05,
+      "unsupported_gap": 3.361238848981461e-06
+    },
+    {
+      "state": 403,
+      "occupancy": 0.0074986946237904735,
+      "supported_gap": 1.603551557614861e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 404,
+      "occupancy": 0.009930665974324642,
+      "supported_gap": 0.0001744466426958578,
+      "unsupported_gap": 2.5392431253986145e-05
+    },
+    {
+      "state": 405,
+      "occupancy": 0.003206789306083262,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 406,
+      "occupancy": 0.01937904250241099,
+      "supported_gap": 4.756706729172388e-05,
+      "unsupported_gap": 1.6098545338776148e-06
+    },
+    {
+      "state": 407,
+      "occupancy": 0.011588304149246283,
+      "supported_gap": 1.3453442249830547e-05,
+      "unsupported_gap": 4.718047455669742e-06
+    },
+    {
+      "state": 408,
+      "occupancy": 0.017912015749551605,
+      "supported_gap": 0.00023196939464006466,
+      "unsupported_gap": 2.2224829670181223e-05
+    },
+    {
+      "state": 409,
+      "occupancy": 0.02507509667090076,
+      "supported_gap": 0.00011479122563121566,
+      "unsupported_gap": 1.0121863712838628e-05
+    },
+    {
+      "state": 410,
+      "occupancy": 0.021670823334910425,
+      "supported_gap": 0.0004399477588636853,
+      "unsupported_gap": 4.8733779689323036e-05
+    },
+    {
+      "state": 411,
+      "occupancy": 0.011220808854106258,
+      "supported_gap": 0.00011433926968863537,
+      "unsupported_gap": 2.1972600258868973e-05
+    },
+    {
+      "state": 412,
+      "occupancy": 0.020943814853166733,
+      "supported_gap": 0.00015374288813095905,
+      "unsupported_gap": 1.4797560746791397e-05
+    },
+    {
+      "state": 413,
+      "occupancy": 0.0021957809960686772,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 414,
+      "occupancy": 0.008273795938630634,
+      "supported_gap": 2.535269415584523e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 415,
+      "occupancy": 0.0039404905549349995,
+      "supported_gap": 4.33430441629553e-06,
+      "unsupported_gap": 1.6408438147403995e-05
+    },
+    {
+      "state": 416,
+      "occupancy": 0.007201581601297255,
+      "supported_gap": 0.00021298444257815313,
+      "unsupported_gap": 8.512956219166413e-05
+    },
+    {
+      "state": 417,
+      "occupancy": 0.01144847363902158,
+      "supported_gap": 0.00010062113791750432,
+      "unsupported_gap": 3.3698065126468395e-05
+    },
+    {
+      "state": 418,
+      "occupancy": 0.010651856899269825,
+      "supported_gap": 7.499102101174257e-05,
+      "unsupported_gap": 2.8793082093112483e-05
+    },
+    {
+      "state": 419,
+      "occupancy": 0.015248308583854545,
+      "supported_gap": 0.0003336314670287624,
+      "unsupported_gap": 4.657845346033744e-06
+    },
+    {
+      "state": 420,
+      "occupancy": 0.0039656894743373035,
+      "supported_gap": 8.475182403024874e-06,
+      "unsupported_gap": 7.583057939548792e-06
+    },
+    {
+      "state": 421,
+      "occupancy": 0.02124980636867093,
+      "supported_gap": 9.904501008296598e-05,
+      "unsupported_gap": 1.0207901214643873e-05
+    },
+    {
+      "state": 422,
+      "occupancy": 0.006855997480547737,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.312858268460091e-19
+    },
+    {
+      "state": 423,
+      "occupancy": 0.0012870778755384284,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 424,
+      "occupancy": 0.011023643173496413,
+      "supported_gap": 4.636218753652541e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 425,
+      "occupancy": 0.017190086840797588,
+      "supported_gap": 0.0,
+      "unsupported_gap": 7.843576050555284e-19
+    },
+    {
+      "state": 426,
+      "occupancy": 0.017763991206793603,
+      "supported_gap": 0.00023871353093515266,
+      "unsupported_gap": 9.826938074312013e-06
+    },
+    {
+      "state": 427,
+      "occupancy": 0.01394988826972169,
+      "supported_gap": 0.00034158536262186113,
+      "unsupported_gap": 0.00011519794407855194
+    },
+    {
+      "state": 428,
+      "occupancy": 0.012948890753846315,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.0646607966672947e-19
+    },
+    {
+      "state": 429,
+      "occupancy": 0.0053916379708625565,
+      "supported_gap": 2.4220488040383864e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 430,
+      "occupancy": 0.005836372081121637,
+      "supported_gap": 0.0,
+      "unsupported_gap": 7.167781708783941e-21
+    },
+    {
+      "state": 431,
+      "occupancy": 0.015919480398255467,
+      "supported_gap": 0.00012686264246145968,
+      "unsupported_gap": 2.0402774931144754e-06
+    },
+    {
+      "state": 432,
+      "occupancy": 0.008575048819789611,
+      "supported_gap": 0.0001919373544186976,
+      "unsupported_gap": 6.854860483605217e-05
+    },
+    {
+      "state": 433,
+      "occupancy": 0.014643247850549919,
+      "supported_gap": 0.00017307387502096296,
+      "unsupported_gap": 1.0282584185216e-05
+    },
+    {
+      "state": 434,
+      "occupancy": 0.012790937530028681,
+      "supported_gap": 0.0,
+      "unsupported_gap": 6.124331364907761e-20
+    },
+    {
+      "state": 435,
+      "occupancy": 0.011054558106573985,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 436,
+      "occupancy": 0.007677197656978364,
+      "supported_gap": 8.366288209765072e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 437,
+      "occupancy": 0.020059417541190734,
+      "supported_gap": 0.00017182362483234085,
+      "unsupported_gap": 6.161684419964631e-06
+    },
+    {
+      "state": 438,
+      "occupancy": 0.007203216383469247,
+      "supported_gap": 0.00011087862185577457,
+      "unsupported_gap": 7.246094048892875e-05
+    },
+    {
+      "state": 439,
+      "occupancy": 0.019922994014928894,
+      "supported_gap": 0.0001995689441571712,
+      "unsupported_gap": 4.326209617378219e-06
+    },
+    {
+      "state": 440,
+      "occupancy": 0.013128553219807458,
+      "supported_gap": 0.00020172604512911588,
+      "unsupported_gap": 1.946916484425592e-05
+    },
+    {
+      "state": 441,
+      "occupancy": 0.019361421213117864,
+      "supported_gap": 0.00025491196994489434,
+      "unsupported_gap": 3.5012926308386715e-05
+    },
+    {
+      "state": 442,
+      "occupancy": 0.008074918634525812,
+      "supported_gap": 5.249880921518808e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 443,
+      "occupancy": 0.018896057126300117,
+      "supported_gap": 4.698822213215209e-05,
+      "unsupported_gap": 1.9243613623421008e-05
+    },
+    {
+      "state": 444,
+      "occupancy": 0.0111239615761321,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.652365802280248e-19
+    },
+    {
+      "state": 445,
+      "occupancy": 0.007288924267565032,
+      "supported_gap": 0.00019928631951055984,
+      "unsupported_gap": 3.351683170125087e-05
+    },
+    {
+      "state": 446,
+      "occupancy": 0.009095313194207557,
+      "supported_gap": 0.00014413149289646584,
+      "unsupported_gap": 2.0171786894332802e-05
+    },
+    {
+      "state": 447,
+      "occupancy": 0.008162311012925604,
+      "supported_gap": 0.000206951756528817,
+      "unsupported_gap": 4.262620101709094e-05
+    },
+    {
+      "state": 448,
+      "occupancy": 0.018751387232393717,
+      "supported_gap": 0.00014125959535639892,
+      "unsupported_gap": 5.578746135659323e-06
+    },
+    {
+      "state": 449,
+      "occupancy": 0.00513512744991314,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.4057597414658658e-19
+    },
+    {
+      "state": 450,
+      "occupancy": 0.006894624413872461,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.2859804110768303e-19
+    },
+    {
+      "state": 451,
+      "occupancy": 0.018746345617134,
+      "supported_gap": 7.755512102197723e-05,
+      "unsupported_gap": 1.8468278959992563e-06
+    },
+    {
+      "state": 452,
+      "occupancy": 0.020361532720556488,
+      "supported_gap": 0.0,
+      "unsupported_gap": 7.622900358692897e-19
+    },
+    {
+      "state": 453,
+      "occupancy": 0.009981090993119699,
+      "supported_gap": 0.0001991087654352487,
+      "unsupported_gap": 7.457931692452551e-05
+    },
+    {
+      "state": 454,
+      "occupancy": 0.008592553492938323,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.879894559451604e-20
+    },
+    {
+      "state": 455,
+      "occupancy": 0.012138297849639377,
+      "supported_gap": 0.0002490383846060968,
+      "unsupported_gap": 5.5201505454831455e-05
+    },
+    {
+      "state": 456,
+      "occupancy": 0.020088811554016723,
+      "supported_gap": 0.00027285894025187084,
+      "unsupported_gap": 4.8728061719902645e-05
+    },
+    {
+      "state": 457,
+      "occupancy": 0.01538340088237089,
+      "supported_gap": 0.0001456087210780725,
+      "unsupported_gap": 3.7202429100615077e-06
+    },
+    {
+      "state": 458,
+      "occupancy": 0.024198699059530995,
+      "supported_gap": 0.00028177352085866276,
+      "unsupported_gap": 5.32996871666909e-06
+    },
+    {
+      "state": 459,
+      "occupancy": 0.020789901522992937,
+      "supported_gap": 4.451150054912587e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 460,
+      "occupancy": 0.02047216751342324,
+      "supported_gap": 0.00014151301517361493,
+      "unsupported_gap": 3.4480964650802314e-05
+    },
+    {
+      "state": 461,
+      "occupancy": 0.0072507009613454925,
+      "supported_gap": 7.935305897125388e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 462,
+      "occupancy": 0.021852205858921128,
+      "supported_gap": 7.329578198809268e-05,
+      "unsupported_gap": 1.6447547797647196e-06
+    },
+    {
+      "state": 463,
+      "occupancy": 0.018593141374400535,
+      "supported_gap": 0.0002519624285471788,
+      "unsupported_gap": 8.06964506397265e-05
+    },
+    {
+      "state": 464,
+      "occupancy": 0.006531641245478316,
+      "supported_gap": 0.00013516344317229985,
+      "unsupported_gap": 3.2458182715250766e-05
+    },
+    {
+      "state": 465,
+      "occupancy": 0.017732708594653993,
+      "supported_gap": 0.00027736974879722135,
+      "unsupported_gap": 8.171669092772825e-06
+    },
+    {
+      "state": 466,
+      "occupancy": 0.010527957908922815,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.4254123503378813e-19
+    },
+    {
+      "state": 467,
+      "occupancy": 0.003849437145510087,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 468,
+      "occupancy": 0.009520389460892668,
+      "supported_gap": 0.00012235608207883397,
+      "unsupported_gap": 4.13695047354597e-05
+    },
+    {
+      "state": 469,
+      "occupancy": 0.005910974790640651,
+      "supported_gap": 7.085334684478534e-05,
+      "unsupported_gap": 5.6847452701048855e-05
+    },
+    {
+      "state": 470,
+      "occupancy": 0.0017932403290058531,
+      "supported_gap": 6.883414515872425e-06,
+      "unsupported_gap": 2.515093765414761e-06
+    },
+    {
+      "state": 471,
+      "occupancy": 0.01327252131882374,
+      "supported_gap": 0.0001613562048540236,
+      "unsupported_gap": 1.5477437373981265e-05
+    },
+    {
+      "state": 472,
+      "occupancy": 0.007796582603715638,
+      "supported_gap": 1.5449655748910758e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 473,
+      "occupancy": 0.02153800594381376,
+      "supported_gap": 0.00015938885843883824,
+      "unsupported_gap": 1.8736027000194938e-05
+    },
+    {
+      "state": 474,
+      "occupancy": 0.02324102017488354,
+      "supported_gap": 0.00036992889080019847,
+      "unsupported_gap": 5.977964459056128e-06
+    },
+    {
+      "state": 475,
+      "occupancy": 0.006652631138417138,
+      "supported_gap": 0.0002447797516089537,
+      "unsupported_gap": 2.889377501816525e-05
+    },
+    {
+      "state": 476,
+      "occupancy": 0.013305315963778893,
+      "supported_gap": 0.00030361369292588697,
+      "unsupported_gap": 0.00011843829210275371
+    },
+    {
+      "state": 477,
+      "occupancy": 0.011572935101759416,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.391272827045336e-19
+    },
+    {
+      "state": 478,
+      "occupancy": 0.007991338228390895,
+      "supported_gap": 5.626155958102136e-05,
+      "unsupported_gap": 5.132289595133629e-05
+    },
+    {
+      "state": 479,
+      "occupancy": 0.015616830562762023,
+      "supported_gap": 0.00013422154491872507,
+      "unsupported_gap": 5.0422966132539496e-05
+    },
+    {
+      "state": 480,
+      "occupancy": 0.008136286665451126,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.566178773439406e-19
+    },
+    {
+      "state": 481,
+      "occupancy": 0.01282917794610938,
+      "supported_gap": 1.1003755229253638e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 482,
+      "occupancy": 0.00935150612574477,
+      "supported_gap": 6.838497965708189e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 483,
+      "occupancy": 0.00868371928770936,
+      "supported_gap": 0.0001103615187299393,
+      "unsupported_gap": 4.314827523939438e-05
+    },
+    {
+      "state": 484,
+      "occupancy": 0.016001571645181723,
+      "supported_gap": 0.0002126094882429388,
+      "unsupported_gap": 3.084052968076724e-05
+    },
+    {
+      "state": 485,
+      "occupancy": 0.005245220036485941,
+      "supported_gap": 2.8379685578313666e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 486,
+      "occupancy": 0.01593714470581698,
+      "supported_gap": 0.00022521923504390158,
+      "unsupported_gap": 7.714037472874194e-05
+    },
+    {
+      "state": 487,
+      "occupancy": 0.018020045703819786,
+      "supported_gap": 6.780145920619733e-05,
+      "unsupported_gap": 1.7859122329243269e-06
+    },
+    {
+      "state": 488,
+      "occupancy": 0.006038729217349627,
+      "supported_gap": 1.2528566520555414e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 489,
+      "occupancy": 0.013520945297900315,
+      "supported_gap": 0.00021156917230055235,
+      "unsupported_gap": 6.606980811973345e-05
+    },
+    {
+      "state": 490,
+      "occupancy": 0.023109442000374004,
+      "supported_gap": 0.00020161617765240516,
+      "unsupported_gap": 2.3415394943000042e-05
+    },
+    {
+      "state": 491,
+      "occupancy": 0.009395005522448615,
+      "supported_gap": 2.0632934582091773e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 492,
+      "occupancy": 0.013988400029248307,
+      "supported_gap": 0.00024405054663033079,
+      "unsupported_gap": 1.2853975989958625e-05
+    },
+    {
+      "state": 493,
+      "occupancy": 0.00588143898586571,
+      "supported_gap": 2.936656717810739e-06,
+      "unsupported_gap": 7.400374928882248e-06
+    },
+    {
+      "state": 494,
+      "occupancy": 0.021529836550085092,
+      "supported_gap": 0.00011884793082169682,
+      "unsupported_gap": 1.1390823240358197e-05
+    },
+    {
+      "state": 495,
+      "occupancy": 0.005335356119627973,
+      "supported_gap": 1.740764632727228e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 496,
+      "occupancy": 0.02173477958991111,
+      "supported_gap": 1.1264517529038394e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 497,
+      "occupancy": 0.008715988958865951,
+      "supported_gap": 0.0001617116597431356,
+      "unsupported_gap": 6.733238771566964e-05
+    },
+    {
+      "state": 498,
+      "occupancy": 0.022513477218830142,
+      "supported_gap": 0.00011947812468037167,
+      "unsupported_gap": 2.465009184304128e-05
+    },
+    {
+      "state": 499,
+      "occupancy": 0.03132333217899476,
+      "supported_gap": 0.0,
+      "unsupported_gap": 6.17551779677728e-19
+    },
+    {
+      "state": 500,
+      "occupancy": 0.011748503501112381,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.8609164317357375e-20
+    },
+    {
+      "state": 501,
+      "occupancy": 0.010037838184122655,
+      "supported_gap": 0.0001173038462195565,
+      "unsupported_gap": 7.120940676119339e-05
+    },
+    {
+      "state": 502,
+      "occupancy": 0.003297856405434523,
+      "supported_gap": 8.378414799584713e-05,
+      "unsupported_gap": 1.5104767296171548e-05
+    },
+    {
+      "state": 503,
+      "occupancy": 0.018750593685569732,
+      "supported_gap": 9.384561521373647e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 504,
+      "occupancy": 0.0232706236905776,
+      "supported_gap": 1.5195091669641466e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 505,
+      "occupancy": 0.02464804054968042,
+      "supported_gap": 0.0001846548389117746,
+      "unsupported_gap": 3.719849281045058e-05
+    },
+    {
+      "state": 506,
+      "occupancy": 0.009655019773901806,
+      "supported_gap": 5.536400149176624e-06,
+      "unsupported_gap": 3.923684055749365e-06
+    },
+    {
+      "state": 507,
+      "occupancy": 0.007851590128811026,
+      "supported_gap": 6.030124106899121e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 508,
+      "occupancy": 0.011860722384507987,
+      "supported_gap": 0.0001804089864788979,
+      "unsupported_gap": 3.181466993711641e-05
+    },
+    {
+      "state": 509,
+      "occupancy": 0.005397291029495824,
+      "supported_gap": 2.082923944380093e-05,
+      "unsupported_gap": 6.496738969376047e-05
+    },
+    {
+      "state": 510,
+      "occupancy": 0.01604860967939237,
+      "supported_gap": 0.0001938819674296018,
+      "unsupported_gap": 5.1752777463918204e-05
+    },
+    {
+      "state": 511,
+      "occupancy": 0.015627284295912335,
+      "supported_gap": 0.00013032500688580975,
+      "unsupported_gap": 6.293350236087154e-07
+    },
+    {
+      "state": 512,
+      "occupancy": 0.004831346442804928,
+      "supported_gap": 5.157569289175845e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 513,
+      "occupancy": 0.0060584077357461515,
+      "supported_gap": 0.0001794449829036504,
+      "unsupported_gap": 8.065613733843978e-05
+    },
+    {
+      "state": 514,
+      "occupancy": 0.009781796591737295,
+      "supported_gap": 0.00011693202407038537,
+      "unsupported_gap": 4.9950982010941794e-06
+    },
+    {
+      "state": 515,
+      "occupancy": 0.016436257662047468,
+      "supported_gap": 8.215893039894022e-05,
+      "unsupported_gap": 1.3082245090074449e-05
+    },
+    {
+      "state": 516,
+      "occupancy": 0.007895315823920545,
+      "supported_gap": 9.405270924688079e-05,
+      "unsupported_gap": 0.0002801986962979996
+    },
+    {
+      "state": 517,
+      "occupancy": 0.004728370693820696,
+      "supported_gap": 0.0001289562106973965,
+      "unsupported_gap": 9.068813150478022e-05
+    },
+    {
+      "state": 518,
+      "occupancy": 0.004100042168251753,
+      "supported_gap": 3.306340478661784e-05,
+      "unsupported_gap": 3.778674832756312e-05
+    },
+    {
+      "state": 519,
+      "occupancy": 0.02549140059935963,
+      "supported_gap": 0.00014518133960985755,
+      "unsupported_gap": 1.091299383230156e-05
+    },
+    {
+      "state": 520,
+      "occupancy": 0.008473308455833191,
+      "supported_gap": 0.00019954723229256426,
+      "unsupported_gap": 6.0606391822497986e-05
+    },
+    {
+      "state": 521,
+      "occupancy": 0.01920618347698212,
+      "supported_gap": 6.803089729235675e-05,
+      "unsupported_gap": 1.6928980089888478e-06
+    },
+    {
+      "state": 522,
+      "occupancy": 0.014671092466494826,
+      "supported_gap": 0.0004434139095363392,
+      "unsupported_gap": 9.847990857787344e-05
+    },
+    {
+      "state": 523,
+      "occupancy": 0.008792715009683271,
+      "supported_gap": 7.001620440569846e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 524,
+      "occupancy": 0.008204276864112472,
+      "supported_gap": 0.000141239020605319,
+      "unsupported_gap": 1.1217478355847322e-05
+    },
+    {
+      "state": 525,
+      "occupancy": 0.004711071959546423,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 526,
+      "occupancy": 0.023473182371974984,
+      "supported_gap": 0.000238285780372059,
+      "unsupported_gap": 7.476492359695345e-05
+    },
+    {
+      "state": 527,
+      "occupancy": 0.004765799970903596,
+      "supported_gap": 2.602416454837957e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 528,
+      "occupancy": 0.014609288241088116,
+      "supported_gap": 4.937630101720408e-05,
+      "unsupported_gap": 3.756892468700373e-05
+    },
+    {
+      "state": 529,
+      "occupancy": 0.001310782346206913,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 530,
+      "occupancy": 0.015364837358229846,
+      "supported_gap": 0.00013205222746582757,
+      "unsupported_gap": 5.5325413547265276e-05
+    },
+    {
+      "state": 531,
+      "occupancy": 0.010117783008691022,
+      "supported_gap": 8.646383779634645e-05,
+      "unsupported_gap": 8.278737396945494e-06
+    },
+    {
+      "state": 532,
+      "occupancy": 0.010443928991694754,
+      "supported_gap": 2.175942420800691e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 533,
+      "occupancy": 0.010498812645698304,
+      "supported_gap": 4.322199959974899e-05,
+      "unsupported_gap": 7.109206378636506e-06
+    },
+    {
+      "state": 534,
+      "occupancy": 0.008639619735108078,
+      "supported_gap": 6.696865543748914e-05,
+      "unsupported_gap": 2.9298786753902698e-05
+    },
+    {
+      "state": 535,
+      "occupancy": 0.01282337658508629,
+      "supported_gap": 0.00011964982061461548,
+      "unsupported_gap": 5.7561627528625485e-05
+    },
+    {
+      "state": 536,
+      "occupancy": 0.01561921736211025,
+      "supported_gap": 6.796668328423653e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 537,
+      "occupancy": 0.00743586590399448,
+      "supported_gap": 7.387415000853431e-05,
+      "unsupported_gap": 1.2570926265299496e-05
+    },
+    {
+      "state": 538,
+      "occupancy": 0.004774131586727152,
+      "supported_gap": 0.0,
+      "unsupported_gap": 7.067134413566289e-20
+    },
+    {
+      "state": 539,
+      "occupancy": 0.012663116321945956,
+      "supported_gap": 1.503191543103272e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 540,
+      "occupancy": 0.007447799580009283,
+      "supported_gap": 0.00011411691988450362,
+      "unsupported_gap": 3.401882353830479e-05
+    },
+    {
+      "state": 541,
+      "occupancy": 0.006490719601937205,
+      "supported_gap": 0.0,
+      "unsupported_gap": 9.854559109000364e-20
+    },
+    {
+      "state": 542,
+      "occupancy": 0.014470226261840762,
+      "supported_gap": 3.7927603789001196e-05,
+      "unsupported_gap": 1.7241844504841715e-05
+    },
+    {
+      "state": 543,
+      "occupancy": 0.0030862191015142027,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 544,
+      "occupancy": 0.02411613251031776,
+      "supported_gap": 0.0003000485703296991,
+      "unsupported_gap": 1.0091358191770937e-05
+    },
+    {
+      "state": 545,
+      "occupancy": 0.007498677083606039,
+      "supported_gap": 2.8665537418686953e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 546,
+      "occupancy": 0.012407878014487835,
+      "supported_gap": 0.00024375580847836386,
+      "unsupported_gap": 9.256760274096004e-05
+    },
+    {
+      "state": 547,
+      "occupancy": 0.01427731799481984,
+      "supported_gap": 0.0,
+      "unsupported_gap": 8.765533917646484e-20
+    },
+    {
+      "state": 548,
+      "occupancy": 0.016067250543679013,
+      "supported_gap": 0.00015731753862496597,
+      "unsupported_gap": 2.8579275335749702e-05
+    },
+    {
+      "state": 549,
+      "occupancy": 0.013339796684365225,
+      "supported_gap": 8.682979033024805e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 550,
+      "occupancy": 0.003035656520526731,
+      "supported_gap": 1.2875134379105285e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 551,
+      "occupancy": 0.010612763385098535,
+      "supported_gap": 0.0002492232348886661,
+      "unsupported_gap": 3.954643704774093e-05
+    },
+    {
+      "state": 552,
+      "occupancy": 0.009277432461294761,
+      "supported_gap": 5.624172108294836e-05,
+      "unsupported_gap": 3.229631736255904e-05
+    },
+    {
+      "state": 553,
+      "occupancy": 0.003226734105113994,
+      "supported_gap": 4.3853449887361595e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 554,
+      "occupancy": 0.006998086365213172,
+      "supported_gap": 0.0,
+      "unsupported_gap": 6.38583831039044e-19
+    },
+    {
+      "state": 555,
+      "occupancy": 0.009387178760923575,
+      "supported_gap": 6.899100370309406e-05,
+      "unsupported_gap": 1.5827660628657552e-06
+    },
+    {
+      "state": 556,
+      "occupancy": 0.01856366089312576,
+      "supported_gap": 0.00037821750668598893,
+      "unsupported_gap": 2.5239101399043933e-05
+    },
+    {
+      "state": 557,
+      "occupancy": 0.0022367040894143023,
+      "supported_gap": 4.483628462699033e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 558,
+      "occupancy": 0.01246284376765735,
+      "supported_gap": 0.00011564201765269663,
+      "unsupported_gap": 9.875566791435027e-06
+    },
+    {
+      "state": 559,
+      "occupancy": 0.011295342165751173,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.5240957937268017e-19
+    },
+    {
+      "state": 560,
+      "occupancy": 0.011314131171006422,
+      "supported_gap": 0.00021275885306611215,
+      "unsupported_gap": 2.41180659738821e-05
+    },
+    {
+      "state": 561,
+      "occupancy": 0.013389953109499936,
+      "supported_gap": 4.2755926634284705e-05,
+      "unsupported_gap": 1.0033659569235503e-06
+    },
+    {
+      "state": 562,
+      "occupancy": 0.010637372035132113,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 563,
+      "occupancy": 0.011950830551156545,
+      "supported_gap": 7.979851992373537e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 564,
+      "occupancy": 0.0077813399102213835,
+      "supported_gap": 0.00019436493644052225,
+      "unsupported_gap": 3.234410615261981e-05
+    },
+    {
+      "state": 565,
+      "occupancy": 0.005012579293867478,
+      "supported_gap": 8.526969663379393e-07,
+      "unsupported_gap": 4.860372708126254e-07
+    },
+    {
+      "state": 566,
+      "occupancy": 0.009681843569053291,
+      "supported_gap": 0.00021096598083102826,
+      "unsupported_gap": 5.395496733565178e-05
+    },
+    {
+      "state": 567,
+      "occupancy": 0.009459499263220693,
+      "supported_gap": 0.00022615336244168207,
+      "unsupported_gap": 0.00014495390032654625
+    },
+    {
+      "state": 568,
+      "occupancy": 0.017593090759363224,
+      "supported_gap": 0.0002081862442180595,
+      "unsupported_gap": 2.8945569849075863e-05
+    },
+    {
+      "state": 569,
+      "occupancy": 0.015414395980594953,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.256030629603375e-19
+    },
+    {
+      "state": 570,
+      "occupancy": 0.016841412829026885,
+      "supported_gap": 0.00011856105752451634,
+      "unsupported_gap": 1.8104496035856184e-05
+    },
+    {
+      "state": 571,
+      "occupancy": 0.019425511093500967,
+      "supported_gap": 0.00020488464455345646,
+      "unsupported_gap": 1.3210483876906781e-05
+    },
+    {
+      "state": 572,
+      "occupancy": 0.010097335454418698,
+      "supported_gap": 0.00011579461783103907,
+      "unsupported_gap": 3.2056144721418964e-05
+    },
+    {
+      "state": 573,
+      "occupancy": 0.010396266589911458,
+      "supported_gap": 0.0003155880119545642,
+      "unsupported_gap": 0.00016824871410234151
+    },
+    {
+      "state": 574,
+      "occupancy": 0.016249185794965527,
+      "supported_gap": 1.4172136950681948e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 575,
+      "occupancy": 0.004544905358840584,
+      "supported_gap": 0.00019491119496432325,
+      "unsupported_gap": 3.226570457179698e-05
+    },
+    {
+      "state": 576,
+      "occupancy": 0.0054828349926632405,
+      "supported_gap": 1.0025926480829792e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 577,
+      "occupancy": 0.011801353297210016,
+      "supported_gap": 9.07891347094949e-05,
+      "unsupported_gap": 3.560283413065106e-05
+    },
+    {
+      "state": 578,
+      "occupancy": 0.005238440183601795,
+      "supported_gap": 3.3573240314975266e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 579,
+      "occupancy": 0.012872050800571352,
+      "supported_gap": 0.0002702752413546052,
+      "unsupported_gap": 6.205289317511463e-05
+    },
+    {
+      "state": 580,
+      "occupancy": 0.014969715548637762,
+      "supported_gap": 0.00017321123882649996,
+      "unsupported_gap": 1.666149689796044e-05
+    },
+    {
+      "state": 581,
+      "occupancy": 0.02055877587309806,
+      "supported_gap": 0.00011138957910769828,
+      "unsupported_gap": 9.693213143220601e-06
+    },
+    {
+      "state": 582,
+      "occupancy": 0.013987878499774934,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.996138801965467e-19
+    },
+    {
+      "state": 583,
+      "occupancy": 0.002920089558473881,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 584,
+      "occupancy": 0.019784507122057926,
+      "supported_gap": 0.0006038992856472311,
+      "unsupported_gap": 9.171926807477864e-05
+    },
+    {
+      "state": 585,
+      "occupancy": 0.004897528719770836,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 586,
+      "occupancy": 0.004627750032999463,
+      "supported_gap": 0.0,
+      "unsupported_gap": 8.625561802441908e-20
+    },
+    {
+      "state": 587,
+      "occupancy": 0.012460842357997153,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 588,
+      "occupancy": 0.008299146892266825,
+      "supported_gap": 0.00022041377023440602,
+      "unsupported_gap": 0.00014588221024459456
+    },
+    {
+      "state": 589,
+      "occupancy": 0.009095043266446666,
+      "supported_gap": 6.078378685593028e-06,
+      "unsupported_gap": 6.897332892480024e-07
+    },
+    {
+      "state": 590,
+      "occupancy": 0.0078053506483128044,
+      "supported_gap": 0.0001675517872388554,
+      "unsupported_gap": 6.0647088913894955e-05
+    },
+    {
+      "state": 591,
+      "occupancy": 0.015250533025237345,
+      "supported_gap": 0.00015863721767958667,
+      "unsupported_gap": 4.896106863847129e-05
+    },
+    {
+      "state": 592,
+      "occupancy": 0.00753108907391211,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 593,
+      "occupancy": 0.00586332132612566,
+      "supported_gap": 6.405440827647768e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 594,
+      "occupancy": 0.0061203742217196344,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.728952647712116e-20
+    },
+    {
+      "state": 595,
+      "occupancy": 0.0007072515476533682,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 596,
+      "occupancy": 0.007634928329668574,
+      "supported_gap": 1.539763025822262e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 597,
+      "occupancy": 0.008555947453879288,
+      "supported_gap": 2.8343019946303208e-05,
+      "unsupported_gap": 7.416275872819761e-06
+    },
+    {
+      "state": 598,
+      "occupancy": 0.013053718041168146,
+      "supported_gap": 5.850903239776305e-05,
+      "unsupported_gap": 8.646241114771261e-06
+    },
+    {
+      "state": 599,
+      "occupancy": 0.00859371917754082,
+      "supported_gap": 6.655315881935811e-05,
+      "unsupported_gap": 2.1408961051937944e-05
+    },
+    {
+      "state": 600,
+      "occupancy": 0.00812834479249245,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.281554742078948e-20
+    },
+    {
+      "state": 601,
+      "occupancy": 0.012000316998876362,
+      "supported_gap": 0.00013497642206624296,
+      "unsupported_gap": 1.6413162806092497e-05
+    },
+    {
+      "state": 602,
+      "occupancy": 0.01599065671700295,
+      "supported_gap": 7.809548095343207e-05,
+      "unsupported_gap": 2.503332975608577e-05
+    },
+    {
+      "state": 603,
+      "occupancy": 0.008644351150355134,
+      "supported_gap": 0.00019979047989570806,
+      "unsupported_gap": 0.0001743993014147688
+    },
+    {
+      "state": 604,
+      "occupancy": 0.006217270227457373,
+      "supported_gap": 5.8067479225309065e-05,
+      "unsupported_gap": 2.1693384315994912e-05
+    },
+    {
+      "state": 605,
+      "occupancy": 0.012252350230754326,
+      "supported_gap": 1.6326285567435942e-05,
+      "unsupported_gap": 4.143378555946485e-06
+    },
+    {
+      "state": 606,
+      "occupancy": 0.013263352919445096,
+      "supported_gap": 0.00012015024076708789,
+      "unsupported_gap": 1.5340669015249773e-05
+    },
+    {
+      "state": 607,
+      "occupancy": 0.0032296771612754264,
+      "supported_gap": 3.9851234584944055e-05,
+      "unsupported_gap": 0.00010596805560087458
+    },
+    {
+      "state": 608,
+      "occupancy": 0.0029150831606792856,
+      "supported_gap": 0.0,
+      "unsupported_gap": 5.0274057377603377e-20
+    },
+    {
+      "state": 609,
+      "occupancy": 0.0069637353773716855,
+      "supported_gap": 0.0001064251086103162,
+      "unsupported_gap": 7.756160309171537e-05
+    },
+    {
+      "state": 610,
+      "occupancy": 0.00742726073172364,
+      "supported_gap": 0.0,
+      "unsupported_gap": 9.021789796776665e-21
+    },
+    {
+      "state": 611,
+      "occupancy": 0.0035247182001721315,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 612,
+      "occupancy": 0.002720036106092421,
+      "supported_gap": 0.00011288006567755216,
+      "unsupported_gap": 5.976003477046879e-05
+    },
+    {
+      "state": 613,
+      "occupancy": 0.004153405416283708,
+      "supported_gap": 2.4023522773891067e-06,
+      "unsupported_gap": 1.2312055421620054e-06
+    },
+    {
+      "state": 614,
+      "occupancy": 0.020503939519721702,
+      "supported_gap": 0.00018870913902184342,
+      "unsupported_gap": 1.238612079404332e-05
+    },
+    {
+      "state": 615,
+      "occupancy": 0.0042412925254163,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 616,
+      "occupancy": 0.008414176922650103,
+      "supported_gap": 5.53633551324877e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 617,
+      "occupancy": 0.009644578048656012,
+      "supported_gap": 7.062730083145759e-05,
+      "unsupported_gap": 2.065370093046321e-05
+    },
+    {
+      "state": 618,
+      "occupancy": 0.007088200983360216,
+      "supported_gap": 2.2539756455508e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 619,
+      "occupancy": 0.006646873017209794,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.0120454961085704e-20
+    },
+    {
+      "state": 620,
+      "occupancy": 0.015427576737863415,
+      "supported_gap": 4.8437813693208656e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 621,
+      "occupancy": 0.009658561526790888,
+      "supported_gap": 5.925286179343528e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 622,
+      "occupancy": 0.020185856001134074,
+      "supported_gap": 0.0005761929657622236,
+      "unsupported_gap": 7.256028298531793e-05
+    },
+    {
+      "state": 623,
+      "occupancy": 0.02165103487652921,
+      "supported_gap": 0.000292341991570017,
+      "unsupported_gap": 4.760286514379212e-06
+    },
+    {
+      "state": 624,
+      "occupancy": 0.007240286530265118,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.481844693441076e-19
+    },
+    {
+      "state": 625,
+      "occupancy": 0.020659677802954957,
+      "supported_gap": 0.0,
+      "unsupported_gap": 2.8473331007393203e-19
+    },
+    {
+      "state": 626,
+      "occupancy": 0.011137056213552918,
+      "supported_gap": 2.3876500315535943e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 627,
+      "occupancy": 0.00398090024657403,
+      "supported_gap": 1.0893809591525754e-05,
+      "unsupported_gap": 2.3617074156371257e-05
+    },
+    {
+      "state": 628,
+      "occupancy": 0.01826052835031196,
+      "supported_gap": 9.253936653176494e-05,
+      "unsupported_gap": 5.6071788871795376e-06
+    },
+    {
+      "state": 629,
+      "occupancy": 0.012527306184819875,
+      "supported_gap": 0.00039007808192079526,
+      "unsupported_gap": 0.00019335263027820575
+    },
+    {
+      "state": 630,
+      "occupancy": 0.007750984581716186,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 631,
+      "occupancy": 0.01502285810611584,
+      "supported_gap": 1.5510406622121484e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 632,
+      "occupancy": 0.009167575959754435,
+      "supported_gap": 2.847467281711304e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 633,
+      "occupancy": 0.02080308710781085,
+      "supported_gap": 3.083748274608414e-05,
+      "unsupported_gap": 2.0343131472620763e-06
+    },
+    {
+      "state": 634,
+      "occupancy": 0.018234424125298198,
+      "supported_gap": 0.00021978213675783378,
+      "unsupported_gap": 1.856332244487533e-06
+    },
+    {
+      "state": 635,
+      "occupancy": 0.02823648695332041,
+      "supported_gap": 0.0001774456320283019,
+      "unsupported_gap": 5.531095540228763e-06
+    },
+    {
+      "state": 636,
+      "occupancy": 0.01902678734959624,
+      "supported_gap": 0.0002651644914752095,
+      "unsupported_gap": 2.9199454547206938e-05
+    },
+    {
+      "state": 637,
+      "occupancy": 0.02128583062624136,
+      "supported_gap": 0.00032222551500709305,
+      "unsupported_gap": 3.4380396179088206e-05
+    },
+    {
+      "state": 638,
+      "occupancy": 0.009410227847991658,
+      "supported_gap": 0.00013648516814648276,
+      "unsupported_gap": 5.244171830996474e-05
+    },
+    {
+      "state": 639,
+      "occupancy": 0.009760752603792637,
+      "supported_gap": 0.00016427654538866125,
+      "unsupported_gap": 4.984856409889858e-05
+    },
+    {
+      "state": 640,
+      "occupancy": 0.016269429088607082,
+      "supported_gap": 7.813457390363922e-05,
+      "unsupported_gap": 2.9855302424011402e-05
+    },
+    {
+      "state": 641,
+      "occupancy": 0.014620915099351622,
+      "supported_gap": 0.0002066946380340808,
+      "unsupported_gap": 2.4595488279685288e-05
+    },
+    {
+      "state": 642,
+      "occupancy": 0.007811026893255588,
+      "supported_gap": 0.00010222136999606438,
+      "unsupported_gap": 3.902155103337729e-05
+    },
+    {
+      "state": 643,
+      "occupancy": 0.00884819250959866,
+      "supported_gap": 0.000126369029284144,
+      "unsupported_gap": 8.357740032020768e-06
+    },
+    {
+      "state": 644,
+      "occupancy": 0.0038538469169615793,
+      "supported_gap": 0.00015591639294678983,
+      "unsupported_gap": 0.00018572393865720526
+    },
+    {
+      "state": 645,
+      "occupancy": 0.01148058874268281,
+      "supported_gap": 7.447982080298996e-05,
+      "unsupported_gap": 1.4214473970411884e-05
+    },
+    {
+      "state": 646,
+      "occupancy": 0.008952799449818537,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 647,
+      "occupancy": 0.028811557579918365,
+      "supported_gap": 0.00021218030162606792,
+      "unsupported_gap": 1.8809624560957707e-06
+    },
+    {
+      "state": 648,
+      "occupancy": 0.015050098674804082,
+      "supported_gap": 0.0001160414572385082,
+      "unsupported_gap": 1.087039412070349e-06
+    },
+    {
+      "state": 649,
+      "occupancy": 0.010248550274427379,
+      "supported_gap": 6.860713722156369e-05,
+      "unsupported_gap": 2.8867846842777197e-05
+    },
+    {
+      "state": 650,
+      "occupancy": 0.007394473588661755,
+      "supported_gap": 0.00016631145812311137,
+      "unsupported_gap": 0.00013583809589352242
+    },
+    {
+      "state": 651,
+      "occupancy": 0.017605317047016424,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.8903122187063255e-19
+    },
+    {
+      "state": 652,
+      "occupancy": 0.0036805880318011995,
+      "supported_gap": 7.127935863753318e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 653,
+      "occupancy": 0.009162037832078905,
+      "supported_gap": 9.773716887859087e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 654,
+      "occupancy": 0.005143696796661993,
+      "supported_gap": 3.693851220811641e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 655,
+      "occupancy": 0.01912603703414265,
+      "supported_gap": 0.00014728888420202857,
+      "unsupported_gap": 1.83632817565242e-05
+    },
+    {
+      "state": 656,
+      "occupancy": 0.02544080342398159,
+      "supported_gap": 9.237890311130586e-05,
+      "unsupported_gap": 5.548976298577403e-06
+    },
+    {
+      "state": 657,
+      "occupancy": 0.011462754500874108,
+      "supported_gap": 6.326326021009611e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 658,
+      "occupancy": 0.012322685677701797,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 659,
+      "occupancy": 0.00825415568154026,
+      "supported_gap": 4.321908522883982e-05,
+      "unsupported_gap": 1.3507738922161944e-05
+    },
+    {
+      "state": 660,
+      "occupancy": 0.017063226966453477,
+      "supported_gap": 6.407223790615324e-05,
+      "unsupported_gap": 2.0332807845134708e-05
+    },
+    {
+      "state": 661,
+      "occupancy": 0.025208668446328037,
+      "supported_gap": 6.906527427368814e-05,
+      "unsupported_gap": 3.6537768013948394e-06
+    },
+    {
+      "state": 662,
+      "occupancy": 0.01651829503218227,
+      "supported_gap": 0.00026488104567035597,
+      "unsupported_gap": 4.900634192648915e-06
+    },
+    {
+      "state": 663,
+      "occupancy": 0.004041906518526474,
+      "supported_gap": 0.0,
+      "unsupported_gap": 7.872662596930874e-19
+    },
+    {
+      "state": 664,
+      "occupancy": 0.007967343999346283,
+      "supported_gap": 5.1838276062609723e-05,
+      "unsupported_gap": 1.2711832991039836e-05
+    },
+    {
+      "state": 665,
+      "occupancy": 0.010284587904632441,
+      "supported_gap": 2.2463471194215263e-05,
+      "unsupported_gap": 2.513769395543121e-05
+    },
+    {
+      "state": 666,
+      "occupancy": 0.016502026525177526,
+      "supported_gap": 0.00019982084849395397,
+      "unsupported_gap": 4.9762678659138377e-05
+    },
+    {
+      "state": 667,
+      "occupancy": 0.009440375840615318,
+      "supported_gap": 4.018581863326819e-05,
+      "unsupported_gap": 3.585172907765155e-05
+    },
+    {
+      "state": 668,
+      "occupancy": 0.003374155980295791,
+      "supported_gap": 2.850332615362172e-05,
+      "unsupported_gap": 4.682689296666426e-05
+    },
+    {
+      "state": 669,
+      "occupancy": 0.018876175191894804,
+      "supported_gap": 0.0003044605056329601,
+      "unsupported_gap": 2.314174123348861e-05
+    },
+    {
+      "state": 670,
+      "occupancy": 0.020102294810649176,
+      "supported_gap": 0.00022340158552657509,
+      "unsupported_gap": 5.638698747193024e-06
+    },
+    {
+      "state": 671,
+      "occupancy": 0.01396761838996035,
+      "supported_gap": 0.00012371132942146966,
+      "unsupported_gap": 1.230765930668717e-05
+    },
+    {
+      "state": 672,
+      "occupancy": 0.020017274008904695,
+      "supported_gap": 0.0003294218377059227,
+      "unsupported_gap": 7.434878285590224e-05
+    },
+    {
+      "state": 673,
+      "occupancy": 0.015495502904777145,
+      "supported_gap": 6.702260635366839e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 674,
+      "occupancy": 0.021887970226547634,
+      "supported_gap": 0.00021820893063502706,
+      "unsupported_gap": 3.750066781719464e-05
+    },
+    {
+      "state": 675,
+      "occupancy": 0.028627470049772393,
+      "supported_gap": 0.00021183287949121771,
+      "unsupported_gap": 2.1651579196085522e-05
+    },
+    {
+      "state": 676,
+      "occupancy": 0.015390668945819691,
+      "supported_gap": 0.00014740889771295461,
+      "unsupported_gap": 7.10969315542754e-05
+    },
+    {
+      "state": 677,
+      "occupancy": 0.010718520832814582,
+      "supported_gap": 0.00026727545075286134,
+      "unsupported_gap": 7.501504515029642e-06
+    },
+    {
+      "state": 678,
+      "occupancy": 0.019633671036841407,
+      "supported_gap": 6.39945966415869e-05,
+      "unsupported_gap": 1.99530208145299e-06
+    },
+    {
+      "state": 679,
+      "occupancy": 0.00989899088823827,
+      "supported_gap": 1.3770506696548418e-05,
+      "unsupported_gap": 3.4426266741371718e-06
+    },
+    {
+      "state": 680,
+      "occupancy": 0.012071207942172502,
+      "supported_gap": 0.00010925325462263535,
+      "unsupported_gap": 1.5589713524022476e-05
+    },
+    {
+      "state": 681,
+      "occupancy": 0.020252025264661154,
+      "supported_gap": 2.1940964666657112e-17,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 682,
+      "occupancy": 0.008271908411683853,
+      "supported_gap": 4.676551728123193e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 683,
+      "occupancy": 0.009079846646124866,
+      "supported_gap": 0.00013443295536250246,
+      "unsupported_gap": 2.5934073214713446e-05
+    },
+    {
+      "state": 684,
+      "occupancy": 0.002736915382496487,
+      "supported_gap": 5.919324300191624e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 685,
+      "occupancy": 0.0075349492141785655,
+      "supported_gap": 0.00010627252037332051,
+      "unsupported_gap": 4.737184513945325e-05
+    },
+    {
+      "state": 686,
+      "occupancy": 0.008561886174620606,
+      "supported_gap": 0.00015465355081485844,
+      "unsupported_gap": 0.00016846252453477607
+    },
+    {
+      "state": 687,
+      "occupancy": 0.007996432405536182,
+      "supported_gap": 8.489957301857011e-19,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 688,
+      "occupancy": 0.005694144207805836,
+      "supported_gap": 6.16600163869331e-05,
+      "unsupported_gap": 3.936754892396455e-05
+    },
+    {
+      "state": 689,
+      "occupancy": 0.014332367653279825,
+      "supported_gap": 0.0,
+      "unsupported_gap": 6.273923400333838e-19
+    },
+    {
+      "state": 690,
+      "occupancy": 0.016847086158879927,
+      "supported_gap": 0.00011351892550660489,
+      "unsupported_gap": 3.6944615107506384e-05
+    },
+    {
+      "state": 691,
+      "occupancy": 0.008599936088436294,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 692,
+      "occupancy": 0.009834640495802124,
+      "supported_gap": 0.0,
+      "unsupported_gap": 4.0745961300899763e-19
+    },
+    {
+      "state": 693,
+      "occupancy": 0.017951817150242955,
+      "supported_gap": 0.00013732366695498726,
+      "unsupported_gap": 3.129157906752574e-05
+    },
+    {
+      "state": 694,
+      "occupancy": 0.017545721843490222,
+      "supported_gap": 5.760754403378673e-18,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 695,
+      "occupancy": 0.009452985118242954,
+      "supported_gap": 0.0,
+      "unsupported_gap": 7.899403452471612e-20
+    },
+    {
+      "state": 696,
+      "occupancy": 0.00501231991379517,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 697,
+      "occupancy": 0.005515816761962109,
+      "supported_gap": 5.278377971937429e-05,
+      "unsupported_gap": 7.603377792909788e-05
+    },
+    {
+      "state": 698,
+      "occupancy": 0.021877850086216077,
+      "supported_gap": 0.00019560375621727522,
+      "unsupported_gap": 4.001776790252802e-05
+    },
+    {
+      "state": 699,
+      "occupancy": 0.0026976715591416132,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 700,
+      "occupancy": 0.019782828223013735,
+      "supported_gap": 9.19602000134397e-05,
+      "unsupported_gap": 3.2511668302983746e-06
+    },
+    {
+      "state": 701,
+      "occupancy": 0.005770959760545789,
+      "supported_gap": 6.284391778726152e-05,
+      "unsupported_gap": 8.21063877920803e-06
+    },
+    {
+      "state": 702,
+      "occupancy": 0.015139099198865393,
+      "supported_gap": 0.00019555804033761901,
+      "unsupported_gap": 2.0218950416483987e-05
+    },
+    {
+      "state": 703,
+      "occupancy": 0.02889070980649933,
+      "supported_gap": 0.0003249612380721458,
+      "unsupported_gap": 9.16578400970301e-05
+    },
+    {
+      "state": 704,
+      "occupancy": 0.004535132495465825,
+      "supported_gap": 0.0,
+      "unsupported_gap": 0.0
+    },
+    {
+      "state": 705,
+      "occupancy": 0.018814938563448336,
+      "supported_gap": 0.00017197614901746485,
+      "unsupported_gap": 4.707532354615779e-05
+    },
+    {
+      "state": 706,
+      "occupancy": 0.02597852612128976,
+      "supported_gap": 0.0001757895089861199,
+      "unsupported_gap": 7.840378933744642e-06
+    },
+    {
+      "state": 707,
+      "occupancy": 0.013110804010888696,
+      "supported_gap": 0.00024316345983478328,
+      "unsupported_gap": 4.1293147820287334e-05
+    },
+    {
+      "state": 708,
+      "occupancy": 0.015684517171890244,
+      "supported_gap": 0.0,
+      "unsupported_gap": 3.881948556067782e-19
+    },
+    {
+      "state": 709,
+      "occupancy": 0.03232683755701814,
+      "supported_gap": 0.00044398846824892887,
+      "unsupported_gap": 1.0700322992151182e-05
+    },
+    {
+      "state": 710,
+      "occupancy": 0.018822023747227547,
+      "supported_gap": 0.0002152377244292441,
+      "unsupported_gap": 1.4167393952979275e-06
+    },
+    {
+      "state": 711,
+      "occupancy": 0.01182540558823256,
+      "supported_gap": 5.301896268712739e-05,
+      "unsupported_gap": 1.5123240552194111e-05
+    },
+    {
+      "state": 712,
+      "occupancy": 0.007927208709368682,
+      "supported_gap": 0.0,
+      "unsupported_gap": 1.1047242213577632e-19
+    }
+  ],
+  "limits": "unsupported transitionrows are modelmeanfill,not observedoutcomes;modelgap attribution not causalclinicalharm,treatmentbenefit or safety;admissibility estimator support not safety;finite table precision not independent clinical evidence"
+}
