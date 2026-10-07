@@ -404,5 +404,32 @@ The cited public sources are linked at their respective analyses above. Source a
 \input{native_multiseed_sec}
 \input{native_dutycycle_sec}
 \input{native_phase_sec}
+
+\section{Saved native trajectories: time-window accounting}
+A frozen retrospective plan at head \texttt{40221fd} reanalyses all eight saved 120-step records for seeds 1561 and 1931 and policies OFF, ON, phase0 and phase1. It adds no new dynamics run. The seeds were selected after known 60-step reversals; they are not an independent held-out population. Windows are fixed before this reanalysis at four consecutive 30-step intervals, the first and second 60-step halves, and the full 120 steps. All records are checked against their original plan, source commit, seed, policy, exact action schedule, finite rewards and reward/action summaries before analysis.
+
+The beta proxy for a window is reconstructed as the average of $-r_t-.05a_t$, with $a_t$ the binary action. Its associated cost is five times the number of ON actions, a voltage-step magnitude rather than joules. For phase0, thirty-step windows alternate sixteen and fourteen ON actions; phase1 has fifteen in each tested quarter. Costs therefore follow the exact action ledger rather than a silently rounded duty fraction. All four quarter-window means and costs reconcile exactly to the full-horizon accounting.
+
+\begin{center}
+\begin{tabular}{rrrrrr}
+\toprule
+Seed & Steps & OFF beta & ON beta & Phase0 beta & Phase1 beta\\
+\midrule
+1561 & 0--30 & 27.8319 & 27.6475 & 28.0943 & 27.9299\\
+1561 & 30--60 & 25.5580 & 25.0871 & 25.5585 & 25.1561\\
+1561 & 60--90 & 19.2720 & 17.5992 & 21.1057 & 20.1610\\
+1561 & 90--120 & 13.4973 & 4.7941 & 9.2051 & 8.0171\\
+1931 & 0--30 & 16.0781 & 16.4170 & 15.8349 & 15.7763\\
+1931 & 30--60 & 16.9046 & 15.9689 & 15.0248 & 15.0688\\
+1931 & 60--90 & 16.0932 & 13.9938 & 13.3704 & 13.3671\\
+1931 & 90--120 & 9.2459 & 6.1392 & 4.6150 & 4.4996\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For seed 1561, phase0 is above both constant-policy beta means in each of the first three quarter-windows, but between them in the final quarter. Phase1 is above both in the first and third quarter, between them otherwise. Both phases are between the constant policies in the full 120-step average. For seed 1931, both phases remain below both constants in every specified window, including the full average. Thus the first seed's aggregate hides within-run ordering changes, while the second retains its tested ordering. Neither establishes a universal phase advantage or a stationary regime. The windows overlap and share a trajectory; they cannot be treated as independent replications.
+
+The complete fourteen seed/window rows, exact costs, full-precision means, ordering comparisons and eight source-record hashes are in \path{results/native_window_audit.json}, with the frozen plan and runner in \path{src/native_window_plan.json} and \path{src/native_window_audit.py}. Tests reproduce every row, reconcile disjoint quarter windows with the full average and reject tampered schedules, identities, rewards or accounting. This remains a selected-seed native-model sensitivity analysis, not learned-control validation, clinical benefit, solver convergence or physiological steady state. The manuscript content-page gate remains uncertified.
+
 \input{appendix}
 \end{document}

@@ -1,0 +1,622 @@
+{
+  "plan_sha256": "352617fb64e71bf48674c52262d2510e9027a221f7a324fee8374f1960e08e53",
+  "source_records": [
+    {
+      "seed": 1561,
+      "policy": "off",
+      "record_sha256": "65d54642f0f92710525375012cda4a7e27548d97494acdc8eabc91f30d2d7c78"
+    },
+    {
+      "seed": 1561,
+      "policy": "on",
+      "record_sha256": "80fc595e824ad643ad8e4e78d7fb1f562212022d53de71869eb647e52cfb1201"
+    },
+    {
+      "seed": 1561,
+      "policy": "phase0",
+      "record_sha256": "2edba659bfef2e0f308e34cab68e37798bdcb85762b34a95ef148ce7f10d1e16"
+    },
+    {
+      "seed": 1561,
+      "policy": "phase1",
+      "record_sha256": "ceeb3008621e528c09478eec533da45cd9f7ee724bf7fad9bbf9b9bb25b3528c"
+    },
+    {
+      "seed": 1931,
+      "policy": "off",
+      "record_sha256": "ec11534c42f3c05595e28e61d8d758d9f5925338565a556ca03c5e858e0122de"
+    },
+    {
+      "seed": 1931,
+      "policy": "on",
+      "record_sha256": "9a5020267c5ebc030a41221176b7dac4b07348150d1af462cd178cc91b30d2d5"
+    },
+    {
+      "seed": 1931,
+      "policy": "phase0",
+      "record_sha256": "424ffdd73deb352c91ba262de7e421c88979adbc1d3dfbe110bc69c789f65b9f"
+    },
+    {
+      "seed": 1931,
+      "policy": "phase1",
+      "record_sha256": "34e9ba9bd1c129d8f244e4c5a9dd9aa5396d4381086e62f1ecf3c2e259453111"
+    }
+  ],
+  "rows": [
+    {
+      "seed": 1561,
+      "window": [
+        0,
+        30
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -27.831850814819337,
+          "mean_beta_component": 27.831850814819337,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -27.697469266255684,
+          "mean_beta_component": 27.647469266255698,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 150
+        },
+        "phase0": {
+          "mean_reward": -28.12099452972411,
+          "mean_beta_component": 28.094327863057455,
+          "on_fraction": 0.5333333333333333,
+          "voltage_step_magnitude": 80,
+          "beta_minus_off": 0.262477048238118,
+          "beta_minus_on": 0.4468585968017571,
+          "below_both": false,
+          "above_both": true
+        },
+        "phase1": {
+          "mean_reward": -27.95494651794433,
+          "mean_beta_component": 27.929946517944337,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 75,
+          "beta_minus_off": 0.09809570312500071,
+          "beta_minus_on": 0.2824772516886398,
+          "below_both": false,
+          "above_both": true
+        }
+      }
+    },
+    {
+      "seed": 1561,
+      "window": [
+        30,
+        60
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -25.55795389811198,
+          "mean_beta_component": 25.55795389811198,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -25.137107721964508,
+          "mean_beta_component": 25.087107721964518,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 150
+        },
+        "phase0": {
+          "mean_reward": -25.5818093363444,
+          "mean_beta_component": 25.55847600301107,
+          "on_fraction": 0.4666666666666667,
+          "voltage_step_magnitude": 70,
+          "beta_minus_off": 0.0005221048990904364,
+          "beta_minus_on": 0.4713682810465514,
+          "below_both": false,
+          "above_both": true
+        },
+        "phase1": {
+          "mean_reward": -25.18112602233886,
+          "mean_beta_component": 25.156126022338867,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 75,
+          "beta_minus_off": -0.40182787577311174,
+          "beta_minus_on": 0.0690183003743492,
+          "below_both": false,
+          "above_both": false
+        }
+      }
+    },
+    {
+      "seed": 1561,
+      "window": [
+        60,
+        90
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -19.27198371887207,
+          "mean_beta_component": 19.27198371887207,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -17.649198929468795,
+          "mean_beta_component": 17.59919892946879,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 150
+        },
+        "phase0": {
+          "mean_reward": -21.132382481892897,
+          "mean_beta_component": 21.105715815226237,
+          "on_fraction": 0.5333333333333333,
+          "voltage_step_magnitude": 80,
+          "beta_minus_off": 1.833732096354165,
+          "beta_minus_on": 3.5065168857574456,
+          "below_both": false,
+          "above_both": true
+        },
+        "phase1": {
+          "mean_reward": -20.185981146494544,
+          "mean_beta_component": 20.160981146494546,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 75,
+          "beta_minus_off": 0.8889974276224741,
+          "beta_minus_on": 2.5617822170257547,
+          "below_both": false,
+          "above_both": true
+        }
+      }
+    },
+    {
+      "seed": 1561,
+      "window": [
+        90,
+        120
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -13.497286065419514,
+          "mean_beta_component": 13.497286065419514,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -4.844143637021381,
+          "mean_beta_component": 4.794143637021382,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 150
+        },
+        "phase0": {
+          "mean_reward": -9.228455565770469,
+          "mean_beta_component": 9.205122232437134,
+          "on_fraction": 0.4666666666666667,
+          "voltage_step_magnitude": 70,
+          "beta_minus_off": -4.29216383298238,
+          "beta_minus_on": 4.410978595415751,
+          "below_both": false,
+          "above_both": false
+        },
+        "phase1": {
+          "mean_reward": -8.04206959406535,
+          "mean_beta_component": 8.01706959406535,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 75,
+          "beta_minus_off": -5.480216471354165,
+          "beta_minus_on": 3.222925957043967,
+          "below_both": false,
+          "above_both": false
+        }
+      }
+    },
+    {
+      "seed": 1561,
+      "window": [
+        0,
+        60
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -26.694902356465658,
+          "mean_beta_component": 26.694902356465658,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -26.417288494110082,
+          "mean_beta_component": 26.367288494110106,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 300
+        },
+        "phase0": {
+          "mean_reward": -26.851401933034246,
+          "mean_beta_component": 26.826401933034262,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 150,
+          "beta_minus_off": 0.13149957656860423,
+          "beta_minus_on": 0.459113438924156,
+          "below_both": false,
+          "above_both": true
+        },
+        "phase1": {
+          "mean_reward": -26.568036270141587,
+          "mean_beta_component": 26.543036270141602,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 150,
+          "beta_minus_off": -0.15186608632405552,
+          "beta_minus_on": 0.17574777603149627,
+          "below_both": false,
+          "above_both": false
+        }
+      }
+    },
+    {
+      "seed": 1561,
+      "window": [
+        60,
+        120
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -16.384634892145794,
+          "mean_beta_component": 16.384634892145794,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -11.246671283245066,
+          "mean_beta_component": 11.196671283245086,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 300
+        },
+        "phase0": {
+          "mean_reward": -15.180419023831671,
+          "mean_beta_component": 15.155419023831685,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 150,
+          "beta_minus_off": -1.2292158683141086,
+          "beta_minus_on": 3.958747740586599,
+          "below_both": false,
+          "above_both": false
+        },
+        "phase1": {
+          "mean_reward": -14.114025370279935,
+          "mean_beta_component": 14.089025370279948,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 150,
+          "beta_minus_off": -2.2956095218658454,
+          "beta_minus_on": 2.892354087034862,
+          "below_both": false,
+          "above_both": false
+        }
+      }
+    },
+    {
+      "seed": 1561,
+      "window": [
+        0,
+        120
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -21.539768624305726,
+          "mean_beta_component": 21.539768624305726,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -18.83197988867763,
+          "mean_beta_component": 18.781979888677597,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 600
+        },
+        "phase0": {
+          "mean_reward": -21.015910478432993,
+          "mean_beta_component": 20.990910478432973,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 300,
+          "beta_minus_off": -0.5488581458727531,
+          "beta_minus_on": 2.2089305897553757,
+          "below_both": false,
+          "above_both": false
+        },
+        "phase1": {
+          "mean_reward": -20.341030820210793,
+          "mean_beta_component": 20.316030820210774,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 300,
+          "beta_minus_off": -1.2237378040949523,
+          "beta_minus_on": 1.5340509315331765,
+          "below_both": false,
+          "above_both": false
+        }
+      }
+    },
+    {
+      "seed": 1931,
+      "window": [
+        0,
+        30
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -16.07813924153646,
+          "mean_beta_component": 16.07813924153646,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -16.467004458109546,
+          "mean_beta_component": 16.41700445810954,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 150
+        },
+        "phase0": {
+          "mean_reward": -15.861535129547123,
+          "mean_beta_component": 15.834868462880452,
+          "on_fraction": 0.5333333333333333,
+          "voltage_step_magnitude": 80,
+          "beta_minus_off": -0.24327077865600621,
+          "beta_minus_on": -0.5821359952290859,
+          "below_both": true,
+          "above_both": false
+        },
+        "phase1": {
+          "mean_reward": -15.801293468475345,
+          "mean_beta_component": 15.776293468475341,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 75,
+          "beta_minus_off": -0.3018457730611175,
+          "beta_minus_on": -0.6407109896341971,
+          "below_both": true,
+          "above_both": false
+        }
+      }
+    },
+    {
+      "seed": 1931,
+      "window": [
+        30,
+        60
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -16.90458526611328,
+          "mean_beta_component": 16.90458526611328,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -16.018883991241463,
+          "mean_beta_component": 15.968883991241455,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 150
+        },
+        "phase0": {
+          "mean_reward": -15.048158302307133,
+          "mean_beta_component": 15.024824968973796,
+          "on_fraction": 0.4666666666666667,
+          "voltage_step_magnitude": 70,
+          "beta_minus_off": -1.8797602971394838,
+          "beta_minus_on": -0.944059022267659,
+          "below_both": true,
+          "above_both": false
+        },
+        "phase1": {
+          "mean_reward": -15.093805249532068,
+          "mean_beta_component": 15.068805249532064,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 75,
+          "beta_minus_off": -1.8357800165812161,
+          "beta_minus_on": -0.9000787417093914,
+          "below_both": true,
+          "above_both": false
+        }
+      }
+    },
+    {
+      "seed": 1931,
+      "window": [
+        60,
+        90
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -16.093239084879556,
+          "mean_beta_component": 16.093239084879556,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -14.043829186757414,
+          "mean_beta_component": 13.993829186757406,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 150
+        },
+        "phase0": {
+          "mean_reward": -13.39706248601278,
+          "mean_beta_component": 13.37039581934611,
+          "on_fraction": 0.5333333333333333,
+          "voltage_step_magnitude": 80,
+          "beta_minus_off": -2.722843265533447,
+          "beta_minus_on": -0.6234333674112964,
+          "below_both": true,
+          "above_both": false
+        },
+        "phase1": {
+          "mean_reward": -13.392103544871016,
+          "mean_beta_component": 13.367103544871012,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 75,
+          "beta_minus_off": -2.726135540008544,
+          "beta_minus_on": -0.6267256418863933,
+          "below_both": true,
+          "above_both": false
+        }
+      }
+    },
+    {
+      "seed": 1931,
+      "window": [
+        90,
+        120
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -9.245902188618977,
+          "mean_beta_component": 9.245902188618977,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -6.189166847864789,
+          "mean_beta_component": 6.139166847864787,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 150
+        },
+        "phase0": {
+          "mean_reward": -4.6382941230138135,
+          "mean_beta_component": 4.614960789680481,
+          "on_fraction": 0.4666666666666667,
+          "voltage_step_magnitude": 70,
+          "beta_minus_off": -4.630941398938496,
+          "beta_minus_on": -1.5242060581843058,
+          "below_both": true,
+          "above_both": false
+        },
+        "phase1": {
+          "mean_reward": -4.524629020690918,
+          "mean_beta_component": 4.499629020690918,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 75,
+          "beta_minus_off": -4.746273167928059,
+          "beta_minus_on": -1.6395378271738688,
+          "below_both": true,
+          "above_both": false
+        }
+      }
+    },
+    {
+      "seed": 1931,
+      "window": [
+        0,
+        60
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -16.49136225382487,
+          "mean_beta_component": 16.49136225382487,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -16.24294422467548,
+          "mean_beta_component": 16.192944224675497,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 300
+        },
+        "phase0": {
+          "mean_reward": -15.454846715927117,
+          "mean_beta_component": 15.429846715927123,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 150,
+          "beta_minus_off": -1.0615155378977477,
+          "beta_minus_on": -0.7630975087483733,
+          "below_both": true,
+          "above_both": false
+        },
+        "phase1": {
+          "mean_reward": -15.447549359003695,
+          "mean_beta_component": 15.422549359003703,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 150,
+          "beta_minus_off": -1.0688128948211677,
+          "beta_minus_on": -0.7703948656717934,
+          "below_both": true,
+          "above_both": false
+        }
+      }
+    },
+    {
+      "seed": 1931,
+      "window": [
+        60,
+        120
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -12.669570636749267,
+          "mean_beta_component": 12.669570636749267,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -10.11649801731109,
+          "mean_beta_component": 10.066498017311096,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 300
+        },
+        "phase0": {
+          "mean_reward": -9.017678304513295,
+          "mean_beta_component": 8.992678304513296,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 150,
+          "beta_minus_off": -3.676892332235971,
+          "beta_minus_on": -1.0738197127977998,
+          "below_both": true,
+          "above_both": false
+        },
+        "phase1": {
+          "mean_reward": -8.958366282780965,
+          "mean_beta_component": 8.933366282780964,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 150,
+          "beta_minus_off": -3.7362043539683025,
+          "beta_minus_on": -1.1331317345301315,
+          "below_both": true,
+          "above_both": false
+        }
+      }
+    },
+    {
+      "seed": 1931,
+      "window": [
+        0,
+        120
+      ],
+      "policies": {
+        "off": {
+          "mean_reward": -14.580466445287069,
+          "mean_beta_component": 14.580466445287069,
+          "on_fraction": 0.0,
+          "voltage_step_magnitude": 0
+        },
+        "on": {
+          "mean_reward": -13.179721120993266,
+          "mean_beta_component": 13.129721120993297,
+          "on_fraction": 1.0,
+          "voltage_step_magnitude": 600
+        },
+        "phase0": {
+          "mean_reward": -12.236262510220195,
+          "mean_beta_component": 12.21126251022021,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 300,
+          "beta_minus_off": -2.3692039350668583,
+          "beta_minus_on": -0.9184586107730865,
+          "below_both": true,
+          "above_both": false
+        },
+        "phase1": {
+          "mean_reward": -12.202957820892319,
+          "mean_beta_component": 12.177957820892335,
+          "on_fraction": 0.5,
+          "voltage_step_magnitude": 300,
+          "beta_minus_off": -2.4025086243947342,
+          "beta_minus_on": -0.9517633001009624,
+          "below_both": true,
+          "above_both": false
+        }
+      }
+    }
+  ],
+  "limits": "retrospective reanalysis of saved exploratory selected-seed trajectories, not new dynamics runs/independent replication; windows selected before this reanalysis but after known aggregate reversals; correlated windows, model beta proxy not clinical endpoint; voltage-step cost not energy; no convergence or steady-state claim"
+}
