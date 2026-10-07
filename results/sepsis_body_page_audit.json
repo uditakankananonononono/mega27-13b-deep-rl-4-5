@@ -223,5 +223,13 @@
     "conservative_shortfall": 29,
     "certified": false,
     "pdf_sha256": "900ba6ee38e2e2bacd7137cc0bc5346b911e51212c6402f184e1d185e130f105"
+  },
+  "after_geo_scope_build": {
+    "physical_pages": 23,
+    "full_body_candidates": 22,
+    "mixed_frontmatter_body_pages": 1,
+    "conservative_shortfall": 28,
+    "certified": false,
+    "pdf_sha256": "47a7baa60d95d81bc53f32b44f36b721ae51ea0f44bdf964838b7129730f2e7a"
   }
 }

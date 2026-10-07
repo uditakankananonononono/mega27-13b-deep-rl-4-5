@@ -1,0 +1,25 @@
+{
+  "plan_sha256": "78ae2afb34dc093f3646027c87437b3ce6946984423029a62de4f15d0c601ecb",
+  "input_sha256": {
+    "data/sepsis/accession_features.csv": "3813049a6d1dc91e3d3b8a1634b4dac87cdf683ed220087c57ca4b75a480b8be",
+    "data/sepsis/provenance.json": "247b75d9d9fc9e8d2d3e1fedec12a52bedd277b24429ef534d06ad2a32a289e4",
+    "results/sepsis_geo.json": "284ad10d2b39ac595df2c263ef1b6a1c81bd2eb35a3721cb4f75e974df79c79a",
+    "results/sepsis_geo_cohort.json": "7f2131ae1a52d77323d010d69e2b6e48e815bc32e04949c4973797be598a475c",
+    "src/geo_analysis.py": "5dddbd493fccf3001264514bb3da488db6d51ede8d57da4e779791795b18bc58",
+    "src/geo_cohort_audit.py": "0f6621faa5f9a64f706c9bb0bb9b534d60e314a8eccba4dab4f124f4224bf59b"
+  },
+  "csv_rows": 479,
+  "unique_accessions": 479,
+  "feature_count": 48,
+  "random_train_n": 335,
+  "random_test_n": 144,
+  "cohort_train_n": 263,
+  "cohort_test_n": 216,
+  "random_test_and_cohort_test_intersection": 67,
+  "random_train_and_cohort_test_intersection": 149,
+  "preprocessing": {
+    "random": "training median centering; training standard deviation; clipping [-5,5]",
+    "cohort": "training mean centering; training standard deviation; clipping [-5,5]"
+  },
+  "limits": "GSMidentitynot patientindependence;sourcecohortlabelsnot independentstudies;splitoverlapnot leakagebyitself;no rawsource revalidation or interventiontransport"
+}
