@@ -1,0 +1,224 @@
+{
+  "plan_sha256": "9399adff3955700d68c3165002ae2fe039a1ee8f0a9098d3639480daab5ecd6a",
+  "historical_ledger_sha256": "cac6a01173f9d1dc24b649dbcfee3c7cd3e015cd7631b63ad1bd824d3c3f8477",
+  "distinct_mixed_components": 17,
+  "category_counts": {
+    "library": 7,
+    "data_archive_or_product": 8,
+    "simulation_engine": 2
+  },
+  "project_counts": {
+    "sepsis": 12,
+    "parkinson": 10
+  },
+  "components": [
+    {
+      "name": "NumPy",
+      "url": "https://numpy.org/",
+      "category": "library",
+      "projects": [
+        "sepsis",
+        "parkinson"
+      ],
+      "local_evidence_sha256": {
+        "src/net.py": "3b0392b286b37f7a1104c61657175d9a611e57ddbeee205019663b30844a9a4f",
+        "src/sepsis.py": "5307f8e357ff6f26f7bf954fe5ee3897ea36fea3fb55b7d44b98a8c6b23c2802",
+        "src/parkinson.py": "8faeb6f5c73df6bf6bbf2dd1032d4f51036d9c5c4597b76c8d4b3970d6ded953",
+        "src/geo_analysis.py": "5dddbd493fccf3001264514bb3da488db6d51ede8d57da4e779791795b18bc58"
+      }
+    },
+    {
+      "name": "SciPy",
+      "url": "https://scipy.org/",
+      "category": "library",
+      "projects": [
+        "sepsis",
+        "parkinson"
+      ],
+      "local_evidence_sha256": {
+        "src/sepsis.py": "5307f8e357ff6f26f7bf954fe5ee3897ea36fea3fb55b7d44b98a8c6b23c2802",
+        "src/geo_analysis.py": "5dddbd493fccf3001264514bb3da488db6d51ede8d57da4e779791795b18bc58"
+      }
+    },
+    {
+      "name": "NCBI GEO",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/",
+      "category": "data_archive_or_product",
+      "projects": [
+        "sepsis",
+        "parkinson"
+      ],
+      "local_evidence_sha256": {
+        "data/sepsis/provenance.json": "247b75d9d9fc9e8d2d3e1fedec12a52bedd277b24429ef534d06ad2a32a289e4",
+        "data/parkinson/provenance.json": "1eb13738fd9bcb6ffd3e0e79e3a550e60f0677fb67913cf7d54c1666500724b1"
+      }
+    },
+    {
+      "name": "Matplotlib",
+      "url": "https://matplotlib.org/",
+      "category": "library",
+      "projects": [
+        "sepsis",
+        "parkinson"
+      ],
+      "local_evidence_sha256": {
+        "src/plots.py": "b564d2a2abbcaab1d9892062c1d452396d0198ab8580783a20ff26c17e8f34a8"
+      }
+    },
+    {
+      "name": "ICU-Sepsis",
+      "url": "https://github.com/icu-sepsis/icu-sepsis",
+      "category": "simulation_engine",
+      "projects": [
+        "sepsis"
+      ],
+      "local_evidence_sha256": {
+        "src/sepsis_native.py": "27b195100b2385f3cb937ae1241564bdd22cff0d009b3bf0838ba4f5fd01b39c",
+        "results/sepsis_native.json": "f95ae8d74c023babef6e51fe4ebf2983692cfc9207b54189794a1f00f32b3ed4"
+      }
+    },
+    {
+      "name": "Gymnasium",
+      "url": "https://gymnasium.farama.org/",
+      "category": "library",
+      "projects": [
+        "sepsis",
+        "parkinson"
+      ],
+      "local_evidence_sha256": {
+        "src/sepsis_native.py": "27b195100b2385f3cb937ae1241564bdd22cff0d009b3bf0838ba4f5fd01b39c",
+        "src/parkinson_native.py": "f95ede5df39059c275efd03b8b491cffbf734c82b35d208c029fcc0eb33e4360"
+      }
+    },
+    {
+      "name": "DBS-Gym",
+      "url": "https://github.com/NevVerVer/DBS-Gym",
+      "category": "simulation_engine",
+      "projects": [
+        "parkinson"
+      ],
+      "local_evidence_sha256": {
+        "src/parkinson_native.py": "f95ede5df39059c275efd03b8b491cffbf734c82b35d208c029fcc0eb33e4360",
+        "results/parkinson_native_smoke.json": "4069af75c9a8454e5da8ce9a8fa58541c563be832e11ad0bac05df72c98dc2e3"
+      }
+    },
+    {
+      "name": "JAX",
+      "url": "https://jax.readthedocs.io/",
+      "category": "library",
+      "projects": [
+        "parkinson"
+      ],
+      "local_evidence_sha256": {
+        "src/parkinson_native.py": "f95ede5df39059c275efd03b8b491cffbf734c82b35d208c029fcc0eb33e4360"
+      }
+    },
+    {
+      "name": "Diffrax",
+      "url": "https://docs.kidger.site/diffrax/",
+      "category": "library",
+      "projects": [
+        "parkinson"
+      ],
+      "local_evidence_sha256": {
+        "src/parkinson_native.py": "f95ede5df39059c275efd03b8b491cffbf734c82b35d208c029fcc0eb33e4360"
+      }
+    },
+    {
+      "name": "PhysioNet MIMIC-III demo",
+      "url": "https://physionet.org/content/mimiciii-demo/1.4/",
+      "category": "data_archive_or_product",
+      "projects": [
+        "sepsis"
+      ],
+      "local_evidence_sha256": {
+        "src/mimic_demo_audit.py": "0681d7396f25bd64ecc2e6dc853c4164a15e84f1fe2dcde19c3e47d983b41b12",
+        "results/sepsis_mimic_demo.json": "b5bb487cb8cfda1163297b6a35b0ee4ed0055d2d9c6b3c42c9b3b9e569ff0452"
+      }
+    },
+    {
+      "name": "pandas",
+      "url": "https://pandas.pydata.org/",
+      "category": "library",
+      "projects": [
+        "sepsis"
+      ],
+      "local_evidence_sha256": {
+        "src/mimic_demo_audit.py": "0681d7396f25bd64ecc2e6dc853c4164a15e84f1fe2dcde19c3e47d983b41b12"
+      }
+    },
+    {
+      "name": "PhysioNet Parkinsonian Tremor database",
+      "url": "https://physionet.org/content/tremordb/1.0.0/",
+      "category": "data_archive_or_product",
+      "projects": [
+        "parkinson"
+      ],
+      "local_evidence_sha256": {
+        "src/parkinson_tremordb.py": "e95775d438d30bf843c12bb6a1652ae5ec697be45fc761d31b233c7c8c3d52b8",
+        "results/parkinson_tremordb.json": "972d8b1aa5f03f98a4e5b6d93e57a8de4223fd201411d54e196baa6fbad7cf69"
+      }
+    },
+    {
+      "name": "Dryad movement-responsive aDBS figure dataset",
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.4xgxd25hw",
+      "category": "data_archive_or_product",
+      "projects": [
+        "parkinson"
+      ],
+      "local_evidence_sha256": {
+        "src/parkinson_dryad_adaptive.py": "708390837e1a73f6087516d087726c2717c07909aef6c1bc6f9de30e8bdd22cb",
+        "results/parkinson_dryad_adaptive.json": "5a447af16e899d544b7f022eb755e17418495df1d5eacc3ce1311a19996b1b48"
+      }
+    },
+    {
+      "name": "Dryad eICU sepsis static risk cohort",
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.hmgqnk9wb",
+      "category": "data_archive_or_product",
+      "projects": [
+        "sepsis"
+      ],
+      "local_evidence_sha256": {
+        "src/sepsis_dryad_eicu_audit.py": "23522e736d9f8537be5e69b36e1ef56e883b5ea99f8ad3147ea5b2b957967e33",
+        "results/sepsis_dryad_eicu.json": "a14c4bbca74e2fd726b3cc666450b12cac6d9567c9c8688ab12f5d1d6cdc7f7e"
+      }
+    },
+    {
+      "name": "Figshare derived ICU sepsis immune trajectories (eICU and MIMIC-IV)",
+      "url": "https://figshare.com/articles/dataset/_b_Derived_ICU_Sepsis_Dataset_from_eICU_and_MIMIC-IV_Immune_Cell_Trajectories_SOFA_and_Outcomes_b_/31146940",
+      "category": "data_archive_or_product",
+      "projects": [
+        "sepsis"
+      ],
+      "local_evidence_sha256": {
+        "src/sepsis_figshare_immune.py": "cb81d1a95912adb290de2a327f3b96f17b2398d9596b9e4df94f2d2c6f042080",
+        "results/sepsis_figshare_immune.json": "1ce7c108ed55c97f9001fe5074839354d3413915b40269ee6b3b3e85f0e10541"
+      }
+    },
+    {
+      "name": "Zenodo authentic simplified sepsis hospital event log",
+      "url": "https://zenodo.org/records/3989590",
+      "category": "data_archive_or_product",
+      "projects": [
+        "sepsis"
+      ],
+      "local_evidence_sha256": {
+        "src/sepsis_zenodo_workflow.py": "22fcc0a70ba5f29f9f1143141edd3d7057101b225959dcb5af5ced9561b70464",
+        "results/sepsis_zenodo_workflow.json": "fe33ae3fef94fa3aecff9ae1e6b6ed326e90777f1774d65f05c562c7965b8aff"
+      }
+    },
+    {
+      "name": "Zenodo dynamic-versus-static sepsis fluid-guidance trial dataset",
+      "url": "https://zenodo.org/records/10579408",
+      "category": "data_archive_or_product",
+      "projects": [
+        "sepsis"
+      ],
+      "local_evidence_sha256": {
+        "src/sepsis_zenodo_fluid_trial.py": "d6828b05521a8bf16d44fc74c704a312eee100bd029b03255027208d229c13fa",
+        "results/sepsis_zenodo_fluid_trial.json": "0bd7e637a55d4a6123b8be89d352f8a9d6f29897ea2e7140eedcd47a92dde011"
+      }
+    }
+  ],
+  "limits": "deduplicatedmixedcomponentsnot40independentmethods;dataproductnotpolicyvalidation;fileexistence/hash not proof of scientificvalidity;historicalledgerkept and counts reconciled"
+}
