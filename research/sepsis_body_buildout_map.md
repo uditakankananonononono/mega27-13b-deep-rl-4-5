@@ -12,3 +12,5 @@ Priorities for additional actual body content:
 5. Correct stale manuscript protocol/date/tool-count descriptions using exact ledgers; avoid claiming a50pagepaper from page breaks,large tables,empty space or appended repeated prose.
 
 No guaranteed path to50substantive pages is asserted. Additional pages must earn their place by evidence,derivation or clearly bounded methods; a shorter honest manuscript is preferable to padding.
+
+Latest map reconciliation: theory and properness landed; priority2 neural results were already present,so added exact parameter accounting rather than repeated synthesis. Priority3 accession-split identity audit found actual preprocessing mismatch (median vs mean),now corrected. Priority4 remains a real timed-patient/action-data gap,no fictional chapter. Priority5 current pageaudit is regenerated from the committedPDF;23physicalpages,22bodycandidates+1mixed,conservativegap28 and uncertified. These small corrections do not establish an honest path to50pages.

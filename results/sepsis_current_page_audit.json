@@ -1,0 +1,218 @@
+{
+  "pdf_sha256": "218dca51e3749b86ab53354fa14dca9bebb41a134c15090c34eb352b6e08f11c",
+  "physical_pages": 23,
+  "full_body_candidates": 22,
+  "mixed_frontmatter_body_pages": 1,
+  "conservative_full_body_shortfall_to50": 28,
+  "certified": false,
+  "classification_basis": "Existing manuscript body-only structure checked in TeX;page1mixedtitleabstractbody. Ordinary headings are not standalone headingpages. This is not certification of novelty,substance or journal readiness.",
+  "pages": [
+    {
+      "physical_page": 1,
+      "classification": "mixed_frontmatter_body",
+      "words": 260,
+      "first_lines": [
+        "A Neural Q-Network Distillation in ICU-Sepsis:",
+        "Reproduced Model Baselines, Weak Neural Policy, and"
+      ]
+    },
+    {
+      "physical_page": 2,
+      "classification": "body_candidate",
+      "words": 348,
+      "first_lines": [
+        "c9a6d19b85d34883304afaf7cbe1ff02ede9e12b.           The archive includes transitionFunction.csv",
+        "(716 states, 25 actions), expertPolicy.csv, initialStateDistribution.csv and rewardFunction.csv."
+      ]
+    },
+    {
+      "physical_page": 3,
+      "classification": "body_candidate",
+      "words": 385,
+      "first_lines": [
+        "ej = clip((xj \u2212 mediantrain (xj ))/ max(sdtrain (xj ), 10\u22126 ), \u22125, 5).",
+        "x                                                                                 (14)"
+      ]
+    },
+    {
+      "physical_page": 4,
+      "classification": "body_candidate",
+      "words": 418,
+      "first_lines": [
+        "probe optimizes fluid or vasopressor choice and has no association with the MDP state IDs. No",
+        "mapping from GEO blood vectors to ICU-Sepsis states is attempted. The held-out accession IDs"
+      ]
+    },
+    {
+      "physical_page": 5,
+      "classification": "body_candidate",
+      "words": 478,
+      "first_lines": [
+        "error 0.031), 0.865 exact-optimal (SE 0.024) and 0.795 expert sampling (SE 0.029). The empirical",
+        "deviations from exact model values 0.780, 0.875, 0.782 do not exceed three estimated SEs at this"
+      ]
+    },
+    {
+      "physical_page": 6,
+      "classification": "body_candidate",
+      "words": 481,
+      "first_lines": [
+        "11     Public MIMIC-III demo event audit as a policy-data gap test",
+        "The full MIMIC-III patient database is access controlled, and it would be misleading to claim"
+      ]
+    },
+    {
+      "physical_page": 7,
+      "classification": "body_candidate",
+      "words": 440,
+      "first_lines": [
+        "13     Second sepsis series: serial sampling is not independent pa-",
+        "tients"
+      ]
+    },
+    {
+      "physical_page": 8,
+      "classification": "body_candidate",
+      "words": 476,
+      "first_lines": [
+        "//github.com/yongh7/MIMIC-sepsis, which describes sepsis trajectory tasks sourced from",
+        "MIMIC-IV. Its README says using the patient database requires credentialed PhysioNet MIMIC-"
+      ]
+    },
+    {
+      "physical_page": 9,
+      "classification": "body_candidate",
+      "words": 529,
+      "first_lines": [
+        "vised memorization of dynamic programming. Selecting an architecture after viewing these values",
+        "is also not a valid held-out model comparison. No new patient treatment outcomes, intervention"
+      ]
+    },
+    {
+      "physical_page": 10,
+      "classification": "body_candidate",
+      "words": 466,
+      "first_lines": [
+        "model.",
+        "This distinction informs the next valid within-project test. A genuinely independent modeled"
+      ]
+    },
+    {
+      "physical_page": 11,
+      "classification": "body_candidate",
+      "words": 464,
+      "first_lines": [
+        "20     Centroid-feature pivot: better state transfer, worse whole-",
+        "policy return"
+      ]
+    },
+    {
+      "physical_page": 12,
+      "classification": "body_candidate",
+      "words": 528,
+      "first_lines": [
+        "It is a model-calculated occupancy measure, with approximately 10.6\u201311.1 visits per simulated",
+        "initial case across the six policies. In each split, test IDs account for about 18.6\u201320.4% of that"
+      ]
+    },
+    {
+      "physical_page": 13,
+      "classification": "body_candidate",
+      "words": 439,
+      "first_lines": [
+        "open. Later sections audit source action support, without closing the independent clinical-policy",
+        "gate."
+      ]
+    },
+    {
+      "physical_page": 14,
+      "classification": "body_candidate",
+      "words": 487,
+      "first_lines": [
+        "24     An open eICU sepsis risk cohort with no usable action se-",
+        "quence"
+      ]
+    },
+    {
+      "physical_page": 15,
+      "classification": "body_candidate",
+      "words": 467,
+      "first_lines": [
+        "For this synthetic assumption, mean values across the twelve draws were 0.858608 one-hot,",
+        "0.847394 centroid and 0.875441 for the original exact-optimal action map. The paired centroid-"
+      ]
+    },
+    {
+      "physical_page": 16,
+      "classification": "body_candidate",
+      "words": 466,
+      "first_lines": [
+        "27     A hospital sepsis process log: real time stamps but wrong",
+        "interventions"
+      ]
+    },
+    {
+      "physical_page": 17,
+      "classification": "body_candidate",
+      "words": 453,
+      "first_lines": [
+        "hour IV fluid is 8,081 mL in static and 8,542 mL in dynamic; 59/62 versus 52/61 have a recorded",
+        "norepinephrine-use indicator. These numbers describe the published assignments and measured"
+      ]
+    },
+    {
+      "physical_page": 18,
+      "classification": "body_candidate",
+      "words": 372,
+      "first_lines": [
+        "URLs, cached versus current evidence and unresolved gates are retained in research/sepsis_",
+        "trajectory_qualification.md and results/sepsis_source_qualification.json. No"
+      ]
+    },
+    {
+      "physical_page": 19,
+      "classification": "body_candidate",
+      "words": 419,
+      "first_lines": [
+        "Using the same arrival rewards and transition law for both policies gives",
+        "V \u2217 \u2212 V\u03c0 = g\u03c0 + P\u03c0 (V \u2217 \u2212 V\u03c0 ).                               (19)"
+      ]
+    },
+    {
+      "physical_page": 20,
+      "classification": "body_candidate",
+      "words": 412,
+      "first_lines": [
+        "reliably estimating its transition row. That distinction is why the expert occupancy audit remains",
+        "necessary even after the exact optimal-value equivalence is verified."
+      ]
+    },
+    {
+      "physical_page": 21,
+      "classification": "body_candidate",
+      "words": 390,
+      "first_lines": [
+        "com/icu-sepsis/icu-sepsis. This new evidence contributes methods and results content rather",
+        "than page padding; the 50-content-page gate remains uncertified."
+      ]
+    },
+    {
+      "physical_page": 22,
+      "classification": "body_candidate",
+      "words": 426,
+      "first_lines": [
+        "32.1    Released expert probability is not restricted to admissible estimator",
+        "rows"
+      ]
+    },
+    {
+      "physical_page": 23,
+      "classification": "body_candidate",
+      "words": 80,
+      "first_lines": [
+        "This identity attributes differences inside the released arrival-reward MDP, using optimal model",
+        "continuation. It is not patient regret, causal harm, preventable mortality, treatment benefit or ev-"
+      ]
+    }
+  ]
+}
