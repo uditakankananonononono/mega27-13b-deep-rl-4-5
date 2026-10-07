@@ -1,0 +1,22 @@
+{
+  "plan_sha256": "b1f1292a158486d854a417f7512bcaf0c56b78562f419f63a62eff917814ef26",
+  "source_net_sha256": "3b0392b286b37f7a1104c61657175d9a611e57ddbeee205019663b30844a9a4f",
+  "architectures": [
+    {
+      "representation": "onehot",
+      "input_dimensions": 716,
+      "parameters": 51673,
+      "first_layer_parameters": 45888,
+      "optimizer_moment_scalar_slots": 103346
+    },
+    {
+      "representation": "centroid",
+      "input_dimensions": 47,
+      "parameters": 8857,
+      "first_layer_parameters": 3072,
+      "optimizer_moment_scalar_slots": 17714
+    }
+  ],
+  "parameter_ratio_onehot_to_centroid": 5.834142486169132,
+  "limits": "parametercount not effectivecapacity/samplecomplexity;equalepochsnot equalFLOPs/parameterbudget;alreadyinspected splitsnot independent modelselection"
+}
